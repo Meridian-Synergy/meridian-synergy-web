@@ -60,6 +60,13 @@
     "feature3": "Automated intervention reports",
     "cta": "Get early access"
   },
+  "servicePage": {
+    "relatedDrones": "Equipment used",
+    "relatedServices": "Related services",
+    "quoteTitle": "Operating in your area",
+    "quoteDesc": "Free quote within 24 hours for any mission in Burgundy and surrounding departments.",
+    "quoteBtn": "Request a quote"
+  },
   "breadcrumb": {
     "home": "Home"
   },

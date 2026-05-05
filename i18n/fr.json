@@ -60,6 +60,13 @@
     "feature3": "Rapports d'intervention automatisés",
     "cta": "Être notifié en avant-première"
   },
+  "servicePage": {
+    "relatedDrones": "Drone utilisé",
+    "relatedServices": "Services complémentaires",
+    "quoteTitle": "Intervention dans votre secteur",
+    "quoteDesc": "Devis gratuit sous 24 h pour toute mission dans la Nièvre et en Bourgogne.",
+    "quoteBtn": "Demander un devis"
+  },
   "breadcrumb": {
     "home": "Accueil"
   },
