@@ -60,6 +60,25 @@
     "feature3": "Automated intervention reports",
     "cta": "Get early access"
   },
+  "breadcrumb": {
+    "home": "Home"
+  },
+  "servicesPage": {
+    "meta": {
+      "title": "Our drone services — Meridian Synergy",
+      "description": "Thermal inspection, agriculture, video, security, topography, infrastructure: our certified drone pilots operate across all demanding sectors."
+    },
+    "hero": {
+      "badge": "Drone expertise",
+      "title": "Our services",
+      "desc": "Certified pilots, state-of-the-art equipment and impeccable regulatory compliance — for every industry."
+    },
+    "contact": {
+      "title": "Got a drone project?",
+      "desc": "Our teams will assess your mission and propose a tailored solution.",
+      "btn": "Get in touch"
+    }
+  },
   "footer": {
     "tagline": "The platform for professional drone pilots.",
     "legal": "Legal notice",

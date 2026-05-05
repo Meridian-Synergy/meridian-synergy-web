@@ -60,6 +60,25 @@
     "feature3": "Rapports d'intervention automatisés",
     "cta": "Être notifié en avant-première"
   },
+  "breadcrumb": {
+    "home": "Accueil"
+  },
+  "servicesPage": {
+    "meta": {
+      "title": "Nos services drone — Meridian Synergy",
+      "description": "Audit thermique, agriculture, vidéo, sécurité, topographie, inspection : nos télépilotes certifiés interviennent dans tous les secteurs exigeants."
+    },
+    "hero": {
+      "badge": "Expertise drone",
+      "title": "Nos services",
+      "desc": "Des télépilotes certifiés, des équipements de pointe et une conformité réglementaire irréprochable — pour chaque secteur d'activité."
+    },
+    "contact": {
+      "title": "Vous avez un projet drone ?",
+      "desc": "Nos équipes étudient votre mission et vous proposent une intervention sur mesure.",
+      "btn": "Prendre contact"
+    }
+  },
   "footer": {
     "tagline": "La plateforme pour télépilotes professionnels.",
     "legal": "Mentions légales",
