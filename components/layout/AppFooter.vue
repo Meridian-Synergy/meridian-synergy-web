@@ -24,6 +24,35 @@ const year = new Date().getFullYear()
             <span class="footer-brand-name">Meridian Synergy</span>
           </NuxtLink>
           <p class="footer-tagline">{{ t('footer.tagline') }}</p>
+
+          <div class="social-links" role="navigation" aria-label="Réseaux sociaux">
+            <a href="https://www.instagram.com/meridian.synergy" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5.5" stroke="currentColor" stroke-width="1.75"/>
+                <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.75"/>
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/company/meridian-synergy/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="4" stroke="currentColor" stroke-width="1.75"/>
+                <path d="M7 10v7M7 7.5v.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+                <path d="M11 17v-4c0-1.657 1.343-3 3-3s3 1.343 3 3v4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+                <path d="M11 10v7" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+              </svg>
+            </a>
+            <a href="https://www.tiktok.com/@meridian.synergy" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a href="https://www.youtube.com/@meridian.synergy" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect x="2" y="5" width="20" height="14" rx="4" stroke="currentColor" stroke-width="1.75"/>
+                <path d="M10 9.5l5 2.5-5 2.5V9.5z" fill="currentColor"/>
+              </svg>
+            </a>
+          </div>
         </div>
 
         <nav class="footer-nav" aria-label="Liens du pied de page">
@@ -87,6 +116,29 @@ const year = new Date().getFullYear()
   color: rgba(255,255,255,0.45);
   line-height: 1.55;
   max-width: 280px;
+  margin-bottom: 16px;
+}
+
+.social-links {
+  display: flex;
+  gap: 8px;
+}
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--ms-radius-md);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  transition: color var(--ms-transition-fast), border-color var(--ms-transition-fast), background-color var(--ms-transition-fast);
+}
+.social-link:hover {
+  color: var(--ms-color-white);
+  border-color: rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.06);
 }
 
 .footer-nav {
