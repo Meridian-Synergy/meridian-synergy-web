@@ -1,0 +1,68 @@
+{
+  "nav": {
+    "home": "Meridian Synergy — Accueil",
+    "services": "Services",
+    "drones": "Drones",
+    "about": "À propos",
+    "contact": "Contact",
+    "cta": "Découvrir"
+  },
+  "hero": {
+    "tag": "Plateforme SaaS pour télépilotes",
+    "titleLine1": "La gestion de missions drone,",
+    "titleLine2": "réinventée.",
+    "desc": "Meridian Synergy unifie la planification des vols, la conformité réglementaire et les rapports d'intervention pour les télépilotes professionnels.",
+    "ctaPrimary": "Voir nos services",
+    "ctaSecondary": "En savoir plus",
+    "dashTitle": "Tableau de bord",
+    "dashLive": "En direct",
+    "dashMissions": "Missions",
+    "dashCompliance": "Conformité DGAC",
+    "dashDrones": "Drones actifs",
+    "dashBadge": "Bientôt disponible"
+  },
+  "services": {
+    "sectionTitle": "Nos domaines d'expertise",
+    "sectionDesc": "Nos télépilotes certifiés interviennent dans des secteurs exigeants avec des équipements adaptés à chaque mission.",
+    "cta": "Voir tous les services",
+    "more": "Découvrir",
+    "thermique": {
+      "title": "Audit thermique",
+      "desc": "Détection de ponts thermiques, infiltrations et cellules solaires défaillantes par caméra infrarouge."
+    },
+    "agriculture": {
+      "title": "Agriculture & Viticulture",
+      "desc": "Cartographie de parcelles, détection du stress hydrique et épandage phytosanitaire précis."
+    },
+    "video": {
+      "title": "Vidéo & Cinéma",
+      "desc": "Prises de vue aériennes pour films, publicités et événements avec des drones silencieux."
+    },
+    "securite": {
+      "title": "Sécurité & Surveillance",
+      "desc": "Surveillance de sites industriels et d'événements avec capteurs thermiques et zoom optique."
+    },
+    "topographie": {
+      "title": "Topographie & Cartographie",
+      "desc": "Relevés topographiques précis, modèles 3D et orthophotos avec Pix4D et DroneDeploy."
+    },
+    "infrastructure": {
+      "title": "Inspection infrastructure",
+      "desc": "Inspection de ponts, pylônes, éoliennes et barrages pour détecter fissures et corrosion."
+    }
+  },
+  "saas": {
+    "badge": "Bientôt",
+    "title": "Le portail télépilote arrive",
+    "desc": "Planification de missions, conformité DGAC, gestion de flotte et rapports d'intervention — tout en un.",
+    "feature1": "Planification de vols réglementée",
+    "feature2": "Suivi de conformité DGAC",
+    "feature3": "Rapports d'intervention automatisés",
+    "cta": "Être notifié en avant-première"
+  },
+  "footer": {
+    "tagline": "La plateforme pour télépilotes professionnels.",
+    "legal": "Mentions légales",
+    "copyright": "© {year} Meridian Synergy. Tous droits réservés."
+  }
+}

@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@import "meridian-synergy-ui/src/tokens/tokens.css";
+
+body {
+  font-family: var(--ms-font-body);
+  color: var(--ms-color-navy);
+  background-color: var(--ms-color-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
