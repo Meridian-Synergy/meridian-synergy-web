@@ -35,6 +35,16 @@ export default defineNuxtConfig({
 
   nitro: {
     preset: 'github-pages',
+    prerender: {
+      failOnError: false,
+    },
+  },
+
+  routeRules: {
+    '/en/services/audit-thermique':          { redirect: { to: '/en/services/thermal-inspection',      statusCode: 301 } },
+    '/en/services/securite-surveillance':    { redirect: { to: '/en/services/security-surveillance',   statusCode: 301 } },
+    '/en/services/topographie-cartographie': { redirect: { to: '/en/services/topography-mapping',      statusCode: 301 } },
+    '/en/services/inspection-infrastructure':{ redirect: { to: '/en/services/infrastructure-inspection', statusCode: 301 } },
   },
 
   components: {

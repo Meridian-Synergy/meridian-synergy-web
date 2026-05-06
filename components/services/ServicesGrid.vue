@@ -1,17 +1,29 @@
 <script setup lang="ts">
 import { MsCard } from '@meridian-synergy/ui'
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const localePath = useLocalePath()
 
-const services = [
-  { key: 'thermique',      path: '/services/audit-thermique',           color: 'var(--ms-color-sky)'     },
-  { key: 'agriculture',    path: '/services/agriculture-viticulture',   color: 'var(--ms-color-success)' },
-  { key: 'video',          path: '/services/video-cinema',              color: 'var(--ms-color-gold)'    },
-  { key: 'securite',       path: '/services/securite-surveillance',     color: 'var(--ms-color-navy)'    },
-  { key: 'topographie',    path: '/services/topographie-cartographie',  color: 'var(--ms-color-sky)'     },
-  { key: 'infrastructure', path: '/services/inspection-infrastructure', color: 'var(--ms-color-orange)'  },
-]
+const slugs: Record<string, Record<string, string>> = {
+  thermique:      { fr: 'audit-thermique',           en: 'thermal-inspection' },
+  agriculture:    { fr: 'agriculture-viticulture',   en: 'agriculture-viticulture' },
+  video:          { fr: 'video-cinema',              en: 'video-cinema' },
+  securite:       { fr: 'securite-surveillance',     en: 'security-surveillance' },
+  topographie:    { fr: 'topographie-cartographie',  en: 'topography-mapping' },
+  infrastructure: { fr: 'inspection-infrastructure', en: 'infrastructure-inspection' },
+}
+
+const services = computed(() => [
+  { key: 'thermique',      color: 'var(--ms-color-sky)'     },
+  { key: 'agriculture',    color: 'var(--ms-color-success)' },
+  { key: 'video',          color: 'var(--ms-color-gold)'    },
+  { key: 'securite',       color: 'var(--ms-color-navy)'    },
+  { key: 'topographie',    color: 'var(--ms-color-sky)'     },
+  { key: 'infrastructure', color: 'var(--ms-color-orange)'  },
+].map(s => ({
+  ...s,
+  path: `/services/${slugs[s.key][locale.value] ?? slugs[s.key].fr}`,
+})))
 </script>
 
 <template>
