@@ -67,7 +67,6 @@ const { data: drones } = await useAsyncData(`drones-${locale.value}`, async () =
                     :src="drone.image"
                     :alt="drone.model"
                     class="drone-img"
-                    @load="($event.target as HTMLImageElement).style.opacity = '1'"
                     @error="($event.target as HTMLImageElement).style.display = 'none'"
                   />
                 </div>
@@ -184,8 +183,6 @@ const { data: drones } = await useAsyncData(`drones-${locale.value}`, async () =
   height: 100%;
   object-fit: cover;
   border-radius: var(--ms-radius-md);
-  opacity: 0;
-  transition: opacity 0.3s;
 }
 
 .drone-meta { display: flex; flex-direction: column; gap: 8px; }

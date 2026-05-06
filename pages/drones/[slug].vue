@@ -88,7 +88,6 @@ const specIcons = {
               :src="page.image"
               :alt="page.model"
               class="hero-img"
-              @load="($event.target as HTMLImageElement).style.opacity = '1'"
               @error="($event.target as HTMLImageElement).style.display = 'none'"
             />
           </div>
@@ -231,8 +230,6 @@ const specIcons = {
   object-fit: cover;
   border-radius: var(--ms-radius-lg);
   border: 1px solid var(--ms-color-border);
-  opacity: 0;
-  transition: opacity 0.3s;
 }
 
 /* ── Specs ── */

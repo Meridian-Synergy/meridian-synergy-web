@@ -73,7 +73,6 @@ const serviceKeys: Record<string, string> = {
           :src="page.image"
           :alt="page.title"
           class="banner-img"
-          @load="($event.target as HTMLImageElement).style.opacity = '1'"
           @error="($event.target as HTMLImageElement).closest('.image-banner')!.remove()"
         />
       </div>
@@ -211,8 +210,6 @@ const serviceKeys: Record<string, string> = {
   border-radius: var(--ms-radius-lg);
   border: 1px solid var(--ms-color-border);
   display: block;
-  opacity: 0;
-  transition: opacity 0.3s;
 }
 @media (min-width: 768px) { .banner-img { height: 420px; } }
 
