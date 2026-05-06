@@ -60,6 +60,33 @@
     "feature3": "Automated intervention reports",
     "cta": "Get early access"
   },
+  "dronesPage": {
+    "meta": {
+      "title": "Our drones — Professional fleet Meridian Synergy",
+      "description": "Discover Meridian Synergy's DJI drones: DJI Agras T100 for agriculture and DJI Matrice 4TD for thermal inspection and surveillance in Burgundy."
+    },
+    "hero": {
+      "badge": "Certified fleet",
+      "title": "Our drones",
+      "desc": "Two DJI aircraft selected for their reliability and performance in the demanding conditions of Burgundy and Nièvre."
+    },
+    "contact": {
+      "title": "Questions about our equipment?",
+      "desc": "We will advise which drone best suits your mission.",
+      "btn": "Contact us"
+    }
+  },
+  "dronePage": {
+    "specs": "Technical specifications",
+    "specWeight": "Weight",
+    "specFlightTime": "Flight time",
+    "specCamera": "Camera",
+    "specRange": "Range",
+    "relatedServices": "Compatible services",
+    "quoteTitle": "Plan a mission",
+    "quoteDesc": "Free quote within 24 hours for any mission in Burgundy.",
+    "quoteBtn": "Request a quote"
+  },
   "servicePage": {
     "relatedDrones": "Equipment used",
     "relatedServices": "Related services",

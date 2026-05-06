@@ -60,6 +60,33 @@
     "feature3": "Rapports d'intervention automatisés",
     "cta": "Être notifié en avant-première"
   },
+  "dronesPage": {
+    "meta": {
+      "title": "Nos drones — Flotte professionnelle Meridian Synergy",
+      "description": "Découvrez les drones DJI de Meridian Synergy : DJI Agras T100 pour l'agriculture et DJI Matrice 4TD pour l'inspection thermique et la surveillance en Bourgogne."
+    },
+    "hero": {
+      "badge": "Flotte certifiée",
+      "title": "Nos drones",
+      "desc": "Deux appareils DJI sélectionnés pour leur fiabilité et leurs performances dans les conditions exigeantes de la Bourgogne et de la Nièvre."
+    },
+    "contact": {
+      "title": "Une question sur nos équipements ?",
+      "desc": "Nous vous conseillons le drone le mieux adapté à votre mission.",
+      "btn": "Nous contacter"
+    }
+  },
+  "dronePage": {
+    "specs": "Spécifications techniques",
+    "specWeight": "Poids",
+    "specFlightTime": "Autonomie",
+    "specCamera": "Caméra",
+    "specRange": "Portée",
+    "relatedServices": "Services compatibles",
+    "quoteTitle": "Planifier une mission",
+    "quoteDesc": "Devis gratuit sous 24 h pour toute mission dans la Nièvre et en Bourgogne.",
+    "quoteBtn": "Demander un devis"
+  },
   "servicePage": {
     "relatedDrones": "Drone utilisé",
     "relatedServices": "Services complémentaires",
