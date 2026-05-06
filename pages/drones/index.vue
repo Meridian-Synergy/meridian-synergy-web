@@ -9,7 +9,7 @@ useSeoMeta({
   description: () => t('dronesPage.meta.description'),
 })
 
-const dronesSlugs = ['dji-t100-agri', 'dji-matrice-4td']
+const dronesSlugs = ['dji-t100-agri', 'dji-matrice-4td', 'dji-avata-360']
 const { data: drones } = await useAsyncData(`drones-${locale.value}`, async () => {
   const results = await Promise.all(
     dronesSlugs.map(async (slug) => {

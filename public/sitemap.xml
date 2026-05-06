@@ -172,6 +172,21 @@
     <priority>0.7</priority>
   </url>
 
+  <url>
+    <loc>https://meridian-synergy.com/drones/dji-avata-360</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/drones/dji-avata-360"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/drones/dji-avata-360"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meridian-synergy.com/en/drones/dji-avata-360</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/drones/dji-avata-360"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/drones/dji-avata-360"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- Static pages -->
   <url>
     <loc>https://meridian-synergy.com/a-propos</loc>
