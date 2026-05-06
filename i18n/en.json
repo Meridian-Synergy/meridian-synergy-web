@@ -113,9 +113,56 @@
       "btn": "Get in touch"
     }
   },
+  "about": {
+    "meta": {
+      "title": "About — Meridian Synergy, drone operator in Burgundy",
+      "description": "Meridian Synergy is a drone services company founded in 2026, based in Cosne-sur-Loire (Nièvre). DGAC certified, we operate across Burgundy for professional missions."
+    },
+    "hero": {
+      "badge": "Our story",
+      "title": "Meridian Synergy",
+      "subtitle": "Certified professional drone operator, based in Cosne-sur-Loire, Nièvre."
+    },
+    "story": {
+      "title": "Who are we?",
+      "p1": "Meridian Synergy was founded in 2026, driven by the acceleration of the professional drone sector and the harmonisation of the European regulatory framework (EU Regulation 2019/947). These developments open new opportunities for certified operators able to work in demanding sectors with state-of-the-art equipment.",
+      "p2": "Based in Cosne-sur-Loire, in Nièvre, we built our business to meet the concrete needs of local stakeholders: local authorities, farmers, winegrowers, industrial companies and infrastructure managers. A rich territory where professional drones make a real difference."
+    },
+    "values": {
+      "title": "Our commitments",
+      "v1": {
+        "title": "Reliability and responsiveness",
+        "desc": "Every mission is prepared with rigour: site analysis, flight plan, regulatory coordination. Quotes within 24 hours, rapid deployment across the whole area."
+      },
+      "v2": {
+        "title": "Local roots",
+        "desc": "Based in Nièvre, we know the territory, local constraints and its stakeholders. We favour direct, lasting relationships."
+      },
+      "v3": {
+        "title": "Cutting-edge technology",
+        "desc": "Latest-generation DJI fleet — Matrice 4TD and Agras T100 — for the best performance in thermal inspection, mapping and crop spraying."
+      },
+      "v4": {
+        "title": "Regulatory compliance",
+        "desc": "Certified A1/A2/A3, CATS (DGAC Specific category), certiphyto and certiBioci — all our operations comply with the applicable European and French framework."
+      }
+    },
+    "certs": { "title": "Certifications" },
+    "zone": {
+      "title": "Operating area",
+      "intro": "Based in Cosne-sur-Loire (Nièvre, 58), we operate across the following 7 departments:"
+    },
+    "contact": {
+      "title": "Let's talk about your project",
+      "desc": "A mission to plan, a technical question, a quote? Contact us directly — we usually reply within 24 hours.",
+      "whatsapp": "Message on WhatsApp",
+      "email": "Send an email"
+    }
+  },
   "footer": {
     "tagline": "The platform for professional drone pilots.",
     "legal": "Legal notice",
-    "copyright": "© {year} Meridian Synergy. All rights reserved."
+    "copyright": "© {year} Meridian Synergy. All rights reserved.",
+    "contact": "Contact"
   }
 }

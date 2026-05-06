@@ -60,6 +60,58 @@
     "feature3": "Rapports d'intervention automatisés",
     "cta": "Être notifié en avant-première"
   },
+  "about": {
+    "meta": {
+      "title": "À propos — Meridian Synergy, opérateur drone en Bourgogne",
+      "description": "Meridian Synergy est une société de services par drone créée en 2026, basée à Cosne-sur-Loire (Nièvre). Certifiée DGAC, nous intervenons en Bourgogne pour vos missions professionnelles."
+    },
+    "hero": {
+      "badge": "Notre histoire",
+      "title": "Meridian Synergy",
+      "subtitle": "Opérateur drone professionnel certifié, basé à Cosne-sur-Loire dans la Nièvre."
+    },
+    "story": {
+      "title": "Qui sommes-nous ?",
+      "p1": "Meridian Synergy est née en 2026, portée par l'accélération du secteur des drones professionnels et l'harmonisation du cadre réglementaire européen (règlement UE 2019/947). Ces évolutions ouvrent de nouvelles opportunités pour les opérateurs certifiés capables d'intervenir dans des secteurs exigeants avec des équipements de dernière génération.",
+      "p2": "Basés à Cosne-sur-Loire, dans la Nièvre, nous avons bâti notre activité pour répondre aux besoins concrets des acteurs locaux : collectivités, agriculteurs, viticulteurs, industriels et gestionnaires d'infrastructures. Un territoire riche, où l'apport du drone professionnel fait une vraie différence."
+    },
+    "values": {
+      "title": "Nos engagements",
+      "v1": {
+        "title": "Sérieux et réactivité",
+        "desc": "Chaque mission est préparée avec rigueur : analyse du site, plan de vol, coordination réglementaire. Devis sous 24 h, intervention rapide dans toute la zone."
+      },
+      "v2": {
+        "title": "Ancrage local",
+        "desc": "Basés en Nièvre, nous connaissons les territoires, les contraintes locales et leurs acteurs. Nous privilégions les relations directes et durables."
+      },
+      "v3": {
+        "title": "Technologies de pointe",
+        "desc": "Flotte DJI dernière génération — Matrice 4TD et Agras T100 — pour les meilleures performances en inspection thermique, cartographie et épandage."
+      },
+      "v4": {
+        "title": "Conformité réglementaire",
+        "desc": "Certifiés A1/A2/A3, CATS (catégorie Spécifique DGAC), certiphyto et certiBioci — toutes nos opérations respectent le cadre européen et français en vigueur."
+      }
+    },
+    "certs": { "title": "Certifications" },
+    "zone": {
+      "title": "Zone d'intervention",
+      "intro": "Basés à Cosne-sur-Loire (Nièvre, 58), nous intervenons dans les 7 départements suivants :"
+    },
+    "contact": {
+      "title": "Parlons de votre projet",
+      "desc": "Une mission à planifier, une question technique, un devis ? Contactez-nous directement — nous répondons en général sous 24 heures.",
+      "whatsapp": "Écrire sur WhatsApp",
+      "email": "Envoyer un e-mail"
+    }
+  },
+  "footer": {
+    "tagline": "La plateforme pour télépilotes professionnels.",
+    "legal": "Mentions légales",
+    "copyright": "© {year} Meridian Synergy. Tous droits réservés.",
+    "contact": "Contact"
+  },
   "dronesPage": {
     "meta": {
       "title": "Nos drones — Flotte professionnelle Meridian Synergy",
@@ -112,10 +164,5 @@
       "desc": "Nos équipes étudient votre mission et vous proposent une intervention sur mesure.",
       "btn": "Prendre contact"
     }
-  },
-  "footer": {
-    "tagline": "La plateforme pour télépilotes professionnels.",
-    "legal": "Mentions légales",
-    "copyright": "© {year} Meridian Synergy. Tous droits réservés."
   }
 }
