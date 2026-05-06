@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { MsBadge, MsCard, MsCtaBanner } from '@meridian-synergy/ui'
+import { MsBadge, MsCard, MsCtaBanner, MsSpecGrid } from '@meridian-synergy/ui'
+import type { MsSpecItem } from '@meridian-synergy/ui'
 
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
@@ -41,12 +42,28 @@ const serviceKeys: Record<string, string> = {
   'infrastructure-inspection':'infrastructure',
 }
 
-const specIcons = {
-  weight: 'M12 3C8 3 5 6 5 10c0 5.25 7 13 7 13s7-7.75 7-13c0-4-3-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 7a2.5 2.5 0 0 1 0 5.5z',
-  flightTime: 'M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48 2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48 2.83-2.83M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z',
-  camera: 'M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2zM12 17a4 4 0 1 0 0-8 4 4 0 0 0 0 8z',
-  range: 'M1.42 9a11 11 0 0 1 21.16 0M5 12.55a7 7 0 0 1 14 0M10.71 17.29a1.41 1.41 0 1 0 2 2M12 20h.01',
-}
+const specItems = computed<MsSpecItem[]>(() => [
+  {
+    label: t('dronePage.specWeight'),
+    value: page.value?.specs?.weight ?? '',
+    icon: '<path d="M12 3a7 7 0 1 0 0 14A7 7 0 0 0 12 3zM8 12h8M12 8v8" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>',
+  },
+  {
+    label: t('dronePage.specFlightTime'),
+    value: page.value?.specs?.maxFlightTime ?? '',
+    icon: '<circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.75"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>',
+  },
+  {
+    label: t('dronePage.specCamera'),
+    value: page.value?.specs?.camera ?? '',
+    icon: '<rect x="2" y="7" width="15" height="11" rx="2" stroke="currentColor" stroke-width="1.75"/><path d="M17 11l5-3v8l-5-3v-2z" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/>',
+  },
+  {
+    label: t('dronePage.specRange'),
+    value: page.value?.specs?.range ?? '',
+    icon: '<path d="M1.5 8.5a13 13 0 0 1 21 0M5 12a10 10 0 0 1 14 0M8.5 15.5a5.5 5.5 0 0 1 7 0" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/><circle cx="12" cy="19" r="1" fill="currentColor"/>',
+  },
+])
 </script>
 
 <template>
@@ -90,44 +107,7 @@ const specIcons = {
     </section>
 
     <!-- Specs -->
-    <section class="specs-section">
-      <div class="container">
-        <p class="specs-label">{{ t('dronePage.specs') }}</p>
-        <div class="specs-grid">
-          <div class="spec-card">
-            <svg class="spec-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M12 3a7 7 0 1 0 0 14A7 7 0 0 0 12 3zM8 12h8M12 8v8" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
-            </svg>
-            <span class="spec-key">{{ t('dronePage.specWeight') }}</span>
-            <span class="spec-val">{{ page.specs?.weight }}</span>
-          </div>
-          <div class="spec-card">
-            <svg class="spec-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.75"/>
-              <path d="M12 7v5l3 3" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span class="spec-key">{{ t('dronePage.specFlightTime') }}</span>
-            <span class="spec-val">{{ page.specs?.maxFlightTime }}</span>
-          </div>
-          <div class="spec-card">
-            <svg class="spec-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <rect x="2" y="7" width="15" height="11" rx="2" stroke="currentColor" stroke-width="1.75"/>
-              <path d="M17 11l5-3v8l-5-3v-2z" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/>
-            </svg>
-            <span class="spec-key">{{ t('dronePage.specCamera') }}</span>
-            <span class="spec-val">{{ page.specs?.camera }}</span>
-          </div>
-          <div class="spec-card">
-            <svg class="spec-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M1.5 8.5a13 13 0 0 1 21 0M5 12a10 10 0 0 1 14 0M8.5 15.5a5.5 5.5 0 0 1 7 0" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
-              <circle cx="12" cy="19" r="1" fill="currentColor"/>
-            </svg>
-            <span class="spec-key">{{ t('dronePage.specRange') }}</span>
-            <span class="spec-val">{{ page.specs?.range }}</span>
-          </div>
-        </div>
-      </div>
-    </section>
+    <MsSpecGrid :label="t('dronePage.specs')" :items="specItems" />
 
     <!-- Content + Sidebar -->
     <section class="content-section">
@@ -213,35 +193,6 @@ const specIcons = {
   border: 1px solid var(--ms-color-border);
 }
 
-/* ── Specs ── */
-.specs-section { background: var(--ms-color-navy); padding: 40px 0; }
-.specs-label {
-  font-family: var(--ms-font-condensed);
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.4);
-  margin: 0 0 20px;
-}
-.specs-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-}
-@media (min-width: 768px) { .specs-grid { grid-template-columns: repeat(4, 1fr); } }
-.spec-card {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: var(--ms-radius-md);
-  padding: 18px 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.spec-icon { width: 20px; height: 20px; color: var(--ms-color-sky); flex-shrink: 0; }
-.spec-key { font-family: var(--ms-font-condensed); font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.45); }
-.spec-val { font-size: 14px; font-weight: 600; color: var(--ms-color-white); line-height: 1.45; }
 
 /* ── Content layout ── */
 .content-section { padding: 64px 0; background: var(--ms-color-white); }
