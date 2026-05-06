@@ -14,7 +14,7 @@ const certifications = [
   { label: 'A2', variant: 'navy' as const },
   { label: 'CATS', variant: 'navy' as const },
   { label: 'Certiphyto', variant: 'sky' as const },
-  { label: 'CertiBioci', variant: 'sky' as const },
+  { label: 'CertiBiocide', variant: 'sky' as const },
 ]
 
 const departments = [

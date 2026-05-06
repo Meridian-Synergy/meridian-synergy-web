@@ -15,7 +15,7 @@ specs:
 publishedAt: "2026-05-06"
 ---
 
-The **DJI Agras T100** is the industry benchmark for high-volume agricultural drone operations. With its 100-litre tank and spray flow rate of up to 40 L/min, it is designed for farms that need to treat large areas in as few passes as possible. Combined with our **certiphyto** certification and **certiBioci** accreditation, it is the tool we deploy for all phytosanitary spraying and fertilisation missions across Burgundy and Nièvre.
+The **DJI Agras T100** is the industry benchmark for high-volume agricultural drone operations. With its 100-litre tank and spray flow rate of up to 40 L/min, it is designed for farms that need to treat large areas in as few passes as possible. Combined with our **certiphyto** certification and **certiBiocide** accreditation, it is the tool we deploy for all phytosanitary spraying and fertilisation missions across Burgundy and Nièvre.
 
 ## Why the T100 for large farming operations?
 
@@ -36,7 +36,7 @@ Hillside vineyards have slopes and row spacings that make tractor passes difficu
 For cereal farms in Nièvre, Cher and Yonne, the T100 carries out fungicide, herbicide and insecticide treatments when plots are waterlogged or crops are too tall for a ground sprayer.
 
 ### Biocontrol applications
-Thanks to our **certiBioci** accreditation, we work with biocontrol products (Bacillus thuringiensis, trichogrammes, sex pheromone confusion systems) — solutions compatible with organic and HVE specifications, applied with the same precision as conventional products.
+Thanks to our **certiBiocide** accreditation, we work with biocontrol products (Bacillus thuringiensis, trichogrammes, sex pheromone confusion systems) — solutions compatible with organic and HVE specifications, applied with the same precision as conventional products.
 
 ### Fertilisation and seeding
 The T100 also accepts a hopper for spreading granular fertiliser or cover crop seed — a fast solution for post-harvest interventions on large areas.

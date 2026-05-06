@@ -18,7 +18,7 @@ seo:
 publishedAt: "2026-05-06"
 ---
 
-Le **DJI Agras T100** est l'outil de référence pour l'agriculture de précision : capable d'épandre jusqu'à 10 L/min avec des buses anti-dérive, il complète une cartographie multispectrale NDVI pour cibler les interventions au mètre près. Associé à notre certification **certiphyto** et notre habilitation **certiBioci** pour les produits de biocontrôle, nous accompagnons les exploitants agricoles et les vignerons bourguignons vers une agriculture plus efficace et plus respectueuse.
+Le **DJI Agras T100** est l'outil de référence pour l'agriculture de précision : capable d'épandre jusqu'à 10 L/min avec des buses anti-dérive, il complète une cartographie multispectrale NDVI pour cibler les interventions au mètre près. Associé à notre certification **certiphyto** et notre habilitation **certiBiocide** pour les produits de biocontrôle, nous accompagnons les exploitants agricoles et les vignerons bourguignons vers une agriculture plus efficace et plus respectueuse.
 
 ## Pourquoi utiliser le drone en agriculture ?
 
@@ -38,7 +38,7 @@ Le capteur multispectral mesure l'indice de végétation (NDVI) pour détecter l
 Traitement des vignes, grandes cultures et arboriculture avec produits homologués UAV. Notre certification **certiphyto** (opérateur) garantit le respect des doses, des ZNT (zones de non-traitement) et des conditions météorologiques réglementaires. Intervention tôt le matin pour limiter la dérive et protéger les zones sensibles.
 
 ### Biocontrôle et alternatives aux pesticides
-Grâce à notre habilitation **certiBioci**, nous réalisons des épandages de produits de biocontrôle (agents naturels, micro-organismes, phéromones) conformément au plan Ecophyto. Une alternative efficace pour les exploitations en conversion bio ou en agriculture intégrée.
+Grâce à notre habilitation **certiBiocide**, nous réalisons des épandages de produits de biocontrôle (agents naturels, micro-organismes, phéromones) conformément au plan Ecophyto. Une alternative efficace pour les exploitations en conversion bio ou en agriculture intégrée.
 
 ### Comptage et suivi de parcelles
 Comptage de pieds de vigne après gel ou grêle, cartographie d'implantation, suivi de levée sur grandes cultures : le drone produit des données précises en quelques heures là où un inventaire au sol prendrait plusieurs jours.

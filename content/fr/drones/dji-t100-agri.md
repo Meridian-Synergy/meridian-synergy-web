@@ -15,7 +15,7 @@ specs:
 publishedAt: "2026-05-06"
 ---
 
-Le **DJI Agras T100** est le drone agricole grand volume de référence dans l'industrie. Avec sa cuve de 100 litres et son débit d'épandage pouvant atteindre 40 L/min, il est conçu pour les exploitations qui ont besoin de traiter de grandes surfaces en un minimum de passages. Associé à notre certification **certiphyto** et notre habilitation **certiBioci**, c'est l'outil que nous utilisons pour toutes nos missions d'épandage phytosanitaire et de fertilisation en Bourgogne et dans la Nièvre.
+Le **DJI Agras T100** est le drone agricole grand volume de référence dans l'industrie. Avec sa cuve de 100 litres et son débit d'épandage pouvant atteindre 40 L/min, il est conçu pour les exploitations qui ont besoin de traiter de grandes surfaces en un minimum de passages. Associé à notre certification **certiphyto** et notre habilitation **certiBiocide**, c'est l'outil que nous utilisons pour toutes nos missions d'épandage phytosanitaire et de fertilisation en Bourgogne et dans la Nièvre.
 
 ## Pourquoi le T100 pour les grandes exploitations ?
 
@@ -36,7 +36,7 @@ Les vignes en coteaux présentent des pentes et des espaces inter-rangs qui rend
 Pour les exploitations céréalières de la Nièvre, du Cher et de l'Yonne, le T100 intervient sur les traitements fongicides, herbicides et insecticides lorsque les parcelles sont détrempées ou que les cultures sont trop hautes pour un pulvérisateur terrestre.
 
 ### Épandage de biocontrôle
-Grâce à notre habilitation **certiBioci**, nous intervenons avec des produits de biocontrôle (Bacillus thuringiensis, trichogrammes, phéromones de confusion sexuelle) — des solutions compatibles avec les cahiers des charges bio et HVE, épandues avec la même précision que les produits conventionnels.
+Grâce à notre habilitation **certiBiocide**, nous intervenons avec des produits de biocontrôle (Bacillus thuringiensis, trichogrammes, phéromones de confusion sexuelle) — des solutions compatibles avec les cahiers des charges bio et HVE, épandues avec la même précision que les produits conventionnels.
 
 ### Fertilisation et semis
 Le T100 accepte également une trémie pour épandre des granulés d'engrais ou des semences de couverts végétaux — une solution rapide pour les interventions post-récolte sur de grandes surfaces.

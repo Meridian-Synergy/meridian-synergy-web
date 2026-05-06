@@ -18,7 +18,7 @@ seo:
 publishedAt: "2026-05-06"
 ---
 
-The **DJI Agras T100** is the benchmark tool for precision agriculture: capable of spraying up to 10 L/min with anti-drift nozzles, it complements multispectral NDVI mapping to target interventions to the nearest metre. Combined with our **certiphyto** certification and **certiBioci** accreditation for biocontrol products, we support farmers and Burgundy winegrowers towards more efficient and sustainable farming.
+The **DJI Agras T100** is the benchmark tool for precision agriculture: capable of spraying up to 10 L/min with anti-drift nozzles, it complements multispectral NDVI mapping to target interventions to the nearest metre. Combined with our **certiphyto** certification and **certiBiocide** accreditation for biocontrol products, we support farmers and Burgundy winegrowers towards more efficient and sustainable farming.
 
 ## Why use drones in agriculture?
 
@@ -38,7 +38,7 @@ The multispectral sensor measures the vegetation index (NDVI) to detect water st
 Treatment of vines, arable crops and orchards with UAV-approved products. Our **certiphyto** certification (operator) ensures compliance with doses, no-spray zones and regulatory weather conditions.
 
 ### Biocontrol and pesticide alternatives
-Thanks to our **certiBioci** accreditation, we carry out applications of biocontrol products (natural agents, micro-organisms, pheromones) in line with France's Ecophyto plan — an effective alternative for organic or integrated farming operations.
+Thanks to our **certiBiocide** accreditation, we carry out applications of biocontrol products (natural agents, micro-organisms, pheromones) in line with France's Ecophyto plan — an effective alternative for organic or integrated farming operations.
 
 ### Plot surveys and plant counting
 Vine plant counting after frost or hail, planting layout mapping, arable crop emergence monitoring: the drone delivers accurate data in a few hours where a ground-based inventory would take several days.
