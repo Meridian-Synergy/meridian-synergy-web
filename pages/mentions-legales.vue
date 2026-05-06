@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { MsBreadcrumb } from '@meridian-synergy/ui'
+
 const { t } = useI18n()
 const localePath = useLocalePath()
 
@@ -12,11 +14,7 @@ useSeoMeta({
   <div>
     <section class="hero">
       <div class="container">
-        <nav class="breadcrumb" aria-label="Fil d'Ariane">
-          <NuxtLink :to="localePath('/')" class="bc-link">{{ t('breadcrumb.home') }}</NuxtLink>
-          <span class="bc-sep" aria-hidden="true">›</span>
-          <span class="bc-current">{{ t('footer.legal') }}</span>
-        </nav>
+        <MsBreadcrumb :crumbs="[{ label: t('breadcrumb.home'), href: localePath('/') }, { label: t('footer.legal') }]" />
         <h1 class="hero-title">{{ t('legalPage.title') }}</h1>
       </div>
     </section>
@@ -129,11 +127,6 @@ useSeoMeta({
   padding: 56px 0;
   border-bottom: 1px solid var(--ms-color-border);
 }
-.breadcrumb { display: flex; align-items: center; gap: 8px; margin-bottom: 24px; }
-.bc-link { font-size: 13px; color: var(--ms-color-muted); text-decoration: none; transition: color var(--ms-transition-fast); }
-.bc-link:hover { color: var(--ms-color-navy); }
-.bc-sep { color: var(--ms-color-border); font-size: 14px; }
-.bc-current { font-size: 13px; color: var(--ms-color-navy); font-weight: 500; }
 .hero-title {
   font-family: var(--ms-font-display);
   font-size: clamp(1.75rem, 3.5vw, 2.5rem);

@@ -8,3 +8,5 @@ export { default as MsAlert  } from 'meridian-synergy-ui/src/components/MsAlert/
 export { default as MsModal       } from 'meridian-synergy-ui/src/components/MsModal/MsModal.vue'
 export { default as MsSocialLinks } from 'meridian-synergy-ui/src/components/MsSocialLinks/MsSocialLinks.vue'
 export type { SocialLinkItem, SocialNetwork } from 'meridian-synergy-ui/src/components/MsSocialLinks/MsSocialLinks.vue'
+export { default as MsBreadcrumb  } from 'meridian-synergy-ui/src/components/MsBreadcrumb/MsBreadcrumb.vue'
+export type { BreadcrumbItem } from 'meridian-synergy-ui/src/components/MsBreadcrumb/MsBreadcrumb.vue'

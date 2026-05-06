@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { MsButton, MsBadge, MsCard } from '@meridian-synergy/ui'
+import { MsButton, MsBadge, MsCard, MsBreadcrumb } from '@meridian-synergy/ui'
 
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
@@ -57,13 +57,7 @@ const specIcons = {
       <div class="container">
         <div class="hero-inner">
           <div class="hero-text">
-            <nav class="breadcrumb" aria-label="Fil d'Ariane">
-              <NuxtLink :to="localePath('/')" class="bc-link">{{ t('breadcrumb.home') }}</NuxtLink>
-              <span class="bc-sep" aria-hidden="true">›</span>
-              <NuxtLink :to="localePath('/drones')" class="bc-link">{{ t('nav.drones') }}</NuxtLink>
-              <span class="bc-sep" aria-hidden="true">›</span>
-              <span class="bc-current">{{ page.model }}</span>
-            </nav>
+            <MsBreadcrumb :crumbs="[{ label: t('breadcrumb.home'), href: localePath('/') }, { label: t('nav.drones'), href: localePath('/drones') }, { label: page.model }]" />
             <MsBadge :label="page.manufacturer" variant="navy" :dot="false" />
             <h1 class="hero-title">{{ page.title }}</h1>
             <p class="hero-desc">{{ page.description }}</p>
@@ -195,11 +189,6 @@ const specIcons = {
   .hero-text { flex: 1; }
   .hero-visual { width: 380px; flex-shrink: 0; }
 }
-.breadcrumb { display: flex; align-items: center; gap: 8px; margin-bottom: 24px; flex-wrap: wrap; }
-.bc-link { font-size: 13px; color: var(--ms-color-muted); text-decoration: none; transition: color var(--ms-transition-fast); }
-.bc-link:hover { color: var(--ms-color-navy); }
-.bc-sep { color: var(--ms-color-border); font-size: 14px; }
-.bc-current { font-size: 13px; color: var(--ms-color-navy); font-weight: 500; }
 .hero-title {
   font-family: var(--ms-font-display);
   font-size: clamp(1.75rem, 3.5vw, 2.75rem);
