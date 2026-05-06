@@ -17,7 +17,6 @@ if (!page.value) {
 }
 
 const siteUrl = 'https://meridian-synergy.com'
-const imageError = ref(false)
 
 useSeoMeta({
   title: () => page.value?.title ?? '',
@@ -68,13 +67,13 @@ const serviceKeys: Record<string, string> = {
     </section>
 
     <!-- Image banner -->
-    <div v-if="page.image && !imageError" class="image-banner">
+    <div v-if="page.image" class="image-banner">
       <div class="container">
         <img
           :src="page.image"
           :alt="page.title"
           class="banner-img"
-          @error="imageError = true"
+          @error="($event.target as HTMLImageElement).parentElement!.style.display = 'none'"
         />
       </div>
     </div>
