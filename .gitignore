@@ -7,6 +7,7 @@
 node_modules/
 
 # Build
+dist
 dist/
 
 # Env
@@ -14,5 +15,14 @@ dist/
 .env.*
 !.env.example
 
+# Logs
+*.log
+logs/
+
+# Cache
+.cache/
+*.tsbuildinfo
+
 # OS
 .DS_Store
+Thumbs.db
