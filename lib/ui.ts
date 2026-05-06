@@ -5,4 +5,6 @@ export { default as MsBadge  } from 'meridian-synergy-ui/src/components/MsBadge/
 export { default as MsInput  } from 'meridian-synergy-ui/src/components/MsInput/MsInput.vue'
 export { default as MsCard   } from 'meridian-synergy-ui/src/components/MsCard/MsCard.vue'
 export { default as MsAlert  } from 'meridian-synergy-ui/src/components/MsAlert/MsAlert.vue'
-export { default as MsModal  } from 'meridian-synergy-ui/src/components/MsModal/MsModal.vue'
+export { default as MsModal       } from 'meridian-synergy-ui/src/components/MsModal/MsModal.vue'
+export { default as MsSocialLinks } from 'meridian-synergy-ui/src/components/MsSocialLinks/MsSocialLinks.vue'
+export type { SocialLinkItem, SocialNetwork } from 'meridian-synergy-ui/src/components/MsSocialLinks/MsSocialLinks.vue'
