@@ -50,7 +50,7 @@ const { data: drones } = await useAsyncData(`drones-${locale.value}`, async () =
             <MsCard>
               <div class="drone-body">
                 <div class="drone-visual">
-                  <svg viewBox="0 0 80 50" fill="none" aria-hidden="true">
+                  <svg class="drone-svg" viewBox="0 0 80 50" fill="none" aria-hidden="true">
                     <rect x="35" y="20" width="10" height="10" rx="2" fill="var(--ms-color-navy)" opacity="0.15"/>
                     <circle cx="40" cy="25" r="4" stroke="var(--ms-color-navy)" stroke-width="1.5" opacity="0.4"/>
                     <line x1="40" y1="25" x2="10" y2="10" stroke="var(--ms-color-navy)" stroke-width="1.5" opacity="0.3"/>
@@ -62,6 +62,14 @@ const { data: drones } = await useAsyncData(`drones-${locale.value}`, async () =
                     <circle cx="10" cy="40" r="5" stroke="var(--ms-color-sky)" stroke-width="1.5" opacity="0.7"/>
                     <circle cx="70" cy="40" r="5" stroke="var(--ms-color-sky)" stroke-width="1.5" opacity="0.7"/>
                   </svg>
+                  <img
+                    v-if="drone.image"
+                    :src="drone.image"
+                    :alt="drone.model"
+                    class="drone-img"
+                    @load="($event.target as HTMLImageElement).style.opacity = '1'"
+                    @error="($event.target as HTMLImageElement).style.display = 'none'"
+                  />
                 </div>
 
                 <div class="drone-meta">
@@ -158,14 +166,27 @@ const { data: drones } = await useAsyncData(`drones-${locale.value}`, async () =
 .drone-body { display: flex; flex-direction: column; gap: 16px; }
 
 .drone-visual {
+  position: relative;
   background: var(--ms-color-bg);
   border-radius: var(--ms-radius-md);
   padding: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  min-height: 160px;
 }
-.drone-visual svg { width: 100%; max-width: 200px; height: auto; }
+.drone-svg { width: 100%; max-width: 200px; height: auto; }
+.drone-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--ms-radius-md);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
 
 .drone-meta { display: flex; flex-direction: column; gap: 8px; }
 .drone-name {
