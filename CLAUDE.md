@@ -122,22 +122,10 @@ Le contenu éditorial est dans `content/fr/` et `content/en/`.
 
 ---
 
-## Pages à créer (backlog priorisé)
+## Pages — état actuel
 
-| Priorité | Type | Slug FR | Slug EN |
-|---|---|---|---|
-| 1 | Page | Home `/` | `/en/` |
-| 2 | Hub | `/services/` | `/en/services/` |
-| 3 | Service | `audit-thermique` | `thermal-inspection` |
-| 4 | Service | `agriculture-viticulture` | `agriculture-viticulture` |
-| 5 | Service | `video-cinema` | `video-cinema` |
-| 6 | Service | `securite-surveillance` | `security-surveillance` |
-| 7 | Service | `topographie-cartographie` | `topography-mapping` |
-| 8 | Service | `inspection-infrastructure` | `infrastructure-inspection` |
-| 9 | Hub | `/drones/` | `/en/drones/` |
-| 10 | Drone | `dji-t100-agri` | `dji-t100-agri` |
-| 11 | Drone | `dji-mavic-3-enterprise` | `dji-mavic-3-enterprise` |
-| 12 | Drone | `dji-matrice-350` | `dji-matrice-350` |
-| 13 | Page | `a-propos` | `about` |
-| 14 | Page | `contact` | `contact` |
-| 15 | Page | `mentions-legales` | `legal` |
+Toutes les pages sont créées. Slugs de contenu existants :
+
+**Services** : `audit-thermique`, `agriculture-viticulture`, `video-cinema`, `securite-surveillance`, `topographie-cartographie`, `inspection-infrastructure` (+ slugs EN correspondants)
+
+**Drones** : `dji-t100-agri`, `dji-matrice-4td`, `dji-avata-360` (FR = EN)
