@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { MsButton, MsBadge, MsCard, MsBreadcrumb } from '@meridian-synergy/ui'
+import { MsBadge, MsCard, MsCtaBanner } from '@meridian-synergy/ui'
 
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
@@ -160,20 +160,12 @@ const specIcons = {
     </section>
 
     <!-- CTA -->
-    <section class="cta-section">
-      <div class="container cta-inner">
-        <div class="cta-text">
-          <h2 class="cta-title">{{ t('dronePage.quoteTitle') }}</h2>
-          <p class="cta-desc">{{ t('dronePage.quoteDesc') }}</p>
-        </div>
-        <MsButton
-          :label="t('dronePage.quoteBtn')"
-          variant="cta"
-          size="lg"
-          @click="navigateTo(localePath('/contact'))"
-        />
-      </div>
-    </section>
+    <MsCtaBanner
+      :title="t('dronePage.quoteTitle')"
+      :desc="t('dronePage.quoteDesc')"
+      :label="t('dronePage.quoteBtn')"
+      :href="localePath('/contact')"
+    />
 
   </div>
 </template>
@@ -272,10 +264,4 @@ const specIcons = {
 .sb-item:hover { background: var(--ms-color-bg); color: var(--ms-color-sky); }
 .sb-item svg { color: var(--ms-color-sky); flex-shrink: 0; }
 
-/* ── CTA ── */
-.cta-section { background: var(--ms-color-navy); padding: 64px 0; }
-.cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
-.cta-text { flex: 1; min-width: 260px; }
-.cta-title { font-family: var(--ms-font-display); font-size: clamp(1.375rem, 2.5vw, 1.875rem); font-weight: 800; color: var(--ms-color-white); letter-spacing: -0.02em; margin: 0 0 10px; }
-.cta-desc { font-size: 1rem; color: var(--ms-color-muted); margin: 0; opacity: 0.8; }
 </style>

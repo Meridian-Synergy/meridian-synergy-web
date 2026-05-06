@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { MsButton, MsPageHero } from '@meridian-synergy/ui'
+import { MsPageHero, MsCtaBanner } from '@meridian-synergy/ui'
 
 const { t } = useI18n()
 const localePath = useLocalePath()
@@ -27,20 +27,12 @@ useSeoMeta({
     </section>
 
     <!-- Contact CTA -->
-    <section class="cta-section">
-      <div class="container cta-inner">
-        <div class="cta-text">
-          <h2 class="cta-title">{{ t('servicesPage.contact.title') }}</h2>
-          <p class="cta-desc">{{ t('servicesPage.contact.desc') }}</p>
-        </div>
-        <MsButton
-          :label="t('servicesPage.contact.btn')"
-          variant="cta"
-          size="lg"
-          @click="navigateTo(localePath('/contact'))"
-        />
-      </div>
-    </section>
+    <MsCtaBanner
+      :title="t('servicesPage.contact.title')"
+      :desc="t('servicesPage.contact.desc')"
+      :label="t('servicesPage.contact.btn')"
+      :href="localePath('/contact')"
+    />
   </div>
 </template>
 
@@ -51,31 +43,4 @@ useSeoMeta({
   background: var(--ms-color-white);
 }
 
-/* ── CTA ── */
-.cta-section {
-  background: var(--ms-color-navy);
-  padding: 64px 0;
-}
-.cta-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 32px;
-  flex-wrap: wrap;
-}
-.cta-text { flex: 1; min-width: 260px; }
-.cta-title {
-  font-family: var(--ms-font-display);
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  font-weight: 800;
-  color: var(--ms-color-white);
-  letter-spacing: -0.02em;
-  margin: 0 0 10px;
-}
-.cta-desc {
-  font-size: 1rem;
-  color: var(--ms-color-muted);
-  margin: 0;
-  opacity: 0.8;
-}
 </style>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { MsButton, MsCard, MsPageHero } from '@meridian-synergy/ui'
+import { MsCard, MsPageHero, MsCtaBanner } from '@meridian-synergy/ui'
 
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
@@ -92,20 +92,12 @@ const { data: drones } = await useAsyncData(`drones-${locale.value}`, async () =
     </section>
 
     <!-- CTA -->
-    <section class="cta-section">
-      <div class="container cta-inner">
-        <div class="cta-text">
-          <h2 class="cta-title">{{ t('dronesPage.contact.title') }}</h2>
-          <p class="cta-desc">{{ t('dronesPage.contact.desc') }}</p>
-        </div>
-        <MsButton
-          :label="t('dronesPage.contact.btn')"
-          variant="cta"
-          size="lg"
-          @click="navigateTo(localePath('/contact'))"
-        />
-      </div>
-    </section>
+    <MsCtaBanner
+      :title="t('dronesPage.contact.title')"
+      :desc="t('dronesPage.contact.desc')"
+      :label="t('dronesPage.contact.btn')"
+      :href="localePath('/contact')"
+    />
   </div>
 </template>
 
@@ -175,10 +167,4 @@ const { data: drones } = await useAsyncData(`drones-${locale.value}`, async () =
 
 .drone-more { font-size: 13px; font-weight: 600; color: var(--ms-color-sky); }
 
-/* ── CTA ── */
-.cta-section { background: var(--ms-color-navy); padding: 64px 0; }
-.cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
-.cta-text { flex: 1; min-width: 260px; }
-.cta-title { font-family: var(--ms-font-display); font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; color: var(--ms-color-white); letter-spacing: -0.02em; margin: 0 0 10px; }
-.cta-desc { font-size: 1rem; color: var(--ms-color-muted); margin: 0; opacity: 0.8; }
 </style>
