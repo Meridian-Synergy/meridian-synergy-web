@@ -34,7 +34,7 @@ const { t } = useI18n()
           </li>
         </ul>
 
-        <MsButton :label="t('saas.cta')" variant="cta" size="lg" />
+        <MsButton :label="t('saas.cta')" variant="cta" size="lg" @click="navigateTo('mailto:contact@meridian-synergy.com?subject=Notification%20plateforme%20t%C3%A9l%C3%A9pilote')" />
       </div>
 
       <!-- Abstract mockup visual -->
