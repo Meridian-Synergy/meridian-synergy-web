@@ -8,18 +8,18 @@
     "cta": "Découvrir"
   },
   "hero": {
-    "tag": "Plateforme SaaS pour télépilotes",
-    "titleLine1": "La gestion de missions drone,",
-    "titleLine2": "réinventée.",
-    "desc": "Meridian Synergy unifie la planification des vols, la conformité réglementaire et les rapports d'intervention pour les télépilotes professionnels.",
-    "ctaPrimary": "Voir nos services",
+    "tag": "Opérateurs drone certifiés",
+    "titleLine1": "Expertise drone",
+    "titleLine2": "pour chaque mission.",
+    "desc": "Télépilotes certifiés DGAC, nous intervenons pour vos inspections thermiques, missions agricoles, surveillances de sites et prises de vue aériennes — avec les équipements les plus performants.",
+    "ctaPrimary": "Nos services",
     "ctaSecondary": "En savoir plus",
-    "dashTitle": "Tableau de bord",
-    "dashLive": "En direct",
-    "dashMissions": "Missions",
-    "dashCompliance": "Conformité DGAC",
-    "dashDrones": "Drones actifs",
-    "dashBadge": "Bientôt disponible"
+    "proof1Title": "Certifié DGAC",
+    "proof1Desc": "Opérateur homologué, assurance RC professionnelle",
+    "proof2Title": "6 domaines d'expertise",
+    "proof2Desc": "Thermique, agriculture, vidéo, sécurité, topographie, inspection",
+    "proof3Title": "Centre-Val de Loire",
+    "proof3Desc": "Basé à Cosne-sur-Loire · Interventions sur tout le territoire"
   },
   "services": {
     "sectionTitle": "Nos domaines d'expertise",

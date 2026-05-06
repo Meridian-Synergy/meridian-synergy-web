@@ -8,18 +8,18 @@
     "cta": "Discover"
   },
   "hero": {
-    "tag": "SaaS Platform for Professional Drone Pilots",
-    "titleLine1": "Drone mission management,",
-    "titleLine2": "reinvented.",
-    "desc": "Meridian Synergy unifies flight planning, regulatory compliance, and intervention reports for professional drone pilots.",
-    "ctaPrimary": "See our services",
+    "tag": "Certified drone operators",
+    "titleLine1": "Drone expertise",
+    "titleLine2": "for every mission.",
+    "desc": "DGAC-certified drone pilots, we handle your thermal inspections, agricultural surveys, site surveillance and aerial video — with the latest professional equipment.",
+    "ctaPrimary": "Our services",
     "ctaSecondary": "Learn more",
-    "dashTitle": "Dashboard",
-    "dashLive": "Live",
-    "dashMissions": "Missions",
-    "dashCompliance": "DGAC Compliance",
-    "dashDrones": "Active drones",
-    "dashBadge": "Coming soon"
+    "proof1Title": "DGAC Certified",
+    "proof1Desc": "Licensed operator, professional liability insurance",
+    "proof2Title": "6 areas of expertise",
+    "proof2Desc": "Thermal, agriculture, video, security, topography, inspection",
+    "proof3Title": "Loire Valley region",
+    "proof3Desc": "Based in Cosne-sur-Loire · Nationwide operations"
   },
   "services": {
     "sectionTitle": "Our areas of expertise",

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { MsButton, MsBadge, MsCard } from '@meridian-synergy/ui'
+import { MsButton, MsBadge } from '@meridian-synergy/ui'
 
 const { t } = useI18n()
 const localePath = useLocalePath()
@@ -35,42 +35,57 @@ const localePath = useLocalePath()
         </div>
       </div>
 
-      <!-- Dashboard mockup -->
+      <!-- Proof points -->
       <div class="hero-visual" aria-hidden="true">
-        <MsCard :title="t('hero.dashTitle')" :dark="true">
-          <template #badge>
-            <MsBadge :label="t('hero.dashLive')" variant="active" />
-          </template>
-
-          <div class="dash-stats">
-            <div class="dash-stat">
-              <span class="dash-val">24</span>
-              <span class="dash-label">{{ t('hero.dashMissions') }}</span>
+        <div class="proof-card">
+          <!-- DGAC -->
+          <div class="proof-item">
+            <div class="proof-icon proof-icon--navy">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 2L4 6v6c0 5.25 3.5 9.74 8 11 4.5-1.26 8-5.75 8-11V6L12 2z" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/>
+                <path d="M8.5 12l2.5 2.5 5-5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
             </div>
-            <div class="dash-stat">
-              <span class="dash-val">98%</span>
-              <span class="dash-label">{{ t('hero.dashCompliance') }}</span>
-            </div>
-            <div class="dash-stat">
-              <span class="dash-val">3</span>
-              <span class="dash-label">{{ t('hero.dashDrones') }}</span>
+            <div class="proof-text">
+              <strong>{{ t('hero.proof1Title') }}</strong>
+              <span>{{ t('hero.proof1Desc') }}</span>
             </div>
           </div>
 
-          <div class="dash-chart">
-            <div class="dash-bar" style="height:42%"></div>
-            <div class="dash-bar" style="height:65%"></div>
-            <div class="dash-bar" style="height:52%"></div>
-            <div class="dash-bar" style="height:78%"></div>
-            <div class="dash-bar" style="height:68%"></div>
-            <div class="dash-bar" style="height:88%"></div>
-            <div class="dash-bar dash-bar--hi" style="height:74%"></div>
+          <div class="proof-divider" />
+
+          <!-- 6 domaines -->
+          <div class="proof-item">
+            <div class="proof-icon proof-icon--sky">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect x="3" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.75"/>
+                <rect x="14" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.75"/>
+                <rect x="3" y="14" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.75"/>
+                <rect x="14" y="14" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.75"/>
+              </svg>
+            </div>
+            <div class="proof-text">
+              <strong>{{ t('hero.proof2Title') }}</strong>
+              <span>{{ t('hero.proof2Desc') }}</span>
+            </div>
           </div>
 
-          <template #footer>
-            <MsBadge :label="t('hero.dashBadge')" variant="navy" :dot="false" />
-          </template>
-        </MsCard>
+          <div class="proof-divider" />
+
+          <!-- Géographie -->
+          <div class="proof-item">
+            <div class="proof-icon proof-icon--gold">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 2C8.69 2 6 4.69 6 8c0 4.5 6 13 6 13s6-8.5 6-13c0-3.31-2.69-6-6-6z" stroke="currentColor" stroke-width="1.75"/>
+                <circle cx="12" cy="8" r="2" stroke="currentColor" stroke-width="1.75"/>
+              </svg>
+            </div>
+            <div class="proof-text">
+              <strong>{{ t('hero.proof3Title') }}</strong>
+              <span>{{ t('hero.proof3Desc') }}</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -140,60 +155,74 @@ const localePath = useLocalePath()
   gap: 12px;
 }
 
-/* ── Dashboard card ── */
+/* ── Proof card ── */
 .hero-visual {
   display: flex;
   justify-content: center;
 }
-.hero-visual :deep(.ms-card) {
+
+.proof-card {
   width: 100%;
-  max-width: 380px;
+  max-width: 400px;
+  background: var(--ms-color-white);
+  border: 1px solid var(--ms-color-border);
+  border-radius: var(--ms-radius-xl);
+  padding: 8px 0;
+  box-shadow: var(--ms-shadow-md);
 }
 
-.dash-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.proof-item {
+  display: flex;
+  align-items: flex-start;
   gap: 16px;
-  padding: 8px 0 20px;
+  padding: 20px 24px;
 }
-.dash-stat {
+
+.proof-divider {
+  height: 1px;
+  background: var(--ms-color-border);
+  margin: 0 24px;
+}
+
+.proof-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--ms-radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.proof-icon svg { width: 22px; height: 22px; }
+
+.proof-icon--navy {
+  background: color-mix(in srgb, var(--ms-color-navy) 10%, transparent);
+  color: var(--ms-color-navy);
+}
+.proof-icon--sky {
+  background: color-mix(in srgb, var(--ms-color-sky) 12%, transparent);
+  color: var(--ms-color-sky);
+}
+.proof-icon--gold {
+  background: color-mix(in srgb, var(--ms-color-gold) 12%, transparent);
+  color: var(--ms-color-gold);
+}
+
+.proof-text {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 4px;
-  text-align: center;
 }
-.dash-val {
+.proof-text strong {
   font-family: var(--ms-font-display);
-  font-size: 2rem;
-  font-weight: 800;
-  color: var(--ms-color-white);
-  letter-spacing: -0.04em;
-  line-height: 1;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--ms-color-navy);
+  line-height: 1.2;
 }
-.dash-label {
-  font-size: 11px;
-  color: rgba(255,255,255,0.45);
-  font-family: var(--ms-font-condensed);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  line-height: 1.3;
+.proof-text span {
+  font-size: 0.8125rem;
+  color: var(--ms-color-muted);
+  line-height: 1.5;
 }
-
-.dash-chart {
-  display: flex;
-  align-items: flex-end;
-  gap: 6px;
-  height: 72px;
-  padding: 0 0 4px;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-  margin-bottom: 4px;
-}
-.dash-bar {
-  flex: 1;
-  border-radius: 3px 3px 0 0;
-  background: rgba(0, 170, 239, 0.25);
-  transition: background var(--ms-transition-base);
-}
-.dash-bar--hi { background: var(--ms-color-sky); }
 </style>
