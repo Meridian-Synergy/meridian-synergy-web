@@ -34,7 +34,9 @@ const { t } = useI18n()
           </li>
         </ul>
 
-        <MsButton :label="t('saas.cta')" variant="cta" size="lg" @click="navigateTo('mailto:contact@meridian-synergy.com?subject=Notification%20plateforme%20t%C3%A9l%C3%A9pilote')" />
+        <a href="mailto:contact@meridian-synergy.com?subject=Notification%20plateforme%20t%C3%A9l%C3%A9pilote" class="saas-mailto">
+          <MsButton :label="t('saas.cta')" variant="cta" size="lg" tag="span" />
+        </a>
       </div>
 
       <!-- Abstract mockup visual -->
@@ -107,6 +109,7 @@ const { t } = useI18n()
   flex-direction: column;
   gap: 24px;
 }
+.saas-mailto { text-decoration: none; display: inline-block; }
 
 .saas-title {
   font-family: var(--ms-font-display);
