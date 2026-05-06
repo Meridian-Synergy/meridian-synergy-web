@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { MsButton, MsBadge, MsBreadcrumb } from '@meridian-synergy/ui'
+import { MsButton, MsBadge, MsPageHero } from '@meridian-synergy/ui'
 
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
@@ -37,15 +37,12 @@ const values = [
 
 <template>
   <div>
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container">
-        <MsBreadcrumb :crumbs="[{ label: t('breadcrumb.home'), href: localePath('/') }, { label: t('nav.about') }]" />
-        <MsBadge :label="t('about.hero.badge')" variant="sky" />
-        <h1 class="hero-title">{{ t('about.hero.title') }}</h1>
-        <p class="hero-subtitle">{{ t('about.hero.subtitle') }}</p>
-      </div>
-    </section>
+    <MsPageHero
+      :crumbs="[{ label: t('breadcrumb.home'), href: localePath('/') }, { label: t('nav.about') }]"
+      :badge="t('about.hero.badge')"
+      :title="t('about.hero.title')"
+      :desc="t('about.hero.subtitle')"
+    />
 
     <!-- Story -->
     <section class="story-section">
@@ -179,28 +176,6 @@ const values = [
 </template>
 
 <style scoped>
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-/* ── Hero ── */
-.hero {
-  background: var(--ms-color-bg);
-  padding: 56px 0;
-  border-bottom: 1px solid var(--ms-color-border);
-}
-.hero-title {
-  font-family: var(--ms-font-display);
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 800;
-  color: var(--ms-color-navy);
-  letter-spacing: -0.03em;
-  margin: 16px 0 8px;
-}
-.hero-subtitle { font-size: 1.0625rem; color: var(--ms-color-muted); max-width: 560px; line-height: 1.7; margin: 0; }
-
 /* ── Story ── */
 .story-section { padding: 72px 0; background: var(--ms-color-white); }
 .story-grid {

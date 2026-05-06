@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { MsBadge, MsBreadcrumb } from '@meridian-synergy/ui'
+import { MsPageHero } from '@meridian-synergy/ui'
 
 const { t } = useI18n()
 const localePath = useLocalePath()
@@ -39,15 +39,12 @@ const socials = [
 
 <template>
   <div>
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container">
-        <MsBreadcrumb :crumbs="[{ label: t('breadcrumb.home'), href: localePath('/') }, { label: t('nav.contact') }]" />
-        <MsBadge :label="t('contactPage.hero.badge')" variant="sky" />
-        <h1 class="hero-title">{{ t('contactPage.hero.title') }}</h1>
-        <p class="hero-subtitle">{{ t('contactPage.hero.subtitle') }}</p>
-      </div>
-    </section>
+    <MsPageHero
+      :crumbs="[{ label: t('breadcrumb.home'), href: localePath('/') }, { label: t('nav.contact') }]"
+      :badge="t('contactPage.hero.badge')"
+      :title="t('contactPage.hero.title')"
+      :desc="t('contactPage.hero.subtitle')"
+    />
 
     <!-- Direct contact -->
     <section class="contact-section">
@@ -137,28 +134,6 @@ const socials = [
 </template>
 
 <style scoped>
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-/* ── Hero ── */
-.hero {
-  background: var(--ms-color-bg);
-  padding: 56px 0;
-  border-bottom: 1px solid var(--ms-color-border);
-}
-.hero-title {
-  font-family: var(--ms-font-display);
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 800;
-  color: var(--ms-color-navy);
-  letter-spacing: -0.03em;
-  margin: 16px 0 8px;
-}
-.hero-subtitle { font-size: 1.0625rem; color: var(--ms-color-muted); max-width: 520px; line-height: 1.7; margin: 0; }
-
 /* ── Section title ── */
 .section-title {
   font-family: var(--ms-font-display);

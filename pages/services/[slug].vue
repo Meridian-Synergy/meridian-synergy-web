@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { MsButton, MsBadge, MsCard, MsBreadcrumb } from '@meridian-synergy/ui'
+import { MsButton, MsCard, MsPageHero } from '@meridian-synergy/ui'
 
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
@@ -50,15 +50,13 @@ const serviceKeys: Record<string, string> = {
 <template>
   <div v-if="page">
 
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container">
-        <MsBreadcrumb :crumbs="[{ label: t('breadcrumb.home'), href: localePath('/') }, { label: t('nav.services'), href: localePath('/services') }, { label: page.title }]" />
-        <MsBadge label="Service" variant="sky" />
-        <h1 class="hero-title">{{ page.title }}</h1>
-        <p class="hero-desc">{{ page.description }}</p>
-      </div>
-    </section>
+    <MsPageHero
+      :crumbs="[{ label: t('breadcrumb.home'), href: localePath('/') }, { label: t('nav.services'), href: localePath('/services') }, { label: page.title }]"
+      badge="Service"
+      :title="page.title"
+      :desc="page.description"
+      size="md"
+    />
 
     <!-- Image banner -->
     <div v-if="page.image" class="image-banner">
@@ -141,36 +139,6 @@ const serviceKeys: Record<string, string> = {
 </template>
 
 <style scoped>
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-/* ── Hero ── */
-.hero {
-  background: var(--ms-color-bg);
-  padding: 56px 0;
-  border-bottom: 1px solid var(--ms-color-border);
-}
-
-
-.hero-title {
-  font-family: var(--ms-font-display);
-  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
-  font-weight: 800;
-  color: var(--ms-color-navy);
-  letter-spacing: -0.03em;
-  margin: 16px 0;
-}
-.hero-desc {
-  font-size: 1.0625rem;
-  color: var(--ms-color-muted);
-  max-width: 600px;
-  line-height: 1.7;
-  margin: 0;
-}
-
 /* ── Image banner ── */
 .image-banner { background: var(--ms-color-white); padding: 0 0 0; }
 .banner-img {

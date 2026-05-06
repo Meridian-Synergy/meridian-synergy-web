@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { MsButton, MsBadge, MsCard, MsBreadcrumb } from '@meridian-synergy/ui'
+import { MsButton, MsCard, MsPageHero } from '@meridian-synergy/ui'
 
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
@@ -23,15 +23,12 @@ const { data: drones } = await useAsyncData(`drones-${locale.value}`, async () =
 
 <template>
   <div>
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container">
-        <MsBreadcrumb :crumbs="[{ label: t('breadcrumb.home'), href: localePath('/') }, { label: t('nav.drones') }]" />
-        <MsBadge :label="t('dronesPage.hero.badge')" variant="sky" />
-        <h1 class="hero-title">{{ t('dronesPage.hero.title') }}</h1>
-        <p class="hero-desc">{{ t('dronesPage.hero.desc') }}</p>
-      </div>
-    </section>
+    <MsPageHero
+      :crumbs="[{ label: t('breadcrumb.home'), href: localePath('/') }, { label: t('nav.drones') }]"
+      :badge="t('dronesPage.hero.badge')"
+      :title="t('dronesPage.hero.title')"
+      :desc="t('dronesPage.hero.desc')"
+    />
 
     <!-- Drones grid -->
     <section class="grid-section">
@@ -113,28 +110,6 @@ const { data: drones } = await useAsyncData(`drones-${locale.value}`, async () =
 </template>
 
 <style scoped>
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-/* ── Hero ── */
-.hero {
-  background: var(--ms-color-bg);
-  padding: 56px 0;
-  border-bottom: 1px solid var(--ms-color-border);
-}
-.hero-title {
-  font-family: var(--ms-font-display);
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 800;
-  color: var(--ms-color-navy);
-  letter-spacing: -0.03em;
-  margin: 16px 0;
-}
-.hero-desc { font-size: 1.0625rem; color: var(--ms-color-muted); max-width: 520px; line-height: 1.7; margin: 0; }
-
 /* ── Grid ── */
 .grid-section { padding: 64px 0; background: var(--ms-color-white); }
 .drones-grid {

@@ -10,3 +10,4 @@ export { default as MsSocialLinks } from 'meridian-synergy-ui/src/components/MsS
 export type { SocialLinkItem, SocialNetwork } from 'meridian-synergy-ui/src/components/MsSocialLinks/MsSocialLinks.vue'
 export { default as MsBreadcrumb  } from 'meridian-synergy-ui/src/components/MsBreadcrumb/MsBreadcrumb.vue'
 export type { BreadcrumbItem } from 'meridian-synergy-ui/src/components/MsBreadcrumb/MsBreadcrumb.vue'
+export { default as MsPageHero   } from 'meridian-synergy-ui/src/components/MsPageHero/MsPageHero.vue'

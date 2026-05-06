@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { MsBreadcrumb } from '@meridian-synergy/ui'
+import { MsPageHero } from '@meridian-synergy/ui'
 
 const { t } = useI18n()
 const localePath = useLocalePath()
@@ -12,12 +12,11 @@ useSeoMeta({
 
 <template>
   <div>
-    <section class="hero">
-      <div class="container">
-        <MsBreadcrumb :crumbs="[{ label: t('breadcrumb.home'), href: localePath('/') }, { label: t('footer.legal') }]" />
-        <h1 class="hero-title">{{ t('legalPage.title') }}</h1>
-      </div>
-    </section>
+    <MsPageHero
+      :crumbs="[{ label: t('breadcrumb.home'), href: localePath('/') }, { label: t('footer.legal') }]"
+      :title="t('legalPage.title')"
+      size="md"
+    />
 
     <section class="content-section">
       <div class="container">
@@ -115,27 +114,6 @@ useSeoMeta({
 </template>
 
 <style scoped>
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-/* ── Hero ── */
-.hero {
-  background: var(--ms-color-bg);
-  padding: 56px 0;
-  border-bottom: 1px solid var(--ms-color-border);
-}
-.hero-title {
-  font-family: var(--ms-font-display);
-  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
-  font-weight: 800;
-  color: var(--ms-color-navy);
-  letter-spacing: -0.03em;
-  margin: 16px 0 0;
-}
-
 /* ── Content ── */
 .content-section { padding: 64px 0 80px; background: var(--ms-color-white); }
 
