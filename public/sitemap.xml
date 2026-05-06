@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Home -->
+  <url>
+    <loc>https://meridian-synergy.com/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://meridian-synergy.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Services hub -->
+  <url>
+    <loc>https://meridian-synergy.com/services/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/services/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/services/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://meridian-synergy.com/en/services/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/services/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/services/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Service pages -->
+  <url>
+    <loc>https://meridian-synergy.com/services/audit-thermique</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/services/audit-thermique"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/services/thermal-inspection"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://meridian-synergy.com/en/services/thermal-inspection</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/services/audit-thermique"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/services/thermal-inspection"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://meridian-synergy.com/services/agriculture-viticulture</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/services/agriculture-viticulture"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/services/agriculture-viticulture"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://meridian-synergy.com/en/services/agriculture-viticulture</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/services/agriculture-viticulture"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/services/agriculture-viticulture"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://meridian-synergy.com/services/video-cinema</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/services/video-cinema"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/services/video-cinema"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://meridian-synergy.com/en/services/video-cinema</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/services/video-cinema"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/services/video-cinema"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://meridian-synergy.com/services/securite-surveillance</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/services/securite-surveillance"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/services/security-surveillance"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://meridian-synergy.com/en/services/security-surveillance</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/services/securite-surveillance"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/services/security-surveillance"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://meridian-synergy.com/services/topographie-cartographie</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/services/topographie-cartographie"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/services/topography-mapping"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://meridian-synergy.com/en/services/topography-mapping</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/services/topographie-cartographie"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/services/topography-mapping"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://meridian-synergy.com/services/inspection-infrastructure</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/services/inspection-infrastructure"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/services/infrastructure-inspection"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://meridian-synergy.com/en/services/infrastructure-inspection</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/services/inspection-infrastructure"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/services/infrastructure-inspection"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Drones hub -->
+  <url>
+    <loc>https://meridian-synergy.com/drones/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/drones/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/drones/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://meridian-synergy.com/en/drones/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/drones/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/drones/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Drone pages -->
+  <url>
+    <loc>https://meridian-synergy.com/drones/dji-matrice-4td</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/drones/dji-matrice-4td"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/drones/dji-matrice-4td"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meridian-synergy.com/en/drones/dji-matrice-4td</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/drones/dji-matrice-4td"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/drones/dji-matrice-4td"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://meridian-synergy.com/drones/dji-t100-agri</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/drones/dji-t100-agri"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/drones/dji-t100-agri"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meridian-synergy.com/en/drones/dji-t100-agri</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/drones/dji-t100-agri"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/drones/dji-t100-agri"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Static pages -->
+  <url>
+    <loc>https://meridian-synergy.com/a-propos</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/a-propos"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/a-propos"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://meridian-synergy.com/en/a-propos</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/a-propos"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/a-propos"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://meridian-synergy.com/contact</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/contact"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://meridian-synergy.com/en/contact</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/contact"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>
