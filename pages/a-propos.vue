@@ -67,8 +67,8 @@ const values = [
               <ellipse cx="100" cy="100" rx="34" ry="88" stroke="var(--ms-color-navy)" stroke-width="3" transform="rotate(60,100,100)"/>
               <ellipse cx="100" cy="100" rx="34" ry="88" stroke="var(--ms-color-navy)" stroke-width="3" transform="rotate(120,100,100)"/>
               <ellipse cx="100" cy="100" rx="88" ry="17" stroke="var(--ms-color-navy)" stroke-width="3"/>
-              <line x1="100" y1="12" x2="100" y2="188" stroke="var(--ms-color-gold)" stroke-width="5"/>
             </g>
+            <line x1="100" y1="12" x2="100" y2="188" stroke="var(--ms-color-gold)" stroke-width="3" clip-path="url(#ap-logo-clip)" opacity="0.85"/>
             <circle cx="100" cy="100" r="88" stroke="var(--ms-color-navy)" stroke-width="3" opacity="0.12"/>
             <circle cx="100" cy="100" r="6" fill="var(--ms-color-sky)" opacity="0.6"/>
             <circle cx="100" cy="100" r="3" fill="var(--ms-color-sky)"/>
