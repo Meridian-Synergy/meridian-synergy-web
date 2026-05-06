@@ -1,5 +1,6 @@
 // Bridge to meridian-synergy-ui source until the package is published on GitHub Packages as @meridian-synergy/ui.
 // When published: remove this file, delete the alias in nuxt.config.ts, and run: pnpm add @meridian-synergy/ui
+export { default as MsLogo   } from 'meridian-synergy-ui/src/components/MsLogo/MsLogo.vue'
 export { default as MsButton } from 'meridian-synergy-ui/src/components/MsButton/MsButton.vue'
 export { default as MsBadge  } from 'meridian-synergy-ui/src/components/MsBadge/MsBadge.vue'
 export { default as MsInput  } from 'meridian-synergy-ui/src/components/MsInput/MsInput.vue'

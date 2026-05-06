@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { MsButton } from '@meridian-synergy/ui'
+import { MsButton, MsLogo } from '@meridian-synergy/ui'
 
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
@@ -26,17 +26,7 @@ watch(() => route.path, () => { isOpen.value = false })
   <header class="header">
     <div class="header-inner">
       <NuxtLink :to="localePath('/')" class="logo" :aria-label="$t('nav.home', 'Meridian Synergy — Accueil')">
-        <svg width="28" height="28" viewBox="0 0 82 82" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-          <defs><clipPath id="ms-logo-h"><circle cx="41" cy="41" r="36.5"/></clipPath></defs>
-          <g clip-path="url(#ms-logo-h)">
-            <ellipse cx="41" cy="41" rx="14" ry="36.5" stroke="var(--ms-color-navy)" stroke-width="2.0" transform="rotate(0,41,41)"/>
-            <ellipse cx="41" cy="41" rx="14" ry="36.5" stroke="var(--ms-color-navy)" stroke-width="2.0" transform="rotate(60,41,41)"/>
-            <ellipse cx="41" cy="41" rx="14" ry="36.5" stroke="var(--ms-color-navy)" stroke-width="2.0" transform="rotate(120,41,41)"/>
-            <ellipse cx="41" cy="41" rx="36.5" ry="7" stroke="var(--ms-color-navy)" stroke-width="2.0"/>
-            <line x1="41" y1="4.5" x2="41" y2="77.5" stroke="var(--ms-color-gold)" stroke-width="2.8"/>
-          </g>
-          <circle cx="41" cy="41" r="36.5" stroke="var(--ms-color-navy)" stroke-width="2.7"/>
-        </svg>
+        <MsLogo variant="icon" color="navy" :width="28" />
         <span class="logo-name">Meridian Synergy</span>
       </NuxtLink>
 

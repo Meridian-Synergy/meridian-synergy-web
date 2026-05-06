@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { MsSocialLinks } from '@meridian-synergy/ui'
+import { MsSocialLinks, MsLogo } from '@meridian-synergy/ui'
 import type { SocialLinkItem } from '@meridian-synergy/ui'
 
 const { t } = useI18n()
@@ -22,17 +22,7 @@ const socialLinks: SocialLinkItem[] = [
       <div class="footer-main">
         <div class="footer-brand">
           <NuxtLink :to="localePath('/')" class="footer-logo" aria-label="Meridian Synergy">
-            <svg width="26" height="26" viewBox="0 0 82 82" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-              <defs><clipPath id="ms-logo-f"><circle cx="41" cy="41" r="36.5"/></clipPath></defs>
-              <g clip-path="url(#ms-logo-f)">
-                <ellipse cx="41" cy="41" rx="14" ry="36.5" stroke="white" stroke-width="2.0" transform="rotate(0,41,41)"/>
-                <ellipse cx="41" cy="41" rx="14" ry="36.5" stroke="white" stroke-width="2.0" transform="rotate(60,41,41)"/>
-                <ellipse cx="41" cy="41" rx="14" ry="36.5" stroke="white" stroke-width="2.0" transform="rotate(120,41,41)"/>
-                <ellipse cx="41" cy="41" rx="36.5" ry="7" stroke="white" stroke-width="2.0"/>
-                <line x1="41" y1="4.5" x2="41" y2="77.5" stroke="var(--ms-color-gold)" stroke-width="2.8"/>
-              </g>
-              <circle cx="41" cy="41" r="36.5" stroke="white" stroke-width="2.7"/>
-            </svg>
+            <MsLogo variant="icon" color="white" :width="26" />
             <span class="footer-brand-name">Meridian Synergy</span>
           </NuxtLink>
           <p class="footer-tagline">{{ t('footer.tagline') }}</p>
