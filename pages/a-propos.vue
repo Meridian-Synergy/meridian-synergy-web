@@ -12,7 +12,7 @@ useSeoMeta({
 const certifications = [
   { label: 'A1 / A3', variant: 'navy' as const },
   { label: 'A2', variant: 'navy' as const },
-  { label: 'CATS', variant: 'sky' as const },
+  { label: 'CATS', variant: 'navy' as const },
   { label: 'Certiphyto', variant: 'sky' as const },
   { label: 'CertiBioci', variant: 'sky' as const },
 ]
@@ -286,12 +286,17 @@ const values = [
 .zone-section { padding: 64px 0; background: var(--ms-color-bg); }
 .zone-intro { text-align: center; font-size: 0.9375rem; color: var(--ms-color-muted); margin: 0 auto 32px; max-width: 520px; }
 .dept-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 12px;
-  justify-content: center;
-  max-width: 640px;
+  max-width: 480px;
   margin: 0 auto;
+}
+@media (min-width: 640px) {
+  .dept-grid {
+    grid-template-columns: repeat(7, 1fr);
+    max-width: 760px;
+  }
 }
 .dept-card {
   display: flex;
