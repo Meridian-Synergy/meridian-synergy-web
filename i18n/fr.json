@@ -68,12 +68,12 @@
     "hero": {
       "badge": "Notre histoire",
       "title": "Meridian Synergy",
-      "subtitle": "Opérateur drone professionnel certifié, basé à Cosne-sur-Loire dans la Nièvre."
+      "subtitle": "Opérateur drone professionnel certifié, basé sur le secteur de Cosne-sur-Loire dans la Nièvre."
     },
     "story": {
       "title": "Qui sommes-nous ?",
       "p1": "Meridian Synergy est née en 2026, portée par l'accélération du secteur des drones professionnels et l'harmonisation du cadre réglementaire européen (règlement UE 2019/947). Ces évolutions ouvrent de nouvelles opportunités pour les opérateurs certifiés capables d'intervenir dans des secteurs exigeants avec des équipements de dernière génération.",
-      "p2": "Basés à Cosne-sur-Loire, dans la Nièvre, nous avons bâti notre activité pour répondre aux besoins concrets des acteurs locaux : collectivités, agriculteurs, viticulteurs, industriels et gestionnaires d'infrastructures. Un territoire riche, où l'apport du drone professionnel fait une vraie différence."
+      "p2": "Basés sur le secteur de Cosne-sur-Loire, dans la Nièvre, nous avons bâti notre activité pour répondre aux besoins concrets des acteurs locaux : collectivités, agriculteurs, viticulteurs, industriels et gestionnaires d'infrastructures. Un territoire riche, où l'apport du drone professionnel fait une vraie différence."
     },
     "values": {
       "title": "Nos engagements",
@@ -104,6 +104,29 @@
       "desc": "Une mission à planifier, une question technique, un devis ? Contactez-nous directement — nous répondons en général sous 24 heures.",
       "whatsapp": "Écrire sur WhatsApp",
       "email": "Envoyer un e-mail"
+    }
+  },
+  "contactPage": {
+    "meta": {
+      "title": "Contact — Meridian Synergy",
+      "description": "Contactez Meridian Synergy pour planifier une mission drone, obtenir un devis ou poser une question technique. Réponse sous 24 h."
+    },
+    "hero": {
+      "badge": "Parlons-nous",
+      "title": "Contactez-nous",
+      "subtitle": "Une mission à planifier, un devis, une question technique ? Nous répondons en général sous 24 heures."
+    },
+    "direct": {
+      "title": "Contact direct",
+      "whatsappLabel": "WhatsApp",
+      "whatsappDesc": "Envoyez-nous un message, nous répondons rapidement.",
+      "whatsappBtn": "Écrire sur WhatsApp",
+      "emailLabel": "E-mail",
+      "emailDesc": "Pour toute demande détaillée ou devis.",
+      "emailBtn": "Envoyer un e-mail"
+    },
+    "social": {
+      "title": "Retrouvez-nous"
     }
   },
   "footer": {

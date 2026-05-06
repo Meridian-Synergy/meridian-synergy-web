@@ -113,6 +113,29 @@
       "btn": "Get in touch"
     }
   },
+  "contactPage": {
+    "meta": {
+      "title": "Contact — Meridian Synergy",
+      "description": "Contact Meridian Synergy to plan a drone mission, get a quote or ask a technical question. Reply within 24 hours."
+    },
+    "hero": {
+      "badge": "Let's talk",
+      "title": "Contact us",
+      "subtitle": "A mission to plan, a quote, a technical question? We usually reply within 24 hours."
+    },
+    "direct": {
+      "title": "Get in touch",
+      "whatsappLabel": "WhatsApp",
+      "whatsappDesc": "Send us a message, we reply quickly.",
+      "whatsappBtn": "Message on WhatsApp",
+      "emailLabel": "Email",
+      "emailDesc": "For detailed requests or quotes.",
+      "emailBtn": "Send an email"
+    },
+    "social": {
+      "title": "Follow us"
+    }
+  },
   "about": {
     "meta": {
       "title": "About — Meridian Synergy, drone operator in Burgundy",
