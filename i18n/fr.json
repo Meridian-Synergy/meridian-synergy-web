@@ -5,7 +5,8 @@
     "drones": "Drones",
     "about": "À propos",
     "contact": "Contact",
-    "cta": "Découvrir"
+    "cta": "Découvrir",
+    "useCases": "Cas d'usage"
   },
   "hero": {
     "tag": "Opérateurs drone certifiés",
@@ -177,7 +178,38 @@
     "quoteBtn": "Demander un devis"
   },
   "breadcrumb": {
-    "home": "Accueil"
+    "home": "Accueil",
+    "useCases": "Cas d'usage"
+  },
+  "useCasesPage": {
+    "meta": {
+      "title": "Cas d'usage — Applications drone terrain | Meridian Synergy",
+      "description": "Découvrez des applications concrètes du drone professionnel : semis, inspection, surveillance et plus."
+    },
+    "hero": {
+      "badge": "Terrain & retours d'expérience",
+      "title": "Cas d'usage",
+      "desc": "Des exemples concrets d'intervention drone dans les secteurs agricoles, industriels et territoriaux."
+    },
+    "contact": {
+      "title": "Un projet similaire ?",
+      "desc": "Nos télépilotes certifiés étudient votre faisabilité et vous proposent la solution adaptée.",
+      "btn": "Nous contacter"
+    },
+    "categories": {
+      "agriculture": "Agriculture"
+    },
+    "relatedService": "Service associé",
+    "relatedDrones": "Drones utilisés",
+    "quoteTitle": "Ce cas d'usage vous intéresse ?",
+    "quoteDesc": "Contactez-nous pour discuter de votre projet et obtenir un devis adapté à vos besoins.",
+    "quoteBtn": "Demander un devis"
+  },
+  "useCases": {
+    "couverts": {
+      "title": "Semis de couverts végétaux",
+      "desc": "Implanter des couverts entre les rangs ou avant moisson sans compactage ni attente de récolte."
+    }
   },
   "servicesPage": {
     "meta": {

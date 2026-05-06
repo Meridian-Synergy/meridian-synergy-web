@@ -54,6 +54,8 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
+    '/en/cas-usage/couverts-vegetaux': { redirect: { to: '/en/cas-usage/cover-crops',         statusCode: 301 } },
+    '/cas-usage/cover-crops':          { redirect: { to: '/cas-usage/couverts-vegetaux',        statusCode: 301 } },
     '/en/services/audit-thermique':          { redirect: { to: '/en/services/thermal-inspection',      statusCode: 301 } },
     '/en/services/securite-surveillance':    { redirect: { to: '/en/services/security-surveillance',   statusCode: 301 } },
     '/en/services/topographie-cartographie': { redirect: { to: '/en/services/topography-mapping',      statusCode: 301 } },

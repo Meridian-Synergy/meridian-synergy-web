@@ -8,10 +8,11 @@ const route = useRoute()
 const isOpen = ref(false)
 
 const links = [
-  { labelKey: 'nav.services', path: '/services' },
-  { labelKey: 'nav.drones',   path: '/drones' },
-  { labelKey: 'nav.about',    path: '/a-propos' },
-  { labelKey: 'nav.contact',  path: '/contact' },
+  { labelKey: 'nav.services',  path: '/services' },
+  { labelKey: 'nav.drones',    path: '/drones' },
+  { labelKey: 'nav.useCases',  path: '/cas-usage' },
+  { labelKey: 'nav.about',     path: '/a-propos' },
+  { labelKey: 'nav.contact',   path: '/contact' },
 ]
 
 function isActive(path: string) {

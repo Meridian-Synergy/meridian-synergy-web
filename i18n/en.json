@@ -5,7 +5,8 @@
     "drones": "Drones",
     "about": "About",
     "contact": "Contact",
-    "cta": "Discover"
+    "cta": "Discover",
+    "useCases": "Use cases"
   },
   "hero": {
     "tag": "Certified drone operators",
@@ -95,7 +96,38 @@
     "quoteBtn": "Request a quote"
   },
   "breadcrumb": {
-    "home": "Home"
+    "home": "Home",
+    "useCases": "Use cases"
+  },
+  "useCasesPage": {
+    "meta": {
+      "title": "Use cases — Real-world drone applications | Meridian Synergy",
+      "description": "Discover real-world applications of professional drones: cover crop seeding, inspection, surveillance and more."
+    },
+    "hero": {
+      "badge": "Field experience",
+      "title": "Use cases",
+      "desc": "Concrete examples of professional drone operations across agriculture, industry and territory management."
+    },
+    "contact": {
+      "title": "Similar project in mind?",
+      "desc": "Our certified drone pilots will assess your feasibility and propose the right solution.",
+      "btn": "Contact us"
+    },
+    "categories": {
+      "agriculture": "Agriculture"
+    },
+    "relatedService": "Related service",
+    "relatedDrones": "Drones used",
+    "quoteTitle": "Interested in this use case?",
+    "quoteDesc": "Contact us to discuss your project and get a tailored quote.",
+    "quoteBtn": "Request a quote"
+  },
+  "useCases": {
+    "couverts": {
+      "title": "Cover crop seeding",
+      "desc": "Establish cover crops between rows or before harvest — with no compaction and no waiting for the harvest to end."
+    }
   },
   "servicesPage": {
     "meta": {
