@@ -16,9 +16,17 @@ if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page introuvable' })
 }
 
+const siteUrl = 'https://meridian-synergy.com'
+const imageError = ref(false)
+
 useSeoMeta({
   title: () => page.value?.title ?? '',
   description: () => page.value?.description ?? '',
+  ogTitle: () => page.value?.title ?? '',
+  ogDescription: () => page.value?.description ?? '',
+  ogType: 'article',
+  ogImage: () => page.value?.image ? `${siteUrl}${page.value.image}` : `${siteUrl}/og-default.png`,
+  twitterCard: 'summary_large_image',
 })
 
 const serviceKeys: Record<string, string> = {
@@ -48,16 +56,43 @@ const specIcons = {
     <!-- Hero -->
     <section class="hero">
       <div class="container">
-        <nav class="breadcrumb" aria-label="Fil d'Ariane">
-          <NuxtLink :to="localePath('/')" class="bc-link">{{ t('breadcrumb.home') }}</NuxtLink>
-          <span class="bc-sep" aria-hidden="true">›</span>
-          <NuxtLink :to="localePath('/drones')" class="bc-link">{{ t('nav.drones') }}</NuxtLink>
-          <span class="bc-sep" aria-hidden="true">›</span>
-          <span class="bc-current">{{ page.model }}</span>
-        </nav>
-        <MsBadge :label="page.manufacturer" variant="navy" :dot="false" />
-        <h1 class="hero-title">{{ page.title }}</h1>
-        <p class="hero-desc">{{ page.description }}</p>
+        <div class="hero-inner">
+          <div class="hero-text">
+            <nav class="breadcrumb" aria-label="Fil d'Ariane">
+              <NuxtLink :to="localePath('/')" class="bc-link">{{ t('breadcrumb.home') }}</NuxtLink>
+              <span class="bc-sep" aria-hidden="true">›</span>
+              <NuxtLink :to="localePath('/drones')" class="bc-link">{{ t('nav.drones') }}</NuxtLink>
+              <span class="bc-sep" aria-hidden="true">›</span>
+              <span class="bc-current">{{ page.model }}</span>
+            </nav>
+            <MsBadge :label="page.manufacturer" variant="navy" :dot="false" />
+            <h1 class="hero-title">{{ page.title }}</h1>
+            <p class="hero-desc">{{ page.description }}</p>
+          </div>
+          <div class="hero-visual">
+            <img
+              v-if="page.image && !imageError"
+              :src="page.image"
+              :alt="page.model"
+              class="hero-img"
+              @error="imageError = true"
+            />
+            <div v-else class="hero-placeholder" aria-hidden="true">
+              <svg viewBox="0 0 80 50" fill="none">
+                <rect x="35" y="20" width="10" height="10" rx="2" fill="var(--ms-color-navy)" opacity="0.1"/>
+                <circle cx="40" cy="25" r="4" stroke="var(--ms-color-navy)" stroke-width="1.5" opacity="0.3"/>
+                <line x1="40" y1="25" x2="10" y2="10" stroke="var(--ms-color-navy)" stroke-width="1.5" opacity="0.2"/>
+                <line x1="40" y1="25" x2="70" y2="10" stroke="var(--ms-color-navy)" stroke-width="1.5" opacity="0.2"/>
+                <line x1="40" y1="25" x2="10" y2="40" stroke="var(--ms-color-navy)" stroke-width="1.5" opacity="0.2"/>
+                <line x1="40" y1="25" x2="70" y2="40" stroke="var(--ms-color-navy)" stroke-width="1.5" opacity="0.2"/>
+                <circle cx="10" cy="10" r="5" stroke="var(--ms-color-sky)" stroke-width="1.5" opacity="0.5"/>
+                <circle cx="70" cy="10" r="5" stroke="var(--ms-color-sky)" stroke-width="1.5" opacity="0.5"/>
+                <circle cx="10" cy="40" r="5" stroke="var(--ms-color-sky)" stroke-width="1.5" opacity="0.5"/>
+                <circle cx="70" cy="40" r="5" stroke="var(--ms-color-sky)" stroke-width="1.5" opacity="0.5"/>
+              </svg>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -155,6 +190,12 @@ const specIcons = {
 
 /* ── Hero ── */
 .hero { background: var(--ms-color-bg); padding: 56px 0; border-bottom: 1px solid var(--ms-color-border); }
+.hero-inner { display: flex; flex-direction: column; gap: 32px; }
+@media (min-width: 768px) {
+  .hero-inner { flex-direction: row; align-items: center; gap: 48px; }
+  .hero-text { flex: 1; }
+  .hero-visual { width: 380px; flex-shrink: 0; }
+}
 .breadcrumb { display: flex; align-items: center; gap: 8px; margin-bottom: 24px; flex-wrap: wrap; }
 .bc-link { font-size: 13px; color: var(--ms-color-muted); text-decoration: none; transition: color var(--ms-transition-fast); }
 .bc-link:hover { color: var(--ms-color-navy); }
@@ -169,6 +210,25 @@ const specIcons = {
   margin: 16px 0;
 }
 .hero-desc { font-size: 1.0625rem; color: var(--ms-color-muted); max-width: 600px; line-height: 1.7; margin: 0; }
+.hero-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: var(--ms-radius-lg);
+  border: 1px solid var(--ms-color-border);
+}
+.hero-placeholder {
+  width: 100%;
+  height: 280px;
+  background: var(--ms-color-white);
+  border: 1px solid var(--ms-color-border);
+  border-radius: var(--ms-radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+}
+.hero-placeholder svg { width: 100%; max-width: 200px; height: auto; }
 
 /* ── Specs ── */
 .specs-section { background: var(--ms-color-navy); padding: 40px 0; }

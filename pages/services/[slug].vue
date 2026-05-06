@@ -16,9 +16,17 @@ if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page introuvable' })
 }
 
+const siteUrl = 'https://meridian-synergy.com'
+const imageError = ref(false)
+
 useSeoMeta({
   title: () => page.value?.title ?? '',
   description: () => page.value?.description ?? '',
+  ogTitle: () => page.value?.title ?? '',
+  ogDescription: () => page.value?.description ?? '',
+  ogType: 'article',
+  ogImage: () => page.value?.image ? `${siteUrl}${page.value.image}` : `${siteUrl}/og-default.png`,
+  twitterCard: 'summary_large_image',
 })
 
 const droneLabels: Record<string, string> = {
@@ -58,6 +66,18 @@ const serviceKeys: Record<string, string> = {
         <p class="hero-desc">{{ page.description }}</p>
       </div>
     </section>
+
+    <!-- Image banner -->
+    <div v-if="page.image && !imageError" class="image-banner">
+      <div class="container">
+        <img
+          :src="page.image"
+          :alt="page.title"
+          class="banner-img"
+          @error="imageError = true"
+        />
+      </div>
+    </div>
 
     <!-- Content + Sidebar -->
     <section class="content-section">
@@ -181,6 +201,19 @@ const serviceKeys: Record<string, string> = {
   line-height: 1.7;
   margin: 0;
 }
+
+/* ── Image banner ── */
+.image-banner { background: var(--ms-color-white); padding: 0 0 0; }
+.banner-img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: var(--ms-radius-lg);
+  border: 1px solid var(--ms-color-border);
+  display: block;
+  margin-top: -1px;
+}
+@media (min-width: 768px) { .banner-img { height: 420px; } }
 
 /* ── Content layout ── */
 .content-section {
