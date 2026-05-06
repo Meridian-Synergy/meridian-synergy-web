@@ -113,6 +113,13 @@
       "btn": "Get in touch"
     }
   },
+  "legalPage": {
+    "meta": {
+      "title": "Legal notice — Meridian Synergy",
+      "description": "Legal notice for meridian-synergy.com: publisher, hosting, intellectual property and personal data."
+    },
+    "title": "Legal notice"
+  },
   "contactPage": {
     "meta": {
       "title": "Contact — Meridian Synergy",

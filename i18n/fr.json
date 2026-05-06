@@ -106,6 +106,13 @@
       "email": "Envoyer un e-mail"
     }
   },
+  "legalPage": {
+    "meta": {
+      "title": "Mentions légales — Meridian Synergy",
+      "description": "Mentions légales du site meridian-synergy.com : éditeur, hébergement, propriété intellectuelle et données personnelles."
+    },
+    "title": "Mentions légales"
+  },
   "contactPage": {
     "meta": {
       "title": "Contact — Meridian Synergy",
