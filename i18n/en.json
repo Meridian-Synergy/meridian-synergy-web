@@ -115,7 +115,11 @@
       "btn": "Contact us"
     },
     "categories": {
-      "agriculture": "Agriculture"
+      "agriculture": "Agriculture",
+      "thermique": "Thermal inspection",
+      "infrastructure": "Infrastructure inspection",
+      "topographie": "Topography & Mapping",
+      "video": "Video & Cinema"
     },
     "relatedService": "Related service",
     "relatedDrones": "Drones used",
@@ -127,6 +131,26 @@
     "couverts": {
       "title": "Cover crop seeding",
       "desc": "Establish cover crops between rows or before harvest — with no compaction and no waiting for the harvest to end."
+    },
+    "panneauxSolaires": {
+      "title": "Solar panel inspection",
+      "desc": "Map faulty cells and hot spots on your photovoltaic installations using drone infrared thermography."
+    },
+    "eoliennes": {
+      "title": "Wind turbine inspection",
+      "desc": "Inspect blades, nacelles and towers without rope access or prolonged machine shutdown."
+    },
+    "chantier": {
+      "title": "Construction site monitoring",
+      "desc": "Regular topographic surveys, volume calculations and 3D modelling for your construction and civil engineering projects."
+    },
+    "viticultureNdvi": {
+      "title": "Vineyard NDVI mapping",
+      "desc": "Plot-by-plot vigour and water stress zoning to optimise your vineyard management decisions."
+    },
+    "immobilier": {
+      "title": "Real estate aerial photography",
+      "desc": "Professional aerial photos and videos to showcase your properties: houses, estates, land and new developments."
     }
   },
   "servicesPage": {

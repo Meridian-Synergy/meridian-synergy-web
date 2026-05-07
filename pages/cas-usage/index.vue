@@ -10,11 +10,12 @@ useSeoMeta({
 })
 
 const useCases = [
-  {
-    key: 'couverts',
-    category: 'agriculture',
-    slugs: { fr: 'couverts-vegetaux', en: 'cover-crops' },
-  },
+  { key: 'couverts',       category: 'agriculture',    slugs: { fr: 'couverts-vegetaux',       en: 'cover-crops'              } },
+  { key: 'panneauxSolaires', category: 'thermique',    slugs: { fr: 'panneaux-solaires',        en: 'solar-panels'             } },
+  { key: 'eoliennes',      category: 'infrastructure', slugs: { fr: 'inspection-eoliennes',     en: 'wind-turbine-inspection'  } },
+  { key: 'chantier',       category: 'topographie',    slugs: { fr: 'suivi-chantier',           en: 'construction-monitoring'  } },
+  { key: 'viticultureNdvi', category: 'agriculture',   slugs: { fr: 'viticulture-ndvi',         en: 'vineyard-ndvi'            } },
+  { key: 'immobilier',     category: 'video',          slugs: { fr: 'prise-de-vue-immobilier',  en: 'real-estate-aerial'       } },
 ]
 
 const items = computed(() =>

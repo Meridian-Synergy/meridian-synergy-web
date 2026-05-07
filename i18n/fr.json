@@ -197,7 +197,11 @@
       "btn": "Nous contacter"
     },
     "categories": {
-      "agriculture": "Agriculture"
+      "agriculture": "Agriculture",
+      "thermique": "Audit thermique",
+      "infrastructure": "Inspection infrastructure",
+      "topographie": "Topographie & Cartographie",
+      "video": "Vidéo & Cinéma"
     },
     "relatedService": "Service associé",
     "relatedDrones": "Drones utilisés",
@@ -209,6 +213,26 @@
     "couverts": {
       "title": "Semis de couverts végétaux",
       "desc": "Implanter des couverts entre les rangs ou avant moisson sans compactage ni attente de récolte."
+    },
+    "panneauxSolaires": {
+      "title": "Inspection de panneaux solaires",
+      "desc": "Cartographier les cellules défaillantes et points chauds de vos installations photovoltaïques par thermographie infrarouge."
+    },
+    "eoliennes": {
+      "title": "Inspection d'éoliennes",
+      "desc": "Contrôle de l'état des pales, nacelles et mâts sans accès en hauteur ni arrêt prolongé de la machine."
+    },
+    "chantier": {
+      "title": "Suivi de chantier",
+      "desc": "Relevés topographiques réguliers, calcul de volumes et modélisation 3D pour vos chantiers BTP et génie civil."
+    },
+    "viticultureNdvi": {
+      "title": "Cartographie NDVI en viticulture",
+      "desc": "Zonage de la vigueur et du stress hydrique parcelle par parcelle pour optimiser vos interventions viticoles."
+    },
+    "immobilier": {
+      "title": "Prise de vue aérienne immobilier",
+      "desc": "Photos et vidéos aériennes professionnelles pour valoriser vos biens : maisons, domaines, terrains, programmes neufs."
     }
   },
   "servicesPage": {
