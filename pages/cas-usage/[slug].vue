@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { MsCard, MsPageHero, MsCtaBanner } from '@meridian-synergy/ui'
+import { MsCard, MsBadge, MsPageHero, MsCtaBanner } from '@meridian-synergy/ui'
 
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
@@ -7,6 +7,7 @@ const route = useRoute()
 
 const slug = route.params.slug as string
 const contentPath = `/${locale.value}/cas-usage/${slug}`
+const dirPrefix = `/${locale.value}/cas-usage/`
 
 const { data: page } = await useAsyncData(contentPath, () =>
   queryCollection('content').path(contentPath).first()
@@ -14,6 +15,23 @@ const { data: page } = await useAsyncData(contentPath, () =>
 
 if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page introuvable' })
+}
+
+const { data: related } = await useAsyncData(`related-${contentPath}`, async () => {
+  const all = await queryCollection('content').all()
+  const peers = all.filter(i => i.path?.startsWith(dirPrefix) && i.path !== contentPath)
+  const svc = (page.value?.meta as any)?.service ?? ''
+  const cat = (page.value?.meta as any)?.category ?? ''
+  const byService  = peers.filter(i => (i.meta as any)?.service === svc)
+  const byCategory = peers.filter(i => (i.meta as any)?.category === cat && (i.meta as any)?.service !== svc)
+  return [...byService, ...byCategory].slice(0, 3)
+})
+
+function hrefFor(item: any) {
+  const itemSlug = (item.path as string)?.split('/').pop() ?? ''
+  return locale.value === 'en'
+    ? `/en/use-case/${itemSlug}`
+    : `/cas-usage/${itemSlug}`
 }
 
 const siteUrl = 'https://meridian-synergy.com'
@@ -24,7 +42,7 @@ useSeoMeta({
   ogTitle: () => page.value?.title ?? '',
   ogDescription: () => page.value?.description ?? '',
   ogType: 'article',
-  ogImage: () => page.value?.image ? `${siteUrl}${page.value.image}` : `${siteUrl}/og-default.png`,
+  ogImage: () => (page.value?.meta as any)?.image ? `${siteUrl}${(page.value?.meta as any).image}` : `${siteUrl}/og-default.png`,
   twitterCard: 'summary_large_image',
 })
 
@@ -58,17 +76,17 @@ const serviceKeys: Record<string, string> = {
         { label: page.categoryLabel ?? page.category },
         { label: page.title }
       ]"
-      :badge="page.categoryLabel ?? page.category"
+      :badge="page.meta?.categoryLabel ?? page.meta?.category"
       :title="page.title"
       :desc="page.description"
       size="md"
     />
 
     <!-- Tags -->
-    <div v-if="page.tags?.length" class="tags-bar">
+    <div v-if="page.meta?.tags?.length" class="tags-bar">
       <div class="container">
         <div class="tags-inner">
-          <span v-for="tag in page.tags" :key="tag" class="detail-tag">{{ tag }}</span>
+          <span v-for="tag in page.meta.tags" :key="tag" class="detail-tag">{{ tag }}</span>
         </div>
       </div>
     </div>
@@ -83,27 +101,27 @@ const serviceKeys: Record<string, string> = {
 
         <aside class="sidebar">
           <!-- Related service -->
-          <MsCard v-if="page.service">
+          <MsCard v-if="page.meta?.service">
             <div class="sb-block">
               <p class="sb-label">{{ t('useCasesPage.relatedService') }}</p>
               <NuxtLink
-                :to="localePath(`/services/${page.service}`)"
+                :to="localePath(`/services/${page.meta.service}`)"
                 class="sb-item"
               >
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                   <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-                {{ t(`services.${serviceKeys[page.service] ?? page.service}.title`) }}
+                {{ t(`services.${serviceKeys[page.meta.service] ?? page.meta.service}.title`) }}
               </NuxtLink>
             </div>
           </MsCard>
 
           <!-- Related drones -->
-          <MsCard v-if="page.relatedDrones?.length">
+          <MsCard v-if="page.meta?.relatedDrones?.length">
             <div class="sb-block">
               <p class="sb-label">{{ t('useCasesPage.relatedDrones') }}</p>
               <NuxtLink
-                v-for="droneSlug in page.relatedDrones"
+                v-for="droneSlug in page.meta.relatedDrones"
                 :key="droneSlug"
                 :to="localePath(`/drones/${droneSlug}`)"
                 class="sb-item"
@@ -119,6 +137,32 @@ const serviceKeys: Record<string, string> = {
           </MsCard>
         </aside>
 
+      </div>
+    </section>
+
+    <!-- Related use cases -->
+    <section v-if="related?.length" class="related-section">
+      <div class="container">
+        <h2 class="related-title">{{ t('useCasesPage.related.title') }}</h2>
+        <div class="related-grid">
+          <NuxtLink
+            v-for="item in related"
+            :key="item.path"
+            :to="hrefFor(item)"
+            class="related-link"
+          >
+            <MsCard>
+              <div class="related-body">
+                <MsBadge :label="(item.meta as any)?.categoryLabel ?? (item.meta as any)?.category" variant="sky" :dot="false" />
+                <h3 class="related-card-title">{{ item.title }}</h3>
+                <p class="related-card-desc">{{ item.description }}</p>
+              </div>
+              <template #footer>
+                <span class="related-more">{{ t('services.more') }} →</span>
+              </template>
+            </MsCard>
+          </NuxtLink>
+        </div>
       </div>
     </section>
 
@@ -251,4 +295,65 @@ const serviceKeys: Record<string, string> = {
   color: var(--ms-color-sky);
 }
 .sb-item svg { color: var(--ms-color-sky); flex-shrink: 0; }
+
+/* ── Related use cases ── */
+.related-section {
+  padding: 64px 0;
+  background: var(--ms-color-bg);
+  border-top: 1px solid var(--ms-color-border);
+}
+.related-title {
+  font-family: var(--ms-font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--ms-color-navy);
+  letter-spacing: -0.02em;
+  margin: 0 0 28px;
+}
+.related-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+@media (min-width: 640px)  { .related-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .related-grid { grid-template-columns: repeat(3, 1fr); } }
+
+.related-link {
+  display: block;
+  text-decoration: none;
+  border-radius: var(--ms-radius-lg);
+  transition: transform var(--ms-transition-base), box-shadow var(--ms-transition-base);
+}
+.related-link:hover { transform: translateY(-3px); box-shadow: var(--ms-shadow-md); }
+.related-link:hover :deep(.ms-card) { border-color: var(--ms-color-sky); }
+
+.related-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 4px 0;
+}
+.related-card-title {
+  font-family: var(--ms-font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ms-color-navy);
+  margin: 0;
+  line-height: 1.35;
+}
+.related-card-desc {
+  font-size: 0.875rem;
+  color: var(--ms-color-muted);
+  line-height: 1.6;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.related-more {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ms-color-sky);
+}
 </style>
