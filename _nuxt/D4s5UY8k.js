@@ -1,0 +1,1 @@
+import{a as t}from"./Dolsb8CZ.js";import{_ as a,o as n,c as s,b as c,J as r,e as _}from"./BMPhQgbk.js";import"./D4WGJgWg.js";const m={},l={class:"layout-minimal"};function i(e,p){const o=t;return n(),s("div",l,[c("main",null,[r(e.$slots,"default")]),_(o)])}const x=a(m,[["render",i]]);export{x as default};
