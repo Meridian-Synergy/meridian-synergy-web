@@ -3,6 +3,9 @@ title: "Cover Crop Seeding by Drone"
 description: "How drone seeding is transforming cover crop establishment: optimal timing, suitable species, agronomic benefits and BCAE 7 regulatory compliance."
 category: "agriculture"
 categoryLabel: "Agriculture"
+tags:
+  - agriculture
+  - sowing
 service: "agriculture-viticulture"
 relatedDrones:
   - dji-t100-agri

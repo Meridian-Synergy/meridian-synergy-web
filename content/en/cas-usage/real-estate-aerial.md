@@ -3,6 +3,9 @@ title: "Aerial Photography for Real Estate by Drone"
 description: "Showcase your properties with professional aerial photos and videos by drone: houses, estates, land, new developments and commercial buildings."
 category: "video"
 categoryLabel: "Video & Cinema"
+tags:
+  - real estate
+  - aerial
 service: "video-cinema"
 relatedDrones:
   - dji-avata-360

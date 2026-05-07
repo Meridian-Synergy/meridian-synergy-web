@@ -119,7 +119,8 @@
       "thermique": "Thermal inspection",
       "infrastructure": "Infrastructure inspection",
       "topographie": "Topography & Mapping",
-      "video": "Video & Cinema"
+      "video": "Video & Cinema",
+      "securite": "Security & Surveillance"
     },
     "relatedService": "Related service",
     "relatedDrones": "Drones used",
@@ -151,6 +152,46 @@
     "immobilier": {
       "title": "Real estate aerial photography",
       "desc": "Professional aerial photos and videos to showcase your properties: houses, estates, land and new developments."
+    },
+    "auditThermiqueBatiments": {
+      "title": "Building thermal inspection",
+      "desc": "Detect thermal bridges, water infiltration and energy losses on roofs and facades using aerial infrared thermography."
+    },
+    "reseauxChaleur": {
+      "title": "District heating network inspection",
+      "desc": "Locate leaks and heat losses in buried district heating pipelines using aerial infrared thermography."
+    },
+    "pylonesElectriques": {
+      "title": "Power line inspection",
+      "desc": "Inspect high-voltage lines, pylons and electrical infrastructure by drone: insulators, conductors, corrosion."
+    },
+    "pontsOuvragesArt": {
+      "title": "Bridge and structure inspection",
+      "desc": "Detect cracks, spalling and corrosion on bridges and viaducts without road closures or specialist access equipment."
+    },
+    "chemineesIndustrielles": {
+      "title": "Industrial chimney inspection",
+      "desc": "Inspect factory stacks and plant chimneys by drone: cracks, corrosion and internal lining condition."
+    },
+    "modelisation3DCarrieres": {
+      "title": "Quarry 3D modelling and volumes",
+      "desc": "Topographic surveys of quarries, stockpile and excavation volume calculations by photogrammetric drone."
+    },
+    "releveCadastral": {
+      "title": "Cadastral survey and as-built plan",
+      "desc": "Precision topographic surveys for cadastre, land subdivision and as-built documentation by drone."
+    },
+    "epandagePhytosanitaire": {
+      "title": "Crop spraying by drone",
+      "desc": "Precision aerial application of phytosanitary products and biocontrol agents by agricultural drone."
+    },
+    "surveillanceSites": {
+      "title": "Industrial site surveillance",
+      "desc": "Aerial thermal and visual surveillance of industrial sites and Seveso zones by drone — intrusion detection."
+    },
+    "couvertureEvenementielle": {
+      "title": "Event aerial coverage",
+      "desc": "Aerial video and photography for events: festivals, sporting competitions, corporate events and inaugurations."
     }
   },
   "servicesPage": {

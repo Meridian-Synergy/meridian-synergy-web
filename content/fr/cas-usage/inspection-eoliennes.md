@@ -3,6 +3,9 @@ title: "Inspection d'éoliennes par drone"
 description: "Contrôle de l'état des pales, nacelles et mâts d'éoliennes par drone : détection de fissures, érosion de bord d'attaque et impacts de foudre sans accès en hauteur."
 category: "infrastructure"
 categoryLabel: "Inspection infrastructure"
+tags:
+  - énergie
+  - inspection
 service: "inspection-infrastructure"
 relatedDrones:
   - dji-matrice-4td

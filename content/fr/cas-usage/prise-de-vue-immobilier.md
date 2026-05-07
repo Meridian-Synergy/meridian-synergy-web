@@ -3,6 +3,9 @@ title: "Prise de vue aérienne pour l'immobilier"
 description: "Valorisez vos biens immobiliers avec des photos et vidéos aériennes professionnelles par drone : maisons, domaines, terrains, programmes neufs et bâtiments tertiaires."
 category: "video"
 categoryLabel: "Vidéo & Cinéma"
+tags:
+  - immobilier
+  - prise de vue
 service: "video-cinema"
 relatedDrones:
   - dji-avata-360

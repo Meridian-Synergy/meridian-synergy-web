@@ -3,6 +3,9 @@ title: "Thermal Inspection of Solar Panels by Drone"
 description: "Detect faulty cells, hot spots and defective bypass diodes on your photovoltaic installations using drone infrared thermography — fast, exhaustive, non-invasive."
 category: "thermique"
 categoryLabel: "Thermal inspection"
+tags:
+  - energy
+  - thermal
 service: "thermal-inspection"
 relatedDrones:
   - dji-matrice-4td

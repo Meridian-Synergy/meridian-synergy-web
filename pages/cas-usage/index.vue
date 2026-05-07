@@ -9,19 +9,32 @@ useSeoMeta({
   description: () => t('useCasesPage.meta.description'),
 })
 
+type Locale = 'fr' | 'en'
+
 const useCases = [
-  { key: 'couverts',       category: 'agriculture',    slugs: { fr: 'couverts-vegetaux',       en: 'cover-crops'              } },
-  { key: 'panneauxSolaires', category: 'thermique',    slugs: { fr: 'panneaux-solaires',        en: 'solar-panels'             } },
-  { key: 'eoliennes',      category: 'infrastructure', slugs: { fr: 'inspection-eoliennes',     en: 'wind-turbine-inspection'  } },
-  { key: 'chantier',       category: 'topographie',    slugs: { fr: 'suivi-chantier',           en: 'construction-monitoring'  } },
-  { key: 'viticultureNdvi', category: 'agriculture',   slugs: { fr: 'viticulture-ndvi',         en: 'vineyard-ndvi'            } },
-  { key: 'immobilier',     category: 'video',          slugs: { fr: 'prise-de-vue-immobilier',  en: 'real-estate-aerial'       } },
+  { key: 'couverts',                    category: 'agriculture',    tags: { fr: ['Agricole', 'Semis'],            en: ['Agriculture', 'Sowing']        }, slugs: { fr: 'couverts-vegetaux',           en: 'cover-crops'                   } },
+  { key: 'panneauxSolaires',            category: 'thermique',      tags: { fr: ['Énergie', 'Thermique'],         en: ['Energy', 'Thermal']             }, slugs: { fr: 'panneaux-solaires',           en: 'solar-panels'                  } },
+  { key: 'eoliennes',                   category: 'infrastructure', tags: { fr: ['Énergie', 'Inspection'],        en: ['Energy', 'Inspection']          }, slugs: { fr: 'inspection-eoliennes',        en: 'wind-turbine-inspection'       } },
+  { key: 'chantier',                    category: 'topographie',    tags: { fr: ['BTP', 'Cartographie'],          en: ['Construction', 'Mapping']       }, slugs: { fr: 'suivi-chantier',              en: 'construction-monitoring'       } },
+  { key: 'viticultureNdvi',             category: 'agriculture',    tags: { fr: ['Agricole', 'Cartographie'],     en: ['Agriculture', 'Mapping']        }, slugs: { fr: 'viticulture-ndvi',            en: 'vineyard-ndvi'                 } },
+  { key: 'immobilier',                  category: 'video',          tags: { fr: ['Immobilier', 'Prise de vue'],   en: ['Real estate', 'Aerial']         }, slugs: { fr: 'prise-de-vue-immobilier',     en: 'real-estate-aerial'            } },
+  { key: 'auditThermiqueBatiments',     category: 'thermique',      tags: { fr: ['Bâtiment', 'Thermique'],        en: ['Building', 'Thermal']           }, slugs: { fr: 'audit-thermique-batiments',   en: 'building-thermal-inspection'   } },
+  { key: 'reseauxChaleur',              category: 'thermique',      tags: { fr: ['Énergie', 'Bâtiment'],          en: ['Energy', 'Building']            }, slugs: { fr: 'reseaux-chaleur',             en: 'heat-network-inspection'       } },
+  { key: 'pylonesElectriques',          category: 'infrastructure', tags: { fr: ['Énergie', 'Infrastructure'],    en: ['Energy', 'Infrastructure']      }, slugs: { fr: 'pylones-electriques',         en: 'power-line-inspection'         } },
+  { key: 'pontsOuvragesArt',            category: 'infrastructure', tags: { fr: ['Infrastructure', 'BTP'],        en: ['Infrastructure', 'Construction'] }, slugs: { fr: 'ponts-ouvrages-art',          en: 'bridge-inspection'             } },
+  { key: 'chemineesIndustrielles',      category: 'infrastructure', tags: { fr: ['Industrie', 'Infrastructure'],  en: ['Industry', 'Infrastructure']    }, slugs: { fr: 'cheminees-industrielles',     en: 'industrial-chimney-inspection' } },
+  { key: 'modelisation3DCarrieres',     category: 'topographie',    tags: { fr: ['Industrie', 'BTP'],             en: ['Industry', 'Construction']      }, slugs: { fr: 'modelisation-3d-carrieres',   en: 'quarry-3d-modelling'           } },
+  { key: 'releveCadastral',             category: 'topographie',    tags: { fr: ['BTP', 'Cartographie'],          en: ['Construction', 'Mapping']       }, slugs: { fr: 'releve-cadastral',            en: 'cadastral-survey'              } },
+  { key: 'epandagePhytosanitaire',      category: 'agriculture',    tags: { fr: ['Agricole', 'Épandage'],         en: ['Agriculture', 'Spraying']       }, slugs: { fr: 'epandage-phytosanitaire',     en: 'crop-spraying'                 } },
+  { key: 'surveillanceSites',           category: 'securite',       tags: { fr: ['Industrie', 'Sécurité'],        en: ['Industry', 'Security']          }, slugs: { fr: 'surveillance-sites-industriels', en: 'industrial-site-surveillance' } },
+  { key: 'couvertureEvenementielle',    category: 'video',          tags: { fr: ['Événementiel', 'Prise de vue'], en: ['Events', 'Aerial']              }, slugs: { fr: 'couverture-evenementielle',    en: 'event-coverage'                } },
 ]
 
 const items = computed(() =>
   useCases.map(uc => ({
     ...uc,
-    slug: uc.slugs[locale.value as 'fr' | 'en'] ?? uc.slugs.fr,
+    slug: uc.slugs[locale.value as Locale] ?? uc.slugs.fr,
+    tags: uc.tags[locale.value as Locale] ?? uc.tags.fr,
     title: t(`useCases.${uc.key}.title`),
     desc:  t(`useCases.${uc.key}.desc`),
     categoryLabel: t(`useCasesPage.categories.${uc.category}`),
@@ -52,6 +65,9 @@ const items = computed(() =>
                 <MsBadge :label="item.categoryLabel" variant="sky" :dot="false" />
                 <h2 class="uc-title">{{ item.title }}</h2>
                 <p class="uc-desc">{{ item.desc }}</p>
+                <div v-if="item.tags?.length" class="uc-tags">
+                  <span v-for="tag in item.tags" :key="tag" class="uc-tag">{{ tag }}</span>
+                </div>
               </div>
               <template #footer>
                 <span class="uc-more">{{ t('services.more') }} →</span>
@@ -112,6 +128,23 @@ const items = computed(() =>
   color: var(--ms-color-muted);
   line-height: 1.65;
   margin: 0;
+}
+.uc-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.uc-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ms-color-muted);
+  background: var(--ms-color-bg);
+  border: 1px solid var(--ms-color-border);
+  border-radius: 4px;
+  padding: 2px 7px;
 }
 .uc-more {
   font-size: 13px;

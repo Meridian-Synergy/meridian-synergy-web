@@ -3,6 +3,9 @@ title: "Suivi de chantier par drone"
 description: "Relevés topographiques réguliers, calcul de volumes de terrassement, modélisation 3D et documentation d'avancement pour vos projets de construction et génie civil."
 category: "topographie"
 categoryLabel: "Topographie & Cartographie"
+tags:
+  - BTP
+  - cartographie
 service: "topographie-cartographie"
 relatedDrones:
   - dji-matrice-4td

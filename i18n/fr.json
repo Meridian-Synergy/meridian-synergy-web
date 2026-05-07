@@ -201,7 +201,8 @@
       "thermique": "Audit thermique",
       "infrastructure": "Inspection infrastructure",
       "topographie": "Topographie & Cartographie",
-      "video": "Vidéo & Cinéma"
+      "video": "Vidéo & Cinéma",
+      "securite": "Sécurité & Surveillance"
     },
     "relatedService": "Service associé",
     "relatedDrones": "Drones utilisés",
@@ -233,6 +234,46 @@
     "immobilier": {
       "title": "Prise de vue aérienne immobilier",
       "desc": "Photos et vidéos aériennes professionnelles pour valoriser vos biens : maisons, domaines, terrains, programmes neufs."
+    },
+    "auditThermiqueBatiments": {
+      "title": "Audit thermique de bâtiments",
+      "desc": "Détecter ponts thermiques, infiltrations et déperditions énergétiques sur toitures et façades par thermographie aérienne."
+    },
+    "reseauxChaleur": {
+      "title": "Inspection de réseaux de chaleur",
+      "desc": "Localiser les fuites et pertes thermiques des canalisations de chauffage urbain enterrées par infrarouge aérien."
+    },
+    "pylonesElectriques": {
+      "title": "Inspection de pylônes électriques",
+      "desc": "Contrôle des lignes haute tension, pylônes et infrastructures électriques par drone : isolation, conducteurs, corrosion."
+    },
+    "pontsOuvragesArt": {
+      "title": "Inspection de ponts et ouvrages d'art",
+      "desc": "Détecter fissures, éclatements et corrosion sur ponts et viaducs sans fermeture de voirie ni accès en hauteur."
+    },
+    "chemineesIndustrielles": {
+      "title": "Inspection de cheminées industrielles",
+      "desc": "Contrôle de l'état des cheminées d'usines et centrales par drone : fissures, corrosion, revêtement interne."
+    },
+    "modelisation3DCarrieres": {
+      "title": "Modélisation 3D et volumes en carrière",
+      "desc": "Relevés topographiques de carrières, calcul de volumes de stocks et d'excavation par drone photogrammétrique."
+    },
+    "releveCadastral": {
+      "title": "Relevé cadastral et plan de récolement",
+      "desc": "Levés topographiques de précision pour le cadastre, divisions parcellaires et plans de récolement par drone."
+    },
+    "epandagePhytosanitaire": {
+      "title": "Épandage phytosanitaire par drone",
+      "desc": "Application aérienne précise de produits phytosanitaires, fongicides et agents de biocontrôle par drone agricole."
+    },
+    "surveillanceSites": {
+      "title": "Surveillance de sites industriels",
+      "desc": "Surveillance aérienne thermique et visuelle de sites industriels et zones SEVESO par drone — détection d'intrusion."
+    },
+    "couvertureEvenementielle": {
+      "title": "Couverture événementielle par drone",
+      "desc": "Vidéo et photographie aériennes pour vos événements : festivals, compétitions sportives, inaugurations et événements d'entreprise."
     }
   },
   "servicesPage": {

@@ -3,6 +3,9 @@ title: "Cartographie NDVI et zonage vitivinicole par drone"
 description: "Cartographiez la vigueur et le stress hydrique de vos parcelles de vigne par drone. Optimisez vos interventions de vendange en vert, irrigation et traitements grâce à l'indice NDVI."
 category: "agriculture"
 categoryLabel: "Agriculture"
+tags:
+  - agricole
+  - cartographie
 service: "agriculture-viticulture"
 relatedDrones:
   - dji-matrice-4td

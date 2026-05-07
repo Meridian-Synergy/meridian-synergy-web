@@ -3,6 +3,9 @@ title: "Wind Turbine Inspection by Drone"
 description: "Blade, nacelle and tower inspection by drone: detect cracks, leading edge erosion and lightning strike damage without rope access or elevated work platforms."
 category: "infrastructure"
 categoryLabel: "Infrastructure inspection"
+tags:
+  - energy
+  - inspection
 service: "infrastructure-inspection"
 relatedDrones:
   - dji-matrice-4td

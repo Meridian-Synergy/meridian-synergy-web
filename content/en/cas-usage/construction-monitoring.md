@@ -3,6 +3,9 @@ title: "Construction Site Monitoring by Drone"
 description: "Regular topographic surveys, earthwork volume calculations, 3D modelling and progress documentation for your construction and civil engineering projects."
 category: "topographie"
 categoryLabel: "Topography & Mapping"
+tags:
+  - construction
+  - mapping
 service: "topography-mapping"
 relatedDrones:
   - dji-matrice-4td

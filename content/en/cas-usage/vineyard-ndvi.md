@@ -3,6 +3,9 @@ title: "NDVI Mapping and Precision Viticulture by Drone"
 description: "Map vine vigour and water stress across your plots by drone. Optimise green harvest, irrigation and treatments with NDVI indices and multispectral analysis."
 category: "agriculture"
 categoryLabel: "Agriculture"
+tags:
+  - agriculture
+  - mapping
 service: "agriculture-viticulture"
 relatedDrones:
   - dji-matrice-4td

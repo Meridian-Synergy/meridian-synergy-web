@@ -3,6 +3,9 @@ title: "Inspection thermique de panneaux solaires par drone"
 description: "Détectez les cellules défaillantes, points chauds et diodes bypass défectueuses sur vos installations photovoltaïques grâce à la thermographie infrarouge par drone."
 category: "thermique"
 categoryLabel: "Audit thermique"
+tags:
+  - énergie
+  - thermique
 service: "audit-thermique"
 relatedDrones:
   - dji-matrice-4td

@@ -64,6 +64,15 @@ const serviceKeys: Record<string, string> = {
       size="md"
     />
 
+    <!-- Tags -->
+    <div v-if="page.tags?.length" class="tags-bar">
+      <div class="container">
+        <div class="tags-inner">
+          <span v-for="tag in page.tags" :key="tag" class="detail-tag">{{ tag }}</span>
+        </div>
+      </div>
+    </div>
+
     <!-- Content + Sidebar -->
     <section class="content-section">
       <div class="container layout">
@@ -124,6 +133,28 @@ const serviceKeys: Record<string, string> = {
 </template>
 
 <style scoped>
+.tags-bar {
+  background: var(--ms-color-white);
+  padding: 12px 0 0;
+}
+.tags-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.detail-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ms-color-muted);
+  background: var(--ms-color-bg);
+  border: 1px solid var(--ms-color-border);
+  border-radius: 4px;
+  padding: 3px 9px;
+}
+
 .content-section {
   padding: 64px 0;
   background: var(--ms-color-white);

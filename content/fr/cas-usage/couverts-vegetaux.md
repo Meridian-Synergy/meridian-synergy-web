@@ -3,6 +3,9 @@ title: "Semis de couverts végétaux par drone"
 description: "Comment le semis par drone révolutionne l'implantation des couverts végétaux : timing optimal, espèces adaptées, avantages agronomiques et conformité BCAE 7."
 category: "agriculture"
 categoryLabel: "Agriculture"
+tags:
+  - agricole
+  - semis
 service: "agriculture-viticulture"
 relatedDrones:
   - dji-t100-agri
