@@ -124,6 +124,7 @@
     },
     "relatedService": "Related service",
     "relatedDrones": "Drones used",
+    "related": { "title": "Related use cases" },
     "quoteTitle": "Interested in this use case?",
     "quoteDesc": "Contact us to discuss your project and get a tailored quote.",
     "quoteBtn": "Request a quote"

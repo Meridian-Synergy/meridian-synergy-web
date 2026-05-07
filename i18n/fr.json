@@ -206,6 +206,7 @@
     },
     "relatedService": "Service associé",
     "relatedDrones": "Drones utilisés",
+    "related": { "title": "Cas d'usage similaires" },
     "quoteTitle": "Ce cas d'usage vous intéresse ?",
     "quoteDesc": "Contactez-nous pour discuter de votre projet et obtenir un devis adapté à vos besoins.",
     "quoteBtn": "Demander un devis"
