@@ -22,7 +22,9 @@ const services = computed(() => [
   { key: 'infrastructure', color: 'var(--ms-color-orange)'  },
 ].map(s => ({
   ...s,
-  path: `/services/${slugs[s.key][locale.value] ?? slugs[s.key].fr}`,
+  href: locale.value === 'en'
+    ? `/en/services/${slugs[s.key].en}`
+    : `/services/${slugs[s.key].fr}`,
 })))
 </script>
 
@@ -31,7 +33,7 @@ const services = computed(() => [
     <NuxtLink
       v-for="s in services"
       :key="s.key"
-      :to="localePath(s.path)"
+      :to="s.href"
       class="card-link"
     >
       <MsCard>

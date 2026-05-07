@@ -33,7 +33,7 @@ const useCases = [
 const items = computed(() =>
   useCases.map(uc => ({
     ...uc,
-    slug: uc.slugs[locale.value as Locale] ?? uc.slugs.fr,
+    href: locale.value === 'en' ? `/en/cas-usage/${uc.slugs.en}` : `/cas-usage/${uc.slugs.fr}`,
     tags: uc.tags[locale.value as Locale] ?? uc.tags.fr,
     title: t(`useCases.${uc.key}.title`),
     desc:  t(`useCases.${uc.key}.desc`),
@@ -57,7 +57,7 @@ const items = computed(() =>
           <NuxtLink
             v-for="item in items"
             :key="item.key"
-            :to="localePath(`/cas-usage/${item.slug}`)"
+            :to="item.href"
             class="card-link"
           >
             <MsCard>
