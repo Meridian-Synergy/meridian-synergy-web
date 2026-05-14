@@ -134,6 +134,9 @@ export default defineNuxtConfig({
     pages: {
       'cas-usage/index': { fr: '/cas-usage', en: '/use-case' },
       'cas-usage/[slug]': { fr: '/cas-usage/[slug]', en: '/use-case/[slug]' },
+      'tarifs': { fr: '/tarifs', en: '/pricing' },
+      'cgu': { fr: '/cgu', en: '/terms-of-use' },
+      'cgv': { fr: '/cgv', en: '/terms-of-sale' },
     },
   },
 

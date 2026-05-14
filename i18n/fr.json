@@ -6,7 +6,10 @@
     "about": "À propos",
     "contact": "Contact",
     "cta": "Découvrir",
-    "useCases": "Cas d'usage"
+    "useCases": "Cas d'usage",
+    "pricing": "Tarifs",
+    "terms": "CGU",
+    "termsSale": "CGV"
   },
   "hero": {
     "tag": "Opérateurs drone certifiés",
@@ -141,7 +144,201 @@
     "tagline": "La plateforme pour télépilotes professionnels.",
     "legal": "Mentions légales",
     "copyright": "© {year} Meridian Synergy. Tous droits réservés.",
-    "contact": "Contact"
+    "contact": "Contact",
+    "cgu": "CGU",
+    "cgv": "CGV",
+    "pricing": "Tarifs"
+  },
+  "tarifsPage": {
+    "meta": {
+      "title": "Tarifs — Meridian Synergy",
+      "description": "Découvrez la tarification transparente de Meridian Synergy : 3 mois d'essai gratuits, puis 10 €/mois par société + 5 €/mois par utilisateur actif."
+    },
+    "hero": {
+      "badge": "Tarification transparente",
+      "title": "Des tarifs simples,\nsans surprise.",
+      "desc": "Un forfait fixe par société et un tarif par siège, sans engagement. Essayez gratuitement pendant 3 mois."
+    },
+    "trial": {
+      "badge": "Période d'essai gratuite — 3 mois",
+      "desc": "Accès complet à toutes les fonctionnalités pendant 3 mois, sans carte bancaire requise."
+    },
+    "plans": {
+      "perMonth": "/ mois / société",
+      "perSeatPeriod": "/ mois / utilisateur actif",
+      "essential": {
+        "name": "Essentiel",
+        "desc": "Le forfait de base, par société, quelle que soit sa taille.",
+        "note": "Forfait fixe — indépendant du nombre d'utilisateurs",
+        "f1": "Gestion de la flotte de drones",
+        "f2": "Planification de missions",
+        "f3": "Gestion des documents réglementaires DGAC",
+        "f4": "Rapports d'intervention automatisés"
+      },
+      "perSeat": {
+        "name": "Par siège",
+        "desc": "En complément, facturation par utilisateur actif dans le mois.",
+        "note": "Par utilisateur ayant effectué au moins une action dans le mois",
+        "f1": "Accès individuel au portail",
+        "f2": "Journal d'activité par pilote",
+        "f3": "Droits et rôles configurables",
+        "f4": "Support prioritaire par utilisateur"
+      }
+    },
+    "example": {
+      "title": "Exemple — société avec 3 utilisateurs actifs",
+      "base": "Forfait Essentiel",
+      "seats": "3 sièges × 5 €",
+      "total": "Total HT",
+      "month": "/ mois"
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "q1": {
+        "q": "Que se passe-t-il à la fin de l'essai gratuit ?",
+        "a": "À l'issue des 3 mois d'essai, vous choisissez de passer à un abonnement payant ou de supprimer votre compte. Aucun prélèvement automatique n'est effectué sans votre accord explicite."
+      },
+      "q2": {
+        "q": "Puis-je annuler à tout moment ?",
+        "a": "Oui. La résiliation est possible à tout moment depuis votre espace d'administration. Elle prend effet à la fin de la période en cours, sans frais ni pénalité."
+      },
+      "q3": {
+        "q": "Comment sont comptés les sièges ?",
+        "a": "Seuls les utilisateurs ayant effectué au moins une action dans le mois calendaire sont comptabilisés comme « actifs ». Un compte inactif n'est pas facturé."
+      },
+      "q4": {
+        "q": "La facturation est-elle mensuelle ou annuelle ?",
+        "a": "La facturation est mensuelle, par prélèvement automatique via Stripe. Une offre annuelle avec remise sera disponible prochainement."
+      }
+    },
+    "cta": {
+      "title": "Commencez votre essai gratuit",
+      "desc": "3 mois gratuits, accès complet, sans carte bancaire. Créez votre compte en moins d'une minute.",
+      "btn": "Commencer l'essai gratuit"
+    }
+  },
+  "cguPage": {
+    "meta": {
+      "title": "Conditions Générales d'Utilisation — Meridian Synergy",
+      "description": "Conditions Générales d'Utilisation de la plateforme SaaS Meridian Synergy pour télépilotes et sociétés opératrices de drones."
+    },
+    "title": "Conditions Générales d'Utilisation",
+    "s1": {
+      "title": "Objet et acceptation",
+      "p1": "Les présentes Conditions Générales d'Utilisation (CGU) ont pour objet de définir les modalités et conditions dans lesquelles Meridian Synergy SAS (ci-après « l'Éditeur ») met à disposition la plateforme SaaS accessible à l'adresse app.meridian-synergy.com (ci-après « la Plateforme »).",
+      "p2": "L'accès à la Plateforme et son utilisation impliquent l'acceptation pleine et entière des présentes CGU. Toute personne physique agissant pour le compte d'une société (ci-après « l'Utilisateur ») qui crée un compte ou accède à la Plateforme est réputée avoir accepté les présentes CGU."
+    },
+    "s2": {
+      "title": "Description du service",
+      "p1": "La Plateforme Meridian Synergy est un outil de gestion destiné aux télépilotes de drones professionnels et aux sociétés opératrices. Elle permet notamment :",
+      "f1": "La gestion de la flotte de drones (enregistrements, maintenances, documents)",
+      "f2": "La planification et le suivi de missions de vol",
+      "f3": "La gestion des documents réglementaires requis par la DGAC et le règlement européen UE 2019/947 (autorisations, assurances, certificats de télépilote)",
+      "f4": "La génération de rapports d'intervention et bilans de conformité"
+    },
+    "s3": {
+      "title": "Accès et compte utilisateur",
+      "p1": "L'accès à la Plateforme est réservé aux professionnels (personnes morales ou personnes physiques exerçant une activité professionnelle). L'Utilisateur crée un compte en fournissant une adresse e-mail valide et un mot de passe sécurisé.",
+      "p2": "L'Utilisateur est responsable de la confidentialité de ses identifiants et de toute activité effectuée sous son compte. En cas de compromission de son compte, il s'engage à en informer immédiatement l'Éditeur à l'adresse legal@meridian-synergy.com.",
+      "p3": "L'Éditeur se réserve le droit de suspendre ou de résilier tout compte dont l'utilisation serait contraire aux présentes CGU, à la réglementation applicable ou susceptible de porter atteinte aux droits de tiers."
+    },
+    "s4": {
+      "title": "Obligations de l'utilisateur",
+      "p1": "L'Utilisateur s'engage à :",
+      "o1": "Fournir des informations exactes et à jour lors de la création du compte et tout au long de l'utilisation du service",
+      "o2": "Utiliser la Plateforme dans le respect du cadre légal et réglementaire applicable aux opérations drone (règlement UE 2019/947, arrêtés DGAC, réglementation EASA)",
+      "o3": "Ne pas tenter de contourner, pirater ou altérer les systèmes de sécurité de la Plateforme",
+      "o4": "Ne pas utiliser la Plateforme à des fins illicites ou contraires à l'ordre public",
+      "o5": "S'assurer que les données de vol et de conformité enregistrées sur la Plateforme sont conformes à la réalité"
+    },
+    "s5": {
+      "title": "Données personnelles (RGPD)",
+      "p1": "L'Éditeur traite les données personnelles des Utilisateurs en qualité de responsable de traitement, conformément au Règlement Général sur la Protection des Données (RGPD — UE 2016/679) et à la loi Informatique et Libertés modifiée.",
+      "p2": "Les données collectées (nom, prénom, adresse e-mail professionnelle, données de vol, informations sur les drones) sont hébergées au sein de l'Union européenne via la solution Supabase (hébergement AWS eu-west-3, Paris). Elles ne sont pas cédées à des tiers à des fins commerciales.",
+      "p3": "Conformément au RGPD, l'Utilisateur dispose d'un droit d'accès, de rectification, d'effacement, de portabilité et d'opposition au traitement de ses données, exerçable à l'adresse legal@meridian-synergy.com."
+    },
+    "s6": {
+      "title": "Propriété intellectuelle",
+      "p1": "La Plateforme, son code source, ses interfaces, ses algorithmes et son contenu (à l'exception des données saisies par l'Utilisateur) sont la propriété exclusive de Meridian Synergy SAS et sont protégés par le droit de la propriété intellectuelle. Toute reproduction, modification ou exploitation non autorisée est interdite.",
+      "p2": "L'Utilisateur conserve la propriété des données qu'il saisit sur la Plateforme. Il concède à l'Éditeur une licence non exclusive et non cessible pour héberger, traiter et afficher ces données dans le seul but de fournir le service."
+    },
+    "s7": {
+      "title": "Limitation de responsabilité",
+      "p1": "La Plateforme est fournie « en l'état ». L'Éditeur s'efforce d'assurer la continuité et la qualité du service mais ne garantit pas une disponibilité ininterrompue. L'Éditeur ne saurait être tenu responsable des dommages indirects, pertes de données ou pertes d'exploitation résultant d'une interruption de service.",
+      "p2": "La Plateforme est un outil d'assistance à la gestion réglementaire. L'Utilisateur demeure seul responsable du respect des obligations réglementaires applicables à ses opérations de vol (déclarations DGAC, autorisations de survol, assurances RC professionnelles)."
+    },
+    "s8": {
+      "title": "Modification des CGU",
+      "p1": "L'Éditeur se réserve le droit de modifier les présentes CGU à tout moment. Les Utilisateurs seront informés de toute modification substantielle par e-mail ou par notification dans la Plateforme au moins 30 jours avant l'entrée en vigueur des nouvelles conditions. La poursuite de l'utilisation de la Plateforme après cette période vaut acceptation des nouvelles CGU."
+    },
+    "s9": {
+      "title": "Droit applicable et juridiction compétente",
+      "p1": "Les présentes CGU sont soumises au droit français. En cas de litige relatif à leur interprétation ou à leur exécution, les parties s'efforceront de trouver une solution amiable.",
+      "p2": "À défaut d'accord amiable dans un délai de 30 jours, tout litige sera soumis à la compétence exclusive des tribunaux de Paris, nonobstant pluralité de défendeurs ou appel en garantie."
+    },
+    "s10": {
+      "title": "Contact",
+      "p1": "Pour toute question relative aux présentes CGU ou à l'utilisation de la Plateforme, contactez-nous à l'adresse : "
+    },
+    "updatedAt": "Dernière mise à jour : mai 2026"
+  },
+  "cgvPage": {
+    "meta": {
+      "title": "Conditions Générales de Vente — Meridian Synergy",
+      "description": "Conditions Générales de Vente de l'abonnement SaaS Meridian Synergy : tarification, essai gratuit, facturation, résiliation et droit applicable."
+    },
+    "title": "Conditions Générales de Vente",
+    "s1": {
+      "title": "Objet",
+      "p1": "Les présentes Conditions Générales de Vente (CGV) régissent les conditions dans lesquelles Meridian Synergy SAS (SIREN 101 847 895, 2 rue des Cages, 58200 Saint-Père) commercialise l'accès à sa plateforme SaaS accessible à l'adresse app.meridian-synergy.com (ci-après « le Service »).",
+      "p2": "Toute souscription au Service implique l'acceptation pleine et entière des présentes CGV. Elles prévalent sur toute condition contraire de l'acheteur sauf accord écrit préalable."
+    },
+    "s2": {
+      "title": "Tarification",
+      "p1": "L'accès au Service est facturé sur la base de deux composantes cumulatives, exprimées en HT :",
+      "item1": "Forfait Essentiel : 10 € HT / mois / société — couvre l'accès de base à la plateforme, indépendamment du nombre d'utilisateurs",
+      "item2": "Tarif par siège : 5 € HT / mois / utilisateur actif — un utilisateur est considéré actif s'il a effectué au moins une action dans le mois calendaire",
+      "p2": "Les tarifs sont susceptibles d'évoluer. Toute modification tarifaire est communiquée aux clients par e-mail avec un préavis minimum de 30 jours avant l'entrée en vigueur."
+    },
+    "s3": {
+      "title": "Période d'essai",
+      "p1": "Tout nouveau compte bénéficie d'une période d'essai gratuit de 3 (trois) mois calendaires à compter de la date de création du compte, avec accès complet à l'ensemble des fonctionnalités. Aucune carte bancaire n'est requise durant la période d'essai.",
+      "p2": "À l'issue de la période d'essai, l'accès au Service est suspendu sauf si l'entreprise souscrit à un abonnement payant. Les données sont conservées pendant 30 jours après la fin de l'essai avant suppression définitive."
+    },
+    "s4": {
+      "title": "Facturation et paiement",
+      "p1": "La facturation est mensuelle, à terme échu. Le paiement s'effectue par prélèvement automatique via la plateforme de paiement Stripe. L'abonnement est renouvelé tacitement chaque mois.",
+      "p2": "Les factures sont disponibles en téléchargement dans l'espace d'administration du compte. Elles sont émises en euros, montants HT. La TVA applicable est mentionnée séparément selon les règles en vigueur."
+    },
+    "s5": {
+      "title": "TVA",
+      "p1": "Les prix sont indiqués hors taxes. La TVA française au taux en vigueur est applicable pour les clients assujettis établis en France. Pour les clients établis dans un autre État membre de l'Union européenne, la TVA du pays du client s'applique conformément aux règles de localisation des services électroniques.",
+      "p2": "Les clients hors UE bénéficient d'une exonération de TVA. Tout client souhaitant bénéficier de l'autoliquidation de TVA intracommunautaire devra fournir son numéro de TVA intracommunautaire valide lors de la souscription."
+    },
+    "s6": {
+      "title": "Résiliation",
+      "p1": "L'abonnement peut être résilié à tout moment par l'Utilisateur depuis son espace d'administration, sans frais ni pénalité. La résiliation prend effet à la fin de la période mensuelle en cours : aucun accès supplémentaire n'est accordé au-delà de cette date."
+    },
+    "s7": {
+      "title": "Remboursements",
+      "p1": "Conformément à la pratique SaaS et dans la mesure permise par la réglementation applicable, aucun remboursement au prorata n'est accordé en cas de résiliation en cours de période mensuelle.",
+      "p2": "En cas d'erreur de facturation avérée imputable à Meridian Synergy, un avoir ou remboursement sera émis dans un délai de 15 jours ouvrés suivant la constatation de l'erreur."
+    },
+    "s8": {
+      "title": "Impayés et suspension",
+      "p1": "En cas de défaut de paiement, l'Éditeur adresse une relance par e-mail à la date d'échéance. Si le paiement n'est pas régularisé dans les 7 jours suivant la relance, l'accès au Service peut être suspendu. Les données restent conservées durant cette période de suspension.",
+      "p2": "Si le paiement n'est pas régularisé dans les 30 jours suivant la suspension, l'Éditeur se réserve le droit de résilier le compte et de supprimer les données associées, après un dernier avertissement par e-mail."
+    },
+    "s9": {
+      "title": "Droit applicable",
+      "p1": "Les présentes CGV sont soumises au droit français. En cas de litige, une solution amiable sera recherchée en priorité.",
+      "p2": "À défaut d'accord amiable dans un délai de 30 jours, tout litige sera soumis à la compétence exclusive des tribunaux de Paris."
+    },
+    "s10": {
+      "title": "Contact facturation",
+      "p1": "Pour toute question relative à la facturation ou aux présentes CGV, contactez notre équipe à l'adresse : "
+    },
+    "updatedAt": "Dernière mise à jour : mai 2026"
   },
   "dronesPage": {
     "meta": {

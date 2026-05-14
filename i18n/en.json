@@ -6,7 +6,10 @@
     "about": "About",
     "contact": "Contact",
     "cta": "Discover",
-    "useCases": "Use cases"
+    "useCases": "Use cases",
+    "pricing": "Pricing",
+    "terms": "Terms of Use",
+    "termsSale": "Terms of Sale"
   },
   "hero": {
     "tag": "Certified drone operators",
@@ -291,6 +294,200 @@
     "tagline": "The platform for professional drone pilots.",
     "legal": "Legal notice",
     "copyright": "© {year} Meridian Synergy. All rights reserved.",
-    "contact": "Contact"
+    "contact": "Contact",
+    "cgu": "Terms of Use",
+    "cgv": "Terms of Sale",
+    "pricing": "Pricing"
+  },
+  "tarifsPage": {
+    "meta": {
+      "title": "Pricing — Meridian Synergy",
+      "description": "Discover Meridian Synergy's transparent pricing: 3-month free trial, then €10/month per company + €5/month per active user."
+    },
+    "hero": {
+      "badge": "Transparent pricing",
+      "title": "Simple pricing,\nno surprises.",
+      "desc": "A flat rate per company and a per-seat fee, no commitment. Try it free for 3 months."
+    },
+    "trial": {
+      "badge": "Free trial — 3 months",
+      "desc": "Full access to all features for 3 months, no credit card required."
+    },
+    "plans": {
+      "perMonth": "/ month / company",
+      "perSeatPeriod": "/ month / active user",
+      "essential": {
+        "name": "Essential",
+        "desc": "The base plan, per company, regardless of size.",
+        "note": "Flat fee — independent of the number of users",
+        "f1": "Drone fleet management",
+        "f2": "Mission planning",
+        "f3": "DGAC regulatory document management",
+        "f4": "Automated intervention reports"
+      },
+      "perSeat": {
+        "name": "Per seat",
+        "desc": "In addition, billing per active user in the month.",
+        "note": "Per user who performed at least one action in the month",
+        "f1": "Individual portal access",
+        "f2": "Activity log per pilot",
+        "f3": "Configurable roles and permissions",
+        "f4": "Priority support per user"
+      }
+    },
+    "example": {
+      "title": "Example — company with 3 active users",
+      "base": "Essential plan",
+      "seats": "3 seats × €5",
+      "total": "Total excl. VAT",
+      "month": "/ month"
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "q1": {
+        "q": "What happens at the end of the free trial?",
+        "a": "After the 3-month trial, you choose to upgrade to a paid subscription or delete your account. No automatic charge is made without your explicit consent."
+      },
+      "q2": {
+        "q": "Can I cancel at any time?",
+        "a": "Yes. Cancellation is possible at any time from your administration panel. It takes effect at the end of the current billing period, with no fees or penalties."
+      },
+      "q3": {
+        "q": "How are seats counted?",
+        "a": "Only users who have performed at least one action in the calendar month are counted as 'active'. An inactive account is not billed."
+      },
+      "q4": {
+        "q": "Is billing monthly or annual?",
+        "a": "Billing is monthly, by automatic debit via Stripe. An annual plan with a discount will be available soon."
+      }
+    },
+    "cta": {
+      "title": "Start your free trial",
+      "desc": "3 months free, full access, no credit card. Create your account in under a minute.",
+      "btn": "Start free trial"
+    }
+  },
+  "cguPage": {
+    "meta": {
+      "title": "Terms of Use — Meridian Synergy",
+      "description": "Terms of Use for the Meridian Synergy SaaS platform for drone pilots and operating companies."
+    },
+    "title": "Terms of Use",
+    "s1": {
+      "title": "Purpose and acceptance",
+      "p1": "These Terms of Use (ToU) define the terms and conditions under which Meridian Synergy SAS (hereinafter 'the Publisher') makes available the SaaS platform accessible at app.meridian-synergy.com (hereinafter 'the Platform').",
+      "p2": "Accessing and using the Platform implies full and unreserved acceptance of these ToU. Any natural person acting on behalf of a company (hereinafter 'the User') who creates an account or accesses the Platform is deemed to have accepted these ToU."
+    },
+    "s2": {
+      "title": "Service description",
+      "p1": "The Meridian Synergy Platform is a management tool for professional drone pilots and operating companies. It enables:",
+      "f1": "Drone fleet management (registrations, maintenance, documents)",
+      "f2": "Mission planning and tracking",
+      "f3": "Management of regulatory documents required by the DGAC and EU Regulation 2019/947 (authorisations, insurance, remote pilot certificates)",
+      "f4": "Generation of intervention reports and compliance summaries"
+    },
+    "s3": {
+      "title": "Account access",
+      "p1": "Access to the Platform is reserved for professionals (legal entities or individuals engaged in a professional activity). The User creates an account by providing a valid email address and a secure password.",
+      "p2": "The User is responsible for the confidentiality of their credentials and for any activity carried out under their account. In the event of a compromised account, they must immediately notify the Publisher at legal@meridian-synergy.com.",
+      "p3": "The Publisher reserves the right to suspend or terminate any account whose use is contrary to these ToU, applicable regulations, or likely to infringe the rights of third parties."
+    },
+    "s4": {
+      "title": "User obligations",
+      "p1": "The User agrees to:",
+      "o1": "Provide accurate and up-to-date information when creating an account and throughout use of the service",
+      "o2": "Use the Platform in compliance with applicable legal and regulatory requirements for drone operations (EU Regulation 2019/947, DGAC orders, EASA regulations)",
+      "o3": "Not attempt to bypass, hack or alter the Platform's security systems",
+      "o4": "Not use the Platform for unlawful or public-order-contrary purposes",
+      "o5": "Ensure that flight and compliance data recorded on the Platform accurately reflects reality"
+    },
+    "s5": {
+      "title": "Personal data (GDPR)",
+      "p1": "The Publisher processes Users' personal data as data controller, in accordance with the General Data Protection Regulation (GDPR — EU 2016/679) and the French Data Protection Act.",
+      "p2": "Data collected (name, professional email address, flight data, drone information) is hosted within the European Union via Supabase (AWS eu-west-3, Paris). It is not transferred to third parties for commercial purposes.",
+      "p3": "In accordance with the GDPR, Users have the right to access, rectify, erase, port and object to the processing of their data, exercisable by contacting legal@meridian-synergy.com."
+    },
+    "s6": {
+      "title": "Intellectual property",
+      "p1": "The Platform, its source code, interfaces, algorithms and content (excluding data entered by the User) are the exclusive property of Meridian Synergy SAS and are protected by intellectual property law. Any unauthorised reproduction, modification or exploitation is prohibited.",
+      "p2": "The User retains ownership of the data they enter on the Platform. They grant the Publisher a non-exclusive, non-transferable licence to host, process and display such data solely for the purpose of providing the service."
+    },
+    "s7": {
+      "title": "Limitation of liability",
+      "p1": "The Platform is provided 'as is'. The Publisher strives to ensure continuity and quality of service but does not guarantee uninterrupted availability. The Publisher cannot be held liable for indirect damages, data loss or business losses resulting from a service interruption.",
+      "p2": "The Platform is a regulatory management assistance tool. The User remains solely responsible for compliance with regulatory obligations applicable to their flight operations (DGAC declarations, overflight authorisations, professional liability insurance)."
+    },
+    "s8": {
+      "title": "Amendments to ToU",
+      "p1": "The Publisher reserves the right to modify these ToU at any time. Users will be informed of any material change by email or in-Platform notification at least 30 days before the new terms take effect. Continued use of the Platform after that period constitutes acceptance of the updated ToU."
+    },
+    "s9": {
+      "title": "Governing law and jurisdiction",
+      "p1": "These ToU are governed by French law. In the event of a dispute regarding their interpretation or performance, the parties will endeavour to find an amicable solution.",
+      "p2": "In the absence of an amicable agreement within 30 days, any dispute shall be submitted to the exclusive jurisdiction of the Paris courts, notwithstanding multiple defendants or warranty claims."
+    },
+    "s10": {
+      "title": "Contact",
+      "p1": "For any questions relating to these ToU or use of the Platform, contact us at: "
+    },
+    "updatedAt": "Last updated: May 2026"
+  },
+  "cgvPage": {
+    "meta": {
+      "title": "Terms of Sale — Meridian Synergy",
+      "description": "Terms of Sale for the Meridian Synergy SaaS subscription: pricing, free trial, billing, cancellation and governing law."
+    },
+    "title": "Terms of Sale",
+    "s1": {
+      "title": "Purpose",
+      "p1": "These Terms of Sale (ToS) govern the conditions under which Meridian Synergy SAS (SIREN 101 847 895, 2 rue des Cages, 58200 Saint-Père, France) sells access to its SaaS platform accessible at app.meridian-synergy.com (hereinafter 'the Service').",
+      "p2": "Any subscription to the Service implies full and unreserved acceptance of these ToS. They take precedence over any contrary conditions of the purchaser unless agreed in writing in advance."
+    },
+    "s2": {
+      "title": "Pricing",
+      "p1": "Access to the Service is billed on the basis of two cumulative components, expressed excluding VAT:",
+      "item1": "Essential plan: €10 excl. VAT / month / company — covers basic access to the platform, regardless of the number of users",
+      "item2": "Per seat: €5 excl. VAT / month / active user — a user is considered active if they have performed at least one action in the calendar month",
+      "p2": "Prices may change. Any pricing change is communicated to clients by email with a minimum notice of 30 days before taking effect."
+    },
+    "s3": {
+      "title": "Free trial",
+      "p1": "Every new account benefits from a 3 (three) calendar month free trial starting from the account creation date, with full access to all features. No credit card is required during the trial period.",
+      "p2": "At the end of the trial period, access to the Service is suspended unless the company subscribes to a paid plan. Data is retained for 30 days after the trial ends before permanent deletion."
+    },
+    "s4": {
+      "title": "Billing and payment",
+      "p1": "Billing is monthly, in arrears. Payment is made by automatic debit via the Stripe payment platform. The subscription is tacitly renewed each month.",
+      "p2": "Invoices are available for download in the account administration panel. They are issued in euros, excl. VAT. Applicable VAT is shown separately in accordance with current regulations."
+    },
+    "s5": {
+      "title": "VAT",
+      "p1": "Prices are quoted excluding taxes. French VAT at the applicable rate applies to taxable customers established in France. For customers established in another EU Member State, the customer's country VAT applies in accordance with electronic services localisation rules.",
+      "p2": "Non-EU customers benefit from a VAT exemption. Any customer wishing to benefit from intra-Community VAT reverse charge must provide their valid intra-Community VAT number at the time of subscription."
+    },
+    "s6": {
+      "title": "Cancellation",
+      "p1": "The subscription may be cancelled at any time by the User from their administration panel, with no fees or penalties. Cancellation takes effect at the end of the current monthly period: no further access is granted beyond that date."
+    },
+    "s7": {
+      "title": "Refunds",
+      "p1": "In accordance with SaaS industry practice and to the extent permitted by applicable regulations, no pro-rata refund is granted for cancellations made during a monthly period.",
+      "p2": "In the event of a billing error demonstrably attributable to Meridian Synergy, a credit note or refund will be issued within 15 business days of the error being identified."
+    },
+    "s8": {
+      "title": "Late payment and suspension",
+      "p1": "In the event of non-payment, the Publisher sends a payment reminder by email on the due date. If payment is not made within 7 days of the reminder, access to the Service may be suspended. Data is retained during this suspension period.",
+      "p2": "If payment is not regularised within 30 days of suspension, the Publisher reserves the right to terminate the account and delete the associated data, after a final warning by email."
+    },
+    "s9": {
+      "title": "Governing law",
+      "p1": "These ToS are governed by French law. In the event of a dispute, an amicable solution will be sought first.",
+      "p2": "In the absence of an amicable agreement within 30 days, any dispute shall be submitted to the exclusive jurisdiction of the Paris courts."
+    },
+    "s10": {
+      "title": "Billing contact",
+      "p1": "For any questions relating to billing or these ToS, contact our team at: "
+    },
+    "updatedAt": "Last updated: May 2026"
   }
 }
