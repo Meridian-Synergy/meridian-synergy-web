@@ -34,12 +34,9 @@ const socialLinks: SocialLinkItem[] = [
           <NuxtLink :to="localePath('/services')">{{ t('nav.services') }}</NuxtLink>
           <NuxtLink :to="localePath('/drones')">{{ t('nav.drones') }}</NuxtLink>
           <NuxtLink :to="localePath('/cas-usage')">{{ t('nav.useCases') }}</NuxtLink>
-          <a href="https://waypoint360.eu/tarifs" target="_blank" rel="noopener noreferrer">{{ t('footer.pricing') }}</a>
           <NuxtLink :to="localePath('/a-propos')">{{ t('nav.about') }}</NuxtLink>
           <NuxtLink :to="localePath('/contact')">{{ t('nav.contact') }}</NuxtLink>
           <NuxtLink :to="localePath('/mentions-legales')">{{ t('footer.legal') }}</NuxtLink>
-          <a href="https://waypoint360.eu/cgu" target="_blank" rel="noopener noreferrer">{{ t('footer.cgu') }}</a>
-          <a href="https://waypoint360.eu/cgv" target="_blank" rel="noopener noreferrer">{{ t('footer.cgv') }}</a>
         </nav>
       </div>
 
