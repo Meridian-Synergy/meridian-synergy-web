@@ -239,7 +239,7 @@
     "s3": {
       "title": "Accès et compte utilisateur",
       "p1": "L'accès à la Plateforme est réservé aux professionnels (personnes morales ou personnes physiques exerçant une activité professionnelle). L'Utilisateur crée un compte en fournissant une adresse e-mail valide et un mot de passe sécurisé.",
-      "p2": "L'Utilisateur est responsable de la confidentialité de ses identifiants et de toute activité effectuée sous son compte. En cas de compromission de son compte, il s'engage à en informer immédiatement l'Éditeur à l'adresse legal@meridian-synergy.com.",
+      "p2": "L'Utilisateur est responsable de la confidentialité de ses identifiants et de toute activité effectuée sous son compte. En cas de compromission de son compte, il s'engage à en informer immédiatement l'Éditeur à l'adresse legal{'@'}meridian-synergy.com.",
       "p3": "L'Éditeur se réserve le droit de suspendre ou de résilier tout compte dont l'utilisation serait contraire aux présentes CGU, à la réglementation applicable ou susceptible de porter atteinte aux droits de tiers."
     },
     "s4": {
@@ -255,7 +255,7 @@
       "title": "Données personnelles (RGPD)",
       "p1": "L'Éditeur traite les données personnelles des Utilisateurs en qualité de responsable de traitement, conformément au Règlement Général sur la Protection des Données (RGPD — UE 2016/679) et à la loi Informatique et Libertés modifiée.",
       "p2": "Les données collectées (nom, prénom, adresse e-mail professionnelle, données de vol, informations sur les drones) sont hébergées au sein de l'Union européenne via la solution Supabase (hébergement AWS eu-west-3, Paris). Elles ne sont pas cédées à des tiers à des fins commerciales.",
-      "p3": "Conformément au RGPD, l'Utilisateur dispose d'un droit d'accès, de rectification, d'effacement, de portabilité et d'opposition au traitement de ses données, exerçable à l'adresse legal@meridian-synergy.com."
+      "p3": "Conformément au RGPD, l'Utilisateur dispose d'un droit d'accès, de rectification, d'effacement, de portabilité et d'opposition au traitement de ses données, exerçable à l'adresse legal{'@'}meridian-synergy.com."
     },
     "s6": {
       "title": "Propriété intellectuelle",

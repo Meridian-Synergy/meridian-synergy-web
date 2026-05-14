@@ -389,7 +389,7 @@
     "s3": {
       "title": "Account access",
       "p1": "Access to the Platform is reserved for professionals (legal entities or individuals engaged in a professional activity). The User creates an account by providing a valid email address and a secure password.",
-      "p2": "The User is responsible for the confidentiality of their credentials and for any activity carried out under their account. In the event of a compromised account, they must immediately notify the Publisher at legal@meridian-synergy.com.",
+      "p2": "The User is responsible for the confidentiality of their credentials and for any activity carried out under their account. In the event of a compromised account, they must immediately notify the Publisher at legal{'@'}meridian-synergy.com.",
       "p3": "The Publisher reserves the right to suspend or terminate any account whose use is contrary to these ToU, applicable regulations, or likely to infringe the rights of third parties."
     },
     "s4": {
@@ -405,7 +405,7 @@
       "title": "Personal data (GDPR)",
       "p1": "The Publisher processes Users' personal data as data controller, in accordance with the General Data Protection Regulation (GDPR — EU 2016/679) and the French Data Protection Act.",
       "p2": "Data collected (name, professional email address, flight data, drone information) is hosted within the European Union via Supabase (AWS eu-west-3, Paris). It is not transferred to third parties for commercial purposes.",
-      "p3": "In accordance with the GDPR, Users have the right to access, rectify, erase, port and object to the processing of their data, exercisable by contacting legal@meridian-synergy.com."
+      "p3": "In accordance with the GDPR, Users have the right to access, rectify, erase, port and object to the processing of their data, exercisable by contacting legal{'@'}meridian-synergy.com."
     },
     "s6": {
       "title": "Intellectual property",
