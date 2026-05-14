@@ -56,13 +56,14 @@
     }
   },
   "saas": {
-    "badge": "Coming soon",
-    "title": "The drone pilot portal is coming",
+    "badge": "Live",
+    "title": "Manage your drone business with Waypoint360",
     "desc": "Mission planning, DGAC compliance, fleet management and intervention reports — all in one place.",
     "feature1": "Regulated flight planning",
     "feature2": "DGAC compliance tracking",
     "feature3": "Automated intervention reports",
-    "cta": "Get early access"
+    "cta": "Access the platform",
+    "url": "app.waypoint360.eu"
   },
   "dronesPage": {
     "meta": {

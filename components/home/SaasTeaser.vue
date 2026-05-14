@@ -8,7 +8,7 @@ const { t } = useI18n()
   <section class="saas">
     <div class="saas-container">
       <div class="saas-content">
-        <MsBadge :label="t('saas.badge')" variant="sky" :dot="false" />
+        <MsBadge :label="t('saas.badge')" variant="sky" :dot="true" />
 
         <h2 class="saas-title">{{ t('saas.title') }}</h2>
         <p class="saas-desc">{{ t('saas.desc') }}</p>
@@ -34,21 +34,44 @@ const { t } = useI18n()
           </li>
         </ul>
 
-        <a href="mailto:contact@meridian-synergy.com?subject=Notification%20plateforme%20t%C3%A9l%C3%A9pilote" class="saas-mailto">
+        <a href="https://app.waypoint360.eu" target="_blank" rel="noopener noreferrer" class="saas-cta">
           <MsButton :label="t('saas.cta')" variant="cta" size="lg" tag="span" />
         </a>
       </div>
 
-      <!-- Abstract mockup visual -->
+      <!-- Browser mockup showing app.waypoint360.eu -->
       <div class="saas-visual" aria-hidden="true">
         <div class="mockup">
-          <div class="mockup-bar">
-            <span></span><span></span><span></span>
+          <div class="mockup-chrome">
+            <div class="chrome-dots">
+              <span class="dot dot--red"></span>
+              <span class="dot dot--yellow"></span>
+              <span class="dot dot--green"></span>
+            </div>
+            <div class="chrome-url">
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                <circle cx="5" cy="5" r="4" stroke="currentColor" stroke-width="1"/>
+                <path d="M2 5h6M5 2a3 3 0 0 1 0 6M5 2a3 3 0 0 0 0 6" stroke="currentColor" stroke-width="0.8"/>
+              </svg>
+              <span>{{ t('saas.url') }}</span>
+            </div>
           </div>
+
+          <div class="mockup-sidebar">
+            <div class="sidebar-logo">W360</div>
+            <div class="sidebar-nav">
+              <div class="sidebar-item sidebar-item--active"></div>
+              <div class="sidebar-item"></div>
+              <div class="sidebar-item"></div>
+              <div class="sidebar-item"></div>
+            </div>
+          </div>
+
           <div class="mockup-body">
-            <div class="mockup-row mockup-row--title"></div>
-            <div class="mockup-row mockup-row--text w-3/4"></div>
-            <div class="mockup-row mockup-row--text w-5/6"></div>
+            <div class="mockup-header">
+              <div class="mockup-row mockup-row--title" style="width: 45%;"></div>
+              <div class="mockup-chip"></div>
+            </div>
             <div class="mockup-cards">
               <div class="mockup-card">
                 <div class="mc-label"></div>
@@ -63,8 +86,12 @@ const { t } = useI18n()
                 <div class="mc-val"></div>
               </div>
             </div>
-            <div class="mockup-row mockup-row--bar full">
-              <div class="mockup-progress"></div>
+            <div class="mockup-table">
+              <div class="mockup-row mockup-row--thead"></div>
+              <div class="mockup-row mockup-row--tr"></div>
+              <div class="mockup-row mockup-row--tr"></div>
+              <div class="mockup-row mockup-row--tr mockup-row--tr-active"></div>
+              <div class="mockup-row mockup-row--tr"></div>
             </div>
           </div>
         </div>
@@ -109,7 +136,7 @@ const { t } = useI18n()
   flex-direction: column;
   gap: 24px;
 }
-.saas-mailto { text-decoration: none; display: inline-block; }
+.saas-cta { text-decoration: none; display: inline-block; }
 
 .saas-title {
   font-family: var(--ms-font-display);
@@ -146,7 +173,7 @@ const { t } = useI18n()
   color: rgba(255,255,255,0.85);
 }
 
-/* ── Mockup visual ── */
+/* ── Mockup ── */
 .saas-visual {
   display: flex;
   justify-content: center;
@@ -155,69 +182,166 @@ const { t } = useI18n()
 
 .mockup {
   width: 100%;
-  max-width: 400px;
-  background: var(--ms-color-dark-bg2);
-  border: 1px solid rgba(255,255,255,0.08);
+  max-width: 420px;
+  background: #0f1623;
+  border: 1px solid rgba(255,255,255,0.1);
   border-radius: var(--ms-radius-lg);
   overflow: hidden;
-  box-shadow: var(--ms-shadow-lg);
+  box-shadow: 0 24px 64px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.04);
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  grid-template-rows: 36px 1fr;
 }
 
-.mockup-bar {
+/* Chrome bar — spans full width */
+.mockup-chrome {
+  grid-column: 1 / -1;
+  grid-row: 1;
   display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 12px 16px;
+  gap: 10px;
+  padding: 0 12px;
+  background: #0a1020;
   border-bottom: 1px solid rgba(255,255,255,0.06);
 }
-.mockup-bar span {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.15);
-}
-.mockup-bar span:first-child { background: rgba(240, 90, 40, 0.5); }
-.mockup-bar span:nth-child(2) { background: rgba(201, 168, 76, 0.5); }
-.mockup-bar span:nth-child(3) { background: rgba(34, 197, 94, 0.5); }
 
-.mockup-body {
-  padding: 20px;
+.chrome-dots {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-shrink: 0;
+}
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+.dot--red    { background: #f05538; }
+.dot--yellow { background: #c9a84c; }
+.dot--green  { background: #22c55e; }
+
+.chrome-url {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 4px;
+  padding: 3px 8px;
+  font-family: var(--ms-font-condensed);
+  font-size: 10px;
+  color: rgba(255,255,255,0.45);
+  letter-spacing: 0.01em;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.chrome-url svg {
+  flex-shrink: 0;
+  color: var(--ms-color-sky);
+  opacity: 0.7;
+}
+
+/* Sidebar */
+.mockup-sidebar {
+  grid-column: 1;
+  grid-row: 2;
+  background: #0c1420;
+  border-right: 1px solid rgba(255,255,255,0.06);
+  padding: 14px 8px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 16px;
+  align-items: center;
+}
+
+.sidebar-logo {
+  font-family: var(--ms-font-display);
+  font-size: 8px;
+  font-weight: 800;
+  color: var(--ms-color-sky);
+  letter-spacing: 0.05em;
+  background: rgba(0, 170, 239, 0.12);
+  border-radius: 4px;
+  padding: 4px 4px;
+  text-align: center;
+  width: 34px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.sidebar-item {
+  height: 28px;
+  border-radius: 4px;
+  background: rgba(255,255,255,0.05);
+}
+.sidebar-item--active {
+  background: rgba(0, 170, 239, 0.2);
+  border: 1px solid rgba(0, 170, 239, 0.3);
+}
+
+/* Body */
+.mockup-body {
+  grid-column: 2;
+  grid-row: 2;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mockup-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.mockup-chip {
+  width: 40px;
+  height: 16px;
+  border-radius: 999px;
+  background: rgba(0, 170, 239, 0.25);
+  border: 1px solid rgba(0, 170, 239, 0.4);
+  flex-shrink: 0;
 }
 
 .mockup-row {
-  border-radius: var(--ms-radius-sm);
+  border-radius: 3px;
   background: rgba(255,255,255,0.07);
 }
-.mockup-row--title { height: 20px; width: 55%; }
-.mockup-row--text  { height: 12px; }
-.mockup-row--bar   { height: 8px; overflow: hidden; }
-
-.mockup-progress {
-  height: 100%;
-  width: 68%;
-  background: var(--ms-color-sky);
-  border-radius: var(--ms-radius-sm);
-}
+.mockup-row--title { height: 14px; }
+.mockup-row--thead { height: 10px; width: 100%; opacity: 0.5; }
+.mockup-row--tr    { height: 22px; width: 100%; border-radius: 4px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.04); }
+.mockup-row--tr-active { background: rgba(0, 170, 239, 0.08); border-color: rgba(0, 170, 239, 0.2); }
 
 .mockup-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  margin: 8px 0;
-}
-.mockup-card {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.06);
-  border-radius: var(--ms-radius-md);
-  padding: 12px;
-  display: flex;
-  flex-direction: column;
   gap: 8px;
 }
-.mc-label { height: 8px; background: rgba(255,255,255,0.12); border-radius: 2px; }
-.mc-val   { height: 20px; background: rgba(255,255,255,0.1); border-radius: 3px; }
-.mc-val--hi { background: rgba(0, 170, 239, 0.35); }
+.mockup-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--ms-radius-md);
+  padding: 10px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.mc-label { height: 6px; background: rgba(255,255,255,0.12); border-radius: 2px; }
+.mc-val   { height: 18px; background: rgba(255,255,255,0.08); border-radius: 3px; }
+.mc-val--hi { background: rgba(0, 170, 239, 0.3); }
+
+.mockup-table {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
 </style>

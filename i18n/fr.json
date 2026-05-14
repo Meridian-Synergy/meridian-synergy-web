@@ -56,13 +56,14 @@
     }
   },
   "saas": {
-    "badge": "Bientôt",
-    "title": "Le portail télépilote arrive",
+    "badge": "En ligne",
+    "title": "Gérez votre activité drone avec Waypoint360",
     "desc": "Planification de missions, conformité DGAC, gestion de flotte et rapports d'intervention — tout en un.",
     "feature1": "Planification de vols réglementée",
     "feature2": "Suivi de conformité DGAC",
     "feature3": "Rapports d'intervention automatisés",
-    "cta": "Être notifié en avant-première"
+    "cta": "Accéder à la plateforme",
+    "url": "app.waypoint360.eu"
   },
   "about": {
     "meta": {

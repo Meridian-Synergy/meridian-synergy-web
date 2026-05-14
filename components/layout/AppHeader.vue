@@ -11,7 +11,6 @@ const links = [
   { labelKey: 'nav.services',  path: '/services' },
   { labelKey: 'nav.drones',    path: '/drones' },
   { labelKey: 'nav.useCases',  path: '/cas-usage' },
-  { labelKey: 'nav.pricing',   path: '/tarifs' },
   { labelKey: 'nav.about',     path: '/a-propos' },
   { labelKey: 'nav.contact',   path: '/contact' },
 ]
