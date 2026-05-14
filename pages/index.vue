@@ -13,6 +13,7 @@ useSeoMeta({
   <div>
     <HeroSection />
     <ServicesTeaser />
+    <MarketplaceTeaser />
     <SaasTeaser />
   </div>
 </template>

@@ -55,6 +55,15 @@
       "desc": "Inspection de ponts, pylônes, éoliennes et barrages pour détecter fissures et corrosion."
     }
   },
+  "marketplace": {
+    "badge": "Waypoint360",
+    "title": "Trouvez le bon expert drone pour votre projet",
+    "desc": "Meridian Synergy est référencée sur Waypoint360, la marketplace qui connecte donneurs d'ordre et télépilotes professionnels certifiés. Comparez les profils, les spécialités et les zones d'intervention — partout en France.",
+    "feature1": "Experts certifiés DGAC et assurés RC professionnelle",
+    "feature2": "Toutes les spécialités : inspection, agriculture, vidéo, topographie",
+    "feature3": "Devis en ligne, sans intermédiaire",
+    "cta": "Découvrir la marketplace"
+  },
   "saas": {
     "badge": "En ligne",
     "title": "Gérez votre activité drone avec Waypoint360",

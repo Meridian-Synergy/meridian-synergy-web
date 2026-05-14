@@ -55,6 +55,15 @@
       "desc": "Inspection of bridges, pylons, wind turbines and dams to detect cracks and corrosion."
     }
   },
+  "marketplace": {
+    "badge": "Waypoint360",
+    "title": "Find the right drone expert for your project",
+    "desc": "Meridian Synergy is listed on Waypoint360, the marketplace connecting clients with certified professional drone operators. Compare profiles, specialties and coverage areas — across France.",
+    "feature1": "DGAC-certified experts with professional liability insurance",
+    "feature2": "All specialties: inspection, agriculture, video, mapping",
+    "feature3": "Online quotes, no middleman",
+    "cta": "Discover the marketplace"
+  },
   "saas": {
     "badge": "Live",
     "title": "Manage your drone business with Waypoint360",
