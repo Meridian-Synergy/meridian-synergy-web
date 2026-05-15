@@ -5,7 +5,14 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
     '@nuxtjs/i18n',
+    '@nuxtjs/seo',
   ],
+
+  site: {
+    url: 'https://meridian-synergy.com',
+    name: 'Meridian Synergy',
+    defaultLocale: 'fr',
+  },
 
   alias: {
     '@meridian-synergy/ui': fileURLToPath(new URL('./lib/ui.ts', import.meta.url)),
@@ -32,8 +39,7 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
         { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
         { rel: 'manifest', href: '/site.webmanifest' },
-        { rel: 'sitemap', type: 'application/xml', href: 'https://meridian-synergy.com/sitemap.xml' },
-        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+{ rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
         {
           rel: 'stylesheet',
@@ -132,7 +138,14 @@ export default defineNuxtConfig({
       { code: 'en', language: 'en-US', name: 'English' },
     ],
     defaultLocale: 'fr',
-    strategy: 'prefix_except_default',
+    strategy: 'prefix_and_default',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'ms-locale',
+      redirectOn: 'all',
+      alwaysRedirect: false,
+      fallbackLocale: 'en',
+    },
     vueI18n: './i18n.config.ts',
     bundle: { optimizeTranslationDirective: false },
     customRoutes: 'config',
