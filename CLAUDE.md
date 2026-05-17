@@ -47,6 +47,18 @@ pnpm preview      # Preview du build SSG
 
 ---
 
+## Git workflow — ABSOLUTE
+
+**Never push directly to `main`.** Every change goes through a branch → PR → merge cycle:
+
+1. Create a branch: `git checkout -b feat/[topic]` or `fix/[topic]`
+2. Work and accumulate commits on that branch (multiple corrections on the same branch are fine)
+3. **Before committing**: present a summary of files changed and why, then wait for explicit **"Go commit"**
+4. After push: user reviews the diff on the GitHub PR
+5. Wait for explicit **"Go merge"** before merging to `main` — merging triggers the production deploy
+
+---
+
 ## Règle absolue — Design System
 
 **Ne jamais créer de composant UI local dans ce repo.**
