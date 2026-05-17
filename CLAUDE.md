@@ -65,6 +65,20 @@ pnpm preview      # Preview du build SSG
 
 ---
 
+## Backward compatibility — ABSOLUTE
+
+### Public URLs and routes
+Never remove or rename a public route, page, or content slug — it breaks SEO rankings, external backlinks, and user bookmarks.
+
+- **Rename a route or slug**: add a `301` redirect first, then rename — never the reverse
+- **Remove a page**: add a redirect to the nearest equivalent before deleting the file
+- Additive-first: always add new routes before removing old ones
+
+### i18n keys
+Never remove an i18n key from `fr.json` or `en.json` — only add. If a key is no longer used in this repo, leave it until confirmed unused across all repos that share the translation namespace.
+
+---
+
 ## Règle absolue — Design System
 
 **Ne jamais créer de composant UI local dans ce repo.**
