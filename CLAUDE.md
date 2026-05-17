@@ -56,6 +56,7 @@ pnpm preview      # Preview du build SSG
 3. **Before committing**: present a summary of files changed and why, then wait for explicit **"Go commit"**
 4. After push: user reviews the diff on the GitHub PR
 5. Wait for explicit **"Go merge"** before merging to `main` — merging triggers the production deploy
+6. After merge: pull local main — `git checkout main && git pull origin main` on affected repos
 
 ---
 
