@@ -51,7 +51,12 @@ pnpm preview      # Preview du build SSG
 
 **Never push directly to `main`.** Every change goes through a branch → PR → merge cycle:
 
-1. Create a branch: `git checkout -b feat/[topic]` or `fix/[topic]`
+**Branch types:**
+- `feat/[topic]` — new feature
+- `fix/[topic]` — one or more small fixes grouped together
+- `hotfix/[topic]` — single urgent fix, branched from `main` (prod), merged back immediately
+
+1. Create a branch: `git checkout -b feat/[topic]`, `fix/[topic]`, or `hotfix/[topic]`
 2. Work and accumulate commits on that branch (multiple corrections on the same branch are fine)
 3. **Before committing**: present a summary of files changed and why, then wait for explicit **"Go commit"**
 4. After push: user reviews the diff on the GitHub PR
