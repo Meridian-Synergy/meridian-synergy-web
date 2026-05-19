@@ -9,6 +9,15 @@ useSeoMeta({
   description: () => t('useCasesPage.meta.description'),
 })
 
+useSchemaOrg([
+  defineBreadcrumb({
+    itemListElement: [
+      { name: t('breadcrumb.home'), item: 'https://meridian-synergy.com' },
+      { name: t('nav.useCases') },
+    ],
+  }),
+])
+
 type Locale = 'fr' | 'en'
 
 const useCases = [

@@ -46,6 +46,29 @@ useSeoMeta({
   twitterCard: 'summary_large_image',
 })
 
+const useCaseHubPath = computed(() =>
+  locale.value === 'en' ? `${siteUrl}/en/use-case` : `${siteUrl}/cas-usage`
+)
+
+useSchemaOrg(computed(() => page.value ? [
+  defineArticle({
+    headline: page.value.title,
+    description: page.value.description,
+    image: (page.value?.meta as any)?.image
+      ? `${siteUrl}${(page.value.meta as any).image}`
+      : `${siteUrl}/og-default.png`,
+    datePublished: page.value.publishedAt as string | undefined,
+    author: [{ '@type': 'Organization', name: 'Meridian Synergy', url: siteUrl }],
+  }),
+  defineBreadcrumb({
+    itemListElement: [
+      { name: t('breadcrumb.home'), item: siteUrl },
+      { name: t('breadcrumb.useCases'), item: useCaseHubPath.value },
+      { name: page.value.title },
+    ],
+  }),
+] : []))
+
 const droneLabels: Record<string, string> = {
   'dji-t100-agri':   'DJI Agras T100',
   'dji-matrice-4td': 'DJI Matrice 4TD',

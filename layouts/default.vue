@@ -1,3 +1,23 @@
+<script setup lang="ts">
+const { locales } = useI18n()
+const switchLocalePath = useSwitchLocalePath()
+
+useHead(computed(() => ({
+  link: [
+    ...locales.value.map(loc => ({
+      rel: 'alternate',
+      hreflang: loc.language,
+      href: `https://meridian-synergy.com${switchLocalePath(loc.code)}`,
+    })),
+    {
+      rel: 'alternate',
+      hreflang: 'x-default',
+      href: `https://meridian-synergy.com${switchLocalePath('fr')}`,
+    },
+  ],
+})))
+</script>
+
 <template>
   <div class="layout">
     <!-- Google Tag Manager (noscript) -->

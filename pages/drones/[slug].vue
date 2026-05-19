@@ -29,6 +29,40 @@ useSeoMeta({
   twitterCard: 'summary_large_image',
 })
 
+useSchemaOrg(computed(() => page.value ? [
+  defineBreadcrumb({
+    itemListElement: [
+      { name: t('breadcrumb.home'), item: siteUrl },
+      { name: t('nav.drones'), item: `${siteUrl}${locale.value === 'en' ? '/en' : ''}/drones` },
+      { name: page.value.model as string },
+    ],
+  }),
+] : []))
+
+useHead(computed(() => {
+  if (!page.value) return {}
+  const schema: Record<string, unknown> = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: page.value.title,
+    description: page.value.description,
+    brand: { '@type': 'Brand', name: page.value.manufacturer },
+    model: page.value.model,
+  }
+  if (page.value.image) schema.image = `${siteUrl}${page.value.image}`
+  if (page.value.specs) {
+    schema.additionalProperty = Object.entries(page.value.specs as Record<string, string>)
+      .filter(([, v]) => v)
+      .map(([k, v]) => ({ '@type': 'PropertyValue', name: k, value: v }))
+  }
+  return {
+    script: [{
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify(schema),
+    }],
+  }
+}))
+
 const serviceKeys: Record<string, string> = {
   'audit-thermique':          'thermique',
   'thermal-inspection':       'thermique',

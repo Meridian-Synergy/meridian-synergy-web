@@ -9,6 +9,15 @@ useSeoMeta({
   description: () => t('about.meta.description'),
 })
 
+useSchemaOrg([
+  defineBreadcrumb({
+    itemListElement: [
+      { name: t('breadcrumb.home'), item: 'https://meridian-synergy.com' },
+      { name: t('nav.about') },
+    ],
+  }),
+])
+
 const certifications = [
   { label: 'A1 / A3', variant: 'navy' as const },
   { label: 'A2', variant: 'navy' as const },

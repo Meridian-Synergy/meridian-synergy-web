@@ -28,6 +28,40 @@ useSeoMeta({
   twitterCard: 'summary_large_image',
 })
 
+useSchemaOrg(computed(() => page.value ? [
+  defineBreadcrumb({
+    itemListElement: [
+      { name: t('breadcrumb.home'), item: siteUrl },
+      { name: t('nav.services'), item: `${siteUrl}${locale.value === 'en' ? '/en' : ''}/services` },
+      { name: page.value.title },
+    ],
+  }),
+] : []))
+
+useHead(computed(() => {
+  if (!page.value) return {}
+  const schema: Record<string, unknown> = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: page.value.title,
+    description: page.value.description,
+    url: `${siteUrl}${locale.value === 'en' ? '/en' : ''}/services/${slug}`,
+    provider: {
+      '@type': 'Organization',
+      name: 'Meridian Synergy',
+      url: siteUrl,
+    },
+    areaServed: { '@type': 'Country', name: 'France' },
+  }
+  if (page.value.image) schema.image = `${siteUrl}${page.value.image}`
+  return {
+    script: [{
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify(schema),
+    }],
+  }
+}))
+
 const droneLabels: Record<string, string> = {
   'dji-t100-agri':   'DJI Agras T100',
   'dji-matrice-4td': 'DJI Matrice 4TD',

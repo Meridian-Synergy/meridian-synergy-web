@@ -7,6 +7,57 @@ useSeoMeta({
   ogTitle: 'Meridian Synergy',
   ogImage: '/og-default.jpg',
 })
+
+useHead({
+  script: [{
+    type: 'application/ld+json',
+    innerHTML: JSON.stringify([
+      {
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        name: 'Meridian Synergy',
+        url: 'https://meridian-synergy.com',
+        logo: 'https://meridian-synergy.com/android-chrome-512x512.png',
+        email: 'contact@meridian-synergy.com',
+        telephone: '+33766974874',
+        description: 'Plateforme SaaS pour télépilotes de drones professionnels. Planification, conformité DGAC, rapports d\'intervention.',
+        sameAs: [
+          'https://www.linkedin.com/company/meridian-synergy/',
+          'https://www.instagram.com/meridian.synergy',
+          'https://www.tiktok.com/@meridian.synergy',
+          'https://www.youtube.com/@meridian.synergy',
+        ],
+        contactPoint: {
+          '@type': 'ContactPoint',
+          telephone: '+33766974874',
+          contactType: 'customer service',
+          availableLanguage: ['French', 'English'],
+        },
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'SoftwareApplication',
+        name: 'Meridian Synergy',
+        url: 'https://app.meridian-synergy.com',
+        applicationCategory: 'BusinessApplication',
+        operatingSystem: 'Web',
+        description: 'Plateforme SaaS pour télépilotes de drones professionnels. Planification, conformité DGAC, rapports d\'intervention.',
+        offers: {
+          '@type': 'Offer',
+          price: '0',
+          priceCurrency: 'EUR',
+          description: 'Essai gratuit disponible',
+        },
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        name: 'Meridian Synergy',
+        url: 'https://meridian-synergy.com',
+      },
+    ]),
+  }],
+})
 </script>
 
 <template>
