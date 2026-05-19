@@ -37,14 +37,14 @@ useHead({
       {
         '@context': 'https://schema.org',
         '@type': 'SoftwareApplication',
-        name: 'Meridian Synergy',
-        url: 'https://app.meridian-synergy.com',
+        name: 'Waypoint360',
+        url: 'https://app.waypoint360.eu',
         applicationCategory: 'BusinessApplication',
         operatingSystem: 'Web',
         description: 'Plateforme SaaS pour télépilotes de drones professionnels. Planification, conformité DGAC, rapports d\'intervention.',
         offers: {
           '@type': 'Offer',
-          price: '0',
+          price: '5',
           priceCurrency: 'EUR',
           description: 'Essai gratuit disponible',
         },
