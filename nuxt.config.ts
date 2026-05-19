@@ -1,5 +1,16 @@
 import { fileURLToPath } from 'node:url'
+import { readdirSync } from 'node:fs'
 import tailwindcss from '@tailwindcss/vite'
+
+function contentSlugs(dir: string): string[] {
+  try { return readdirSync(dir).map(f => f.replace('.md', '')) } catch { return [] }
+}
+
+const frServices  = contentSlugs('./content/fr/services')
+const enServices  = contentSlugs('./content/en/services')
+const frUseCases  = contentSlugs('./content/fr/cas-usage')
+const enUseCases  = contentSlugs('./content/en/cas-usage')
+const drones      = contentSlugs('./content/fr/drones')
 
 export default defineNuxtConfig({
   modules: [
@@ -61,6 +72,26 @@ export default defineNuxtConfig({
     preset: 'github-pages',
     prerender: {
       failOnError: false,
+      crawlLinks: true,
+      routes: [
+        // Static pages — FR (default) + EN
+        '/', '/en/',
+        '/services/', '/en/services/',
+        '/cas-usage/', '/en/use-case/',
+        '/drones/', '/en/drones/',
+        '/a-propos/', '/en/a-propos/',
+        '/contact/', '/en/contact/',
+        '/mentions-legales/', '/en/mentions-legales/',
+        // Dynamic content — services
+        ...frServices.map(s => `/services/${s}`),
+        ...enServices.map(s => `/en/services/${s}`),
+        // Dynamic content — use cases
+        ...frUseCases.map(s => `/cas-usage/${s}`),
+        ...enUseCases.map(s => `/en/use-case/${s}`),
+        // Dynamic content — drones (same slugs FR/EN)
+        ...drones.map(s => `/drones/${s}`),
+        ...drones.map(s => `/en/drones/${s}`),
+      ],
     },
   },
 
