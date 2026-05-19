@@ -41,7 +41,7 @@ useHead({
         url: 'https://app.waypoint360.eu',
         applicationCategory: 'BusinessApplication',
         operatingSystem: 'Web',
-        description: 'Plateforme SaaS pour télépilotes de drones professionnels. Planification, conformité DGAC, rapports d\'intervention.',
+        description: 'Plateforme SaaS pour opérateurs de drones professionnels. Génération de MANEX, analyse SORA, planification de missions et conformité DGAC en un seul outil.',
         offers: {
           '@type': 'Offer',
           price: '5',
