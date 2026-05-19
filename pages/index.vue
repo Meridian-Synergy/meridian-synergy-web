@@ -20,7 +20,7 @@ useHead({
         logo: 'https://meridian-synergy.com/android-chrome-512x512.png',
         email: 'contact@meridian-synergy.com',
         telephone: '+33766974874',
-        description: 'Plateforme SaaS pour télépilotes de drones professionnels. Planification, conformité DGAC, rapports d\'intervention.',
+        description: 'Meridian Synergy réunit trois expertises : conseil IT & architecture digitale, télépilotage professionnel certifié DGAC, et édition de Waypoint360 — la plateforme SaaS dédiée aux opérateurs de drones.',
         sameAs: [
           'https://www.linkedin.com/company/meridian-synergy/',
           'https://www.instagram.com/meridian.synergy',
