@@ -187,6 +187,263 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Use-case hub -->
+  <url>
+    <loc>https://meridian-synergy.com/cas-usage/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/cas-usage/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/use-case/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://meridian-synergy.com/en/use-case/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/cas-usage/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/use-case/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Use-case pages -->
+  <url>
+    <loc>https://meridian-synergy.com/cas-usage/couverts-vegetaux</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/cas-usage/couverts-vegetaux"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/use-case/cover-crops"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meridian-synergy.com/en/use-case/cover-crops</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/cas-usage/couverts-vegetaux"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/use-case/cover-crops"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://meridian-synergy.com/cas-usage/panneaux-solaires</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/cas-usage/panneaux-solaires"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/use-case/solar-panels"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meridian-synergy.com/en/use-case/solar-panels</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/cas-usage/panneaux-solaires"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/use-case/solar-panels"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://meridian-synergy.com/cas-usage/inspection-eoliennes</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/cas-usage/inspection-eoliennes"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/use-case/wind-turbine-inspection"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meridian-synergy.com/en/use-case/wind-turbine-inspection</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/cas-usage/inspection-eoliennes"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/use-case/wind-turbine-inspection"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://meridian-synergy.com/cas-usage/suivi-chantier</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/cas-usage/suivi-chantier"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/use-case/construction-monitoring"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meridian-synergy.com/en/use-case/construction-monitoring</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/cas-usage/suivi-chantier"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/use-case/construction-monitoring"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://meridian-synergy.com/cas-usage/viticulture-ndvi</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/cas-usage/viticulture-ndvi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/use-case/vineyard-ndvi"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meridian-synergy.com/en/use-case/vineyard-ndvi</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/cas-usage/viticulture-ndvi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/use-case/vineyard-ndvi"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://meridian-synergy.com/cas-usage/prise-de-vue-immobilier</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/cas-usage/prise-de-vue-immobilier"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/use-case/real-estate-aerial"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meridian-synergy.com/en/use-case/real-estate-aerial</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/cas-usage/prise-de-vue-immobilier"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/use-case/real-estate-aerial"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://meridian-synergy.com/cas-usage/audit-thermique-batiments</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/cas-usage/audit-thermique-batiments"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/use-case/building-thermal-inspection"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meridian-synergy.com/en/use-case/building-thermal-inspection</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/cas-usage/audit-thermique-batiments"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/use-case/building-thermal-inspection"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://meridian-synergy.com/cas-usage/reseaux-chaleur</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/cas-usage/reseaux-chaleur"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/use-case/heat-network-inspection"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meridian-synergy.com/en/use-case/heat-network-inspection</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/cas-usage/reseaux-chaleur"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/use-case/heat-network-inspection"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://meridian-synergy.com/cas-usage/pylones-electriques</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/cas-usage/pylones-electriques"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/use-case/power-line-inspection"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meridian-synergy.com/en/use-case/power-line-inspection</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/cas-usage/pylones-electriques"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/use-case/power-line-inspection"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://meridian-synergy.com/cas-usage/ponts-ouvrages-art</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/cas-usage/ponts-ouvrages-art"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/use-case/bridge-inspection"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meridian-synergy.com/en/use-case/bridge-inspection</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/cas-usage/ponts-ouvrages-art"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/use-case/bridge-inspection"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://meridian-synergy.com/cas-usage/cheminees-industrielles</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/cas-usage/cheminees-industrielles"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/use-case/industrial-chimney-inspection"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meridian-synergy.com/en/use-case/industrial-chimney-inspection</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/cas-usage/cheminees-industrielles"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/use-case/industrial-chimney-inspection"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://meridian-synergy.com/cas-usage/modelisation-3d-carrieres</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/cas-usage/modelisation-3d-carrieres"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/use-case/quarry-3d-modelling"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meridian-synergy.com/en/use-case/quarry-3d-modelling</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/cas-usage/modelisation-3d-carrieres"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/use-case/quarry-3d-modelling"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://meridian-synergy.com/cas-usage/releve-cadastral</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/cas-usage/releve-cadastral"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/use-case/cadastral-survey"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meridian-synergy.com/en/use-case/cadastral-survey</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/cas-usage/releve-cadastral"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/use-case/cadastral-survey"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://meridian-synergy.com/cas-usage/epandage-phytosanitaire</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/cas-usage/epandage-phytosanitaire"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/use-case/crop-spraying"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meridian-synergy.com/en/use-case/crop-spraying</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/cas-usage/epandage-phytosanitaire"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/use-case/crop-spraying"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://meridian-synergy.com/cas-usage/surveillance-sites-industriels</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/cas-usage/surveillance-sites-industriels"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/use-case/industrial-site-surveillance"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meridian-synergy.com/en/use-case/industrial-site-surveillance</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/cas-usage/surveillance-sites-industriels"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/use-case/industrial-site-surveillance"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://meridian-synergy.com/cas-usage/couverture-evenementielle</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/cas-usage/couverture-evenementielle"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/use-case/event-coverage"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meridian-synergy.com/en/use-case/event-coverage</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/cas-usage/couverture-evenementielle"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/use-case/event-coverage"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- Static pages -->
   <url>
     <loc>https://meridian-synergy.com/a-propos</loc>
@@ -216,6 +473,22 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/contact"/>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
+  </url>
+
+  <!-- Legal pages -->
+  <url>
+    <loc>https://meridian-synergy.com/mentions-legales</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/mentions-legales"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/mentions-legales"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://meridian-synergy.com/en/mentions-legales</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meridian-synergy.com/mentions-legales"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridian-synergy.com/en/mentions-legales"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 
 </urlset>
