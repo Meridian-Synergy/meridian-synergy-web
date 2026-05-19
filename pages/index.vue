@@ -44,7 +44,7 @@ useHead({
         description: 'Plateforme SaaS pour télépilotes de drones professionnels. Planification, conformité DGAC, rapports d\'intervention.',
         offers: {
           '@type': 'Offer',
-          price: '0',
+          price: '5',
           priceCurrency: 'EUR',
           description: 'Essai gratuit disponible',
         },
