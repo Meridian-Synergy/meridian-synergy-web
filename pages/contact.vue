@@ -9,6 +9,48 @@ useSeoMeta({
   description: () => t('contactPage.meta.description'),
 })
 
+useSchemaOrg([
+  defineBreadcrumb({
+    itemListElement: [
+      { name: t('breadcrumb.home'), item: 'https://meridian-synergy.com' },
+      { name: t('nav.contact') },
+    ],
+  }),
+])
+
+useHead({
+  script: [{
+    type: 'application/ld+json',
+    innerHTML: JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'Meridian Synergy',
+      url: 'https://meridian-synergy.com',
+      logo: 'https://meridian-synergy.com/android-chrome-512x512.png',
+      sameAs: [
+        'https://www.linkedin.com/company/meridian-synergy/',
+        'https://www.instagram.com/meridian.synergy',
+        'https://www.tiktok.com/@meridian.synergy',
+        'https://www.youtube.com/@meridian.synergy',
+      ],
+      contactPoint: [
+        {
+          '@type': 'ContactPoint',
+          telephone: '+33766974874',
+          contactType: 'customer service',
+          availableLanguage: ['French', 'English'],
+        },
+        {
+          '@type': 'ContactPoint',
+          email: 'contact@meridian-synergy.com',
+          contactType: 'customer service',
+          availableLanguage: ['French', 'English'],
+        },
+      ],
+    }),
+  }],
+})
+
 const socials = [
   {
     label: 'Instagram',

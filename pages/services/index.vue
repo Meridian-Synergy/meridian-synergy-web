@@ -8,6 +8,15 @@ useSeoMeta({
   title: () => t('servicesPage.meta.title'),
   description: () => t('servicesPage.meta.description'),
 })
+
+useSchemaOrg([
+  defineBreadcrumb({
+    itemListElement: [
+      { name: t('breadcrumb.home'), item: 'https://meridian-synergy.com' },
+      { name: t('nav.services') },
+    ],
+  }),
+])
 </script>
 
 <template>
