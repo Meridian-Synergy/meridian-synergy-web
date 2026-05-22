@@ -25,6 +25,42 @@ export default defineNuxtConfig({
     defaultLocale: 'fr',
   },
 
+  sitemap: {
+    exclude: ['/fr', '/fr/**'],
+    urls: [
+      // Homepages
+      { loc: '/',    priority: 1.0, changefreq: 'monthly' },
+      { loc: '/en/', priority: 1.0, changefreq: 'monthly' },
+      // Services hub
+      { loc: '/services/',    priority: 0.9, changefreq: 'monthly' },
+      { loc: '/en/services/', priority: 0.9, changefreq: 'monthly' },
+      // Services pages
+      ...frServices.map(s => ({ loc: `/services/${s}`,    priority: 0.8, changefreq: 'monthly' as const })),
+      ...enServices.map(s => ({ loc: `/en/services/${s}`, priority: 0.8, changefreq: 'monthly' as const })),
+      // Use cases hub
+      { loc: '/cas-usage/',   priority: 0.8, changefreq: 'monthly' },
+      { loc: '/en/use-case/', priority: 0.8, changefreq: 'monthly' },
+      // Use cases pages
+      ...frUseCases.map(s => ({ loc: `/cas-usage/${s}`,    priority: 0.7, changefreq: 'monthly' as const })),
+      ...enUseCases.map(s => ({ loc: `/en/use-case/${s}`,  priority: 0.7, changefreq: 'monthly' as const })),
+      // Drones hub
+      { loc: '/drones/',    priority: 0.7, changefreq: 'monthly' },
+      { loc: '/en/drones/', priority: 0.7, changefreq: 'monthly' },
+      // Drone pages
+      ...drones.map(s => ({ loc: `/drones/${s}`,    priority: 0.6, changefreq: 'monthly' as const })),
+      ...drones.map(s => ({ loc: `/en/drones/${s}`, priority: 0.6, changefreq: 'monthly' as const })),
+      // About
+      { loc: '/a-propos/',    priority: 0.5, changefreq: 'yearly' },
+      { loc: '/en/a-propos/', priority: 0.5, changefreq: 'yearly' },
+      // Contact
+      { loc: '/contact/',    priority: 0.6, changefreq: 'yearly' },
+      { loc: '/en/contact/', priority: 0.6, changefreq: 'yearly' },
+      // Legal
+      { loc: '/mentions-legales/',    priority: 0.2, changefreq: 'yearly' },
+      { loc: '/en/mentions-legales/', priority: 0.2, changefreq: 'yearly' },
+    ],
+  },
+
   alias: {
     '@meridian-synergy/ui': fileURLToPath(new URL('./lib/ui.ts', import.meta.url)),
   },
