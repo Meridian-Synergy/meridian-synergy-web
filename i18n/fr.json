@@ -11,6 +11,12 @@
     "terms": "CGU",
     "termsSale": "CGV"
   },
+  "home": {
+    "meta": {
+      "title": "Meridian Synergy — Opérateur drone certifié DGAC",
+      "description": "Télépilotes certifiés DGAC spécialisés en audit thermique, agriculture, topographie et inspection d'infrastructure. Éditeur de Waypoint360."
+    }
+  },
   "hero": {
     "tag": "Opérateurs drone certifiés",
     "titleLine1": "Expertise drone",
