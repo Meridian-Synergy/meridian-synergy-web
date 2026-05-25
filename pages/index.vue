@@ -2,10 +2,10 @@
 const { t } = useI18n()
 
 useSeoMeta({
-  title: 'Meridian Synergy — La plateforme drone professionnelle',
-  description: 'Plateforme SaaS pour télépilotes de drones professionnels. Planification, conformité DGAC, rapports d\'intervention.',
-  ogTitle: 'Meridian Synergy',
-  ogImage: '/og-default.jpg',
+  title:       t('home.meta.title'),
+  description: t('home.meta.description'),
+  ogTitle:     'Meridian Synergy',
+  ogImage:     '/og-default.png',
 })
 
 useHead({
@@ -20,7 +20,7 @@ useHead({
         logo: 'https://meridian-synergy.com/android-chrome-512x512.png',
         email: 'contact@meridian-synergy.com',
         telephone: '+33766974874',
-        description: 'Meridian Synergy réunit trois expertises : conseil IT & architecture digitale, télépilotage professionnel certifié DGAC, et édition de Waypoint360 — la plateforme SaaS dédiée aux opérateurs de drones.',
+        description: 'Opérateur drone professionnel certifié DGAC, spécialisé en audit thermique, agriculture, topographie et inspection d\'infrastructure. Éditeur de Waypoint360, la plateforme SaaS pour opérateurs de drones.',
         sameAs: [
           'https://www.linkedin.com/company/meridian-synergy/',
           'https://www.instagram.com/meridian.synergy',

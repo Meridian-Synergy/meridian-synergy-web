@@ -11,6 +11,12 @@
     "terms": "Terms of Use",
     "termsSale": "Terms of Sale"
   },
+  "home": {
+    "meta": {
+      "title": "Meridian Synergy — Certified Drone Operator",
+      "description": "DGAC-certified drone pilots specialising in thermal inspection, agriculture, topography and infrastructure inspection. Publisher of Waypoint360."
+    }
+  },
   "hero": {
     "tag": "Certified drone operators",
     "titleLine1": "Drone expertise",
