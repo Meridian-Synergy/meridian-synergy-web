@@ -1,0 +1,14 @@
+{
+  "name": "meridian-synergy-og-image",
+  "description": "Generate Meridian Synergy OG default image",
+  "type": "module",
+  "scripts": {
+    "generate": "npx tsx generate.ts"
+  },
+  "dependencies": {
+    "sharp": "^0.33.5"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2"
+  }
+}
