@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
 
+Disallow: /_nuxt/
+
 Sitemap: https://meridian-synergy.com/sitemap.xml
