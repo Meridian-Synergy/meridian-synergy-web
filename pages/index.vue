@@ -8,6 +8,8 @@ useSeoMeta({
   ogImage:     '/og-default.png',
 })
 
+useHead({ titleTemplate: '%s' })
+
 useHead({
   script: [{
     type: 'application/ld+json',
