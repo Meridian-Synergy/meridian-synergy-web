@@ -151,7 +151,7 @@ watch(() => route.path, () => { isOpen.value = false })
   font-family: var(--ms-font-body);
   font-size: 15px;
   font-weight: 500;
-  color: var(--ms-color-muted);
+  color: var(--ms-color-muted-strong);
   text-decoration: none;
   border-radius: var(--ms-radius-md);
   transition: color var(--ms-transition-base), background-color var(--ms-transition-base);
@@ -177,7 +177,7 @@ watch(() => route.path, () => { isOpen.value = false })
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--ms-color-muted);
+  color: var(--ms-color-muted-strong);
   text-decoration: none;
   transition: color var(--ms-transition-fast);
 }
