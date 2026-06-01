@@ -209,7 +209,7 @@ export default defineNuxtConfig({
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: 'ms-locale',
-      redirectOn: 'all',
+      redirectOn: 'root',
       alwaysRedirect: false,
       fallbackLocale: 'en',
     },
