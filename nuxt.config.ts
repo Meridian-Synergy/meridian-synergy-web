@@ -193,6 +193,16 @@ export default defineNuxtConfig({
     '/cas-usage/crop-spraying':              { redirect: { to: '/cas-usage/epandage-phytosanitaire',    statusCode: 301 } },
     '/cas-usage/industrial-site-surveillance':{ redirect: { to: '/cas-usage/surveillance-sites-industriels', statusCode: 301 } },
     '/cas-usage/event-coverage':             { redirect: { to: '/cas-usage/couverture-evenementielle',  statusCode: 301 } },
+    // Trailing-slash variants — GSC-reported missing rules
+    '/services/thermal-inspection/':              { redirect: { to: '/services/audit-thermique',             statusCode: 301 } },
+    '/en/services/audit-thermique/':              { redirect: { to: '/en/services/thermal-inspection',       statusCode: 301 } },
+    '/en/cas-usage/solar-panels/':                { redirect: { to: '/en/use-case/solar-panels',             statusCode: 301 } },
+    '/en/cas-usage/building-thermal-inspection/': { redirect: { to: '/en/use-case/building-thermal-inspection', statusCode: 301 } },
+    '/en/cas-usage/industrial-chimney-inspection/':{ redirect: { to: '/en/use-case/industrial-chimney-inspection', statusCode: 301 } },
+    '/en/use-case/audit-thermique-batiments/':    { redirect: { to: '/en/use-case/building-thermal-inspection', statusCode: 301 } },
+    '/en/use-case/cheminees-industrielles/':      { redirect: { to: '/en/use-case/industrial-chimney-inspection', statusCode: 301 } },
+    '/cas-usage/building-thermal-inspection/':    { redirect: { to: '/cas-usage/audit-thermique-batiments',  statusCode: 301 } },
+    '/cas-usage/industrial-chimney-inspection/':  { redirect: { to: '/cas-usage/cheminees-industrielles',    statusCode: 301 } },
   },
 
   components: {
