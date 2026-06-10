@@ -42,8 +42,14 @@ useSeoMeta({
   ogTitle: () => page.value?.title ?? '',
   ogDescription: () => page.value?.description ?? '',
   ogType: 'article',
-  ogImage: () => (page.value?.meta as any)?.image ? `${siteUrl}${(page.value?.meta as any).image}` : `${siteUrl}/og-default.png`,
   twitterCard: 'summary_large_image',
+})
+
+defineOgImage({
+  component: 'CasUsage',
+  title: page.value?.title ?? '',
+  description: page.value?.description ?? '',
+  categoryLabel: (page.value?.meta as any)?.categoryLabel ?? (page.value?.meta as any)?.category ?? '',
 })
 
 const useCaseHubPath = computed(() =>
