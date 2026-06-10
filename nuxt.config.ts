@@ -221,7 +221,7 @@ export default defineNuxtConfig({
       cookieKey: 'ms-locale',
       redirectOn: 'root',
       alwaysRedirect: false,
-      fallbackLocale: 'en',
+      fallbackLocale: 'fr',
     },
     vueI18n: './i18n.config.ts',
     bundle: { optimizeTranslationDirective: false },

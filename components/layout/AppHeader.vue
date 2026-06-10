@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import { MsButton, MsLogo } from '@meridian-synergy/ui'
 
-const { t, locale } = useI18n()
+const { t, locale, setLocale } = useI18n()
 const localePath = useLocalePath()
-const switchLocalePath = useSwitchLocalePath()
 const route = useRoute()
 const isOpen = ref(false)
 
@@ -44,15 +43,9 @@ watch(() => route.path, () => { isOpen.value = false })
 
       <div class="actions">
         <div class="lang" role="navigation" aria-label="Langue / Language">
-          <NuxtLink
-            :to="switchLocalePath('fr')"
-            :class="['lang-btn', { 'lang-btn--active': locale === 'fr' }]"
-          >FR</NuxtLink>
+          <button :class="['lang-btn', { 'lang-btn--active': locale === 'fr' }]" @click="setLocale('fr')">FR</button>
           <span aria-hidden="true" class="lang-sep">|</span>
-          <NuxtLink
-            :to="switchLocalePath('en')"
-            :class="['lang-btn', { 'lang-btn--active': locale === 'en' }]"
-          >EN</NuxtLink>
+          <button :class="['lang-btn', { 'lang-btn--active': locale === 'en' }]" @click="setLocale('en')">EN</button>
         </div>
         <MsButton
           :label="t('nav.cta')"
@@ -91,9 +84,9 @@ watch(() => route.path, () => { isOpen.value = false })
         </nav>
         <div class="drawer-foot">
           <div class="lang">
-            <NuxtLink :to="switchLocalePath('fr')" :class="['lang-btn', { 'lang-btn--active': locale === 'fr' }]">FR</NuxtLink>
+            <button :class="['lang-btn', { 'lang-btn--active': locale === 'fr' }]" @click="setLocale('fr')">FR</button>
             <span aria-hidden="true" class="lang-sep">|</span>
-            <NuxtLink :to="switchLocalePath('en')" :class="['lang-btn', { 'lang-btn--active': locale === 'en' }]">EN</NuxtLink>
+            <button :class="['lang-btn', { 'lang-btn--active': locale === 'en' }]" @click="setLocale('en')">EN</button>
           </div>
           <MsButton :label="t('nav.cta')" variant="primary" @click="navigateTo(localePath('/services'))" />
         </div>
@@ -179,6 +172,10 @@ watch(() => route.path, () => { isOpen.value = false })
   text-transform: uppercase;
   color: var(--ms-color-muted-strong);
   text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
   transition: color var(--ms-transition-fast);
 }
 .lang-btn:hover,
