@@ -37,6 +37,17 @@ Pour l'architecture détaillée, voir `ARCHITECTURE-WEB.md`.
 
 ---
 
+## Services & outils tiers
+
+| Outil | Rôle | Notes |
+|---|---|---|
+| **Gandi** | Registrar DNS pour `meridian-synergy.com` | DNS et certificats TLS gérés depuis le dashboard Gandi |
+| **BetterStack** | Uptime monitoring + status page publique | Ping HTTP sur l'URL de production |
+| **Atlassian Jira** | Tickets et suivi du backlog | Projet Meridian Synergy sur Jira |
+| **Atlassian Confluence** | Documentation technique et fonctionnelle | Espace Meridian Synergy sur Confluence |
+
+---
+
 ## Commandes
 
 ```bash
