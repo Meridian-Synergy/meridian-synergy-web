@@ -58,6 +58,14 @@ pnpm preview      # Preview du build SSG
 
 ---
 
+## Versioning — ABSOLUTE
+
+Version numbers follow `a.b.c` (major.minor.patch) and are historised on every change.
+
+- **Every branch** (feat / fix / hotfix / quickfix — anything): bump the **patch** `c` in `package.json` **and** add **one line** to `CHANGELOG.md`, within the same branch.
+- Bumps of `a` (major) and `b` (minor) happen **only on explicit request**.
+- Bump from the latest `main` at branch time; if `main` advanced before merge, re-bump to avoid a duplicate version / conflict.
+
 ## Git workflow — ABSOLUTE
 
 **Never push directly to `main`.** Every change goes through a branch → PR → merge cycle:
