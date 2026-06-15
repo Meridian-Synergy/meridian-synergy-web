@@ -23,6 +23,11 @@ export default defineNuxtConfig({
     url: 'https://meridian-synergy.com',
     name: 'Meridian Synergy',
     defaultLocale: 'fr',
+    // GitHub Pages serves directory URLs with a trailing slash (and 301s the
+    // no-slash form to it). Generate canonical/og/sitemap WITH the slash so they
+    // match the served URL — otherwise every canonical/sitemap entry points to a
+    // redirecting URL (GSC "page with redirect" / "duplicate").
+    trailingSlash: true,
   },
 
   sitemap: {
