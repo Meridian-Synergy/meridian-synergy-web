@@ -31,6 +31,8 @@ export default defineNuxtConfig({
   },
 
   sitemap: {
+    sitemaps: false,
+    includeAppSources: false,
     exclude: ['/fr', '/fr/**'],
     urls: [
       // Homepages
