@@ -60,11 +60,12 @@ pnpm preview      # Preview du build SSG
 
 ## Versioning — ABSOLUTE
 
-Version numbers follow `a.b.c` (major.minor.patch) and are historised on every change.
+Version numbers follow `a.b.c` (major.minor.patch). **Versioning is automated by release-please — never bump `package.json` or edit `CHANGELOG.md` by hand.**
 
-- **Every branch** (feat / fix / hotfix / quickfix — anything): bump the **patch** `c` in `package.json` **and** add **one line** to `CHANGELOG.md`, within the same branch.
-- Bumps of `a` (major) and `b` (minor) happen **only on explicit request**.
-- Bump from the latest `main` at branch time; if `main` advanced before merge, re-bump to avoid a duplicate version / conflict.
+- **Conventional Commits are mandatory** on `main`: `feat:` → minor, `fix:` → patch, `feat!:`/`BREAKING CHANGE:` → major, `chore:`/`ci:`/`docs:` → no release. The subject becomes the changelog line.
+- release-please maintains a **Release PR** (bumps `package.json` + writes `CHANGELOG.md`). Merging it creates the tag `vX.Y.Z`.
+- The static site is published to GitHub Pages on **every** `main` push (`deploy.yml`), independent of releases — the tag is just the version marker.
+- Baseline lives in `.release-please-manifest.json`.
 
 ## Git workflow — ABSOLUTE
 
