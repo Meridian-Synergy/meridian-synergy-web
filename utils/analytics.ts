@@ -1,8 +1,9 @@
-const GA_MEASUREMENT_ID = 'G-21HRF748F7'
+export const GA_MEASUREMENT_ID = 'G-21HRF748F7'
 
-// Loads GA4 (gtag.js) via an external <script src> — no inline script. Replaces the old
-// inline GTM bootstrap. Client-only (this site is statically generated).
-export default defineNuxtPlugin(() => {
+// Loads GA4 (gtag.js) via an external <script src> — no inline script (CSP-safe). Called
+// only once analytics consent is granted, so nothing loads or collects before consent.
+// Idempotent.
+export function loadAnalytics() {
   if (typeof window === 'undefined') return
   if (document.getElementById('ga-script')) return
   const w = window as any
@@ -15,4 +16,4 @@ export default defineNuxtPlugin(() => {
   s.async = true
   s.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`
   document.head.appendChild(s)
-})
+}

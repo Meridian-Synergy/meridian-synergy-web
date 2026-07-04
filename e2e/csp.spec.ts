@@ -24,6 +24,11 @@ for (const path of ['/', '/services/', '/drones/']) {
     const gtag: string[] = []
     page.on('request', (r) => { if (r.url().includes('gtag/js')) gtag.push(r.url()) })
 
+    // GA4 is gated behind analytics consent — pre-grant it so the loader runs.
+    await page.addInitScript(() => {
+      localStorage.setItem('msy_consent', JSON.stringify({ analytics: true, expires: Date.now() + 10_000_000_000 }))
+    })
+
     await page.goto(path, { waitUntil: 'load' })
     await page.waitForTimeout(1500)
 
@@ -32,3 +37,12 @@ for (const path of ['/', '/services/', '/drones/']) {
     expect(gtag.length, 'GA4 (gtag.js) loads under the strict CSP').toBeGreaterThan(0)
   })
 }
+
+test('cookie banner is shown and GA does not load before consent', async ({ page }) => {
+  const gtag: string[] = []
+  page.on('request', (r) => { if (r.url().includes('gtag/js')) gtag.push(r.url()) })
+  await page.goto('/', { waitUntil: 'load' })
+  await page.waitForTimeout(1500)
+  await expect(page.getByRole('dialog')).toBeVisible()
+  expect(gtag.length, 'GA must not load before consent is granted').toBe(0)
+})
