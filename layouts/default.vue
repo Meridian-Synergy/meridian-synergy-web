@@ -2,6 +2,13 @@
 const { locales } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
 
+// Load GA4 (gtag.js, external — CSP-safe) only once analytics consent is granted.
+const { analyticsConsent, load } = useCookieConsent()
+onMounted(() => load())
+watch(analyticsConsent, (val) => {
+  if (val) loadAnalytics()
+}, { immediate: true })
+
 useHead(computed(() => ({
   link: [
     ...locales.value.map(loc => ({
@@ -25,6 +32,7 @@ useHead(computed(() => ({
       <slot />
     </main>
     <AppFooter />
+    <CookieBanner />
   </div>
 </template>
 

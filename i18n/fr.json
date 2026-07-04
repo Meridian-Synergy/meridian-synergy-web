@@ -1,4 +1,10 @@
 {
+  "cookies": {
+    "title": "Gestion des cookies",
+    "desc": "Meridian Synergy utilise Google Analytics pour mesurer l'audience et améliorer nos services. Ces cookies ne sont déposés qu'avec votre accord.",
+    "accept": "Tout accepter",
+    "decline": "Tout refuser"
+  },
   "nav": {
     "home": "Meridian Synergy — Accueil",
     "services": "Services",
