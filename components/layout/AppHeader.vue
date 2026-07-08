@@ -5,13 +5,28 @@ const { t, locale, setLocale } = useI18n()
 const localePath = useLocalePath()
 const route = useRoute()
 const isOpen = ref(false)
+const openGroup = ref<string | null>(null)
 
-const links = [
-  { labelKey: 'nav.services',  path: '/services' },
-  { labelKey: 'nav.drones',    path: '/drones' },
-  { labelKey: 'nav.useCases',  path: '/cas-usage' },
-  { labelKey: 'nav.about',     path: '/a-propos' },
-  { labelKey: 'nav.contact',   path: '/contact' },
+interface NavLink {
+  labelKey: string
+  path: string
+  children?: { labelKey: string; path: string }[]
+}
+
+const links: NavLink[] = [
+  { labelKey: 'nav.conseil', path: '/conseil' },
+  {
+    labelKey: 'nav.drones',
+    path: '/drones',
+    children: [
+      { labelKey: 'nav.services',  path: '/services' },
+      { labelKey: 'nav.useCases',  path: '/cas-usage' },
+      { labelKey: 'nav.fleet',     path: '/flotte' },
+    ],
+  },
+  { labelKey: 'nav.products', path: '/produits' },
+  { labelKey: 'nav.about',    path: '/a-propos' },
+  { labelKey: 'nav.contact',  path: '/contact' },
 ]
 
 function isActive(path: string) {
@@ -19,7 +34,11 @@ function isActive(path: string) {
   return route.path === resolved || route.path.startsWith(resolved + '/')
 }
 
-watch(() => route.path, () => { isOpen.value = false })
+function isGroupActive(link: NavLink) {
+  return isActive(link.path) || (link.children?.some(c => isActive(c.path)) ?? false)
+}
+
+watch(() => route.path, () => { isOpen.value = false; openGroup.value = null })
 </script>
 
 <template>
@@ -31,14 +50,40 @@ watch(() => route.path, () => { isOpen.value = false })
       </NuxtLink>
 
       <nav class="nav" aria-label="Navigation principale">
-        <NuxtLink
-          v-for="link in links"
-          :key="link.path"
-          :to="localePath(link.path)"
-          :class="['nav-link', { 'nav-link--active': isActive(link.path) }]"
-        >
-          {{ t(link.labelKey) }}
-        </NuxtLink>
+        <template v-for="link in links" :key="link.path">
+          <!-- Dropdown group -->
+          <div v-if="link.children" class="nav-item">
+            <NuxtLink
+              :to="localePath(link.path)"
+              :class="['nav-link', 'nav-link--group', { 'nav-link--active': isGroupActive(link) }]"
+              :aria-haspopup="true"
+            >
+              {{ t(link.labelKey) }}
+              <svg class="caret" width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+                <path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </NuxtLink>
+            <div class="dropdown">
+              <NuxtLink
+                v-for="child in link.children"
+                :key="child.path"
+                :to="localePath(child.path)"
+                :class="['dropdown-link', { 'dropdown-link--active': isActive(child.path) }]"
+              >
+                {{ t(child.labelKey) }}
+              </NuxtLink>
+            </div>
+          </div>
+
+          <!-- Simple link -->
+          <NuxtLink
+            v-else
+            :to="localePath(link.path)"
+            :class="['nav-link', { 'nav-link--active': isActive(link.path) }]"
+          >
+            {{ t(link.labelKey) }}
+          </NuxtLink>
+        </template>
       </nav>
 
       <div class="actions">
@@ -51,7 +96,7 @@ watch(() => route.path, () => { isOpen.value = false })
           :label="t('nav.cta')"
           variant="primary"
           size="sm"
-          @click="navigateTo(localePath('/services'))"
+          @click="navigateTo(localePath('/conseil'))"
         />
       </div>
 
@@ -73,14 +118,49 @@ watch(() => route.path, () => { isOpen.value = false })
     <Transition name="drawer">
       <div v-if="isOpen" class="drawer">
         <nav class="drawer-nav" aria-label="Navigation mobile">
-          <NuxtLink
-            v-for="link in links"
-            :key="link.path"
-            :to="localePath(link.path)"
-            :class="['drawer-link', { 'drawer-link--active': isActive(link.path) }]"
-          >
-            {{ t(link.labelKey) }}
-          </NuxtLink>
+          <template v-for="link in links" :key="link.path">
+            <!-- Accordion group -->
+            <div v-if="link.children" class="drawer-group">
+              <div class="drawer-group-head">
+                <NuxtLink
+                  :to="localePath(link.path)"
+                  :class="['drawer-link', 'drawer-link--grouphead', { 'drawer-link--active': isActive(link.path) }]"
+                >
+                  {{ t(link.labelKey) }}
+                </NuxtLink>
+                <button
+                  class="drawer-toggle"
+                  :aria-expanded="openGroup === link.path"
+                  :aria-label="t(link.labelKey)"
+                  @click="openGroup = openGroup === link.path ? null : link.path"
+                >
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"
+                       :style="{ transform: openGroup === link.path ? 'rotate(180deg)' : 'none' }">
+                    <path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+              <div v-if="openGroup === link.path" class="drawer-children">
+                <NuxtLink
+                  v-for="child in link.children"
+                  :key="child.path"
+                  :to="localePath(child.path)"
+                  :class="['drawer-link', 'drawer-link--child', { 'drawer-link--active': isActive(child.path) }]"
+                >
+                  {{ t(child.labelKey) }}
+                </NuxtLink>
+              </div>
+            </div>
+
+            <!-- Simple link -->
+            <NuxtLink
+              v-else
+              :to="localePath(link.path)"
+              :class="['drawer-link', { 'drawer-link--active': isActive(link.path) }]"
+            >
+              {{ t(link.labelKey) }}
+            </NuxtLink>
+          </template>
         </nav>
         <div class="drawer-foot">
           <div class="lang">
@@ -88,7 +168,7 @@ watch(() => route.path, () => { isOpen.value = false })
             <span aria-hidden="true" class="lang-sep">|</span>
             <button :class="['lang-btn', { 'lang-btn--active': locale === 'en' }]" @click="setLocale('en')">EN</button>
           </div>
-          <MsButton :label="t('nav.cta')" variant="primary" @click="navigateTo(localePath('/services'))" />
+          <MsButton :label="t('nav.cta')" variant="primary" @click="navigateTo(localePath('/conseil'))" />
         </div>
       </div>
     </Transition>
@@ -139,7 +219,12 @@ watch(() => route.path, () => { isOpen.value = false })
 }
 @media (min-width: 900px) { .nav { display: flex; } }
 
+.nav-item { position: relative; }
+
 .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
   padding: 6px 12px;
   font-family: var(--ms-font-body);
   font-size: 15px;
@@ -152,6 +237,49 @@ watch(() => route.path, () => { isOpen.value = false })
 }
 .nav-link:hover { color: var(--ms-color-navy); background: var(--ms-color-bg); }
 .nav-link--active { color: var(--ms-color-navy); font-weight: 600; background: var(--ms-color-bg); }
+.caret { transition: transform var(--ms-transition-fast); opacity: 0.7; }
+
+/* Dropdown */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  min-width: 200px;
+  background: var(--ms-color-white);
+  border: 1px solid var(--ms-color-border);
+  border-radius: var(--ms-radius-lg);
+  box-shadow: var(--ms-shadow-md);
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: opacity var(--ms-transition-fast), transform var(--ms-transition-fast), visibility var(--ms-transition-fast);
+  z-index: 20;
+}
+.nav-item:hover .dropdown,
+.nav-item:focus-within .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.nav-item:hover .caret,
+.nav-item:focus-within .caret { transform: rotate(180deg); }
+
+.dropdown-link {
+  padding: 9px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ms-color-muted-strong);
+  text-decoration: none;
+  border-radius: var(--ms-radius-md);
+  transition: color var(--ms-transition-fast), background-color var(--ms-transition-fast);
+  white-space: nowrap;
+}
+.dropdown-link:hover { color: var(--ms-color-navy); background: var(--ms-color-bg); }
+.dropdown-link--active { color: var(--ms-color-sky); font-weight: 600; }
 
 /* ── Actions (lang + CTA) ── */
 .actions {
@@ -222,6 +350,26 @@ watch(() => route.path, () => { isOpen.value = false })
 }
 .drawer-link:hover { background: var(--ms-color-bg); }
 .drawer-link--active { background: var(--ms-color-bg); font-weight: 600; }
+
+.drawer-group { display: flex; flex-direction: column; }
+.drawer-group-head { display: flex; align-items: center; }
+.drawer-group-head .drawer-link { flex: 1; }
+.drawer-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  background: none;
+  border: none;
+  color: var(--ms-color-muted-strong);
+  cursor: pointer;
+  border-radius: var(--ms-radius-md);
+}
+.drawer-toggle svg { transition: transform var(--ms-transition-fast); }
+.drawer-toggle:hover { background: var(--ms-color-bg); }
+
+.drawer-children { display: flex; flex-direction: column; gap: 2px; padding-left: 12px; }
+.drawer-link--child { font-size: 15px; font-weight: 500; color: var(--ms-color-muted-strong); padding: 10px 16px; }
 
 .drawer-foot {
   display: flex;

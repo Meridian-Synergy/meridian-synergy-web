@@ -31,9 +31,9 @@ const socialLinks: SocialLinkItem[] = [
         </div>
 
         <nav class="footer-nav" aria-label="Liens du pied de page">
-          <NuxtLink :to="localePath('/services')">{{ t('nav.services') }}</NuxtLink>
+          <NuxtLink :to="localePath('/conseil')">{{ t('nav.conseil') }}</NuxtLink>
           <NuxtLink :to="localePath('/drones')">{{ t('nav.drones') }}</NuxtLink>
-          <NuxtLink :to="localePath('/cas-usage')">{{ t('nav.useCases') }}</NuxtLink>
+          <NuxtLink :to="localePath('/produits')">{{ t('nav.products') }}</NuxtLink>
           <NuxtLink :to="localePath('/a-propos')">{{ t('nav.about') }}</NuxtLink>
           <NuxtLink :to="localePath('/contact')">{{ t('nav.contact') }}</NuxtLink>
           <NuxtLink :to="localePath('/mentions-legales')">{{ t('footer.legal') }}</NuxtLink>

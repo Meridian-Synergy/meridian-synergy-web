@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { MsBadge, MsCard, MsCtaBanner, MsSpecGrid } from '@meridian-synergy/ui'
+import { MsBadge, MsCard, MsCtaBanner, MsSpecGrid, MsBreadcrumb } from '@meridian-synergy/ui'
 import type { MsSpecItem } from '@meridian-synergy/ui'
 
 const { t, locale } = useI18n()
@@ -7,6 +7,7 @@ const localePath = useLocalePath()
 const route = useRoute()
 
 const slug = route.params.slug as string
+// Fleet content still lives under content/**/drones/ — only the route moved to /flotte.
 const contentPath = `/${locale.value}/drones/${slug}`
 
 const { data: page } = await useAsyncData(contentPath, () =>
@@ -18,6 +19,7 @@ if (!page.value) {
 }
 
 const siteUrl = 'https://meridian-synergy.com'
+const localePrefix = locale.value === 'en' ? '/en' : ''
 
 useSeoMeta({
   title: () => page.value?.title ?? '',
@@ -33,7 +35,8 @@ useSchemaOrg(computed(() => page.value ? [
   defineBreadcrumb({
     itemListElement: [
       { name: t('breadcrumb.home'), item: siteUrl },
-      { name: t('nav.drones'), item: `${siteUrl}${locale.value === 'en' ? '/en' : ''}/drones` },
+      { name: t('nav.drones'), item: `${siteUrl}${localePrefix}/drones` },
+      { name: t('nav.fleet'), item: `${siteUrl}${localePrefix}${locale.value === 'en' ? '/fleet' : '/flotte'}` },
       { name: page.value.model as string },
     ],
   }),
@@ -108,7 +111,7 @@ const specItems = computed<MsSpecItem[]>(() => [
       <div class="container">
         <div class="hero-inner">
           <div class="hero-text">
-            <MsBreadcrumb :crumbs="[{ label: t('breadcrumb.home'), href: localePath('/') }, { label: t('nav.drones'), href: localePath('/drones') }, { label: page.model }]" />
+            <MsBreadcrumb :crumbs="[{ label: t('breadcrumb.home'), href: localePath('/') }, { label: t('nav.drones'), href: localePath('/drones') }, { label: t('nav.fleet'), href: localePath('/flotte') }, { label: page.model }]" />
             <MsBadge :label="page.manufacturer" variant="navy" :dot="false" />
             <h1 class="hero-title">{{ page.title }}</h1>
             <p class="hero-desc">{{ page.description }}</p>
@@ -248,5 +251,4 @@ const specItems = computed<MsSpecItem[]>(() => [
 .sb-item { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 500; color: var(--ms-color-navy); text-decoration: none; padding: 6px 8px; border-radius: var(--ms-radius-md); transition: background-color var(--ms-transition-fast), color var(--ms-transition-fast); }
 .sb-item:hover { background: var(--ms-color-bg); color: var(--ms-color-sky); }
 .sb-item svg { color: var(--ms-color-sky); flex-shrink: 0; }
-
 </style>
