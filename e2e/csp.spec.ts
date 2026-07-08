@@ -18,7 +18,7 @@ async function collectEnforced(page: Page): Promise<{ directive: string; blocked
   return found
 }
 
-for (const path of ['/', '/services/', '/drones/']) {
+for (const path of ['/', '/conseil/', '/produits/', '/drones/', '/flotte/', '/services/']) {
   test(`strict CSP blocks nothing and the page renders on ${path}`, async ({ page }) => {
     const violations = await collectEnforced(page)
     const gtag: string[] = []
