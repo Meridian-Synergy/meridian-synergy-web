@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { MsCard, MsPageHero, MsCtaBanner } from '@meridian-synergy/ui'
+import { MsCard, MsCtaBanner } from '@meridian-synergy/ui'
 
-const { t, locale } = useI18n()
+const { t } = useI18n()
 const localePath = useLocalePath()
 
 useSeoMeta({
@@ -18,81 +18,61 @@ useSchemaOrg([
   }),
 ])
 
-const dronesSlugs = ['dji-t100-agri', 'dji-matrice-4td', 'dji-avata-360']
-const { data: drones } = await useAsyncData(`drones-${locale.value}`, async () => {
-  const results = await Promise.all(
-    dronesSlugs.map(async (slug) => {
-      const doc = await queryCollection('content').path(`/${locale.value}/drones/${slug}`).first()
-      return doc ? { ...doc, slug } : null
-    })
-  )
-  return results.filter(Boolean)
-})
+// Sub-sections of the drone branch.
+const subSections = [
+  { key: 'services',  path: '/services',  color: 'var(--ms-color-sky)' },
+  { key: 'useCases',  path: '/cas-usage', color: 'var(--ms-color-gold)' },
+  { key: 'fleet',     path: '/flotte',    color: 'var(--ms-color-navy)' },
+]
 </script>
 
 <template>
   <div>
-    <MsPageHero
-      :crumbs="[{ label: t('breadcrumb.home'), href: localePath('/') }, { label: t('nav.drones') }]"
-      :badge="t('dronesPage.hero.badge')"
-      :title="t('dronesPage.hero.title')"
-      :desc="t('dronesPage.hero.desc')"
-    />
+    <!-- Drone branch pitch (certified operator, 6 fields, geography) -->
+    <HeroSection />
 
-    <!-- Drones grid -->
-    <section class="grid-section">
-      <div class="container">
-        <div class="drones-grid">
+    <!-- Branch sub-sections -->
+    <section class="subs">
+      <div class="subs-container">
+        <div class="subs-header">
+          <h2 class="subs-title">{{ t('dronesLanding.subs.title') }}</h2>
+          <p class="subs-desc">{{ t('dronesLanding.subs.desc') }}</p>
+        </div>
+        <div class="subs-grid">
           <NuxtLink
-            v-for="drone in drones"
-            :key="drone.slug"
-            :to="localePath(`/drones/${drone.slug}`)"
-            class="drone-link"
+            v-for="s in subSections"
+            :key="s.key"
+            :to="localePath(s.path)"
+            class="sub-link"
           >
             <MsCard>
-              <div class="drone-body">
-                <div class="drone-visual">
-                  <svg class="drone-svg" viewBox="0 0 80 50" fill="none" aria-hidden="true">
-                    <rect x="35" y="20" width="10" height="10" rx="2" fill="var(--ms-color-navy)" opacity="0.15"/>
-                    <circle cx="40" cy="25" r="4" stroke="var(--ms-color-navy)" stroke-width="1.5" opacity="0.4"/>
-                    <line x1="40" y1="25" x2="10" y2="10" stroke="var(--ms-color-navy)" stroke-width="1.5" opacity="0.3"/>
-                    <line x1="40" y1="25" x2="70" y2="10" stroke="var(--ms-color-navy)" stroke-width="1.5" opacity="0.3"/>
-                    <line x1="40" y1="25" x2="10" y2="40" stroke="var(--ms-color-navy)" stroke-width="1.5" opacity="0.3"/>
-                    <line x1="40" y1="25" x2="70" y2="40" stroke="var(--ms-color-navy)" stroke-width="1.5" opacity="0.3"/>
-                    <circle cx="10" cy="10" r="5" stroke="var(--ms-color-sky)" stroke-width="1.5" opacity="0.7"/>
-                    <circle cx="70" cy="10" r="5" stroke="var(--ms-color-sky)" stroke-width="1.5" opacity="0.7"/>
-                    <circle cx="10" cy="40" r="5" stroke="var(--ms-color-sky)" stroke-width="1.5" opacity="0.7"/>
-                    <circle cx="70" cy="40" r="5" stroke="var(--ms-color-sky)" stroke-width="1.5" opacity="0.7"/>
+              <div class="sub-body">
+                <div class="sub-icon" :style="{ '--icon': s.color }">
+                  <svg v-if="s.key === 'services'" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                    <rect x="4" y="4" width="10" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+                    <rect x="18" y="4" width="10" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+                    <rect x="4" y="18" width="10" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+                    <rect x="18" y="18" width="10" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
                   </svg>
-                  <img
-                    v-if="drone.image"
-                    :src="drone.image"
-                    :alt="drone.model"
-                    class="drone-img"
-                    @error="($event.target as HTMLImageElement).style.display = 'none'"
-                  />
+                  <svg v-else-if="s.key === 'useCases'" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                    <path d="M6 4h20v18l-10 6-10-6V4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M11 14l3 3 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <svg v-else viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                    <rect x="14" y="14" width="4" height="4" rx="1" fill="currentColor"/>
+                    <circle cx="16" cy="16" r="2" stroke="currentColor" stroke-width="2"/>
+                    <circle cx="6" cy="6" r="3" stroke="currentColor" stroke-width="2"/>
+                    <circle cx="26" cy="6" r="3" stroke="currentColor" stroke-width="2"/>
+                    <circle cx="6" cy="26" r="3" stroke="currentColor" stroke-width="2"/>
+                    <circle cx="26" cy="26" r="3" stroke="currentColor" stroke-width="2"/>
+                    <path d="M16 16L7 7M16 16l9-9M16 16l-9 9M16 16l9 9" stroke="currentColor" stroke-width="1.5"/>
+                  </svg>
                 </div>
-
-                <div class="drone-meta">
-                  <MsBadge :label="drone.manufacturer" variant="navy" :dot="false" />
-                  <h2 class="drone-name">{{ drone.model }}</h2>
-                  <p class="drone-desc">{{ drone.description }}</p>
-                </div>
-
-                <dl class="drone-specs">
-                  <div class="spec-item">
-                    <dt>{{ t('dronePage.specFlightTime') }}</dt>
-                    <dd>{{ drone.specs?.maxFlightTime }}</dd>
-                  </div>
-                  <div class="spec-item">
-                    <dt>{{ t('dronePage.specCamera') }}</dt>
-                    <dd>{{ drone.specs?.camera }}</dd>
-                  </div>
-                </dl>
+                <h3 class="sub-name">{{ t(`dronesLanding.subs.${s.key}.title`) }}</h3>
+                <p class="sub-text">{{ t(`dronesLanding.subs.${s.key}.desc`) }}</p>
               </div>
-
               <template #footer>
-                <span class="drone-more">{{ t('services.more') }} →</span>
+                <span class="sub-more">{{ t('services.more') }} →</span>
               </template>
             </MsCard>
           </NuxtLink>
@@ -100,80 +80,59 @@ const { data: drones } = await useAsyncData(`drones-${locale.value}`, async () =
       </div>
     </section>
 
+    <!-- Detailed service fields -->
+    <ServicesTeaser />
+
     <!-- CTA -->
     <MsCtaBanner
-      :title="t('dronesPage.contact.title')"
-      :desc="t('dronesPage.contact.desc')"
-      :label="t('dronesPage.contact.btn')"
+      :title="t('dronesLanding.contact.title')"
+      :desc="t('dronesLanding.contact.desc')"
+      :label="t('dronesLanding.contact.btn')"
       :href="localePath('/contact')"
     />
   </div>
 </template>
 
 <style scoped>
-/* ── Grid ── */
-.grid-section { padding: 64px 0; background: var(--ms-color-white); }
-.drones-grid {
+.subs { padding: 72px 24px; background: var(--ms-color-bg); }
+.subs-container { max-width: 1280px; margin: 0 auto; }
+.subs-header { text-align: center; margin-bottom: 40px; }
+.subs-title {
+  font-family: var(--ms-font-display);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 800;
+  color: var(--ms-color-navy);
+  letter-spacing: -0.03em;
+  margin: 0 0 12px;
+}
+.subs-desc { font-size: 1.0625rem; color: var(--ms-color-muted); max-width: 540px; margin: 0 auto; line-height: 1.7; }
+
+.subs-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 24px;
+  gap: 16px;
 }
-@media (min-width: 768px) { .drones-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 768px) { .subs-grid { grid-template-columns: repeat(3, 1fr); } }
 
-.drone-link {
+.sub-link {
   display: block;
   text-decoration: none;
   border-radius: var(--ms-radius-lg);
   transition: transform var(--ms-transition-base), box-shadow var(--ms-transition-base);
 }
-.drone-link:hover { transform: translateY(-3px); box-shadow: var(--ms-shadow-md); }
-.drone-link:hover :deep(.ms-card) { border-color: var(--ms-color-sky); }
+.sub-link:hover { transform: translateY(-3px); box-shadow: var(--ms-shadow-md); }
+.sub-link:hover :deep(.ms-card) { border-color: var(--ms-color-sky); }
 
-.drone-body { display: flex; flex-direction: column; gap: 16px; }
-
-.drone-visual {
-  position: relative;
-  background: var(--ms-color-bg);
+.sub-body { display: flex; flex-direction: column; gap: 12px; padding: 4px 0; }
+.sub-icon {
+  width: 44px; height: 44px;
   border-radius: var(--ms-radius-md);
-  padding: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  min-height: 160px;
+  background: color-mix(in srgb, var(--icon) 12%, transparent);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--icon); flex-shrink: 0;
 }
-.drone-svg { width: 100%; max-width: 200px; height: auto; }
-.drone-img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: var(--ms-radius-md);
-}
-
-.drone-meta { display: flex; flex-direction: column; gap: 8px; }
-.drone-name {
-  font-family: var(--ms-font-display);
-  font-size: 1.375rem;
-  font-weight: 700;
-  color: var(--ms-color-navy);
-  margin: 0;
-}
-.drone-desc { font-size: 0.9375rem; color: var(--ms-color-muted); line-height: 1.65; margin: 0; }
-
-.drone-specs {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  border-top: 1px solid var(--ms-color-border);
-  padding-top: 16px;
-  margin: 0;
-}
-.spec-item { display: flex; flex-direction: column; gap: 3px; }
-.spec-item dt { font-family: var(--ms-font-condensed); font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ms-color-muted); }
-.spec-item dd { font-size: 13px; font-weight: 600; color: var(--ms-color-navy); margin: 0; }
-
-.drone-more { font-size: 13px; font-weight: 600; color: var(--ms-color-sky); }
-
+.sub-icon svg { width: 22px; height: 22px; }
+.sub-name { font-family: var(--ms-font-display); font-size: 1.0625rem; font-weight: 700; color: var(--ms-color-navy); margin: 0; }
+.sub-text { font-size: 0.875rem; color: var(--ms-color-muted); line-height: 1.6; margin: 0; }
+.sub-more { font-family: var(--ms-font-body); font-size: 13px; font-weight: 600; color: var(--ms-color-sky); }
 </style>

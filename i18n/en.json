@@ -7,11 +7,14 @@
   },
   "nav": {
     "home": "Meridian Synergy — Home",
+    "conseil": "Consulting & Architecture",
     "services": "Services",
     "drones": "Drones",
+    "products": "Products",
+    "fleet": "Fleet",
     "about": "About",
     "contact": "Contact",
-    "cta": "Discover",
+    "cta": "Contact us",
     "useCases": "Use cases",
     "pricing": "Pricing",
     "terms": "Terms of Use",
@@ -19,8 +22,35 @@
   },
   "home": {
     "meta": {
-      "title": "Meridian Synergy",
-      "description": "DGAC-certified drone pilots specialising in thermal inspection, agriculture, topography and infrastructure inspection. Publisher of Waypoint360."
+      "title": "Meridian Synergy — Consulting, enterprise architecture & drone",
+      "description": "Meridian Synergy: consulting and enterprise architecture, DGAC-certified drone operator and publisher of the Waypoint360 SaaS platform. From framing to delivery."
+    }
+  },
+  "homeHero": {
+    "tag": "Consulting · Drones · Products",
+    "titleLine1": "Technical expertise,",
+    "titleLine2": "from consulting to delivery.",
+    "desc": "Meridian Synergy supports organisations across three complementary trades: consulting and enterprise architecture, DGAC-certified drone operations, and SaaS product publishing. One standard, from strategy to implementation.",
+    "ctaPrimary": "Consulting & Architecture",
+    "ctaSecondary": "Drone operations"
+  },
+  "pillars": {
+    "title": "Three trades, one standard",
+    "desc": "Each pillar answers a need of its own — and together they prove a capacity to think, then deliver.",
+    "conseil": {
+      "title": "Consulting & Architecture",
+      "desc": "Enterprise architecture, project direction and delivery, interim management — cross-functional or on a specific domain.",
+      "cta": "Explore consulting"
+    },
+    "drones": {
+      "title": "Drones",
+      "desc": "DGAC-certified operator: thermal inspection, agriculture, topography, infrastructure inspection and aerial footage.",
+      "cta": "See drone operations"
+    },
+    "produits": {
+      "title": "Products",
+      "desc": "Waypoint360, our SaaS platform for drone operators — designed, developed and operated in-house.",
+      "cta": "Discover our products"
     }
   },
   "hero": {
@@ -86,10 +116,132 @@
     "cta": "Access the platform",
     "url": "app.waypoint360.eu"
   },
+  "conseilPage": {
+    "meta": {
+      "title": "Consulting & Enterprise Architecture — Meridian Synergy",
+      "description": "Enterprise architecture, project direction and delivery, interim management. An architect engaged from framing to implementation, cross-functional or on a specific domain."
+    },
+    "hero": {
+      "badge": "Consulting & Architecture",
+      "title": "From audit to delivery",
+      "desc": "An enterprise architect engaged end to end — cross-functional or on a specific domain, up to interim management."
+    },
+    "intro": "Designing a coherent information system is only worth it if it translates into practice. Consulting and architecture I carry personally: you have a single point of contact, responsible from framing to trajectory. When delivery comes, I assemble and lead a team of qualified freelancers — the same standard, with the capacity to ship.",
+    "modes": {
+      "title": "Two ways to intervene",
+      "transverse": {
+        "title": "Cross-functional",
+        "desc": "I bring an overall reading of your information system: aligning strategy, business processes, applications and infrastructure. Useful when local decisions no longer hold together and a legible trajectory must be re-established."
+      },
+      "domaine": {
+        "title": "On a specific domain",
+        "desc": "I intervene on a defined scope — an application overhaul, an urbanisation building block, a structuring choice. A short, framed contribution, without mobilising an entire transformation."
+      }
+    },
+    "transition": {
+      "badge": "Interim management",
+      "title": "Taking the helm during a sensitive phase",
+      "desc": "I take operational responsibility for a function or a programme during a sensitive phase: a vacant key position, the launch of a structuring initiative, the recovery of a troubled project. The aim is not to settle in, but to stabilise, move things forward, then hand over to a team that regains control on sound foundations."
+    },
+    "continuum": {
+      "title": "A continuum, not isolated services",
+      "audit": {
+        "title": "Audit & consulting",
+        "desc": "I lay out a lucid assessment of the existing situation and the options genuinely open, without window dressing. We start from your context, not a generic template."
+      },
+      "archi": {
+        "title": "Enterprise architecture",
+        "desc": "The heart of my trade: connecting strategy, business, applications and technology into a coherent whole, governable over time."
+      },
+      "direction": {
+        "title": "Project direction",
+        "desc": "I hold the trajectory once decisions are made: trade-offs, coordination of stakeholders, control of schedule and risks."
+      },
+      "realisation": {
+        "title": "Delivery",
+        "desc": "We go all the way to a deliverable that works and can be operated. An architecture decision made by those who will have to deliver it is never theoretical."
+      }
+    },
+    "proof": {
+      "title": "All the way to implementation",
+      "desc": "Most consulting engagements stop at the master plan. We go all the way to a product in production: Waypoint360, our SaaS platform designed, developed and operated in-house, is the demonstration.",
+      "link": "See Waypoint360"
+    },
+    "cta": {
+      "title": "Let's talk about your context",
+      "desc": "A mission to frame, an architecture to lay down, a project to lead or deliver? Describe your context — I'll reply quickly.",
+      "btn": "Contact us"
+    }
+  },
+  "productsPage": {
+    "meta": {
+      "title": "Products — Waypoint360 | Meridian Synergy",
+      "description": "Waypoint360, the SaaS platform for professional drone operators published by Meridian Synergy: mission planning, DGAC compliance, fleet management and intervention reports."
+    },
+    "hero": {
+      "badge": "Waypoint360",
+      "title": "Our SaaS products",
+      "desc": "Meridian Synergy designs and operates its own products. The first, Waypoint360, addresses professional drone operators."
+    },
+    "intro": "Waypoint360 is our SaaS platform for professional drone operators. We designed it, developed it and operate it in-house — the concrete demonstration of our ability to deliver a product, from framing all the way to production.",
+    "highlights": {
+      "h1": {
+        "title": "Built in-house",
+        "desc": "From architecture to product design, with no outsourcing of the core."
+      },
+      "h2": {
+        "title": "In production",
+        "desc": "A platform genuinely live and used, not a mock-up."
+      },
+      "h3": {
+        "title": "Operated daily",
+        "desc": "We handle its operations, compliance and evolutions."
+      }
+    }
+  },
+  "dronesLanding": {
+    "subs": {
+      "title": "Explore drone operations",
+      "desc": "Our services, concrete field examples and the equipment we operate.",
+      "services": {
+        "title": "Services",
+        "desc": "Our drone areas of expertise, from thermal to topography."
+      },
+      "useCases": {
+        "title": "Use cases",
+        "desc": "Concrete field examples, sector by sector."
+      },
+      "fleet": {
+        "title": "Fleet",
+        "desc": "The DJI drones we operate and their specifications."
+      }
+    },
+    "contact": {
+      "title": "A drone mission to plan?",
+      "desc": "Describe your need: we assess feasibility and propose the right solution.",
+      "btn": "Contact us"
+    }
+  },
+  "fleetPage": {
+    "meta": {
+      "title": "Our drone fleet — Meridian Synergy",
+      "description": "Discover Meridian Synergy's DJI drones: DJI Agras T100 for agriculture and DJI Matrice 4TD for thermal inspection and surveillance in Burgundy."
+    },
+    "hero": {
+      "badge": "Certified fleet",
+      "title": "Our fleet",
+      "desc": "A range of DJI equipment selected for reliability and performance in the demanding conditions of Burgundy and Nièvre."
+    },
+    "contact": {
+      "title": "Questions about our equipment?",
+      "desc": "We will advise which drone best suits your mission.",
+      "btn": "Contact us"
+    }
+  },
   "dronesPage": {
     "meta": {
-      "title": "Our drones — Professional fleet Meridian Synergy",
-      "description": "Discover Meridian Synergy's DJI drones: DJI Agras T100 for agriculture and DJI Matrice 4TD for thermal inspection and surveillance in Burgundy."
+      "title": "Drone operations — DGAC-certified operator | Meridian Synergy",
+      "description": "Meridian Synergy, DGAC-certified drone operator: thermal inspection, agriculture, topography, infrastructure inspection and aerial footage in Burgundy."
     },
     "hero": {
       "badge": "Certified fleet",
@@ -268,18 +420,18 @@
   },
   "about": {
     "meta": {
-      "title": "About — Meridian Synergy, drone operator in Burgundy",
-      "description": "Meridian Synergy is a drone services company founded in 2026, based in Cosne-sur-Loire (Nièvre). DGAC certified, we operate across Burgundy for professional missions."
+      "title": "About — Meridian Synergy",
+      "description": "Meridian Synergy: consulting and enterprise architecture, DGAC-certified drone operator and publisher of the Waypoint360 SaaS platform. Based near Cosne-sur-Loire (Nièvre)."
     },
     "hero": {
       "badge": "Our story",
       "title": "Meridian Synergy",
-      "subtitle": "Certified professional drone operators, based in Cosne-sur-Loire, Nièvre."
+      "subtitle": "One technical standard across three trades: consulting and enterprise architecture, DGAC-certified drone operations, and SaaS product publishing."
     },
     "story": {
       "title": "Who are we?",
-      "p1": "Meridian Synergy was founded in 2026, driven by the acceleration of the professional drone sector and the harmonisation of the European regulatory framework (EU Regulation 2019/947). These developments open new opportunities for certified operators able to work in demanding sectors with state-of-the-art equipment.",
-      "p2": "Based in Cosne-sur-Loire, in Nièvre, we built our business to meet the concrete needs of local stakeholders: local authorities, farmers, winegrowers, industrial companies and infrastructure managers. A rich territory where professional drones make a real difference."
+      "p1": "Meridian Synergy brings together three complementary trades around one conviction: thinking and delivering should not be separated. Consulting and enterprise architecture are its core — supporting organisations from framing to implementation, cross-functional or on a specific domain, up to interim management.",
+      "p2": "To this expertise we add operational activity as a DGAC-certified drone operator and the publishing of our own SaaS products, starting with Waypoint360. Based near Cosne-sur-Loire, in Nièvre, we combine local roots with technical rigour serving local authorities, industrial companies and businesses."
     },
     "values": {
       "title": "Our commitments",
@@ -313,7 +465,7 @@
     }
   },
   "footer": {
-    "tagline": "The platform for professional drone pilots.",
+    "tagline": "Consulting and enterprise architecture, drone operations and SaaS products.",
     "legal": "Legal notice",
     "copyright": "© {year} Meridian Synergy. All rights reserved.",
     "contact": "Contact",

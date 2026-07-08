@@ -22,7 +22,7 @@ useHead({
         logo: 'https://meridian-synergy.com/android-chrome-512x512.png',
         email: 'contact@meridian-synergy.com',
         telephone: '+33766974874',
-        description: 'Opérateur drone professionnel certifié DGAC, spécialisé en audit thermique, agriculture, topographie et inspection d\'infrastructure. Éditeur de Waypoint360, la plateforme SaaS pour opérateurs de drones.',
+        description: 'Meridian Synergy — conseil et architecture d\'entreprise, opérateur drone certifié DGAC et éditeur de la plateforme SaaS Waypoint360. Du cadrage à la réalisation.',
         sameAs: [
           'https://www.linkedin.com/company/meridian-synergy/',
           'https://www.instagram.com/meridian.synergy',
@@ -64,9 +64,7 @@ useHead({
 
 <template>
   <div>
-    <HeroSection />
-    <ServicesTeaser />
-    <MarketplaceTeaser />
-    <SaasTeaser />
+    <UmbrellaHero />
+    <PillarsSection />
   </div>
 </template>

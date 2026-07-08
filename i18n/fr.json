@@ -7,11 +7,14 @@
   },
   "nav": {
     "home": "Meridian Synergy — Accueil",
+    "conseil": "Conseil & Architecture",
     "services": "Services",
     "drones": "Drones",
+    "products": "Produits",
+    "fleet": "Flotte",
     "about": "À propos",
     "contact": "Contact",
-    "cta": "Découvrir",
+    "cta": "Nous contacter",
     "useCases": "Cas d'usage",
     "pricing": "Tarifs",
     "terms": "CGU",
@@ -19,8 +22,35 @@
   },
   "home": {
     "meta": {
-      "title": "Meridian Synergy",
-      "description": "Télépilotes certifiés DGAC spécialisés en audit thermique, agriculture, topographie et inspection d'infrastructure. Éditeur de Waypoint360."
+      "title": "Meridian Synergy — Conseil, architecture d'entreprise & drone",
+      "description": "Meridian Synergy : conseil et architecture d'entreprise, opérateur drone certifié DGAC et éditeur de la plateforme SaaS Waypoint360. Du cadrage à la réalisation."
+    }
+  },
+  "homeHero": {
+    "tag": "Conseil · Drones · Produits",
+    "titleLine1": "L'expertise technique,",
+    "titleLine2": "du conseil à la réalisation.",
+    "desc": "Meridian Synergy accompagne les organisations sur trois métiers complémentaires : le conseil et l'architecture d'entreprise, les opérations par drone certifiées DGAC, et l'édition de produits SaaS. Une même exigence, de la stratégie à la mise en œuvre.",
+    "ctaPrimary": "Conseil & Architecture",
+    "ctaSecondary": "Activité drone"
+  },
+  "pillars": {
+    "title": "Trois métiers, une exigence",
+    "desc": "Chaque pilier répond à un besoin propre — et prouve, ensemble, une capacité à penser puis réaliser.",
+    "conseil": {
+      "title": "Conseil & Architecture",
+      "desc": "Architecture d'entreprise, direction et réalisation de projet, management de transition — en transverse ou sur un domaine précis.",
+      "cta": "Découvrir le conseil"
+    },
+    "drones": {
+      "title": "Drones",
+      "desc": "Opérateur certifié DGAC : audit thermique, agriculture, topographie, inspection d'infrastructure et prises de vue aériennes.",
+      "cta": "Voir l'activité drone"
+    },
+    "produits": {
+      "title": "Produits",
+      "desc": "Waypoint360, notre plateforme SaaS pour opérateurs de drones — conçue, développée et opérée en interne.",
+      "cta": "Découvrir nos produits"
     }
   },
   "hero": {
@@ -88,18 +118,18 @@
   },
   "about": {
     "meta": {
-      "title": "À propos — Meridian Synergy, opérateur drone en Bourgogne",
-      "description": "Meridian Synergy est une société de services par drone créée en 2026, basée à Cosne-sur-Loire (Nièvre). Certifiée DGAC, nous intervenons en Bourgogne pour vos missions professionnelles."
+      "title": "À propos — Meridian Synergy",
+      "description": "Meridian Synergy : conseil et architecture d'entreprise, opérateur drone certifié DGAC et éditeur de la plateforme SaaS Waypoint360. Basée sur le secteur de Cosne-sur-Loire (Nièvre)."
     },
     "hero": {
       "badge": "Notre histoire",
       "title": "Meridian Synergy",
-      "subtitle": "Opérateurs drone professionnels certifiés, basés sur le secteur de Cosne-sur-Loire dans la Nièvre."
+      "subtitle": "Une même exigence technique sur trois métiers : conseil et architecture d'entreprise, opérations par drone certifiées DGAC, et édition de produits SaaS."
     },
     "story": {
       "title": "Qui sommes-nous ?",
-      "p1": "Meridian Synergy est née en 2026, portée par l'accélération du secteur des drones professionnels et l'harmonisation du cadre réglementaire européen (règlement UE 2019/947). Ces évolutions ouvrent de nouvelles opportunités pour les opérateurs certifiés capables d'intervenir dans des secteurs exigeants avec des équipements de dernière génération.",
-      "p2": "Basés sur le secteur de Cosne-sur-Loire, dans la Nièvre, nous avons bâti notre activité pour répondre aux besoins concrets des acteurs locaux : collectivités, agriculteurs, viticulteurs, industriels et gestionnaires d'infrastructures. Un territoire riche, où l'apport du drone professionnel fait une vraie différence."
+      "p1": "Meridian Synergy réunit trois métiers complémentaires autour d'une conviction : penser et réaliser ne doivent pas être séparés. Le conseil et l'architecture d'entreprise en sont le cœur — accompagner les organisations du cadrage à la mise en œuvre, en transverse ou sur un domaine précis, jusqu'au management de transition.",
+      "p2": "À cette expertise s'ajoutent une activité opérationnelle d'opérateur drone certifié DGAC et l'édition de nos propres produits SaaS, à commencer par Waypoint360. Basés sur le secteur de Cosne-sur-Loire, dans la Nièvre, nous conjuguons ancrage local et exigence technique au service de collectivités, d'industriels et d'entreprises."
     },
     "values": {
       "title": "Nos engagements",
@@ -163,7 +193,7 @@
     }
   },
   "footer": {
-    "tagline": "La plateforme pour télépilotes professionnels.",
+    "tagline": "Conseil et architecture d'entreprise, opérations par drone et produits SaaS.",
     "legal": "Mentions légales",
     "copyright": "© {year} Meridian Synergy. Tous droits réservés.",
     "contact": "Contact",
@@ -362,10 +392,132 @@
     },
     "updatedAt": "Dernière mise à jour : mai 2026"
   },
+  "conseilPage": {
+    "meta": {
+      "title": "Conseil & Architecture d'entreprise — Meridian Synergy",
+      "description": "Architecture d'entreprise, direction et réalisation de projet, management de transition. Un architecte engagé du cadrage à la mise en œuvre, en transverse ou sur un domaine précis."
+    },
+    "hero": {
+      "badge": "Conseil & Architecture",
+      "title": "De l'audit à la réalisation",
+      "desc": "Un architecte d'entreprise engagé de bout en bout — en transverse ou sur un domaine précis, jusqu'au management de transition."
+    },
+    "intro": "Concevoir un système d'information cohérent ne vaut que s'il se traduit sur le terrain. Le conseil et l'architecture, je les porte personnellement : vous avez un interlocuteur unique, responsable du cadrage à la trajectoire. Quand vient la réalisation, je constitue et pilote une équipe de freelances qualifiés — la même exigence, avec la capacité de livrer.",
+    "modes": {
+      "title": "Deux façons d'intervenir",
+      "transverse": {
+        "title": "En transverse",
+        "desc": "J'apporte une lecture d'ensemble de votre système d'information : aligner la stratégie, les processus métier, les applications et l'infrastructure. Utile quand les décisions locales ne « tiennent » plus ensemble et qu'il faut réétablir une trajectoire lisible."
+      },
+      "domaine": {
+        "title": "Sur un domaine précis",
+        "desc": "J'interviens sur un périmètre défini — une refonte applicative, une brique d'urbanisation, un choix structurant. Un apport court et cadré, sans mobiliser une transformation entière."
+      }
+    },
+    "transition": {
+      "badge": "Management de transition",
+      "title": "Prendre la main pendant une phase sensible",
+      "desc": "Je prends la responsabilité opérationnelle d'une fonction ou d'un programme pendant une phase sensible : vacance d'un poste clé, lancement d'un chantier structurant, remise en ordre d'un projet en difficulté. L'objectif n'est pas de m'installer, mais de stabiliser, faire avancer, puis transmettre à une équipe qui reprend la main sur des bases saines."
+    },
+    "continuum": {
+      "title": "Un continuum, pas des prestations isolées",
+      "audit": {
+        "title": "Audit & conseil",
+        "desc": "Je pose un état des lieux lucide de l'existant et des options réellement ouvertes, sans habillage. On part de votre contexte, pas d'un modèle générique."
+      },
+      "archi": {
+        "title": "Architecture d'entreprise",
+        "desc": "Le cœur de mon métier : relier stratégie, métier, applications et technique dans un ensemble cohérent et gouvernable dans le temps."
+      },
+      "direction": {
+        "title": "Direction de projet",
+        "desc": "Je tiens la trajectoire une fois les décisions prises : arbitrages, coordination des intervenants, maîtrise des délais et des risques."
+      },
+      "realisation": {
+        "title": "Réalisation",
+        "desc": "Nous allons jusqu'au livrable qui fonctionne et s'exploite. Une décision d'architecture prise par ceux qui devront la réaliser n'est jamais théorique."
+      }
+    },
+    "proof": {
+      "title": "Jusqu'à la mise en œuvre",
+      "desc": "La plupart des missions de conseil s'arrêtent au schéma directeur. Nous allons jusqu'au produit en production : Waypoint360, notre plateforme SaaS conçue, développée et opérée en interne, en est la démonstration.",
+      "link": "Voir Waypoint360"
+    },
+    "cta": {
+      "title": "Parlons de votre contexte",
+      "desc": "Une mission à cadrer, une architecture à poser, un projet à piloter ou à réaliser ? Décrivez-moi votre contexte — je vous réponds rapidement.",
+      "btn": "Nous contacter"
+    }
+  },
+  "productsPage": {
+    "meta": {
+      "title": "Produits — Waypoint360 | Meridian Synergy",
+      "description": "Waypoint360, la plateforme SaaS pour opérateurs de drones professionnels, éditée par Meridian Synergy : planification de missions, conformité DGAC, gestion de flotte et rapports d'intervention."
+    },
+    "hero": {
+      "badge": "Waypoint360",
+      "title": "Nos produits SaaS",
+      "desc": "Meridian Synergy conçoit et opère ses propres produits. Le premier, Waypoint360, adresse les opérateurs de drones professionnels."
+    },
+    "intro": "Waypoint360 est notre plateforme SaaS pour les opérateurs de drones professionnels. Nous l'avons conçue, développée et nous l'opérons en interne — c'est la démonstration concrète de notre capacité à réaliser un produit, du cadrage jusqu'à la production.",
+    "highlights": {
+      "h1": {
+        "title": "Conçu en interne",
+        "desc": "De l'architecture au design produit, sans sous-traitance du cœur métier."
+      },
+      "h2": {
+        "title": "En production",
+        "desc": "Une plateforme réellement en ligne et utilisée, pas une maquette."
+      },
+      "h3": {
+        "title": "Opéré au quotidien",
+        "desc": "Nous en assurons l'exploitation, la conformité et les évolutions."
+      }
+    }
+  },
+  "dronesLanding": {
+    "subs": {
+      "title": "Explorer l'activité drone",
+      "desc": "Nos prestations, des exemples concrets d'intervention et les équipements que nous mettons en œuvre.",
+      "services": {
+        "title": "Services",
+        "desc": "Nos domaines d'expertise drone, du thermique à la topographie."
+      },
+      "useCases": {
+        "title": "Cas d'usage",
+        "desc": "Des exemples concrets d'intervention sur le terrain, secteur par secteur."
+      },
+      "fleet": {
+        "title": "Flotte",
+        "desc": "Les drones DJI que nous opérons et leurs caractéristiques."
+      }
+    },
+    "contact": {
+      "title": "Une mission drone à planifier ?",
+      "desc": "Décrivez-nous votre besoin : nous étudions la faisabilité et vous proposons la solution adaptée.",
+      "btn": "Nous contacter"
+    }
+  },
+  "fleetPage": {
+    "meta": {
+      "title": "Notre flotte de drones — Meridian Synergy",
+      "description": "Découvrez les drones DJI de Meridian Synergy : DJI Agras T100 pour l'agriculture et DJI Matrice 4TD pour l'inspection thermique et la surveillance en Bourgogne."
+    },
+    "hero": {
+      "badge": "Flotte certifiée",
+      "title": "Notre flotte",
+      "desc": "Une gamme d'équipements DJI sélectionnés pour leur fiabilité et leurs performances dans les conditions exigeantes de la Bourgogne et de la Nièvre."
+    },
+    "contact": {
+      "title": "Une question sur nos équipements ?",
+      "desc": "Nous vous conseillons le drone le mieux adapté à votre mission.",
+      "btn": "Nous contacter"
+    }
+  },
   "dronesPage": {
     "meta": {
-      "title": "Nos drones — Flotte professionnelle Meridian Synergy",
-      "description": "Découvrez les drones DJI de Meridian Synergy : DJI Agras T100 pour l'agriculture et DJI Matrice 4TD pour l'inspection thermique et la surveillance en Bourgogne."
+      "title": "Activité drone — Opérateur certifié DGAC | Meridian Synergy",
+      "description": "Meridian Synergy, opérateur drone certifié DGAC : audit thermique, agriculture, topographie, inspection d'infrastructure et prises de vue aériennes en Bourgogne."
     },
     "hero": {
       "badge": "Flotte certifiée",
