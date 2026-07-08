@@ -116,6 +116,7 @@ const contactActions = computed(() => [
     <section class="certs-section">
       <div class="container">
         <h2 class="section-title centered">{{ t('about.certs.title') }}</h2>
+        <p class="certs-intro">{{ t('about.certs.intro') }}</p>
         <div class="certs-list">
           <MsBadge
             v-for="cert in certifications"
@@ -195,6 +196,7 @@ const contactActions = computed(() => [
 
 /* ── Certifications ── */
 .certs-section { padding: 64px 0; background: var(--ms-color-white); }
+.certs-intro { text-align: center; font-size: 0.9375rem; color: var(--ms-color-muted); margin: 0 auto 32px; max-width: 520px; }
 .certs-list {
   display: flex;
   flex-wrap: wrap;

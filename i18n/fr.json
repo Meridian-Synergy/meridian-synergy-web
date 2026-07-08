@@ -150,10 +150,13 @@
         "desc": "Certifiés A1/A2/A3, CATS (catégorie Spécifique DGAC), certiphyto et certiBiocide — toutes nos opérations respectent le cadre européen et français en vigueur."
       }
     },
-    "certs": { "title": "Certifications" },
+    "certs": {
+      "title": "Certifications — activité drone",
+      "intro": "Ces certifications encadrent notre activité d'opérateur drone (réglementation DGAC et européenne). Le conseil, l'architecture et nos produits SaaS relèvent de compétences distinctes."
+    },
     "zone": {
-      "title": "Zone d'intervention",
-      "intro": "Basés à Cosne-sur-Loire (Nièvre, 58), nous intervenons dans les 7 départements suivants :"
+      "title": "Zone d'intervention — activité drone",
+      "intro": "Notre activité d'opérateur drone intervient dans les 7 départements suivants. Le conseil, l'architecture et nos produits SaaS, eux, s'adressent à des clients sans limite géographique."
     },
     "contact": {
       "title": "Parlons de votre projet",
@@ -177,7 +180,7 @@
     "hero": {
       "badge": "Parlons-nous",
       "title": "Contactez-nous",
-      "subtitle": "Une mission à planifier, un devis, une question technique ? Nous répondons en général sous 24 heures."
+      "subtitle": "Une mission de conseil à cadrer, une intervention drone à planifier, une question sur Waypoint360 ? Écrivez-nous — nous répondons en général sous 24 heures."
     },
     "direct": {
       "title": "Contact direct",
