@@ -111,17 +111,22 @@ const subSections = [
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
+  align-items: stretch;
 }
 @media (min-width: 768px) { .subs-grid { grid-template-columns: repeat(3, 1fr); } }
 
 .sub-link {
   display: block;
+  height: 100%;
   text-decoration: none;
   border-radius: var(--ms-radius-lg);
   transition: transform var(--ms-transition-base), box-shadow var(--ms-transition-base);
 }
 .sub-link:hover { transform: translateY(-3px); box-shadow: var(--ms-shadow-md); }
 .sub-link:hover :deep(.ms-card) { border-color: var(--ms-color-sky); }
+/* Equal-height cards: card fills the grid row, footer pinned to the bottom */
+.sub-link :deep(.ms-card) { height: 100%; display: flex; flex-direction: column; }
+.sub-link :deep(.ms-card__body) { flex: 1 1 auto; }
 
 .sub-body { display: flex; flex-direction: column; gap: 12px; padding: 4px 0; }
 .sub-icon {

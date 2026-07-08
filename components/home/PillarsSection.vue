@@ -79,17 +79,21 @@ const pillars = [
 }
 .pillars-desc { font-size: 1.0625rem; color: var(--ms-color-muted); max-width: 560px; margin: 0 auto; line-height: 1.7; }
 
-.pillars-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+.pillars-grid { display: grid; grid-template-columns: 1fr; gap: 20px; align-items: stretch; }
 @media (min-width: 768px) { .pillars-grid { grid-template-columns: repeat(3, 1fr); } }
 
 .pillar-link {
   display: block;
+  height: 100%;
   text-decoration: none;
   border-radius: var(--ms-radius-lg);
   transition: transform var(--ms-transition-base), box-shadow var(--ms-transition-base);
 }
 .pillar-link:hover { transform: translateY(-4px); box-shadow: var(--ms-shadow-md); }
 .pillar-link:hover :deep(.ms-card) { border-color: var(--ms-color-sky); }
+/* Equal-height cards: card fills the grid row, footer pinned to the bottom */
+.pillar-link :deep(.ms-card) { height: 100%; display: flex; flex-direction: column; }
+.pillar-link :deep(.ms-card__body) { flex: 1 1 auto; }
 
 .pillar-body { display: flex; flex-direction: column; gap: 14px; padding: 12px 4px; }
 .pillar-icon {

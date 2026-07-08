@@ -403,7 +403,7 @@
     "hero": {
       "badge": "Let's talk",
       "title": "Contact us",
-      "subtitle": "A mission to plan, a quote, a technical question? We usually reply within 24 hours."
+      "subtitle": "A consulting engagement to frame, a drone mission to plan, a question about Waypoint360? Get in touch — we usually reply within 24 hours."
     },
     "direct": {
       "title": "Get in touch",
@@ -452,10 +452,13 @@
         "desc": "Certified A1/A2/A3, CATS (DGAC Specific category), certiphyto and certiBiocide — all our operations comply with the applicable European and French framework."
       }
     },
-    "certs": { "title": "Certifications" },
+    "certs": {
+      "title": "Certifications — drone operations",
+      "intro": "These certifications govern our drone-operator activity (DGAC and European regulations). Consulting, architecture and our SaaS products fall under distinct expertise."
+    },
     "zone": {
-      "title": "Operating area",
-      "intro": "Based in Cosne-sur-Loire (Nièvre, 58), we operate across the following 7 departments:"
+      "title": "Operating area — drone operations",
+      "intro": "Our drone-operator activity covers the following 7 departments. Consulting, architecture and our SaaS products, however, serve clients with no geographical limit."
     },
     "contact": {
       "title": "Let's talk about your project",
