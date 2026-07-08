@@ -44,10 +44,10 @@
   </text>
 
   <!-- Tagline 1 -->
-  <text x="400" y="352" font-family="'Barlow',Arial,sans-serif" font-weight="600" font-size="22" fill="#FFFFFF" opacity="0.75" letter-spacing="0.3">Opérateur drone certifié DGAC · Éditeur de Waypoint360</text>
+  <text x="400" y="352" font-family="'Barlow',Arial,sans-serif" font-weight="600" font-size="22" fill="#FFFFFF" opacity="0.75" letter-spacing="0.3">Conseil &amp; architecture d'entreprise · Drone · SaaS</text>
 
   <!-- Tagline 2 -->
-  <text x="400" y="388" font-family="'Barlow',Arial,sans-serif" font-weight="400" font-size="20" fill="#00AAEF" opacity="0.85" letter-spacing="0.3">Audit thermique · Agriculture · Topographie · Inspection</text>
+  <text x="400" y="388" font-family="'Barlow',Arial,sans-serif" font-weight="400" font-size="20" fill="#00AAEF" opacity="0.85" letter-spacing="0.3">Du cadrage à la réalisation</text>
 
   <!-- Domain -->
   <text x="1180" y="614" font-family="'Barlow',Arial,sans-serif" font-weight="600" font-size="18" fill="#FFFFFF" opacity="0.35" text-anchor="end">meridian-synergy.com</text>
