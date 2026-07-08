@@ -5,6 +5,19 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) — versioning:
 
 ---
 
+## [1.2.0](https://github.com/Meridian-Synergy/meridian-synergy-web/compare/v1.1.0...v1.2.0) (2026-07-08)
+
+
+### Features
+
+* refonte ombrelle — piliers Conseil, Drones, Produits ([#34](https://github.com/Meridian-Synergy/meridian-synergy-web/issues/34)) ([9f95dd0](https://github.com/Meridian-Synergy/meridian-synergy-web/commit/9f95dd008551711d9ad526e9924aafbce2cc9eec))
+
+
+### Bug Fixes
+
+* baseline de l'image OG au positionnement ombrelle ([#36](https://github.com/Meridian-Synergy/meridian-synergy-web/issues/36)) ([58a20b3](https://github.com/Meridian-Synergy/meridian-synergy-web/commit/58a20b36ada95eb71fa40693465f571ff3f8cb48))
+* cartes piliers à hauteur égale + copy société (à-propos, contact) ([#37](https://github.com/Meridian-Synergy/meridian-synergy-web/issues/37)) ([44d5a91](https://github.com/Meridian-Synergy/meridian-synergy-web/commit/44d5a91b2fb4f3ece690eff20a982c861f26081a))
+
 ## [1.1.0](https://github.com/Meridian-Synergy/meridian-synergy-web/compare/v1.0.2...v1.1.0) (2026-07-04)
 
 
