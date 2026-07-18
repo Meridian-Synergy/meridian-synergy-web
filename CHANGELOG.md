@@ -5,6 +5,15 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) — versioning:
 
 ---
 
+## [1.2.1](https://github.com/Meridian-Synergy/meridian-synergy-web/compare/v1.2.0...v1.2.1) (2026-07-18)
+
+
+### Bug Fixes
+
+* align home hero background with other page heros ([#42](https://github.com/Meridian-Synergy/meridian-synergy-web/issues/42)) ([a604dcc](https://github.com/Meridian-Synergy/meridian-synergy-web/commit/a604dcc9410c64752bae046aa84df81574ce9f92))
+* reduce home hero vertical height ([#43](https://github.com/Meridian-Synergy/meridian-synergy-web/issues/43)) ([cdb05c6](https://github.com/Meridian-Synergy/meridian-synergy-web/commit/cdb05c6e0b44f833c5db6db1185ef8580edaadb5))
+* unbreak use-case detail pages by removing crashing per-page OG image ([#39](https://github.com/Meridian-Synergy/meridian-synergy-web/issues/39)) ([4f333c3](https://github.com/Meridian-Synergy/meridian-synergy-web/commit/4f333c36314cc7bc077b05f539e292bd947af587))
+
 ## [1.2.0](https://github.com/Meridian-Synergy/meridian-synergy-web/compare/v1.1.0...v1.2.0) (2026-07-08)
 
 
