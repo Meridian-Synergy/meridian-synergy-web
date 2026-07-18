@@ -45,12 +45,12 @@ useSeoMeta({
   twitterCard: 'summary_large_image',
 })
 
-defineOgImage({
-  component: 'CasUsage',
-  title: page.value?.title ?? '',
-  description: page.value?.description ?? '',
-  categoryLabel: (page.value?.meta as any)?.categoryLabel ?? (page.value?.meta as any)?.category ?? '',
-})
+// NOTE: per-page OG images via defineOgImage are disabled here. nuxt-og-image@6.5.0
+// crashes during SSR head resolution ("originalName.split is not a function" in
+// resolveComponentName), which — because prerender.failOnError is false — silently
+// dropped every use-case detail page from the build (live 404s reported by GSC).
+// Pages fall back to the site-wide og-default.png. Re-enable once the module is
+// fixed/upgraded. See components/OgImage/CasUsage.satori.vue (kept for that follow-up).
 
 const useCaseHubPath = computed(() =>
   locale.value === 'en' ? `${siteUrl}/en/use-case` : `${siteUrl}/cas-usage`
