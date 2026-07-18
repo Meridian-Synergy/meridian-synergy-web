@@ -38,19 +38,10 @@ const localePath = useLocalePath()
 <style scoped>
 .hero {
   padding: 96px 24px 88px;
-  background: linear-gradient(160deg, var(--ms-color-white) 50%, #EEF5FB 100%);
+  background: var(--ms-color-bg);
+  border-bottom: 1px solid var(--ms-color-border);
   overflow: hidden;
   position: relative;
-}
-.hero::before {
-  content: '';
-  position: absolute;
-  top: -140px;
-  right: -100px;
-  width: 620px;
-  height: 620px;
-  background: radial-gradient(circle, rgba(0, 170, 239, 0.07) 0%, transparent 70%);
-  pointer-events: none;
 }
 
 .hero-container {
