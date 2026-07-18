@@ -37,7 +37,7 @@ const localePath = useLocalePath()
 
 <style scoped>
 .hero {
-  padding: 96px 24px 88px;
+  padding: 56px 24px;
   background: var(--ms-color-bg);
   border-bottom: 1px solid var(--ms-color-border);
   overflow: hidden;
@@ -51,7 +51,7 @@ const localePath = useLocalePath()
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 24px;
+  gap: 20px;
   position: relative;
 }
 
