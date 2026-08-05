@@ -23,6 +23,9 @@ useHead({
         email: 'contact@meridian-synergy.com',
         telephone: '+33766974874',
         description: 'Meridian Synergy — conseil et architecture d\'entreprise, opérateur drone certifié DGAC et éditeur de la plateforme SaaS Waypoint360. Du cadrage à la réalisation.',
+        // Stays exhaustive on purpose: `sameAs` confirms the entity's identity to
+        // search engines and is not user-facing, so accounts hidden from the UI
+        // (see lib/socials.ts) must remain listed here.
         sameAs: [
           'https://www.linkedin.com/company/meridian-synergy/',
           'https://www.instagram.com/meridian.synergy',
