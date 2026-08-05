@@ -3,6 +3,8 @@ import { MsButton, MsCard } from '@meridian-synergy/ui'
 
 const { t } = useI18n()
 const localePath = useLocalePath()
+// CTAs render as real links (MsButton `as`), so they carry an href.
+const NuxtLink = resolveComponent('NuxtLink')
 
 const services = [
   { key: 'thermique',      path: '/services/audit-thermique',         color: 'var(--ms-color-sky)' },
@@ -79,10 +81,11 @@ const services = [
 
       <div class="services-cta">
         <MsButton
+          :as="NuxtLink"
+          :to="localePath('/services')"
           :label="t('services.cta')"
           variant="secondary"
           size="lg"
-          @click="navigateTo(localePath('/services'))"
         />
       </div>
     </div>
