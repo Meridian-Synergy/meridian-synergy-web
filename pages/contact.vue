@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { MsPageHero, MsContactChannel, MsSocialCard } from '@meridian-synergy/ui'
+import { visibleSocialAccounts } from '~/lib/socials'
 
 const { t } = useI18n()
 const localePath = useLocalePath()
@@ -27,6 +28,9 @@ useHead({
       name: 'Meridian Synergy',
       url: 'https://meridian-synergy.com',
       logo: 'https://meridian-synergy.com/android-chrome-512x512.png',
+      // Stays exhaustive on purpose: `sameAs` confirms the entity's identity to
+      // search engines and is not user-facing, so accounts hidden from the UI
+      // (see lib/socials.ts) must remain listed here.
       sameAs: [
         'https://www.linkedin.com/company/meridian-synergy/',
         'https://www.instagram.com/meridian.synergy',
@@ -51,32 +55,7 @@ useHead({
   }],
 })
 
-const socials = [
-  {
-    label: 'Instagram',
-    handle: '@meridian.synergy',
-    href: 'https://www.instagram.com/meridian.synergy',
-    icon: 'instagram',
-  },
-  {
-    label: 'LinkedIn',
-    handle: 'meridian-synergy',
-    href: 'https://www.linkedin.com/company/meridian-synergy/',
-    icon: 'linkedin',
-  },
-  {
-    label: 'TikTok',
-    handle: '@meridian.synergy',
-    href: 'https://www.tiktok.com/@meridian.synergy',
-    icon: 'tiktok',
-  },
-  {
-    label: 'YouTube',
-    handle: '@meridian.synergy',
-    href: 'https://www.youtube.com/@meridian.synergy',
-    icon: 'youtube',
-  },
-]
+const socials = visibleSocialAccounts
 </script>
 
 <template>
@@ -121,7 +100,7 @@ const socials = [
           <MsSocialCard
             v-for="s in socials"
             :key="s.label"
-            :network="s.icon"
+            :network="s.network"
             :href="s.href"
             :label="s.label"
             :handle="s.handle"

@@ -4,6 +4,8 @@ import { MsButton, MsLogo } from '@meridian-synergy/ui'
 const { t, locale, setLocale } = useI18n()
 const localePath = useLocalePath()
 const route = useRoute()
+// CTAs render as real links (MsButton `as`), so they carry an href.
+const NuxtLink = resolveComponent('NuxtLink')
 const isOpen = ref(false)
 const openGroup = ref<string | null>(null)
 
@@ -93,10 +95,11 @@ watch(() => route.path, () => { isOpen.value = false; openGroup.value = null })
           <button :class="['lang-btn', { 'lang-btn--active': locale === 'en' }]" @click="setLocale('en')">EN</button>
         </div>
         <MsButton
+          :as="NuxtLink"
+          :to="localePath('/contact')"
           :label="t('nav.cta')"
           variant="primary"
           size="sm"
-          @click="navigateTo(localePath('/conseil'))"
         />
       </div>
 
@@ -168,7 +171,7 @@ watch(() => route.path, () => { isOpen.value = false; openGroup.value = null })
             <span aria-hidden="true" class="lang-sep">|</span>
             <button :class="['lang-btn', { 'lang-btn--active': locale === 'en' }]" @click="setLocale('en')">EN</button>
           </div>
-          <MsButton :label="t('nav.cta')" variant="primary" @click="navigateTo(localePath('/conseil'))" />
+          <MsButton :as="NuxtLink" :to="localePath('/contact')" :label="t('nav.cta')" variant="primary" />
         </div>
       </div>
     </Transition>

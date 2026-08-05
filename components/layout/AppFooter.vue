@@ -1,18 +1,17 @@
 <script setup lang="ts">
 import { MsSocialLinks, MsLogo } from '@meridian-synergy/ui'
 import type { SocialLinkItem } from '@meridian-synergy/ui'
+import { visibleSocialAccounts } from '~/lib/socials'
 
 const { t } = useI18n()
 const localePath = useLocalePath()
 const year = new Date().getFullYear()
 
+// Social accounts first, then the direct channels, which are always shown.
 const socialLinks: SocialLinkItem[] = [
-  { network: 'instagram', href: 'https://www.instagram.com/meridian.synergy',        label: 'Instagram' },
-  { network: 'linkedin',  href: 'https://www.linkedin.com/company/meridian-synergy/', label: 'LinkedIn' },
-  { network: 'tiktok',    href: 'https://www.tiktok.com/@meridian.synergy',           label: 'TikTok' },
-  { network: 'youtube',   href: 'https://www.youtube.com/@meridian.synergy',          label: 'YouTube' },
-  { network: 'whatsapp',  href: 'https://wa.me/33766974874',                          label: 'WhatsApp' },
-  { network: 'email',     href: 'mailto:contact@meridian-synergy.com',                label: 'Email' },
+  ...visibleSocialAccounts.map(({ network, href, label }) => ({ network, href, label })),
+  { network: 'whatsapp', href: 'https://wa.me/33766974874',           label: 'WhatsApp' },
+  { network: 'email',    href: 'mailto:contact@meridian-synergy.com', label: 'Email' },
 ]
 </script>
 
