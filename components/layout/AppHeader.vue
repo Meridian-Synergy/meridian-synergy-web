@@ -96,7 +96,7 @@ watch(() => route.path, () => { isOpen.value = false; openGroup.value = null })
           :label="t('nav.cta')"
           variant="primary"
           size="sm"
-          @click="navigateTo(localePath('/conseil'))"
+          @click="navigateTo(localePath('/contact'))"
         />
       </div>
 
@@ -168,7 +168,7 @@ watch(() => route.path, () => { isOpen.value = false; openGroup.value = null })
             <span aria-hidden="true" class="lang-sep">|</span>
             <button :class="['lang-btn', { 'lang-btn--active': locale === 'en' }]" @click="setLocale('en')">EN</button>
           </div>
-          <MsButton :label="t('nav.cta')" variant="primary" @click="navigateTo(localePath('/conseil'))" />
+          <MsButton :label="t('nav.cta')" variant="primary" @click="navigateTo(localePath('/contact'))" />
         </div>
       </div>
     </Transition>
