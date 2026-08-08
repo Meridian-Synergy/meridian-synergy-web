@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "nuxt dev",
-    "generate": "nuxt generate && node scripts/postbuild-sitemap.mjs && node scripts/postbuild-csp.mjs",
+    "generate": "nuxt generate && node scripts/postbuild-prune.mjs && node scripts/postbuild-sitemap.mjs && node scripts/postbuild-csp.mjs",
     "preview": "nuxt preview",
     "test:e2e": "playwright test"
   },
