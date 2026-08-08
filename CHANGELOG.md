@@ -5,6 +5,14 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) — versioning:
 
 ---
 
+## [1.2.2](https://github.com/Meridian-Synergy/meridian-synergy-web/compare/v1.2.1...v1.2.2) (2026-08-08)
+
+
+### Bug Fixes
+
+* header CTA lands on /contact + hide empty social accounts ([#44](https://github.com/Meridian-Synergy/meridian-synergy-web/issues/44)) ([5969f08](https://github.com/Meridian-Synergy/meridian-synergy-web/commit/5969f081b9ede90f43df7bc6807eda9596ce5f98))
+* localize EN slugs for About/Legal notice and prune phantom route trees ([#46](https://github.com/Meridian-Synergy/meridian-synergy-web/issues/46)) ([b008ae2](https://github.com/Meridian-Synergy/meridian-synergy-web/commit/b008ae20212e0d169e364463dd06d74557aae35a))
+
 ## [1.2.1](https://github.com/Meridian-Synergy/meridian-synergy-web/compare/v1.2.0...v1.2.1) (2026-07-18)
 
 
