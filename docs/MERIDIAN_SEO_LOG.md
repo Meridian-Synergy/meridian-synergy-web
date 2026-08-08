@@ -102,4 +102,15 @@ Slugs EN alignés sur les libellés déjà présents dans `i18n/en.json` (`nav.a
 
 **Verdict** : _(à remplir)_
 
-**Décision restée ouverte** : basculer `strategy` de `prefix_and_default` vers `prefix_except_default`, ce qui supprimerait les 75 pages `/fr/**` **à la source** au lieu de les purger après coup. Mesuré le 2026-08-08 sur une branche : l'espace d'URL généré est **strictement identique** (138 pages, diff vide), sitemap identique à la prod, canonical/hreflang inchangés, 60/60 e2e verts. Aucun bénéfice de `prefix_and_default` sur GitHub Pages n'a été identifié. En attente d'arbitrage.
+**Suite donnée** : bascule de `strategy` vers `prefix_except_default` — cf. entrée du 2026-08-08 ci-dessous.
+
+### 2026-08-08 — `strategy` i18n : `prefix_and_default` → `prefix_except_default`
+
+- **Statut** : **déployé le 2026-08-08**.
+- **Constat mesuré** : `prefix_and_default` rendait la locale par défaut accessible à `/` **et** `/fr/`, générant **75 pages `/fr/**`** en doublon auto-canonique (33 doublons directs + 42 fantômes `/fr/en/`). Sur GitHub Pages, aucun 301 n'est possible : ces pages ne pouvaient qu'être purgées après build.
+- **Mesure de la bascule**, faite avant de décider : l'espace d'URL généré est **strictement identique** — 138 pages avant, 138 après, `diff` des chemins **vide** ; sitemap identique à la prod au `<loc>` près ; canonical et hreflang inchangés sur `/a-propos/` et `/en/about/` ; **60/60** e2e verts. Les pages `/fr/**` générées passent de 75 à **0**.
+- **Conclusion** : le préfixe de la locale par défaut ne produisait **que** des doublons. Aucun bénéfice de `prefix_and_default` sur un hébergeur statique n'a été identifié — l'hébergement statique est au contraire ce qui rend ce réglage coûteux, puisqu'il interdit de rediriger les doublons.
+- **Périmètre livré** : une ligne de `nuxt.config.ts`, plus le `CLAUDE.md` du repo qui annonçait déjà `prefix_except_default` (la config avait dérivé du doc, pas l'inverse) — désormais assorti d'un avertissement explicite de ne pas y revenir.
+- **Reste purgé après build** : les **42** pages `/en/en/**`, qui viennent des stubs `routeRules` et sont indépendantes de la `strategy`. `postbuild-prune.mjs` reste donc nécessaire.
+- **Risque contrôlé** : avec `detectBrowserLanguage.redirectOn: 'root'`, un rebond de `/` vers `/fr/` atterrirait sur le 404 qu'on vient de créer — sur l'URL la plus visitée du site. Vérifié sur la prod : `fr-FR` reste sur `/`, `en-US` part sur `/en`, `de-DE` retombe sur `/`. Verrouillé par un test e2e (`phantom-routes.spec.ts`).
+- **Effet SEO attendu** : **aucun** en soi — l'espace d'URL servi ne change pas. C'est une action de **prévention** : sans elle, chaque build régénère 75 doublons que seule la purge post-build empêche d'être publiés. Ne pas chercher de verdict GSC pour cette entrée.

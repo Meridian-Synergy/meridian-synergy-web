@@ -244,7 +244,7 @@ export default defineNuxtConfig({
       { code: 'en', language: 'en-US', name: 'English' },
     ],
     defaultLocale: 'fr',
-    strategy: 'prefix_and_default',
+    strategy: 'prefix_except_default',
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: 'ms-locale',
