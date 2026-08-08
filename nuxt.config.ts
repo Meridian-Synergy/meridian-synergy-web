@@ -66,14 +66,14 @@ export default defineNuxtConfig({
       ...drones.map(s => ({ loc: `/flotte/${s}`,   priority: 0.5, changefreq: 'monthly' as const })),
       ...drones.map(s => ({ loc: `/en/fleet/${s}`, priority: 0.5, changefreq: 'monthly' as const })),
       // About
-      { loc: '/a-propos/',    priority: 0.5, changefreq: 'yearly' },
-      { loc: '/en/a-propos/', priority: 0.5, changefreq: 'yearly' },
+      { loc: '/a-propos/', priority: 0.5, changefreq: 'yearly' },
+      { loc: '/en/about/', priority: 0.5, changefreq: 'yearly' },
       // Contact
       { loc: '/contact/',    priority: 0.6, changefreq: 'yearly' },
       { loc: '/en/contact/', priority: 0.6, changefreq: 'yearly' },
       // Legal
-      { loc: '/mentions-legales/',    priority: 0.2, changefreq: 'yearly' },
-      { loc: '/en/mentions-legales/', priority: 0.2, changefreq: 'yearly' },
+      { loc: '/mentions-legales/',  priority: 0.2, changefreq: 'yearly' },
+      { loc: '/en/legal-notice/',   priority: 0.2, changefreq: 'yearly' },
     ],
   },
 
@@ -129,9 +129,9 @@ export default defineNuxtConfig({
         '/cas-usage/', '/en/use-case/',
         '/drones/', '/en/drones/',
         '/flotte/', '/en/fleet/',
-        '/a-propos/', '/en/a-propos/',
+        '/a-propos/', '/en/about/',
         '/contact/', '/en/contact/',
-        '/mentions-legales/', '/en/mentions-legales/',
+        '/mentions-legales/', '/en/legal-notice/',
         // Dynamic content — services
         ...frServices.map(s => `/services/${s}`),
         ...enServices.map(s => `/en/services/${s}`),
@@ -216,6 +216,12 @@ export default defineNuxtConfig({
     '/cas-usage/crop-spraying':              { redirect: { to: '/cas-usage/epandage-phytosanitaire',    statusCode: 301 } },
     '/cas-usage/industrial-site-surveillance':{ redirect: { to: '/cas-usage/surveillance-sites-industriels', statusCode: 301 } },
     '/cas-usage/event-coverage':             { redirect: { to: '/cas-usage/couverture-evenementielle',  statusCode: 301 } },
+    // EN slugs for About / Legal notice (were served with the FR slug and are
+    // already indexed by Google under /en/a-propos + /en/mentions-legales).
+    '/en/a-propos':           { redirect: { to: '/en/about',        statusCode: 301 } },
+    '/en/a-propos/':          { redirect: { to: '/en/about',        statusCode: 301 } },
+    '/en/mentions-legales':   { redirect: { to: '/en/legal-notice', statusCode: 301 } },
+    '/en/mentions-legales/':  { redirect: { to: '/en/legal-notice', statusCode: 301 } },
     // Trailing-slash variants — GSC-reported missing rules
     '/services/thermal-inspection/':              { redirect: { to: '/services/audit-thermique',             statusCode: 301 } },
     '/en/services/audit-thermique/':              { redirect: { to: '/en/services/thermal-inspection',       statusCode: 301 } },
@@ -258,6 +264,11 @@ export default defineNuxtConfig({
       // Fleet moved out of /drones (now the drone branch landing) to /flotte
       'flotte/index': { fr: '/flotte', en: '/fleet' },
       'flotte/[slug]': { fr: '/flotte/[slug]', en: '/fleet/[slug]' },
+      // These two shipped with the FR slug on /en/ (untranslated URL indexed by
+      // Google). EN slugs match the existing CTA labels: nav.about "About",
+      // footer.legal "Legal notice".
+      'a-propos': { fr: '/a-propos', en: '/about' },
+      'mentions-legales': { fr: '/mentions-legales', en: '/legal-notice' },
     },
   },
 
