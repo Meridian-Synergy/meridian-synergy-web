@@ -179,7 +179,10 @@ publishedAt: "YYYY-MM-DD"
 
 ## i18n
 
-Strategy `prefix_except_default` : FR sans préfixe, EN avec `/en/`.
+Strategy `prefix_except_default` : FR sans préfixe, EN avec `/en/`. **Ne pas repasser à
+`prefix_and_default`** : cela régénère tout le site une seconde fois sous `/fr/`, en pages
+auto-canoniques servies en 200 — des doublons que GitHub Pages, hébergeur statique, ne peut
+pas rediriger. Cf. `scripts/postbuild-prune.mjs`.
 
 Les traductions UI (navbar, boutons) sont dans `i18n/fr.json` / `i18n/en.json`.
 Le contenu éditorial est dans `content/fr/` et `content/en/`.

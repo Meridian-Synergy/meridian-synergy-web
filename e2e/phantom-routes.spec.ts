@@ -47,3 +47,23 @@ for (const path of MUST_404) {
     expect(response?.status(), `${path} must 404 — a 200 here is indexable duplicate content`).toBe(404)
   })
 }
+
+// The counterpart of the two fixes above: /fr/ no longer exists, so nothing may ever
+// send a visitor there. detectBrowserLanguage runs on the root with redirectOn:'root',
+// and a French browser is the case that would bounce to /fr/ under a prefixed default
+// locale — landing on a 404 for the site's single most visited URL.
+test.describe('root landing for a French browser', () => {
+  test.use({ locale: 'fr-FR' })
+
+  test('stays on / and never bounces to the removed /fr/', async ({ page }) => {
+    const response = await page.goto('/', { waitUntil: 'load' })
+    expect(response?.status()).toBe(200)
+
+    await expect
+      .poll(() => new URL(page.url()).pathname, {
+        message: 'a fr-FR browser must stay on / — /fr/ is not generated any more',
+      })
+      .toBe('/')
+    await expect(page.locator('h1')).not.toBeEmpty()
+  })
+})
