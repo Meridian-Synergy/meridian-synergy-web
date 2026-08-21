@@ -512,6 +512,7 @@
   "footer": {
     "tagline": "Consulting and enterprise architecture, drone operations and SaaS products.",
     "legal": "Legal notice",
+    "aiInstructions": "AI Instructions",
     "copyright": "© {year} Meridian Synergy. All rights reserved.",
     "contact": "Contact",
     "cgu": "Terms of Use",

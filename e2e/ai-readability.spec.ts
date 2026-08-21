@@ -104,3 +104,33 @@ test('robots.txt names the AI search agents and blocks none of them', () => {
 
   expect(blanketDisallow, 'no agent group may carry a blanket `Disallow: /`').toEqual([])
 })
+
+// The /ai-instructions page only works if it is reachable and dated: an orphan page is
+// not crawled, and an undated one is indistinguishable from stale content.
+test('the AI instructions page is served, dated and declared', async ({ page }) => {
+  const response = await page.goto('/en/ai-instructions/', { waitUntil: 'load' })
+  expect(response?.status(), '/en/ai-instructions/ must be prerendered').toBe(200)
+
+  const text = await page.locator('body').innerText()
+  expect(text.length, 'the page must carry substantive content, not a stub').toBeGreaterThan(5000)
+  expect(text, 'the page must state when it was last updated').toContain('Last updated')
+
+  const sitemap = readFileSync(`${BUILD}/sitemap.xml`, 'utf8')
+  expect(sitemap, 'the page must be declared in the sitemap').toContain(
+    '<loc>https://meridian-synergy.com/en/ai-instructions/</loc>',
+  )
+})
+
+// English-only by design: retrieval pivots through English, and a translated twin would
+// only add a duplicate URL. `fr: false` in i18n.pages is what keeps it to one — and
+// serving it on the English path is what makes <html lang> correct.
+test('the AI instructions page has no localized duplicate', async ({ request }) => {
+  const response = await request.get('/ai-instructions/')
+  expect(response.status(), 'the French-path variant must not exist').toBe(404)
+})
+
+test('the AI instructions page is linked, not orphaned', async ({ page }) => {
+  await page.goto('/', { waitUntil: 'load' })
+  const link = page.locator('a[href*="/ai-instructions"]')
+  await expect(link, 'the home page footer must link to /ai-instructions').not.toHaveCount(0)
+})
