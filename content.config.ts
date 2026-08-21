@@ -18,6 +18,17 @@ export default defineContentConfig({
           range: z.string().optional(),
         }).optional(),
         publishedAt: z.string().optional(),
+        // Editorial dossiers (content/{fr,en}/dossiers/**)
+        updatedAt: z.string().optional(),
+        kind: z.string().optional(),
+        translationKey: z.string().optional(),
+        metaTitle: z.string().optional(),
+        relatedDossiers: z.array(z.string()).optional(),
+        sources: z.array(z.object({
+          label: z.string(),
+          url: z.string(),
+          date: z.string().optional(),
+        })).optional(),
         seo: z.object({
           keywords: z.array(z.string()).optional(),
         }).optional(),

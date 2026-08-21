@@ -8,6 +8,7 @@
   "nav": {
     "home": "Meridian Synergy — Accueil",
     "conseil": "Conseil & Architecture",
+    "dossiers": "Dossiers",
     "services": "Services",
     "drones": "Drones",
     "products": "Produits",
@@ -19,6 +20,29 @@
     "pricing": "Tarifs",
     "terms": "CGU",
     "termsSale": "CGV"
+  },
+  "dossiersPage": {
+    "meta": {
+      "title": "Dossiers — dette technique et IA",
+      "description": "Analyses chiffrées et sourcées sur la dette technique, l'IA et la modernisation des systèmes d'information."
+    },
+    "hero": {
+      "badge": "Conseil & Architecture",
+      "title": "Dossiers",
+      "desc": "Des analyses de fond sur les décisions qui engagent un système d'information — chiffrées, sourcées, datées."
+    },
+    "intro": "Je publie ici les analyses dont je me sers en mission. Chaque chiffre renvoie à sa source et chaque source est datée : sur des sujets où l'approximation circule vite, c'est le minimum qu'on doive à un décideur qui engage un budget.",
+    "badge": "Dossier",
+    "byline": "Mis à jour le {date}",
+    "sources": "Sources",
+    "related": "Autres dossiers",
+    "pillarLabel": "L'offre associée",
+    "pillarDesc": "Audit, architecture, direction de projet et réalisation, sur un continuum unique.",
+    "cta": {
+      "title": "Un état des lieux de votre parc ?",
+      "desc": "L'inventaire est court, il coûte peu, et il dit où se trouve l'urgence comme où l'IA rendra immédiatement.",
+      "btn": "Me contacter"
+    }
   },
   "home": {
     "meta": {
@@ -396,6 +420,11 @@
     "updatedAt": "Dernière mise à jour : mai 2026"
   },
   "conseilPage": {
+    "dossiers": {
+      "title": "Les analyses derrière la méthode",
+      "desc": "Je publie les dossiers dont je me sers en mission : dette technique, obsolescence, modernisation. Chiffrés, sourcés, datés.",
+      "link": "Lire les dossiers"
+    },
     "meta": {
       "title": "Conseil & Architecture d'entreprise — Meridian Synergy",
       "description": "Architecture d'entreprise, direction et réalisation de projet, management de transition. Un architecte engagé du cadrage à la mise en œuvre, en transverse ou sur un domaine précis."

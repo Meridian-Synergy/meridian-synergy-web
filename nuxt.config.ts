@@ -11,6 +11,8 @@ const enServices  = contentSlugs('./content/en/services')
 const frUseCases  = contentSlugs('./content/fr/cas-usage')
 const enUseCases  = contentSlugs('./content/en/cas-usage')
 const drones      = contentSlugs('./content/fr/drones')
+const frDossiers  = contentSlugs('./content/fr/dossiers')
+const enDossiers  = contentSlugs('./content/en/dossiers')
 
 export default defineNuxtConfig({
   modules: [
@@ -41,6 +43,12 @@ export default defineNuxtConfig({
       // Conseil & Architecture pillar
       { loc: '/conseil/',    priority: 0.9, changefreq: 'monthly' },
       { loc: '/en/consulting/', priority: 0.9, changefreq: 'monthly' },
+      // Dossiers hub (editorial arm of the Conseil pillar)
+      { loc: '/dossiers/',   priority: 0.8, changefreq: 'monthly' },
+      { loc: '/en/insights/', priority: 0.8, changefreq: 'monthly' },
+      // Dossiers pages
+      ...frDossiers.map(s => ({ loc: `/dossiers/${s}`, priority: 0.8, changefreq: 'monthly' as const })),
+      ...enDossiers.map(s => ({ loc: `/en/insights/${s}`, priority: 0.8, changefreq: 'monthly' as const })),
       // Produits pillar
       { loc: '/produits/',   priority: 0.8, changefreq: 'monthly' },
       { loc: '/en/products/', priority: 0.8, changefreq: 'monthly' },
@@ -124,6 +132,7 @@ export default defineNuxtConfig({
         // Static pages — FR (default) + EN
         '/', '/en/',
         '/conseil/', '/en/consulting/',
+        '/dossiers/', '/en/insights/',
         '/produits/', '/en/products/',
         '/services/', '/en/services/',
         '/cas-usage/', '/en/use-case/',
@@ -132,6 +141,9 @@ export default defineNuxtConfig({
         '/a-propos/', '/en/about/',
         '/contact/', '/en/contact/',
         '/mentions-legales/', '/en/legal-notice/',
+        // Dynamic content — dossiers
+        ...frDossiers.map(s => `/dossiers/${s}`),
+        ...enDossiers.map(s => `/en/insights/${s}`),
         // Dynamic content — services
         ...frServices.map(s => `/services/${s}`),
         ...enServices.map(s => `/en/services/${s}`),
@@ -260,6 +272,8 @@ export default defineNuxtConfig({
       'cas-usage/[slug]': { fr: '/cas-usage/[slug]', en: '/use-case/[slug]' },
       // Umbrella refonte — localized slugs for the new pillars
       'conseil': { fr: '/conseil', en: '/consulting' },
+      'dossiers/index': { fr: '/dossiers', en: '/insights' },
+      'dossiers/[slug]': { fr: '/dossiers/[slug]', en: '/insights/[slug]' },
       'produits': { fr: '/produits', en: '/products' },
       // Fleet moved out of /drones (now the drone branch landing) to /flotte
       'flotte/index': { fr: '/flotte', en: '/fleet' },

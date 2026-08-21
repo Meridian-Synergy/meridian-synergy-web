@@ -16,7 +16,13 @@ interface NavLink {
 }
 
 const links: NavLink[] = [
-  { labelKey: 'nav.conseil', path: '/conseil' },
+  {
+    labelKey: 'nav.conseil',
+    path: '/conseil',
+    children: [
+      { labelKey: 'nav.dossiers', path: '/dossiers' },
+    ],
+  },
   {
     labelKey: 'nav.drones',
     path: '/drones',

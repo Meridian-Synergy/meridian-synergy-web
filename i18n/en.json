@@ -8,6 +8,7 @@
   "nav": {
     "home": "Meridian Synergy — Home",
     "conseil": "Consulting & Architecture",
+    "dossiers": "Insights",
     "services": "Services",
     "drones": "Drones",
     "products": "Products",
@@ -19,6 +20,29 @@
     "pricing": "Pricing",
     "terms": "Terms of Use",
     "termsSale": "Terms of Sale"
+  },
+  "dossiersPage": {
+    "meta": {
+      "title": "Insights — technical debt and AI",
+      "description": "Sourced, quantified analyses on technical debt, AI and information system modernisation."
+    },
+    "hero": {
+      "badge": "Consulting & Architecture",
+      "title": "Insights",
+      "desc": "In-depth analyses of the decisions that commit an information system — quantified, sourced, dated."
+    },
+    "intro": "I publish here the analyses I rely on during engagements. Every figure points to its source and every source is dated: on subjects where approximation travels fast, that is the minimum owed to a decision-maker committing a budget.",
+    "badge": "Insight",
+    "byline": "Updated on {date}",
+    "sources": "Sources",
+    "related": "Other insights",
+    "pillarLabel": "Related offering",
+    "pillarDesc": "Audit, architecture, project direction and delivery, on a single continuum.",
+    "cta": {
+      "title": "A status review of your estate?",
+      "desc": "The inventory is short, it costs little, and it shows both where the urgency sits and where AI will pay off immediately.",
+      "btn": "Get in touch"
+    }
   },
   "home": {
     "meta": {
@@ -117,6 +141,11 @@
     "url": "app.waypoint360.eu"
   },
   "conseilPage": {
+    "dossiers": {
+      "title": "The analyses behind the method",
+      "desc": "I publish the insights I rely on during engagements: technical debt, obsolescence, modernisation. Quantified, sourced, dated.",
+      "link": "Read the insights"
+    },
     "meta": {
       "title": "Consulting & Enterprise Architecture — Meridian Synergy",
       "description": "Enterprise architecture, project direction and delivery, interim management. An architect engaged from framing to implementation, cross-functional or on a specific domain."
