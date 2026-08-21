@@ -1,5 +1,6 @@
 ---
 title: "Drone Surveillance — Thermal Security Day and Night"
+translationKey: "security-surveillance"
 description: "Aerial thermal and visual surveillance for events, industrial sites and natural areas in Burgundy. CATS certified, available in Nièvre and neighbouring departments."
 image: "/images/services/securite-surveillance.jpg"
 relatedDrones:

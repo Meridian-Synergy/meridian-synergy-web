@@ -1,5 +1,6 @@
 ---
 title: "Prises de vue aériennes par drone — Vidéo 4K et photographie"
+translationKey: "video-cinema"
 description: "Vidéo aérienne 4K et photographie drone pour événements, immobilier, tourisme et communication institutionnelle en Bourgogne. Nièvre, Côte-d'Or, Saône-et-Loire."
 image: "/images/services/video-cinema.jpg"
 relatedDrones:

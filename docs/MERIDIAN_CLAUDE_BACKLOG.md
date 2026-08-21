@@ -27,7 +27,7 @@
 |---|---|---|---|---|
 | G1 | Page `/fiche-google-entreprise/` | P1 | M | Fiche GMB en ligne et vérifiée |
 | T1 | Titre de marque doublé sur `/conseil` et `/services` | P2 | S | — |
-| T2 | Supprimer 22 stubs de redirection par `translationKey` | P2 | M | — |
+| T2 | Stubs de redirection — **services corrigés**, cas d'usage restants | ~~P2~~ **P1** | M | — |
 
 ---
 
@@ -78,16 +78,36 @@ dossiers. Un `quickfix`, une ligne par page.
 
 ---
 
-### T2 — Supprimer 22 stubs de redirection par `translationKey` · P2 · M
+### T2 — Stubs de redirection · ~~P2~~ **P1** · M · services **corrigés le 2026-08-21**
 
-**Pourquoi.** Les slugs FR et EN des services et des cas d'usage diffèrent, et `@nuxtjs/i18n`
-ne devine pas le pendant d'un paramètre dynamique : il annonce en `hreflang` une URL qui
-n'existe pas. Le dépôt compense par **22 redirections `routeRules`**, chacune générant un stub
-HTML servi en 200. Les dossiers ont résolu la cause le 2026-08-21 — un `translationKey` partagé
-plus `setI18nParams` — et ne génèrent **aucune** URL parasite.
+⚠️ **Requalifié P0→P1 après mesure.** Ces stubs n'étaient pas cosmétiques : ils
+**excluaient silencieusement quatre vraies pages anglaises du sitemap**. Mesuré avant
+correction : `/services` déclarait **7 URL FR pour 3 EN**, alors que six pages anglaises de
+~41 Ko existaient au build. Les deux seules déclarées — `agriculture-viticulture` et
+`video-cinema` — étaient précisément celles dont les slugs FR et EN sont identiques, donc
+sans redirection.
 
-**Done.** Porter le mécanisme sur `services/[slug]` et `cas-usage/[slug]`, retirer les
-`routeRules` devenues inutiles. ⚠️ **Additif d'abord** : ces stubs sont indexés depuis des mois,
-vérifier dans GSC… ce qui n'est plus possible depuis l'abandon du suivi. Donc : les **conserver**
-en redirection le temps d'un cycle, et ne retirer que ce qui n'a jamais reçu de trafic connu.
-Ne pas traiter ce point comme purement mécanique.
+**Cause, établie par test et non par déduction.** Première hypothèse — les redirections
+`/en/services/<slug-FR>` — **fausse** : leur retrait ne ramenait aucune page. C'est l'inverse :
+une clé `routeRules` côté FR portant un slug EN (`/services/thermal-inspection`) est
+**re-préfixée par i18n** en `/en/services/thermal-inspection`, où elle entre en collision avec
+la vraie page, que le module de sitemap écarte alors comme redirection. ⚠️ Et il faut retirer
+**les deux formes**, avec et sans barre oblique finale : n'en retirer qu'une laissait
+`thermal-inspection` absente là où les trois autres revenaient.
+
+**Fait** : `translationKey` posé sur les 12 fichiers de services, `setI18nParams` dans
+`pages/services/[slug].vue`, et les 4 redirections `/services/<slug-EN>` retirées. Sitemap
+83 → **87**, les 6 services EN déclarés, hreflang appariés dans les deux sens.
+
+**Reste** : les **16 redirections de `cas-usage`**, de même forme. ⚠️ **Aucun dommage mesuré
+de leur côté** — les 17 pages EN de cas d'usage sont bien au sitemap. Ne pas les traiter par
+symétrie : la correction a un coût (voir ci-dessous) et aucun bénéfice constaté ici. À revoir
+seulement si une mesure montre un manque.
+
+⚠️ **Coût assumé de la correction, à connaître avant de refaire le geste ailleurs.** Les 4 URL
+`/services/<slug-EN>` passent de redirection à **404 réel**. Elles étaient annoncées en
+`hreflang` par les pages anglaises, donc possiblement indexées. C'est un écart délibéré à la
+règle « jamais de route publique retirée sans 301 » du `CLAUDE.md` : ces URL n'ont jamais porté
+de contenu, ce sont des stubs nés d'un défaut de hreflang, et l'hébergement statique ne permet
+pas de garder la redirection sans reproduire l'exclusion du sitemap. Le suivi GSC étant
+abandonné, **cette bascule ne sera pas observée**.

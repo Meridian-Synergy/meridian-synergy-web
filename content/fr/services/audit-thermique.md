@@ -1,5 +1,6 @@
 ---
 title: "Audit thermique par drone — Inspection infrarouge aérienne"
+translationKey: "thermal-inspection"
 description: "Détection de ponts thermiques, infiltrations et anomalies photovoltaïques par drone dans la Nièvre et en Bourgogne. Sans échafaudage, rapport géoréférencé sous 24 h."
 image: "/images/services/audit-thermique.jpg"
 relatedDrones:

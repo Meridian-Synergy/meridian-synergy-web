@@ -1,5 +1,6 @@
 ---
 title: "Drone agricole — Cartographie NDVI et épandage de précision"
+translationKey: "agriculture-viticulture"
 description: "Services drone pour l'agriculture et la viticulture en Bourgogne : cartographie NDVI, épandage phytosanitaire et biocontrôle certifiés. Nièvre, Côte-d'Or, Saône-et-Loire."
 image: "/images/services/agriculture-viticulture.jpg"
 relatedDrones:

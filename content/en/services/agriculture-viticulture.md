@@ -1,5 +1,6 @@
 ---
 title: "Agricultural Drone Services — NDVI Mapping and Precision Spraying"
+translationKey: "agriculture-viticulture"
 description: "Drone services for agriculture and viticulture in Burgundy: NDVI mapping, certified phytosanitary spraying and biocontrol. Nièvre, Côte-d'Or, Saône-et-Loire."
 image: "/images/services/agriculture-viticulture.jpg"
 relatedDrones:

@@ -52,6 +52,36 @@ GSC **ne reflète pas nos déploiements en temps réel** : il montre l'**index d
 
 ## Entrées
 
+### 2026-08-21 — Quatre pages anglaises absentes du sitemap : cause trouvée par test (PR #58)
+
+- **Constat mesuré** : `/services` déclarait **7 URL FR pour 3 EN**, alors que **six** pages de
+  services anglaises, réelles et de ~41 Ko, existaient au build. Défaut **préexistant**, découvert
+  en contrôlant la couverture FR/EN section par section — pas cherché, tombé dessus.
+- **Cause, établie par test** : une clé `routeRules` côté FR portant un slug EN est **re-préfixée
+  par i18n** et entre en collision avec la vraie page anglaise, que le module de sitemap écarte
+  alors comme redirection.
+
+⚠️ **Ma première hypothèse était fausse, et le test l'a montré.** Je pensais les redirections
+`/en/services/<slug-FR>` responsables ; leur retrait n'a ramené **aucune** page. C'est la
+direction inverse. Sans ce test, j'aurais livré une correction sans effet en la croyant bonne.
+
+⚠️ **Deuxième piège** : les redirections existent en **deux formes**, avec et sans barre oblique
+finale, dans deux blocs distincts. N'en retirer qu'une ramenait 3 pages sur 4 — et le résultat
+partiel ressemblait à un succès.
+
+**Corrigé à la cause** : `translationKey` sur les 12 fichiers de services + `setI18nParams`,
+comme les dossiers et les guides. Les 4 redirections deviennent inutiles et sont retirées.
+Sitemap **83 → 87**, les 6 services EN déclarés, hreflang appariés dans les deux sens.
+
+**Contrepartie assumée** : les 4 URL `/services/<slug-EN>` passent de redirection à **404 réel**.
+Elles étaient annoncées en `hreflang`, donc possiblement indexées. Écart délibéré à la règle
+« jamais de route publique retirée sans 301 » : ce sont des stubs nés d'un défaut, ils n'ont
+jamais porté de contenu, et l'hébergement statique interdit de garder la redirection sans
+reproduire l'exclusion. ⛔ Le suivi GSC étant abandonné, **cette bascule ne sera pas observée**.
+
+**Non traité à dessein** : les 16 redirections de `cas-usage`, de même forme, **sans dommage
+mesuré** — leurs 17 pages EN sont bien déclarées. Pas de correction par symétrie.
+
 ### 2026-08-21 — Dossier « référencement ChatGPT » (PR #55)
 
 - **Périmètre** : `/dossiers/referencement-chatgpt/` ↔ `/en/insights/chatgpt-visibility/`, FR **et** EN.
