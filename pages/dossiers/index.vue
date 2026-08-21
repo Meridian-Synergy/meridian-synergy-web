@@ -35,8 +35,11 @@ const { data: dossiers } = await useAsyncData(`dossiers-hub-${locale.value}`, as
       publishedAt: (doc.publishedAt as string | undefined) ?? '',
       updatedAt: (doc.updatedAt as string | undefined) ?? '',
       keywords: ((doc.seo as { keywords?: string[] } | undefined)?.keywords ?? []).slice(0, 3),
+      order: (doc.order as number | undefined) ?? 99,
     }))
-    .sort((a, b) => (b.publishedAt ?? '').localeCompare(a.publishedAt ?? ''))
+    // Explicit order first — the dossiers share a publication date, so without it the
+    // listing order comes from file enumeration. Newest first among equals.
+    .sort((a, b) => a.order - b.order || (b.publishedAt ?? '').localeCompare(a.publishedAt ?? ''))
 })
 
 const dateFormatter = computed(() =>

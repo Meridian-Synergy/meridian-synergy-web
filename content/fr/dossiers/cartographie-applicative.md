@@ -3,6 +3,7 @@ title: "Cartographie applicative : ce qu'elle doit contenir"
 description: "Sans carte, aucun lot n'est isolable et aucune dette n'est remboursable. Ce que l'ANSSI demande, et ce qui la fait mourir."
 metaTitle: "Cartographie applicative du SI"
 kind: "dossier"
+order: 2
 translationKey: "application-mapping"
 publishedAt: "2026-08-21"
 updatedAt: "2026-08-21"

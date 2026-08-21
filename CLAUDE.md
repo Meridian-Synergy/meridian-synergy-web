@@ -180,6 +180,9 @@ metaTitle: ""             # Optionnel — titre SERP court. @nuxtjs/seo AJOUTE
                           # de 60 car. laisse donc 41 car. au titre. `title` reste
                           # le H1 et l'og:title (non suffixé, budget 60 plein).
 kind: "dossier"
+order: 1                  # Ordre d'affichage sur le hub (croissant). Les dossiers d'un
+                          # même lot partagent leur date : sans ce champ, l'ordre vient
+                          # de l'énumération des fichiers. Pilier = 1.
 translationKey: ""        # MÊME valeur dans les deux locales — c'est ce qui apparie
                           # les hreflang (les slugs FR et EN diffèrent, i18n ne peut
                           # pas deviner le pendant d'un param dynamique)

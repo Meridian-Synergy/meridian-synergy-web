@@ -3,6 +3,7 @@ title: "Application mapping: what it must contain"
 description: "Without a map, no batch can be isolated and no debt repaid. What the French cyber agency requires, and what kills a map."
 metaTitle: "Application mapping for your estate"
 kind: "dossier"
+order: 2
 translationKey: "application-mapping"
 publishedAt: "2026-08-21"
 updatedAt: "2026-08-21"

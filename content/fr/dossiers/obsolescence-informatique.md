@@ -3,6 +3,7 @@ title: "Obsolescence informatique : ce qu'elle vous coûte"
 description: "Une fin de support ne casse rien le jour venu. Elle transforme votre parc en surface d'attaque, sur une échéance subie."
 metaTitle: "Gérer l'obsolescence informatique"
 kind: "dossier"
+order: 3
 translationKey: "it-obsolescence"
 publishedAt: "2026-08-21"
 updatedAt: "2026-08-21"

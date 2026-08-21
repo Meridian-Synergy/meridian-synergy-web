@@ -3,6 +3,7 @@ title: "Dette technique et IA : solder enfin le legacy"
 description: "L'IA rend la reprise du legacy abordable — à condition de savoir où elle rend et où elle coûte. Analyse chiffrée."
 metaTitle: "Dette technique : ce que l'IA change"
 kind: "dossier"
+order: 1
 translationKey: "tech-debt-ai"
 publishedAt: "2026-08-21"
 updatedAt: "2026-08-21"

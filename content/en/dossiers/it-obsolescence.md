@@ -3,6 +3,7 @@ title: "IT obsolescence: what it really costs you"
 description: "End of support breaks nothing on the day. It turns your estate into attack surface, on a deadline you no longer set."
 metaTitle: "Managing IT obsolescence"
 kind: "dossier"
+order: 3
 translationKey: "it-obsolescence"
 publishedAt: "2026-08-21"
 updatedAt: "2026-08-21"

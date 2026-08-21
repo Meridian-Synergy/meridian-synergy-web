@@ -23,6 +23,7 @@ export default defineContentConfig({
         kind: z.string().optional(),
         translationKey: z.string().optional(),
         metaTitle: z.string().optional(),
+        order: z.number().optional(),
         relatedDossiers: z.array(z.string()).optional(),
         sources: z.array(z.object({
           label: z.string(),
