@@ -33,7 +33,7 @@
     },
     "author": {
       "title": "Who writes these?",
-      "body": "Denis Gosset, enterprise architect and publication director of Meridian Synergy. I work across a single continuum — audit, architecture, project direction and delivery — either transversally or on one specific domain. The trade-offs described here are ones I hold on production systems, including Waypoint360, a SaaS platform I designed, built and operate."
+      "body": "Denis Gosset, enterprise architect and publication director of Meridian Synergy. I work from audit through to delivery, by way of architecture and project direction, either transversally or on one specific domain. The trade-offs described here are ones I hold on production systems, including Waypoint360, a SaaS platform I designed, built and operate."
     },
     "meta": {
       "title": "Insights — technical debt and AI",
@@ -50,7 +50,7 @@
     "sources": "Sources",
     "related": "Other insights",
     "pillarLabel": "Related offering",
-    "pillarDesc": "Audit, architecture, project direction and delivery, on a single continuum.",
+    "pillarDesc": "Audit, architecture, project direction and delivery, from the same person.",
     "cta": {
       "title": "A status review of your estate?",
       "desc": "The inventory is short, it costs little, and it shows both where the urgency sits and where AI will pay off immediately.",
@@ -211,7 +211,7 @@
       "desc": "I take operational responsibility for a function or a programme during a sensitive phase: a vacant key position, the launch of a structuring initiative, the recovery of a troubled project. The aim is not to settle in, but to stabilise, move things forward, then hand over to a team that regains control on sound foundations."
     },
     "continuum": {
-      "title": "A continuum, not isolated services",
+      "title": "One coherent run, not isolated services",
       "audit": {
         "title": "Audit & consulting",
         "desc": "I lay out a lucid assessment of the existing situation and the options genuinely open, without window dressing. We start from your context, not a generic template."
