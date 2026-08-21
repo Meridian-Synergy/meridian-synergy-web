@@ -52,6 +52,64 @@ GSC **ne reflète pas nos déploiements en temps réel** : il montre l'**index d
 
 ## Entrées
 
+### 2026-08-21 — Pages PME : diagnostic offert + deux portes d'entrée (PR #54)
+
+- **Statut** : implémenté sur branche `feat/pages-audit-pme`.
+- **Périmètre** : `/audit-de-site/` (conversion), `/guides/combien-coute-un-site-internet/` et
+  `/guides/site-invisible-sur-google/` (acquisition). **FR uniquement**, `en: false`.
+
+**Le virage, et pourquoi.** La demande initiale était une page audit géolocalisée sur
+Paris / Cher / Nièvre / Loiret / Yonne. La mesure d'autocomplétion l'a invalidée en deux temps.
+
+*Premier temps* — la demande géo existe, mais accrochée à `agence web` (présente sur les cinq zones)
+et `création site internet`, pas à notre vocabulaire. `audit site internet + lieu` : **zéro
+suggestion**, nulle part, Paris compris. Revendiquer « agence web » attirerait les mauvais prospects.
+
+*Second temps, après objection de Denis* — `audit site web` (63 suggestions) semblait commercial ;
+ses modificateurs disent l'inverse : *gratuit, en ligne, exemple pdf, def, semrush*. Chercheur
+d'outil et rédacteur de mémoire, pas acheteur. **Même piège que `audit système d'information`.**
+
+Ce qu'un dirigeant tape réellement, mesuré : `mon site n'apparaît pas sur google` (15 suggestions,
+dont *n'apparaît **plus***, *wix*, *wordpress*, *shopify*), `combien coûte un site internet`
+(**69 suggestions** : *vitrine, marchand, pour une entreprise, par mois, professionnel, pour
+artisan*), `comment améliorer le référencement de mon site`. Jamais le mot « audit ».
+
+**Conséquence assumée : la page de conversion n'est PAS un pari SEO.** Son travail est de convertir
+un lecteur venu de l'e-mail à froid, du rapport ou de LinkedIn. **Attente de trafic organique :
+quasi nulle, écrite d'avance.** Le pouvoir SEO repose sur les deux guides.
+
+**Volet IA — angle sur une page, cible sur l'autre.** `combien coûte un site internet avec l'IA` ne
+renvoie **rien** : sur la page prix, l'IA est un **traitement d'objection** (`créer un site web avec
+l'IA **gratuit**` existe bel et bien), pas un mot visé. Sur la visibilité en revanche,
+`référencement ChatGPT` existe — dont `**agence** référencement chatgpt`, donc un marché commercial
+qui se forme. ⚠️ **Gemini écarté sur mesure** : le mot est accaparé par des questions Android
+(*faire apparaître Gemini sur mon téléphone*). `apparaître dans les IA` et `visibilité ia` : rien
+ou bruit.
+
+**L'expérience géo que Denis voulait est conservée, mais honnêtement cadrée.** Les cinq départements
+figurent sur la page de conversion, en signal de proximité et en `areaServed` du schema `Service` —
+**pas comme un pari de classement**. Hypothèse écrite d'avance : *aucune* requête combinant un
+service et un lieu ne produira d'impression à +8 semaines. Si une seule apparaît, c'est une surprise
+mesurée, pas une prophétie.
+
+⚠️ **Le vrai levier local n'est pas une page** : la fiche d'établissement Google, créée le même jour.
+`fiche google entreprise` sort **74 suggestions**, `pourquoi mon entreprise n'apparaît pas sur
+google` en sort 14. C'est le champ « zones desservies » de la fiche, et non le texte d'une page, qui
+rend éligible au pack local.
+
+**Pièges évités** : une page par ville aurait été du *doorway*, nommément cité par la politique
+anti-spam de Google (« pages targeted at specific regions or cities that funnel users to one page »).
+Et le défaut hreflang appris sur `/ai-instructions` a été corrigé **à l'écriture** : avec la variante
+anglaise coupée, i18n annonçait la page d'accueil comme version alternative. Réécrit par clé,
+verrouillé par six tests.
+
+**KPI** : apparition de requêtes `combien coûte un site internet` et `mon site n'apparaît pas sur
+google` dans GSC — aucune n'existe aujourd'hui. Et le contrôle négatif : les requêtes géo.
+
+**Fenêtre de verdict** : +4 sem et +8-12 sem à compter du déploiement.
+
+**Verdict** : _(à remplir)_
+
 ### 2026-08-21 — Lot Instructions IA : page `/en/ai-instructions` (PR #53)
 
 - **Statut** : implémenté sur branche `feat/ai-instructions`.

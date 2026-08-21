@@ -131,6 +131,8 @@ content/fr/drones/[slug].md    →  /drones/[slug]
 content/en/drones/[slug].md    →  /en/drones/[slug]
 content/fr/dossiers/[slug].md  →  /dossiers/[slug]
 content/en/dossiers/[slug].md  →  /en/insights/[slug]
+content/fr/guides/[slug].md    →  /guides/[slug]         (français seul)
+content/fr/offre/audit-de-site.md → /audit-de-site        (français seul)
 content/meta/ai-instructions.md → /en/ai-instructions  (anglais seul)
 ```
 
@@ -267,5 +269,13 @@ de locale et annonce la **page d'accueil** comme version française.
 ⚠️ **Ne jamais y écrire un fait non publié ailleurs sur le site** — effectif, chiffre
 d'affaires, nombre de clients, date de création, récompenses, tarifs. C'est précisément ce
 qu'elle existe pour empêcher un modèle d'inventer.
+
+**PME / diagnostic** : `/audit-de-site` (conversion) + `/guides/combien-coute-un-site-internet`
+et `/guides/site-invisible-sur-google` (acquisition). **Français seul et à dessein** —
+`en: false` : l'audience est un dirigeant de PME française, une jumelle anglaise ajouterait
+une URL sans lecteur. ⚠️ Comme pour `/ai-instructions`, la locale coupée fait retomber i18n
+sur la racine et annoncer la **page d'accueil** en alternative : les `hreflang` sont réécrits
+par clé dans chaque page. ⚠️ La page de conversion n'a **aucune attente SEO** — c'est écrit
+dans le journal ; le trafic est le travail des deux guides.
 
 **Dossiers** : `dette-technique-ia` (EN `technical-debt-ai`), `cartographie-applicative` (EN `application-mapping`), `obsolescence-informatique` (EN `it-obsolescence`)
