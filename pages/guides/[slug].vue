@@ -1,21 +1,23 @@
 <script setup lang="ts">
 import { MsPageHero, MsCtaBanner, MsCard } from '@meridian-synergy/ui'
 
-// Guides written for a French SME owner, deliberately French-only: the audience is
-// local and an English twin would add a URL with no reader. The English variant is
-// disabled in nuxt.config (`'guides/[slug]': { en: false }`).
+// Guides for an SME owner, published in both locales. The FR and EN slugs differ, so
+// the two versions are paired through `translationKey` — same mechanism as the
+// dossiers, and for the same reason: left alone, i18n emits an alternate pointing at
+// a URL that does not exist.
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const localePath = useLocalePath()
 const route = useRoute()
 
 const slug = route.params.slug as string
-const contentPath = `/fr/guides/${slug}`
+const contentPath = computed(() => `/${locale.value}/guides/${slug}`)
 const siteUrl = 'https://meridian-synergy.com'
-const canonicalUrl = `${siteUrl}/guides/${slug}/`
+const hubPath = computed(() => (locale.value === 'en' ? '/en/guides' : '/guides'))
+const canonicalUrl = computed(() => `${siteUrl}${hubPath.value}/${slug}/`)
 
-const { data: page } = await useAsyncData(contentPath, () =>
-  queryCollection('content').path(contentPath).first()
+const { data: page } = await useAsyncData(contentPath.value, () =>
+  queryCollection('content').path(contentPath.value).first()
 )
 
 if (!page.value) {
@@ -33,25 +35,39 @@ useSeoMeta({
   twitterCard: 'summary_large_image',
 })
 
-// With the English variant disabled, i18n falls back to the locale root and emits an
-// en-US alternate pointing at the HOME PAGE. The tags carry stable keys, so they are
-// rewritten to point here — the page is its own only version.
-useHead(
-  {
-    link: [
-      { key: 'i18n-alt-fr-FR', rel: 'alternate', hreflang: 'fr-FR', href: canonicalUrl },
-      { key: 'i18n-alt-en-US', rel: 'alternate', hreflang: 'en-US', href: canonicalUrl },
-      { key: 'i18n-xd', rel: 'alternate', hreflang: 'x-default', href: canonicalUrl },
-    ],
-  },
-  { tagPriority: 'high' },
-)
+// FR and EN slugs differ, and i18n cannot guess the counterpart of a dynamic param.
+// Pairing on translationKey makes the alternates real instead of pointing at a URL
+// that was never generated.
+const { data: catalogue } = await useAsyncData('guides-catalogue', async () => {
+  const all = await queryCollection('content').all()
+  return all
+    .filter(doc => /^\/(fr|en)\/guides\//.test(doc.path ?? ''))
+    .map(doc => {
+      const [, docLocale, docSlug] = doc.path!.match(/^\/(fr|en)\/guides\/(.+)$/)!
+      return {
+        locale: docLocale,
+        slug: docSlug,
+        path: doc.path!,
+        translationKey: (doc.translationKey as string | undefined) ?? docSlug,
+      }
+    })
+})
+
+const setI18nParams = useSetI18nParams()
+const alternates = computed(() => {
+  const key = catalogue.value?.find(e => e.path === contentPath.value)?.translationKey
+  if (!key) return {}
+  return Object.fromEntries(
+    (catalogue.value ?? []).filter(e => e.translationKey === key).map(e => [e.locale, { slug: e.slug }]),
+  )
+})
+setI18nParams(alternates.value)
 
 useSchemaOrg(computed(() => (page.value ? [
   defineBreadcrumb({
     itemListElement: [
       { name: t('breadcrumb.home'), item: siteUrl },
-      { name: page.value.title, item: canonicalUrl },
+      { name: page.value.title, item: canonicalUrl.value },
     ],
   }),
 ] : [])))
@@ -66,12 +82,12 @@ useHead(computed(() => {
         '@type': 'Article',
         headline: page.value.title,
         description: page.value.description,
-        url: canonicalUrl,
-        inLanguage: 'fr',
-        mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+        url: canonicalUrl.value,
+        inLanguage: locale.value === 'en' ? 'en' : 'fr',
+        mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl.value },
         datePublished: page.value.publishedAt,
         dateModified: page.value.updatedAt ?? page.value.publishedAt,
-        author: { '@type': 'Person', name: 'Denis Gosset', url: `${siteUrl}/a-propos` },
+        author: { '@type': 'Person', name: 'Denis Gosset', url: `${siteUrl}${locale.value === 'en' ? '/en/about' : '/a-propos'}` },
         publisher: { '@type': 'Organization', name: 'Meridian Synergy', url: siteUrl },
       }),
     }],
@@ -102,7 +118,7 @@ useHead(computed(() => {
             <div class="sb-block">
               <p class="sb-label">{{ t('guidesPage.offerLabel') }}</p>
               <p class="sb-text">{{ t('guidesPage.offerDesc') }}</p>
-              <NuxtLink to="/audit-de-site" class="sb-item">
+              <NuxtLink :to="localePath('/audit-de-site')" class="sb-item">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                   <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>

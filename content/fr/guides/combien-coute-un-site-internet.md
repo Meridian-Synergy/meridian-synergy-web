@@ -3,6 +3,7 @@ title: "Combien coûte un site internet en 2026 ?"
 description: "Des fourchettes réelles, ce qui fait varier le prix, et pourquoi le coût du site n'est pas celui de sa création."
 metaTitle: "Combien coûte un site internet ?"
 kind: "guide"
+translationKey: "website-cost"
 order: 1
 publishedAt: "2026-08-21"
 updatedAt: "2026-08-21"

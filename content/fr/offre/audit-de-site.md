@@ -3,6 +3,7 @@ title: "Le diagnostic de votre site, offert"
 description: "Un document de constats mesurés sur votre site : visibilité, performance, sécurité, conformité. Utilisable même sans moi."
 metaTitle: "Diagnostic de site internet offert"
 kind: "offre"
+translationKey: "website-audit"
 publishedAt: "2026-08-21"
 updatedAt: "2026-08-21"
 seo:

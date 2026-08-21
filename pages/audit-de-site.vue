@@ -1,18 +1,24 @@
 <script setup lang="ts">
 import { MsPageHero, MsCtaBanner, MsCard } from '@meridian-synergy/ui'
 
-// Conversion page for the offered site diagnosis. French-only by design: it is linked
-// from cold outreach and from the report itself, and its audience is a French SME
-// owner. The English variant is disabled in nuxt.config.
+// Conversion page for the offered site diagnosis, published in both locales. This is
+// a STATIC route with a localised slug (/audit-de-site ↔ /en/website-audit), so i18n
+// resolves the alternates on its own — unlike the dynamic guide and dossier routes,
+// which need translationKey pairing.
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const localePath = useLocalePath()
 
 const siteUrl = 'https://meridian-synergy.com'
-const canonicalUrl = `${siteUrl}/audit-de-site/`
+const contentPath = computed(() =>
+  locale.value === 'en' ? '/en/offre/website-audit' : '/fr/offre/audit-de-site',
+)
+const canonicalUrl = computed(() =>
+  `${siteUrl}${locale.value === 'en' ? '/en/website-audit' : '/audit-de-site'}/`,
+)
 
-const { data: page } = await useAsyncData('audit-de-site', () =>
-  queryCollection('content').path('/fr/offre/audit-de-site').first()
+const { data: page } = await useAsyncData(contentPath.value, () =>
+  queryCollection('content').path(contentPath.value).first()
 )
 
 if (!page.value) {
@@ -29,24 +35,11 @@ useSeoMeta({
   twitterCard: 'summary_large_image',
 })
 
-// Same correction as the guides: with the English variant disabled, i18n would
-// advertise the home page as this page's English counterpart.
-useHead(
-  {
-    link: [
-      { key: 'i18n-alt-fr-FR', rel: 'alternate', hreflang: 'fr-FR', href: canonicalUrl },
-      { key: 'i18n-alt-en-US', rel: 'alternate', hreflang: 'en-US', href: canonicalUrl },
-      { key: 'i18n-xd', rel: 'alternate', hreflang: 'x-default', href: canonicalUrl },
-    ],
-  },
-  { tagPriority: 'high' },
-)
-
 useSchemaOrg(computed(() => (page.value ? [
   defineBreadcrumb({
     itemListElement: [
       { name: t('breadcrumb.home'), item: siteUrl },
-      { name: page.value.title, item: canonicalUrl },
+      { name: page.value.title, item: canonicalUrl.value },
     ],
   }),
 ] : [])))
@@ -58,12 +51,14 @@ useHead({
     innerHTML: JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'Service',
-      name: 'Diagnostic de site internet',
-      serviceType: 'Audit de site internet',
-      description:
-        "Diagnostic mesuré d'un site internet : visibilité dans les moteurs et les IA, "
-        + 'fiche d\'établissement, performance, protection du nom de domaine, conformité.',
-      url: canonicalUrl,
+      name: locale.value === 'en' ? 'Website diagnosis' : 'Diagnostic de site internet',
+      serviceType: locale.value === 'en' ? 'Website audit' : 'Audit de site internet',
+      description: locale.value === 'en'
+        ? 'Measured diagnosis of a website: visibility in search engines and AI, business '
+          + 'profile, performance, domain name protection, compliance.'
+        : "Diagnostic mesuré d'un site internet : visibilité dans les moteurs et les IA, "
+          + "fiche d'établissement, performance, protection du nom de domaine, conformité.",
+      url: canonicalUrl.value,
       provider: { '@type': 'Organization', name: 'Meridian Synergy', url: siteUrl },
       areaServed: [
         { '@type': 'AdministrativeArea', name: 'Nièvre' },
@@ -76,11 +71,15 @@ useHead({
   }],
 })
 
-const guides = [
-  { href: '/guides/combien-coute-un-site-internet', key: 'prix' },
-  { href: '/guides/site-invisible-sur-google', key: 'visibilite' },
-  { href: '/dossiers/referencement-chatgpt', key: 'chatgpt' },
-]
+// Slugs differ per locale; the hub prefix does too.
+const guides = computed(() => {
+  const en = locale.value === 'en'
+  return [
+    { href: en ? '/en/guides/website-cost' : '/guides/combien-coute-un-site-internet', key: 'prix' },
+    { href: en ? '/en/guides/site-not-showing-on-google' : '/guides/site-invisible-sur-google', key: 'visibilite' },
+    { href: en ? '/en/insights/chatgpt-visibility' : '/dossiers/referencement-chatgpt', key: 'chatgpt' },
+  ]
+})
 </script>
 
 <template>

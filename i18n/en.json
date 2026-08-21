@@ -59,27 +59,27 @@
   },
   "guidesPage": {
     "badge": "Guide",
-    "offerLabel": "Aller plus loin",
-    "offerDesc": "Un diagnostic mesuré de votre site, offert et utilisable même sans moi.",
-    "offerLink": "Le diagnostic offert",
+    "offerLabel": "Going further",
+    "offerDesc": "A measured diagnosis of your site, offered free and usable even without me.",
+    "offerLink": "The free diagnosis",
     "cta": {
-      "title": "Une question sur votre site ?",
-      "desc": "Écrivez-moi l'adresse de votre site : je vous dis ce que j'y vois, mesures à l'appui.",
-      "btn": "Me contacter"
+      "title": "A question about your site?",
+      "desc": "Send me your site address and I will tell you what I see, with measurements to back it.",
+      "btn": "Get in touch"
     }
   },
   "auditPage": {
-    "badge": "Diagnostic offert",
-    "readLabel": "À lire aussi",
+    "badge": "Free diagnosis",
+    "readLabel": "Also worth reading",
     "guides": {
-      "prix": "Combien coûte un site internet ?",
-      "visibilite": "Mon site n'apparaît pas sur Google",
-      "chatgpt": "Référencement ChatGPT"
+      "prix": "How much does a website cost?",
+      "visibilite": "My site does not show on Google",
+      "chatgpt": "ChatGPT visibility"
     },
     "cta": {
-      "title": "Demander votre diagnostic",
-      "desc": "Indiquez-moi l'adresse de votre site. Rien d'autre à fournir, aucun accès à donner.",
-      "btn": "Me contacter"
+      "title": "Request your diagnosis",
+      "desc": "Give me your site address. Nothing else to provide, no access to hand over.",
+      "btn": "Get in touch"
     }
   },
   "home": {
@@ -537,7 +537,7 @@
   "footer": {
     "tagline": "Consulting and enterprise architecture, drone operations and SaaS products.",
     "legal": "Legal notice",
-    "audit": "Diagnostic offert",
+    "audit": "Free diagnosis",
     "aiInstructions": "AI Instructions",
     "copyright": "© {year} Meridian Synergy. All rights reserved.",
     "contact": "Contact",
