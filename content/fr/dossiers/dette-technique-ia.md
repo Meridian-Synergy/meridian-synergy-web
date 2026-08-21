@@ -45,7 +45,7 @@ reprendre méthodiquement des couches logicielles anciennes, les documenter, les
 les remettre à niveau. Autrement dit, **solder une dette technique** que la plupart des
 DSI traînent depuis dix ou quinze ans faute d'avoir jamais pu justifier la dépense.
 
-## Ce que la dette coûte, mesuré
+## Combien coûte réellement la dette technique ?
 
 Le chiffre le plus parlant vient des DSI eux-mêmes. Interrogés par McKinsey, ils
 estiment leur dette technique à **20 à 40 % de la valeur de l'ensemble de leur parc
@@ -61,7 +61,7 @@ sensiblement augmenté sur les trois dernières années.
 C'est la définition même d'un cercle vicieux : la dette consomme la capacité qui
 permettrait de la rembourser.
 
-## Pourquoi quinze ans de plans de modernisation ont échoué
+## Pourquoi les plans de modernisation échouent-ils depuis quinze ans ?
 
 Aucun DSI n'ignore le problème. Ce n'est pas un défaut de lucidité, c'est un défaut
 d'arbitrage — et l'arbitrage était rationnel.
@@ -78,7 +78,7 @@ correctement identifié.
 Ce qui change aujourd'hui, ce n'est pas notre lucidité. C'est le **coût unitaire** de
 ce travail répétitif.
 
-## Ce que l'IA change réellement
+## Qu'est-ce que l'IA change vraiment sur du code legacy ?
 
 Deux retours d'expérience à grande échelle, publiés et documentés, donnent la mesure.
 
@@ -101,7 +101,7 @@ bibliothèque. Le critère de réussite est binaire, et le résultat se teste. C
 exactement la zone où l'IA produit sa valeur — et ce n'est pas un hasard si les deux
 entreprises qui publient ces chiffres l'ont appliquée là, et pas ailleurs.
 
-## Ce qu'elle ne change pas — et que peu de gens écrivent
+## Dans quels cas l'IA fait-elle perdre du temps ?
 
 C'est la partie qui manque à la plupart des articles sur le sujet, et c'est celle qui
 détermine si votre programme réussira.
@@ -126,7 +126,7 @@ sans cartographie, sans tests de non-régression et sans critère de sortie ne s
 pas mieux avec l'IA — il se dégrade plus vite. On remplace alors une vieille dette par
 une dette neuve, produite plus vite et moins comprise.
 
-## L'échéance n'est plus la vôtre
+## Pourquoi l'obsolescence devient-elle une urgence en 2026 ?
 
 Jusqu'ici, moderniser était un choix : le calendrier vous appartenait. Ce n'est plus
 vrai, et c'est le vrai changement de 2026.
@@ -167,7 +167,7 @@ explicitement portée par l'organe de direction. Au moment où j'écris ces lign
 de transposition française n'est pas encore promulguée : l'échéance n'est pas passée,
 elle arrive.
 
-## La méthode
+## Comment reprendre un legacy avec l'IA, étape par étape ?
 
 Un programme de reprise du legacy assisté par l'IA ne commence pas par l'IA. Il
 commence par ce qui rend l'IA utilisable.
@@ -194,7 +194,7 @@ commence par ce qui rend l'IA utilisable.
 Les étapes 1 et 2 ne sont pas des préliminaires administratifs : ce sont elles qui
 déterminent si les étapes 3 à 6 produiront un gain ou une dette neuve.
 
-## Ce que je peux prouver
+## Sur quoi cette méthode a-t-elle été éprouvée ?
 
 Je ne vends pas une capacité théorique. Waypoint360 est une plateforme SaaS que j'ai
 conçue, développée et que j'exploite : socle d'authentification, facturation,
@@ -207,7 +207,7 @@ C'est la même exigence que j'applique à ce dossier : chaque chiffre cité renv
 source, et les sources sont datées. Sur un sujet où l'approximation circule vite, c'est
 le minimum qu'on doive à un décideur qui engage un budget.
 
-## Par où commencer
+## Par où commencer ?
 
 Par l'inventaire, toujours. Il est court, il ne coûte presque rien, et il produit deux
 choses : la liste de ce qui est exposé et non maintenu — la partie qui relève de

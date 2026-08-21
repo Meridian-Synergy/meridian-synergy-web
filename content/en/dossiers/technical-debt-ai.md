@@ -46,7 +46,7 @@ them up to date. In other words, **clearing a technical debt** that most IT depa
 have been carrying for ten or fifteen years, for lack of ever being able to justify the
 spend.
 
-## What the debt actually costs
+## How much does technical debt really cost?
 
 The most telling figure comes from CIOs themselves. Surveyed by McKinsey, they put
 their technical debt at **20 to 40 % of the value of their entire technology estate**,
@@ -61,7 +61,7 @@ three years.
 That is the very definition of a vicious circle: the debt consumes the capacity that
 would allow it to be repaid.
 
-## Why fifteen years of modernisation plans have failed
+## Why have modernisation plans been failing for fifteen years?
 
 No CIO is unaware of the problem. This is not a failure of clear-sightedness, it is a
 failure of arbitration — and the arbitration was rational.
@@ -77,7 +77,7 @@ on a subject everyone had correctly identified.
 What has changed today is not our clear-sightedness. It is the **unit cost** of that
 repetitive work.
 
-## What AI genuinely changes
+## What does AI actually change on legacy code?
 
 Two large-scale, published and documented field reports give the measure.
 
@@ -100,7 +100,7 @@ the result can be tested. That is precisely where AI delivers its value — and 
 accident that the two companies publishing these figures applied it there, and nowhere
 else.
 
-## What it does not change — and few people write down
+## When does AI make you slower?
 
 This is the part missing from most articles on the subject, and it is the part that
 determines whether your programme succeeds.
@@ -124,7 +124,7 @@ accelerating on.** A legacy estate with no map, no regression tests and no exit
 criterion is not handled better with AI — it degrades faster. You then replace old debt
 with new debt, produced faster and understood less.
 
-## The deadline is no longer yours
+## Why has obsolescence become urgent in 2026?
 
 Until now, modernising was a choice: the timetable was yours. That is no longer true,
 and it is the real change of 2026.
@@ -164,7 +164,7 @@ worldwide turnover** for essential entities, and accountability explicitly carri
 the management body. As I write, the French transposition law has not yet been
 promulgated: the deadline has not passed, it is coming.
 
-## The method
+## How do you take back a legacy estate with AI, step by step?
 
 An AI-assisted legacy remediation programme does not start with AI. It starts with what
 makes AI usable.
@@ -190,7 +190,7 @@ makes AI usable.
 Steps 1 and 2 are not administrative preliminaries: they are what determines whether
 steps 3 to 6 produce a gain or a fresh debt.
 
-## What I can prove
+## What has this method been tested on?
 
 I do not sell a theoretical capability. Waypoint360 is a SaaS platform I designed,
 built and operate: authentication foundation, billing, database migrations, continuous
@@ -202,7 +202,7 @@ The same requirement applies to this article: every figure quoted points to its 
 and the sources are dated. On a subject where approximation travels fast, that is the
 minimum owed to a decision-maker committing a budget.
 
-## Where to start
+## Where should you start?
 
 With the inventory, always. It is short, it costs almost nothing, and it produces two
 things: the list of what is exposed and unmaintained — the part that is urgent — and

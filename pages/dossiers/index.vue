@@ -97,6 +97,28 @@ function formatDate(value?: string): string {
       </div>
     </section>
 
+    <!-- Editorial rules, spelled out: the section is meant to be read and quoted, so
+         what it is and how it is written belong on the hub, not only in the pieces. -->
+    <section class="editorial">
+      <div class="container">
+        <div class="editorial-grid">
+          <article class="editorial-block">
+            <h2 class="editorial-title">{{ t('dossiersPage.about.title') }}</h2>
+            <p class="editorial-text">{{ t('dossiersPage.about.body') }}</p>
+          </article>
+          <article class="editorial-block">
+            <h2 class="editorial-title">{{ t('dossiersPage.method.title') }}</h2>
+            <p class="editorial-text">{{ t('dossiersPage.method.body1') }}</p>
+            <p class="editorial-text">{{ t('dossiersPage.method.body2') }}</p>
+          </article>
+          <article class="editorial-block">
+            <h2 class="editorial-title">{{ t('dossiersPage.author.title') }}</h2>
+            <p class="editorial-text">{{ t('dossiersPage.author.body') }}</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <MsCtaBanner
       :title="t('dossiersPage.cta.title')"
       :desc="t('dossiersPage.cta.desc')"
@@ -127,6 +149,31 @@ function formatDate(value?: string): string {
   gap: 20px;
 }
 @media (min-width: 768px)  { .dossiers-grid { grid-template-columns: repeat(2, 1fr); } }
+
+.editorial { padding: 8px 0 64px; background: var(--ms-color-white); }
+.editorial-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  max-width: 820px;
+}
+.editorial-block { display: flex; flex-direction: column; gap: 12px; }
+.editorial-title {
+  font-family: var(--ms-font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--ms-color-navy);
+  letter-spacing: -0.02em;
+  margin: 0;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid var(--ms-color-border);
+}
+.editorial-text {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--ms-color-navy);
+  margin: 0;
+}
 
 .card-link {
   display: block;

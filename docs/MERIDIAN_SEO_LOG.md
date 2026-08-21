@@ -112,6 +112,44 @@ requêtes existantes** — pour pouvoir prouver que les requêtes « dette techn
 
 **Verdict** : _(à remplir)_
 
+**Conformité à `POC_PLAYBOOK/20-SEO-IA.md`** — vérifiée avant merge, quatre écarts corrigés dans la
+même PR.
+
+*Règle n°1 — HTML servi sans JavaScript.* Mesuré, pas supposé. ⚠️ **La commande `sed` de la fiche ne
+retire pas les `<script>`** (`.*?` n'est pas un quantificateur paresseux en sed, et `.` ne franchit pas
+les sauts de ligne) : le payload Nuxt inline est compté comme du texte, ce qui gonfle le résultat d'un
+facteur ~20. Remesuré en retirant réellement scripts et styles, on retrouve **exactement** le chiffre de
+la fiche sur la prod (1 368 car.), ce qui valide la méthode corrigée.
+
+| Page | Texte visible sans JS |
+|---|---|
+| `/` | 1 367 |
+| `/dossiers/` **avant** étoffement | 1 204 |
+| `/dossiers/` **après** | **2 761** |
+| `/en/insights/` | 2 629 |
+| `/dossiers/dette-technique-ia/` | **11 591** |
+| `/en/insights/technical-debt-ai/` | 10 769 |
+
+Le pilier pèse **8,5 fois la home** : c'est désormais la plus grosse surface récupérable du domaine.
+
+*Écarts corrigés* :
+1. **Titres reformulés en questions** (règle « le passage prime sur la page ») — 8 H2 par locale.
+2. **`robots.txt` nomme 10 agents IA**, recherche et entraînement distingués, aucun `Disallow: /`.
+   Rien n'était bloqué avant ; l'écart était de lisibilité d'intention, pas de blocage.
+3. **Hub étoffé** — il servait moins de texte que la home, donc n'aurait jamais été récupéré.
+4. **Gardes ajoutés** (`e2e/ai-readability.spec.ts`) : plancher de texte SSR sur les 70 URL du sitemap,
+   cliquet anti-`llms.txt`, contrôle des agents nommés. ⚠️ La fiche dit « étendre le guard vitest » :
+   **ce dépôt n'a pas de vitest**, ses gardes vivent dans `e2e/`.
+
+*Calibrage du plancher* : 600 caractères. Page réelle la plus maigre du sitemap = `/en/contact/` à
+**766** car., soit 28 % de marge. Vérifié que le garde discrimine : à 1 000 il échouerait sur 2 pages.
+Il attrape un effondrement en coquille rendue côté client, pas une variation éditoriale.
+
+*Décision de plan corrigée pour le Lot Instructions IA* : ce sera **une seule page `/ai-instructions`
+en anglais**, et non la paire FR/EN annoncée. Motif tiré de la fiche : les modèles pivotent par
+l'anglais pour récupérer, et traduire un vocabulaire technique vise un terme que le marché ne tape pas.
+Le protocole de mesure passe aussi **par moteur** (citation ≠ récupération comme source).
+
 **Suite prévue** : Lot Satellites (`cartographie-applicative`, `obsolescence-informatique`), puis Lot
 Instructions IA (page `/instructions-ia/` ↔ `/en/ai-instructions/`). Note mesurée pour ce dernier :
 `public/_robots.txt` autorise déjà tous les agents (`User-agent: * / Allow: /`, seul `/_nuxt/` exclu), donc

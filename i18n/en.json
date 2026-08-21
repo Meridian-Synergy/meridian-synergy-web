@@ -22,6 +22,19 @@
     "termsSale": "Terms of Sale"
   },
   "dossiersPage": {
+    "about": {
+      "title": "What is this section for?",
+      "body": "These insights deal with the decisions that commit an information system for years: technical debt, obsolescence, modernisation, architecture trade-offs. They are written for an IT department that has to defend a budget, not for a team looking for a tutorial. Each one targets a specific decision and states what it costs, what it returns, and under what condition."
+    },
+    "method": {
+      "title": "How are these analyses written?",
+      "body1": "Every figure quoted points to a primary source I have read — a report, a research publication, an agency document — never to a second-hand summary. Every source is listed at the end of the piece and dated, so you can judge how fresh it is rather than take my word for it.",
+      "body2": "The second rule is the expensive one: a figure I could not trace back to its original source does not go online, even when it circulates everywhere, and even when it supports my argument. The third is to show the counter-evidence. An analysis that only presents what suits it helps nobody decide, and on these subjects a badly informed decision is paid for over years."
+    },
+    "author": {
+      "title": "Who writes these?",
+      "body": "Denis Gosset, enterprise architect and publication director of Meridian Synergy. I work across a single continuum — audit, architecture, project direction and delivery — either transversally or on one specific domain. The trade-offs described here are ones I hold on production systems, including Waypoint360, a SaaS platform I designed, built and operate."
+    },
     "meta": {
       "title": "Insights — technical debt and AI",
       "description": "Sourced, quantified analyses on technical debt, AI and information system modernisation."
