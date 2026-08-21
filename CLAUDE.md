@@ -131,6 +131,7 @@ content/fr/drones/[slug].md    →  /drones/[slug]
 content/en/drones/[slug].md    →  /en/drones/[slug]
 content/fr/dossiers/[slug].md  →  /dossiers/[slug]
 content/en/dossiers/[slug].md  →  /en/insights/[slug]
+content/meta/ai-instructions.md → /en/ai-instructions  (anglais seul)
 ```
 
 Les slugs EN sont différents des slugs FR (ex: `audit-thermique` → `thermal-inspection`).
@@ -253,5 +254,18 @@ Toutes les pages sont créées. Slugs de contenu existants :
 **Services** : `audit-thermique`, `agriculture-viticulture`, `video-cinema`, `securite-surveillance`, `topographie-cartographie`, `inspection-infrastructure` (+ slugs EN correspondants)
 
 **Drones** : `dji-t100-agri`, `dji-matrice-4td`, `dji-avata-360` (FR = EN)
+
+**Référence machine** : `/en/ai-instructions` — fiche de faits destinée aux assistants IA.
+Anglais **seul et à dessein** : les modèles pivotent par l'anglais pour récupérer, traduire
+une page adressée aux machines n'ajouterait qu'une URL en doublon. Servie sur le chemin
+**anglais** parce que `@nuxtjs/i18n` impose `<html lang>` depuis la locale de la route et
+qu'un `useHead` de page ne le surcharge pas — même en `tagPriority: 'critical'`. La
+variante française est coupée par `'ai-instructions': { fr: false }`. Ses `hreflang` sont
+réécrits par clé (`i18n-alt-<langue>`, `i18n-xd`) : sans cela, i18n retombe sur la racine
+de locale et annonce la **page d'accueil** comme version française.
+
+⚠️ **Ne jamais y écrire un fait non publié ailleurs sur le site** — effectif, chiffre
+d'affaires, nombre de clients, date de création, récompenses, tarifs. C'est précisément ce
+qu'elle existe pour empêcher un modèle d'inventer.
 
 **Dossiers** : `dette-technique-ia` (EN `technical-debt-ai`), `cartographie-applicative` (EN `application-mapping`), `obsolescence-informatique` (EN `it-obsolescence`)

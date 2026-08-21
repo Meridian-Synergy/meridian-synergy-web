@@ -43,6 +43,8 @@ export default defineNuxtConfig({
       // Conseil & Architecture pillar
       { loc: '/conseil/',    priority: 0.9, changefreq: 'monthly' },
       { loc: '/en/consulting/', priority: 0.9, changefreq: 'monthly' },
+      // Machine-facing reference page — English only, single URL
+      { loc: '/en/ai-instructions/', priority: 0.5, changefreq: 'monthly' },
       // Dossiers hub (editorial arm of the Conseil pillar)
       { loc: '/dossiers/',   priority: 0.8, changefreq: 'monthly' },
       { loc: '/en/insights/', priority: 0.8, changefreq: 'monthly' },
@@ -133,6 +135,7 @@ export default defineNuxtConfig({
         '/', '/en/',
         '/conseil/', '/en/consulting/',
         '/dossiers/', '/en/insights/',
+        '/en/ai-instructions/',
         '/produits/', '/en/products/',
         '/services/', '/en/services/',
         '/cas-usage/', '/en/use-case/',
@@ -272,6 +275,12 @@ export default defineNuxtConfig({
       'cas-usage/[slug]': { fr: '/cas-usage/[slug]', en: '/use-case/[slug]' },
       // Umbrella refonte — localized slugs for the new pillars
       'conseil': { fr: '/conseil', en: '/consulting' },
+      // English-only reference page for AI systems. It lives on the ENGLISH path, not
+      // the default-locale one: @nuxtjs/i18n sets <html lang> from the route's locale
+      // and a page-level useHead cannot override it (tried at 'high' and 'critical'
+      // priority). Serving English prose under the FR locale would declare
+      // lang="fr-FR" on it. `fr: false` removes the French variant, so it exists once.
+      'ai-instructions': { fr: false },
       'dossiers/index': { fr: '/dossiers', en: '/insights' },
       'dossiers/[slug]': { fr: '/dossiers/[slug]', en: '/insights/[slug]' },
       'produits': { fr: '/produits', en: '/products' },

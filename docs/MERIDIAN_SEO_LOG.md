@@ -52,6 +52,44 @@ GSC **ne reflète pas nos déploiements en temps réel** : il montre l'**index d
 
 ## Entrées
 
+### 2026-08-21 — Lot Instructions IA : page `/en/ai-instructions` (PR #53)
+
+- **Statut** : implémenté sur branche `feat/ai-instructions`.
+- **Périmètre** : `content/meta/ai-instructions.md` (≈11 700 caractères de texte servi sans JS),
+  `pages/ai-instructions.vue`, schema `Organization`, lien en pied de page, registre sitemap +
+  prerender, trois gardes e2e.
+
+**Pourquoi une page et pas un `llms.txt`** — cf. fiche `POC_PLAYBOOK/20-SEO-IA.md` : le fichier est
+mesuré inerte, la page est une URL normale, crawlée, indexée et récupérée en direct.
+
+**Deux défauts trouvés en vérifiant le build, et corrigés.**
+
+1. **`<html lang="fr-FR">` sur de la prose anglaise.** `@nuxtjs/i18n` impose l'attribut depuis la
+   locale de la route, et un `useHead` de page **ne le surcharge pas** — essayé en `tagPriority`
+   `'high'` puis `'critical'`, sans effet. Corrigé en servant la page sur le **chemin anglais**
+   (`fr: false` au lieu de `en: false`), ce qui rend l'attribut juste sans contournement. L'URL
+   passe de `/ai-instructions/` à **`/en/ai-instructions/`** — le site étant FR par défaut, c'est
+   la page anglaise qui était l'anomalie, pas le préfixe.
+2. **`hreflang` annonçant la page d'accueil.** La variante de l'autre locale étant coupée, i18n
+   retombe sur la **racine de locale** : la page déclarait la home comme sa version alternative.
+   Les balises portent des clés stables (`i18n-alt-<langue>`, `i18n-xd`) : elles sont **réécrites**
+   depuis la page pour pointer toutes vers l'URL canonique. Vérifié dans le build.
+
+**Contenu — règle appliquée** : uniquement des faits **déjà publiés sur le site** (mentions légales,
+À propos, pages piliers). ⚠️ `/tarifs`, `/cgu` et `/cgv` ont des clés i18n mais **aucune page** sur ce
+domaine : les tarifs Waypoint360 qui y figurent n'ont donc **pas** été repris. La page dit
+explicitement qu'aucun tarif de conseil n'est publié et interdit aux modèles d'en estimer un.
+
+Sections de bornage : « ce que Meridian Synergy n'est pas » (ni ESN, ni régie, ni revendeur de
+drones, ni organisme de formation, ni société de cybersécurité, ni la même entité que Waypoint360)
+et **la distinction de périmètre géographique** — la certification DGAC et la zone Bourgogne
+concernent la **branche drone seule**, pas le conseil ni le SaaS. C'est l'erreur la plus probable
+d'un modèle sur cette entité.
+
+**KPI** : aucun verdict GSC attendu. Mesure prévue par **jeu de prompts, moteur par moteur** — la
+fiche impose de distinguer *être cité* de *être récupéré comme source*, et un chiffre agrégé sur
+« les IA » ment. Relevé avant/après à +6 et +12 semaines.
+
 ### 2026-08-21 — `robots.txt` : deux agents manquants et une omission non gardée (PR #52)
 
 - **Statut** : correctif du même jour, postérieur au déploiement du Lot Fondation.
