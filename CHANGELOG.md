@@ -5,6 +5,26 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) — versioning:
 
 ---
 
+## [1.3.0](https://github.com/Meridian-Synergy/meridian-synergy-web/compare/v1.2.2...v1.3.0) (2026-08-21)
+
+
+### Features
+
+* **ai-instructions:** publish a machine-facing reference page ([#53](https://github.com/Meridian-Synergy/meridian-synergy-web/issues/53)) ([1796097](https://github.com/Meridian-Synergy/meridian-synergy-web/commit/1796097aafb24781864d62f4e6c9242422408635))
+* **dossiers:** add the application-mapping and IT-obsolescence satellites ([#51](https://github.com/Meridian-Synergy/meridian-synergy-web/issues/51)) ([4d7d886](https://github.com/Meridian-Synergy/meridian-synergy-web/commit/4d7d8861c16ddfa66c0d5f3880007676cfee8c0a))
+* **dossiers:** add the ChatGPT visibility piece, measured rather than asserted ([#55](https://github.com/Meridian-Synergy/meridian-synergy-web/issues/55)) ([0bf3309](https://github.com/Meridian-Synergy/meridian-synergy-web/commit/0bf33095146ad9c681f1d1dcb6beb3127d664994))
+* **dossiers:** open the editorial cluster with the technical-debt/AI pillar ([#50](https://github.com/Meridian-Synergy/meridian-synergy-web/issues/50)) ([1c30816](https://github.com/Meridian-Synergy/meridian-synergy-web/commit/1c30816f721f358b7be65e3c4886dbe0b00f3c91))
+* **i18n:** translate the SME pages, and fix sixteen French strings in en.json ([#57](https://github.com/Meridian-Synergy/meridian-synergy-web/issues/57)) ([3100729](https://github.com/Meridian-Synergy/meridian-synergy-web/commit/310072924ebd74061c98640f63fafd76365c11ab))
+* **pme:** add the diagnosis conversion page and its two entry guides ([#54](https://github.com/Meridian-Synergy/meridian-synergy-web/issues/54)) ([eea2747](https://github.com/Meridian-Synergy/meridian-synergy-web/commit/eea2747e9f5f59be89a38fb14283a36e8f448f92))
+
+
+### Bug Fixes
+
+* **i18n:** stop generating the default locale under /fr/ ([#48](https://github.com/Meridian-Synergy/meridian-synergy-web/issues/48)) ([fdb3607](https://github.com/Meridian-Synergy/meridian-synergy-web/commit/fdb360725a65522998574fcb0aad8e3015789c53))
+* **robots:** complete the AI agent list and guard the deliberate omissions ([#52](https://github.com/Meridian-Synergy/meridian-synergy-web/issues/52)) ([86be0d8](https://github.com/Meridian-Synergy/meridian-synergy-web/commit/86be0d8b5c39deb3b1f54c37a5b9d39f38e91e9a))
+* **services:** restore the redirects without reintroducing the sitemap exclusion ([#59](https://github.com/Meridian-Synergy/meridian-synergy-web/issues/59)) ([0b3d1db](https://github.com/Meridian-Synergy/meridian-synergy-web/commit/0b3d1db03f22217a20eb5cbac81dfcd2a7e64193))
+* **sitemap:** restore four English service pages to the registry ([#58](https://github.com/Meridian-Synergy/meridian-synergy-web/issues/58)) ([fac94b9](https://github.com/Meridian-Synergy/meridian-synergy-web/commit/fac94b9c5e512596a2f0210519211bbc3824491c))
+
 ## [1.2.2](https://github.com/Meridian-Synergy/meridian-synergy-web/compare/v1.2.1...v1.2.2) (2026-08-08)
 
 
