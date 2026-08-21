@@ -3,6 +3,7 @@ title: "Technical debt and AI: finally clearing the legacy"
 description: "AI makes legacy remediation affordable — if you know where it pays off and where it costs. A sourced analysis."
 metaTitle: "Technical debt: what AI actually changes"
 kind: "dossier"
+order: 1
 translationKey: "tech-debt-ai"
 publishedAt: "2026-08-21"
 updatedAt: "2026-08-21"

@@ -52,9 +52,77 @@ GSC **ne reflète pas nos déploiements en temps réel** : il montre l'**index d
 
 ## Entrées
 
-### 2026-08-21 — Ouverture du cluster « Dossiers » + pilier dette technique / IA (Lot Fondation, PR à venir)
+### 2026-08-21 — Lot Satellites : cartographie applicative + obsolescence informatique
 
-- **Statut** : **implémenté sur branche `feat/dossiers-dette-technique-ia`**, non mergé, non déployé.
+- **Statut** : implémenté sur branche `feat/dossiers-satellites`, non mergé au moment de l'écriture.
+- **Périmètre livré** : deux dossiers en FR et EN — `cartographie-applicative` ↔ `application-mapping`
+  et `obsolescence-informatique` ↔ `it-obsolescence`. Tests `dossiers.spec.ts` généralisés aux trois
+  dossiers (hreflang, 404 inter-locales, sources, sitemap) : 73 → **87 tests**.
+
+**Pourquoi ces deux cibles** — décision issue de la mesure d'autocomplétion du même jour, consignée
+dans l'entrée du Lot Fondation ci-dessous. `cartographie applicative` est le cluster FR le mieux formé
+qu'on ait trouvé (58 suggestions propres : `exemple`, `si`, `excel`, `outil`, `logiciel`,
+`cartographie des applications informatiques`). `obsolescence informatique` en donne 12, propres,
+dont `gestion obsolescence informatique`. Les deux visent une intention praticien ou décideur, là où
+`modernisation applicative` et `audit système d'information` avaient été écartés pour bruit et
+intention académique.
+
+⚠️ **La cible n'est PAS `NIS2`** sur le dossier obsolescence : SERP tenue par l'ANSSI, KPMG et les
+cabinets d'avocats. NIS2 est un argument dans la page, pas le mot visé.
+
+**Sources primaires ajoutées au corpus** :
+- **ANSSI — Cartographie du système d'information, guide d'élaboration en cinq étapes (v1b, 2018)**.
+  PDF téléchargé et extrait page à page. Fournit la structure canonique citée dans le dossier :
+  **trois visions, six vues** nommées au texte. Fournit aussi la recommandation la plus
+  contre-intuitive du guide, reprise telle quelle : la cartographie **ne doit pas être stockée sur le
+  SI qu'elle représente**, un attaquant y trouverait le plan de sa cible.
+- **Microsoft — fin de support de Windows 10 le 14 octobre 2025**, page officielle du cycle de vie ;
+  programme de mises à jour de sécurité étendues grand public **jusqu'au 12 octobre 2027**.
+- **Règlement sur la cyberrésilience — obligations fournisseurs à compter du 11 décembre 2027**,
+  cité depuis le PDF ANSSI déjà extrait, pas depuis une reprise.
+
+**Texte servi sans JavaScript** (règle n°1 de `POC_PLAYBOOK/20-SEO-IA.md`, méthode corrigée) :
+
+| Page | Caractères |
+|---|---|
+| `/dossiers/` | 3 361 |
+| `/dossiers/dette-technique-ia/` | 11 709 |
+| `/dossiers/cartographie-applicative/` | 7 452 |
+| `/dossiers/obsolescence-informatique/` | 7 560 |
+| `/en/insights/` | 3 167 |
+| `/en/insights/technical-debt-ai/` | 10 976 |
+| `/en/insights/application-mapping/` | 6 880 |
+| `/en/insights/it-obsolescence/` | 6 812 |
+
+**Maillage interne** : vérifié dans le build, le pilier pointe vers les deux satellites et
+réciproquement — le mécanisme de dossiers frères le fait sans configuration. Chaque dossier renvoie
+aussi vers `/conseil`.
+
+**Titres en questions** appliqués dès l'écriture, conformément à la fiche 20 : sept H2 par dossier,
+formulés comme les questions réellement tapées (`Que doit contenir une cartographie, concrètement ?`,
+`Combien de temps avez-vous après une fin de support ?`).
+
+**KPI à surveiller dans GSC** — mêmes fenêtres que le Lot Fondation, à compter de la date de
+déploiement :
+- apparition de requêtes contenant « cartographie applicative » et « obsolescence informatique » dans
+  le rapport Requêtes. Aucune n'existe aujourd'hui sur ce domaine ;
+- indexation des 6 nouvelles URL ;
+- **cohérence de cluster** : c'est l'hypothèse testée par ce lot. Google évalue un ensemble ; trois
+  dossiers reliés sur un même champ sémantique doivent faire mieux qu'un pilier isolé. Si les trois
+  restent non indexés à +8 semaines, l'hypothèse est fausse et il faudra chercher ailleurs que le
+  volume de contenu.
+
+**Fenêtre de verdict** : +4 sem et +8-12 sem à compter du déploiement.
+
+**Verdict** : _(à remplir)_
+
+### 2026-08-21 — Ouverture du cluster « Dossiers » + pilier dette technique / IA (Lot Fondation, PR #50)
+
+- **Statut** : **déployé en production le 2026-08-21** (PR #50, squash `1c30816`). Vérifié en ligne :
+  les 4 URL répondent 200, les 2 URL inter-locales répondent 404, `robots.txt` sert les 11 groupes
+  d'agents, le sitemap expose les 4 entrées. ⏳ **Baseline GSC restant à saisir** — impressions et
+  clics 28 j, et surtout la **liste des requêtes existantes** au 2026-08-21, sans quoi aucun verdict
+  ne sera attribuable.
 - **Périmètre livré** : nouvelle collection éditoriale `content/{fr,en}/dossiers/`, hub `/dossiers/` ↔ `/en/insights/`,
   gabarit `pages/dossiers/[slug].vue` (schema `Article` + `citation`, bloc Sources rendu depuis le frontmatter),
   entrée de nav sous « Conseil & Architecture », lien entrant depuis `/conseil`, registre `sitemap.urls`
