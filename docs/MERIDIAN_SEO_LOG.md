@@ -52,6 +52,44 @@ GSC **ne reflète pas nos déploiements en temps réel** : il montre l'**index d
 
 ## Entrées
 
+### 2026-08-21 — Dossier « référencement ChatGPT » (PR #55)
+
+- **Périmètre** : `/dossiers/referencement-chatgpt/` ↔ `/en/insights/chatgpt-visibility/`, FR **et** EN.
+  Placé dans les dossiers et non dans les guides : `guides/[slug]` est `en: false`, le rendre bilingue
+  aurait forcé à traduire deux pages dont la version anglaise n'a aucun lecteur. C'est par ailleurs la
+  seule page qui parle autant à un dirigeant de PME qu'à une DSI.
+
+⛔ **DÉCISION DU 2026-08-21 — LE SUIVI GSC EST ABANDONNÉ.** Denis a arrêté le sujet. Les entrées
+antérieures de ce journal portent des « fenêtres de verdict » et un tableau de baseline vide : ils ne
+seront **pas** remplis. Ne pas les chercher, ne pas les relancer. La méthode du log reste valable pour
+tracer *quoi, pourquoi, quand* — c'est la partie *verdict mesuré* qui tombe, faute de baseline.
+
+**Mesure de SERP faite avant d'écrire** (et non l'inverse) : la requête `référencement ChatGPT` est
+tenue par des agences web françaises, et **les deux premiers sont solides** — ~4 500 mots (Kelcible)
+et ~3 500-4 000 (a2com), couvrant `OAI-SearchBot`, l'absence d'exécution du JavaScript et la
+dépendance à Bing. Ce n'est **pas** une SERP faible : ni le volume ni l'exhaustivité ne la gagneront.
+
+⚠️ **Auto-correction** : j'avais cru relever une contradiction chiffrée entre les deux leaders — 55 %
+contre 14 % pour le même facteur. Vérification faite, les deux pourcentages portent sur des objets
+différents. L'angle n'a **pas** été bâti dessus.
+
+**Les trois différenciateurs retenus, tous vérifiés** :
+1. **Désaccord frontal et sourcé sur `llms.txt`** — le premier résultat de France le recommande
+   encore ; les mesures disent 408 requêtes sur 500 M+ de visites, 97 % de fichiers sans trafic
+   (Ahrefs, 137 000 sites), ~10 % d'adoption (SE Ranking, 300 000 domaines), aucun engagement
+   fournisseur, et la comparaison de Mueller avec `meta keywords`.
+2. **La nuance Bing** — l'index de ChatGPT est aujourd'hui un **assemblage** : robot et index propres
+   à OpenAI, Bing qui continue d'alimenter, accords éditeurs. La dépendance s'est **desserrée sans
+   disparaître**. Les pages françaises tranchent dans un sens ou dans l'autre ; aucune ne dit ça.
+3. **Mesure de première main** — texte servi à `GPTBot`, douze agents nommés dans notre `robots.txt`,
+   page canonique publiée. Les concurrents citent le travail des autres ; aucun ne montre le sien.
+
+**Ligne rouge respectée** (fiche 16 et 20) : le dossier dit qu'on mesure si un site **peut** être cité,
+**jamais** s'il l'**est**. Toute la SERP laisse entendre l'inverse.
+
+**Attente réaliste** : la première place n'est pas accessible — le domaine n'a aucune autorité sur ce
+sujet. La page vaut comme **preuve** et pour la longue traîne.
+
 ### 2026-08-21 — Pages PME : diagnostic offert + deux portes d'entrée (PR #54)
 
 - **Statut** : implémenté sur branche `feat/pages-audit-pme`.

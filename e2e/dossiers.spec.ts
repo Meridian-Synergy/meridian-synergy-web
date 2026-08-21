@@ -15,6 +15,7 @@ const DOSSIERS = [
   { fr: 'dette-technique-ia', en: 'technical-debt-ai' },
   { fr: 'cartographie-applicative', en: 'application-mapping' },
   { fr: 'obsolescence-informatique', en: 'it-obsolescence' },
+  { fr: 'referencement-chatgpt', en: 'chatgpt-visibility' },
 ]
 
 const PAGES = [

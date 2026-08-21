@@ -77,8 +77,9 @@ useHead({
 })
 
 const guides = [
-  { slug: 'combien-coute-un-site-internet', key: 'prix' },
-  { slug: 'site-invisible-sur-google', key: 'visibilite' },
+  { href: '/guides/combien-coute-un-site-internet', key: 'prix' },
+  { href: '/guides/site-invisible-sur-google', key: 'visibilite' },
+  { href: '/dossiers/referencement-chatgpt', key: 'chatgpt' },
 ]
 </script>
 
@@ -106,8 +107,8 @@ const guides = [
               <p class="sb-label">{{ t('auditPage.readLabel') }}</p>
               <NuxtLink
                 v-for="guide in guides"
-                :key="guide.slug"
-                :to="`/guides/${guide.slug}`"
+                :key="guide.href"
+                :to="guide.href"
                 class="sb-item"
               >
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
