@@ -67,18 +67,6 @@ useHead(computed(() => {
   }
 }))
 
-const dateFormatter = computed(() =>
-  new Intl.DateTimeFormat(locale.value === 'en' ? 'en-GB' : 'fr-FR', {
-    year: 'numeric', month: 'long', day: 'numeric',
-  })
-)
-
-function formatDate(value?: string): string {
-  if (!value) return ''
-  const parsed = new Date(value)
-  return Number.isNaN(parsed.getTime()) ? value : dateFormatter.value.format(parsed)
-}
-
 // Every dossier of every locale, in one query: it feeds both the sibling links and
 // the hreflang pairing below.
 const { data: catalogue } = await useAsyncData(`dossiers-catalogue`, async () => {
@@ -150,10 +138,6 @@ const relatedDossiers = computed(() => {
       <div class="container layout">
 
         <div class="main-col">
-          <p v-if="page.updatedAt || page.publishedAt" class="byline">
-            {{ t('dossiersPage.byline', { date: formatDate(page.updatedAt ?? page.publishedAt) }) }}
-          </p>
-
           <div class="prose">
             <ContentRenderer :value="page" />
           </div>
@@ -229,16 +213,6 @@ const relatedDossiers = computed(() => {
 }
 
 .main-col { min-width: 0; }
-
-.byline {
-  font-family: var(--ms-font-condensed);
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--ms-color-muted);
-  margin: 0 0 24px;
-}
 
 /* ── Prose ── */
 .prose :deep(h2) {

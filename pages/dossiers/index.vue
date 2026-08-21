@@ -33,7 +33,6 @@ const { data: dossiers } = await useAsyncData(`dossiers-hub-${locale.value}`, as
       title: doc.title as string,
       description: doc.description as string,
       publishedAt: (doc.publishedAt as string | undefined) ?? '',
-      updatedAt: (doc.updatedAt as string | undefined) ?? '',
       keywords: ((doc.seo as { keywords?: string[] } | undefined)?.keywords ?? []).slice(0, 3),
       order: (doc.order as number | undefined) ?? 99,
     }))
@@ -42,17 +41,6 @@ const { data: dossiers } = await useAsyncData(`dossiers-hub-${locale.value}`, as
     .sort((a, b) => a.order - b.order || (b.publishedAt ?? '').localeCompare(a.publishedAt ?? ''))
 })
 
-const dateFormatter = computed(() =>
-  new Intl.DateTimeFormat(locale.value === 'en' ? 'en-GB' : 'fr-FR', {
-    year: 'numeric', month: 'long', day: 'numeric',
-  })
-)
-
-function formatDate(value?: string): string {
-  if (!value) return ''
-  const parsed = new Date(value)
-  return Number.isNaN(parsed.getTime()) ? value : dateFormatter.value.format(parsed)
-}
 </script>
 
 <template>
@@ -89,10 +77,7 @@ function formatDate(value?: string): string {
                 </div>
               </div>
               <template #footer>
-                <div class="d-footer">
-                  <span class="d-date">{{ formatDate(item.updatedAt || item.publishedAt) }}</span>
-                  <span class="d-more">{{ t('services.more') }} →</span>
-                </div>
+                <span class="d-more">{{ t('services.more') }} →</span>
               </template>
             </MsCard>
           </NuxtLink>
@@ -219,20 +204,6 @@ function formatDate(value?: string): string {
   border: 1px solid var(--ms-color-border);
   border-radius: 4px;
   padding: 2px 7px;
-}
-.d-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-}
-.d-date {
-  font-family: var(--ms-font-condensed);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--ms-color-muted);
 }
 .d-more { font-size: 13px; font-weight: 600; color: var(--ms-color-sky); }
 </style>
