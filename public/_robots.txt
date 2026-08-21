@@ -8,6 +8,17 @@ Disallow: /_nuxt/
 # crawler does NOT block the search one, but a Disallow inherited from `User-agent: *`
 # blocks both — and being excluded from retrieval means being excluded from citation.
 # We allow all of them. Cf. POC_PLAYBOOK/20-SEO-IA.md.
+#
+# Two of the groups below are a DECLARATION OF INTENT, NOT A CONTROL: OpenAI documents
+# that its rules "may not apply" to ChatGPT-User, and Perplexity that Perplexity-User
+# "generally ignores robots.txt" — in both cases because a human triggered the fetch.
+# Anthropic is the only vendor stating all three of its bots honour the file.
+#
+# Googlebot and Bingbot are DELIBERATELY ABSENT and must stay under `*`. Googlebot
+# carries AI Overviews, and Microsoft publishes no Copilot-specific agent — Bingbot
+# feeds that index. Giving either its own group would lift it out of the general search
+# rules. e2e/ai-readability.spec.ts guards the omission so it does not read as an
+# oversight and get "fixed".
 
 # OpenAI — retrieval for ChatGPT search (decides citation)
 User-agent: OAI-SearchBot
@@ -51,8 +62,18 @@ User-agent: Google-Extended
 Allow: /
 Disallow: /_nuxt/
 
+# Mistral — user-triggered fetch
+User-agent: MistralAI-User
+Allow: /
+Disallow: /_nuxt/
+
 # Common Crawl — feeds several models' training corpora
 User-agent: CCBot
+Allow: /
+Disallow: /_nuxt/
+
+# ByteDance — training crawler
+User-agent: Bytespider
 Allow: /
 Disallow: /_nuxt/
 

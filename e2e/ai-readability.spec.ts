@@ -67,11 +67,33 @@ test('no llms.txt is published', () => {
 // Search crawlers and training crawlers are independent settings for every vendor.
 // Naming them keeps the intent readable, so a later blanket Disallow under
 // `User-agent: *` cannot silently remove us from citation.
+const NAMED_AGENTS = [
+  'OAI-SearchBot', 'GPTBot', 'ChatGPT-User',
+  'Claude-SearchBot', 'ClaudeBot', 'Claude-User',
+  'PerplexityBot', 'Perplexity-User',
+  'Google-Extended', 'MistralAI-User', 'CCBot', 'Bytespider',
+]
+
+// Deliberately absent, and the omission needs a guard of its own: without one it reads
+// as an oversight and someone "fixes" it. Googlebot carries AI Overviews and Microsoft
+// publishes no Copilot-specific agent — Bingbot feeds that index. Giving either its own
+// group would lift it out of the general search rules, since RFC 9309 makes a named
+// group win over `*` for that token.
+const MUST_STAY_UNDER_WILDCARD = ['Googlebot', 'Bingbot']
+
 test('robots.txt names the AI search agents and blocks none of them', () => {
   const robots = readFileSync(`${BUILD}/robots.txt`, 'utf8')
 
-  for (const agent of ['OAI-SearchBot', 'GPTBot', 'ClaudeBot', 'Claude-SearchBot', 'PerplexityBot', 'Google-Extended']) {
+  for (const agent of NAMED_AGENTS) {
     expect(robots, `${agent} must be named explicitly in robots.txt`).toContain(`User-agent: ${agent}`)
+  }
+
+  for (const agent of MUST_STAY_UNDER_WILDCARD) {
+    expect(
+      robots,
+      `${agent} must NOT get its own group — it would be lifted out of the general ` +
+        `search rules. Cf. POC_PLAYBOOK/20-SEO-IA.md.`,
+    ).not.toContain(`User-agent: ${agent}`)
   }
 
   // A bare `Disallow: /` in any group would exclude that agent from retrieval, and

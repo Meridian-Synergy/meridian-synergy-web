@@ -52,9 +52,42 @@ GSC **ne reflète pas nos déploiements en temps réel** : il montre l'**index d
 
 ## Entrées
 
+### 2026-08-21 — `robots.txt` : deux agents manquants et une omission non gardée (PR #52)
+
+- **Statut** : correctif du même jour, postérieur au déploiement du Lot Fondation.
+- **Origine** : jetons relevés **aux documentations d'éditeur** (OpenAI, Anthropic, Perplexity, Mistral,
+  Google, RFC 9309), et non à des listes de blogs SEO — qui recopient des jetons périmés comme
+  `Claude-Web` ou `anthropic-ai`.
+
+**Trois constats, dont deux corrigent ce qui venait d'être livré.**
+
+1. **Deux agents manquaient** à la liste de dix : `MistralAI-User` et `Bytespider`. Portée à **douze**.
+2. **L'omission de `Googlebot` et `Bingbot` n'était gardée par aucun test.** C'est le défaut le plus
+   sérieux du lot précédent : ces deux-là **doivent rester sous `*`** — `Googlebot` porte les AI
+   Overviews, et Microsoft ne publie aucun agent propre à Copilot, c'est `Bingbot` qui alimente
+   l'index. Leur donner un groupe nommé les soustrairait aux règles de recherche classique, puisque
+   la RFC 9309 fait gagner le groupe nommé sur `*`. Sans test, l'omission se lit comme un oubli et
+   quelqu'un la « corrige » de bonne foi. Le garde teste désormais **les douze agents nommés ET les
+   deux volontairement laissés sous `*`**.
+3. **Deux des groupes ne sont pas un contrôle.** OpenAI écrit que ses règles « may not apply » à
+   `ChatGPT-User`, Perplexity que `Perplexity-User` « generally ignores robots.txt » — dans les deux
+   cas parce que la requête est déclenchée par une personne. Anthropic est le seul à annoncer que ses
+   trois robots honorent le fichier. Le fait est désormais écrit **dans `public/_robots.txt`
+   lui-même**, pour que personne ne prenne ces groupes pour une garantie.
+
+**Non retenu à dessein** : `OAI-AdsBot`, qui valide des pages d'atterrissage publicitaires — il n'y en
+a aucune sur ce site.
+
+**Effet SEO attendu** : **aucun** en soi. Rien n'était bloqué avant, rien ne l'est après. C'est une
+action de **prévention** : elle protège d'un `Disallow` générique posé plus tard, et empêche une
+correction bien intentionnée de retirer Googlebot des règles générales. Ne pas chercher de verdict GSC
+pour cette entrée.
+
 ### 2026-08-21 — Lot Satellites : cartographie applicative + obsolescence informatique
 
-- **Statut** : implémenté sur branche `feat/dossiers-satellites`, non mergé au moment de l'écriture.
+- **Statut** : **déployé en production le 2026-08-21** (PR #51, squash `4d7d886`). Vérifié en ligne :
+  les 8 URL du cluster répondent 200, les 4 URL inter-locales répondent 404, le sitemap expose les 8
+  entrées. ⏳ **Baseline GSC restant à saisir**, commune aux deux lots du jour.
 - **Périmètre livré** : deux dossiers en FR et EN — `cartographie-applicative` ↔ `application-mapping`
   et `obsolescence-informatique` ↔ `it-obsolescence`. Tests `dossiers.spec.ts` généralisés aux trois
   dossiers (hreflang, 404 inter-locales, sources, sitemap) : 73 → **87 tests**.
