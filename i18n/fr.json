@@ -33,7 +33,7 @@
     },
     "author": {
       "title": "Qui écrit ces dossiers ?",
-      "body": "Denis Gosset, architecte d'entreprise et directeur de la publication de Meridian Synergy. J'interviens sur un continuum audit, architecture, direction de projet et réalisation, en transverse ou sur un domaine précis. Les arbitrages décrits ici sont ceux que je tiens sur des systèmes en production — dont Waypoint360, une plateforme SaaS que j'ai conçue, développée et que j'exploite."
+      "body": "Denis Gosset, architecte d'entreprise et directeur de la publication de Meridian Synergy. J'interviens de l'audit à la réalisation, en passant par l'architecture et la direction de projet, en transverse ou sur un domaine précis. Les arbitrages décrits ici sont ceux que je tiens sur des systèmes en production — dont Waypoint360, une plateforme SaaS que j'ai conçue, développée et que j'exploite."
     },
     "meta": {
       "title": "Dossiers — dette technique et IA",
@@ -50,7 +50,7 @@
     "sources": "Sources",
     "related": "Autres dossiers",
     "pillarLabel": "L'offre associée",
-    "pillarDesc": "Audit, architecture, direction de projet et réalisation, sur un continuum unique.",
+    "pillarDesc": "Audit, architecture, direction de projet et réalisation, par le même interlocuteur.",
     "cta": {
       "title": "Un état des lieux de votre parc ?",
       "desc": "L'inventaire est court, il coûte peu, et il dit où se trouve l'urgence comme où l'IA rendra immédiatement.",
@@ -492,7 +492,7 @@
       "desc": "Je prends la responsabilité opérationnelle d'une fonction ou d'un programme pendant une phase sensible : vacance d'un poste clé, lancement d'un chantier structurant, remise en ordre d'un projet en difficulté. L'objectif n'est pas de m'installer, mais de stabiliser, faire avancer, puis transmettre à une équipe qui reprend la main sur des bases saines."
     },
     "continuum": {
-      "title": "Un continuum, pas des prestations isolées",
+      "title": "Une suite qui se tient, pas des prestations isolées",
       "audit": {
         "title": "Audit & conseil",
         "desc": "Je pose un état des lieux lucide de l'existant et des options réellement ouvertes, sans habillage. On part de votre contexte, pas d'un modèle générique."

@@ -59,8 +59,8 @@ operations.
 
 ## 4. Consulting and enterprise architecture
 
-Positioned as a **continuum rather than isolated services**: audit and consulting →
-enterprise architecture → project direction → delivery.
+Positioned as **one coherent run rather than isolated services**: audit and consulting
+→ enterprise architecture → project direction → delivery.
 
 Two ways of intervening are published:
 
