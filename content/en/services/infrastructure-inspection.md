@@ -1,5 +1,6 @@
 ---
 title: "Drone Infrastructure Inspection — Bridges, Pylons and Structures"
+translationKey: "infrastructure-inspection"
 description: "Aerial drone inspection of infrastructure in Burgundy: bridges, pylons, wind turbines, water towers. Thermal camera and 168 mm zoom. Nièvre and neighbouring departments."
 image: "/images/services/inspection-infrastructure.jpg"
 relatedDrones:

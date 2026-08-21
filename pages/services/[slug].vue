@@ -62,6 +62,38 @@ useHead(computed(() => {
   }
 }))
 
+// FR and EN service slugs differ, and i18n cannot guess the counterpart of a dynamic
+// param: left alone it advertises /en/services/<FR slug>, a URL that only exists as a
+// redirect stub — and whose routeRules entry silently EXCLUDED four real English pages
+// from the sitemap. Measured before fixing: 3 EN service pages declared out of 6.
+// Pairing on translationKey removes the need for those redirects entirely.
+const { data: serviceCatalogue } = await useAsyncData('services-catalogue', async () => {
+  const all = await queryCollection('content').all()
+  return all
+    .filter(doc => /^\/(fr|en)\/services\//.test(doc.path ?? ''))
+    .map(doc => {
+      const [, docLocale, docSlug] = doc.path!.match(/^\/(fr|en)\/services\/(.+)$/)!
+      return {
+        locale: docLocale,
+        slug: docSlug,
+        path: doc.path!,
+        translationKey: (doc.translationKey as string | undefined) ?? docSlug,
+      }
+    })
+})
+
+const setI18nParams = useSetI18nParams()
+const serviceAlternates = computed(() => {
+  const key = serviceCatalogue.value?.find(e => e.path === contentPath)?.translationKey
+  if (!key) return {}
+  return Object.fromEntries(
+    (serviceCatalogue.value ?? [])
+      .filter(e => e.translationKey === key)
+      .map(e => [e.locale, { slug: e.slug }]),
+  )
+})
+setI18nParams(serviceAlternates.value)
+
 const droneLabels: Record<string, string> = {
   'dji-t100-agri':   'DJI Agras T100',
   'dji-matrice-4td': 'DJI Matrice 4TD',

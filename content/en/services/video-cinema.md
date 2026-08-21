@@ -1,5 +1,6 @@
 ---
 title: "Drone Aerial Photography & Video — 4K Professional Footage"
+translationKey: "video-cinema"
 description: "Professional 4K aerial video and photography for events, real estate, tourism and institutional communication in Burgundy. Nièvre, Côte-d'Or, Saône-et-Loire."
 image: "/images/services/video-cinema.jpg"
 relatedDrones:

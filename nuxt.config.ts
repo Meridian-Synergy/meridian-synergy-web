@@ -181,10 +181,6 @@ export default defineNuxtConfig({
       [`/en/drones/${s}/`, { redirect: { to: `/en/fleet/${s}`,  statusCode: 301 } }],
     ])),
     // Services: EN slugs differ from FR — redirect stray FR slugs on EN
-    '/services/thermal-inspection':          { redirect: { to: '/services/audit-thermique',            statusCode: 301 } },
-    '/services/infrastructure-inspection':   { redirect: { to: '/services/inspection-infrastructure',  statusCode: 301 } },
-    '/services/security-surveillance':       { redirect: { to: '/services/securite-surveillance',      statusCode: 301 } },
-    '/services/topography-mapping':          { redirect: { to: '/services/topographie-cartographie',   statusCode: 301 } },
     '/en/services/audit-thermique':          { redirect: { to: '/en/services/thermal-inspection',      statusCode: 301 } },
     '/en/services/securite-surveillance':    { redirect: { to: '/en/services/security-surveillance',   statusCode: 301 } },
     '/en/services/topographie-cartographie': { redirect: { to: '/en/services/topography-mapping',      statusCode: 301 } },
@@ -248,7 +244,6 @@ export default defineNuxtConfig({
     '/en/mentions-legales':   { redirect: { to: '/en/legal-notice', statusCode: 301 } },
     '/en/mentions-legales/':  { redirect: { to: '/en/legal-notice', statusCode: 301 } },
     // Trailing-slash variants — GSC-reported missing rules
-    '/services/thermal-inspection/':              { redirect: { to: '/services/audit-thermique',             statusCode: 301 } },
     '/en/services/audit-thermique/':              { redirect: { to: '/en/services/thermal-inspection',       statusCode: 301 } },
     '/en/cas-usage/solar-panels/':                { redirect: { to: '/en/use-case/solar-panels',             statusCode: 301 } },
     '/en/cas-usage/building-thermal-inspection/': { redirect: { to: '/en/use-case/building-thermal-inspection', statusCode: 301 } },

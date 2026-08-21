@@ -1,5 +1,6 @@
 ---
 title: "Surveillance par drone — Sécurité thermique de jour et de nuit"
+translationKey: "security-surveillance"
 description: "Surveillance aérienne thermique et visuelle pour événements, sites industriels et espaces naturels en Bourgogne. Certifié CATS, disponible en Nièvre et départements voisins."
 image: "/images/services/securite-surveillance.jpg"
 relatedDrones:

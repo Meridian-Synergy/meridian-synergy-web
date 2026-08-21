@@ -1,5 +1,6 @@
 ---
 title: "Drone Thermal Inspection — Infrared Aerial Surveys"
+translationKey: "thermal-inspection"
 description: "Drone thermal inspection in Burgundy: detect heat loss, moisture infiltration and faulty solar panels without scaffolding. Nièvre (58) and neighbouring departments."
 image: "/images/services/audit-thermique.jpg"
 relatedDrones:

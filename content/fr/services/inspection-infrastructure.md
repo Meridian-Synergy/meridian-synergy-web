@@ -1,5 +1,6 @@
 ---
 title: "Inspection d'infrastructure par drone — Ponts, pylônes et ouvrages d'art"
+translationKey: "infrastructure-inspection"
 description: "Inspection aérienne d'infrastructures par drone en Bourgogne : ponts, pylônes, éoliennes, châteaux d'eau. Caméra thermique et zoom 168 mm. Nièvre et départements voisins."
 image: "/images/services/inspection-infrastructure.jpg"
 relatedDrones:
