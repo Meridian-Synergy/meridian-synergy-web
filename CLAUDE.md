@@ -251,4 +251,4 @@ Toutes les pages sont créées. Slugs de contenu existants :
 
 **Drones** : `dji-t100-agri`, `dji-matrice-4td`, `dji-avata-360` (FR = EN)
 
-**Dossiers** : `dette-technique-ia` (EN `technical-debt-ai`)
+**Dossiers** : `dette-technique-ia` (EN `technical-debt-ai`), `cartographie-applicative` (EN `application-mapping`), `obsolescence-informatique` (EN `it-obsolescence`)
