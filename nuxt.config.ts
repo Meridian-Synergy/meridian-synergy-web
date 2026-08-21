@@ -13,6 +13,7 @@ const enUseCases  = contentSlugs('./content/en/cas-usage')
 const drones      = contentSlugs('./content/fr/drones')
 const frDossiers  = contentSlugs('./content/fr/dossiers')
 const enDossiers  = contentSlugs('./content/en/dossiers')
+const frGuides    = contentSlugs('./content/fr/guides')
 
 export default defineNuxtConfig({
   modules: [
@@ -43,6 +44,9 @@ export default defineNuxtConfig({
       // Conseil & Architecture pillar
       { loc: '/conseil/',    priority: 0.9, changefreq: 'monthly' },
       { loc: '/en/consulting/', priority: 0.9, changefreq: 'monthly' },
+      // Offer + guides for French SMEs — French only, see i18n.pages below
+      { loc: '/audit-de-site/', priority: 0.8, changefreq: 'monthly' },
+      ...frGuides.map(s => ({ loc: `/guides/${s}`, priority: 0.7, changefreq: 'monthly' as const })),
       // Machine-facing reference page — English only, single URL
       { loc: '/en/ai-instructions/', priority: 0.5, changefreq: 'monthly' },
       // Dossiers hub (editorial arm of the Conseil pillar)
@@ -136,6 +140,8 @@ export default defineNuxtConfig({
         '/conseil/', '/en/consulting/',
         '/dossiers/', '/en/insights/',
         '/en/ai-instructions/',
+        '/audit-de-site/',
+        ...frGuides.map(s => `/guides/${s}`),
         '/produits/', '/en/products/',
         '/services/', '/en/services/',
         '/cas-usage/', '/en/use-case/',
@@ -280,6 +286,11 @@ export default defineNuxtConfig({
       // and a page-level useHead cannot override it (tried at 'high' and 'critical'
       // priority). Serving English prose under the FR locale would declare
       // lang="fr-FR" on it. `fr: false` removes the French variant, so it exists once.
+      // Audience française : une jumelle anglaise ajouterait une URL sans lecteur.
+      // `en: false` la supprime — le mécanisme est le même que pour /ai-instructions,
+      // dans l'autre sens.
+      'audit-de-site': { en: false },
+      'guides/[slug]': { en: false },
       'ai-instructions': { fr: false },
       'dossiers/index': { fr: '/dossiers', en: '/insights' },
       'dossiers/[slug]': { fr: '/dossiers/[slug]', en: '/insights/[slug]' },

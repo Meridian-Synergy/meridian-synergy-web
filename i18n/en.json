@@ -57,6 +57,30 @@
       "btn": "Get in touch"
     }
   },
+  "guidesPage": {
+    "badge": "Guide",
+    "offerLabel": "Aller plus loin",
+    "offerDesc": "Un diagnostic mesuré de votre site, offert et utilisable même sans moi.",
+    "offerLink": "Le diagnostic offert",
+    "cta": {
+      "title": "Une question sur votre site ?",
+      "desc": "Écrivez-moi l'adresse de votre site : je vous dis ce que j'y vois, mesures à l'appui.",
+      "btn": "Me contacter"
+    }
+  },
+  "auditPage": {
+    "badge": "Diagnostic offert",
+    "readLabel": "À lire aussi",
+    "guides": {
+      "prix": "Combien coûte un site internet ?",
+      "visibilite": "Mon site n'apparaît pas sur Google"
+    },
+    "cta": {
+      "title": "Demander votre diagnostic",
+      "desc": "Indiquez-moi l'adresse de votre site. Rien d'autre à fournir, aucun accès à donner.",
+      "btn": "Me contacter"
+    }
+  },
   "home": {
     "meta": {
       "title": "Meridian Synergy — Consulting, enterprise architecture & drone",
@@ -512,6 +536,7 @@
   "footer": {
     "tagline": "Consulting and enterprise architecture, drone operations and SaaS products.",
     "legal": "Legal notice",
+    "audit": "Diagnostic offert",
     "aiInstructions": "AI Instructions",
     "copyright": "© {year} Meridian Synergy. All rights reserved.",
     "contact": "Contact",
