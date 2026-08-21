@@ -1,6 +1,59 @@
+# Default: everything is crawlable except the build assets.
 User-agent: *
 Allow: /
+Disallow: /_nuxt/
 
+# AI agents are named explicitly so the intent survives the next refactor.
+# Search and training are SEPARATE settings for every vendor: blocking a training
+# crawler does NOT block the search one, but a Disallow inherited from `User-agent: *`
+# blocks both — and being excluded from retrieval means being excluded from citation.
+# We allow all of them. Cf. POC_PLAYBOOK/20-SEO-IA.md.
+
+# OpenAI — retrieval for ChatGPT search (decides citation)
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /_nuxt/
+
+# OpenAI — model training
+User-agent: GPTBot
+Allow: /
+Disallow: /_nuxt/
+
+# OpenAI — user-triggered fetch
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /_nuxt/
+
+# Anthropic — retrieval, training, user-triggered fetch
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /_nuxt/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /_nuxt/
+
+User-agent: Claude-User
+Allow: /
+Disallow: /_nuxt/
+
+# Perplexity — retrieval and user-triggered fetch
+User-agent: PerplexityBot
+Allow: /
+Disallow: /_nuxt/
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /_nuxt/
+
+# Google — Gemini training outside Search. No effect on Search ranking or AI Overviews.
+User-agent: Google-Extended
+Allow: /
+Disallow: /_nuxt/
+
+# Common Crawl — feeds several models' training corpora
+User-agent: CCBot
+Allow: /
 Disallow: /_nuxt/
 
 Sitemap: https://meridian-synergy.com/sitemap.xml

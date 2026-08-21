@@ -109,6 +109,17 @@ const continuum = ['audit', 'archi', 'direction', 'realisation'] as const
       </div>
     </section>
 
+    <!-- Dossiers -->
+    <section class="dossiers-link">
+      <div class="container">
+        <div class="dossiers-inner">
+          <h2 class="dossiers-title">{{ t('conseilPage.dossiers.title') }}</h2>
+          <p class="dossiers-text">{{ t('conseilPage.dossiers.desc') }}</p>
+          <NuxtLink :to="localePath('/dossiers')" class="dossiers-cta">{{ t('conseilPage.dossiers.link') }} →</NuxtLink>
+        </div>
+      </div>
+    </section>
+
     <!-- CTA -->
     <MsCtaBanner
       :title="t('conseilPage.cta.title')"
@@ -179,6 +190,19 @@ const continuum = ['audit', 'archi', 'direction', 'realisation'] as const
 }
 .transition-title { font-family: var(--ms-font-display); font-size: 1.375rem; font-weight: 800; color: var(--ms-color-navy); margin: 0 0 12px; letter-spacing: -0.02em; }
 .transition-text { font-size: 1rem; line-height: 1.7; color: var(--ms-color-muted); margin: 0; }
+
+/* Dossiers */
+.dossiers-link { padding: 56px 0; background: var(--ms-color-white); }
+.dossiers-inner {
+  border: 1px solid var(--ms-color-border);
+  border-radius: var(--ms-radius-lg);
+  padding: 28px 32px;
+  background: var(--ms-color-bg);
+}
+.dossiers-title { font-family: var(--ms-font-display); font-size: 1.25rem; font-weight: 800; color: var(--ms-color-navy); margin: 0 0 10px; letter-spacing: -0.02em; }
+.dossiers-text { font-size: 0.9375rem; line-height: 1.7; color: var(--ms-color-muted); margin: 0 0 14px; }
+.dossiers-cta { font-size: 14px; font-weight: 600; color: var(--ms-color-sky); text-decoration: none; }
+.dossiers-cta:hover { text-decoration: underline; }
 
 /* Continuum */
 .continuum { padding: 64px 0; background: var(--ms-color-bg); }

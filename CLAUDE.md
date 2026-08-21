@@ -129,6 +129,8 @@ content/fr/services/[slug].md  →  /services/[slug]
 content/en/services/[slug].md  →  /en/services/[slug]
 content/fr/drones/[slug].md    →  /drones/[slug]
 content/en/drones/[slug].md    →  /en/drones/[slug]
+content/fr/dossiers/[slug].md  →  /dossiers/[slug]
+content/en/dossiers/[slug].md  →  /en/insights/[slug]
 ```
 
 Les slugs EN sont différents des slugs FR (ex: `audit-thermique` → `thermal-inspection`).
@@ -166,6 +168,42 @@ specs:
 publishedAt: "YYYY-MM-DD"
 ---
 ```
+
+### Frontmatter obligatoire — page Dossier
+
+```markdown
+---
+title: ""
+description: ""           # Meta SEO : ≤ 125 caractères
+metaTitle: ""             # Optionnel — titre SERP court. @nuxtjs/seo AJOUTE
+                          # " | Meridian Synergy" (19 car.) au <title> : le budget
+                          # de 60 car. laisse donc 41 car. au titre. `title` reste
+                          # le H1 et l'og:title (non suffixé, budget 60 plein).
+kind: "dossier"
+translationKey: ""        # MÊME valeur dans les deux locales — c'est ce qui apparie
+                          # les hreflang (les slugs FR et EN diffèrent, i18n ne peut
+                          # pas deviner le pendant d'un param dynamique)
+publishedAt: "YYYY-MM-DD"
+updatedAt: "YYYY-MM-DD"
+relatedDossiers: []       # Slugs de la MÊME locale ; vide = tous les autres dossiers
+seo:
+  keywords: []            # 3 à 6 mots-clés longue traîne
+sources:                  # Obligatoire dès qu'un chiffre est cité
+  - label: ""
+    url: ""
+    date: ""
+---
+```
+
+Un dossier se publie en déposant le fichier markdown : le hub `/dossiers` liste le
+dossier de la collection, pas une liste codée en dur. **Penser tout de même à ajouter
+la route au `sitemap.urls` et au `nitro.prerender.routes`** — les deux listes sont
+construites depuis `contentSlugs('./content/{fr,en}/dossiers')`, donc rien à faire tant
+que le fichier est au bon endroit.
+
+**Règle éditoriale** : tout chiffre cité renvoie à une source primaire lue, listée dans
+`sources` et datée. Un chiffre qu'on n'a pu vérifier que sur une reprise secondaire ne
+part pas en ligne.
 
 ---
 
@@ -212,3 +250,5 @@ Toutes les pages sont créées. Slugs de contenu existants :
 **Services** : `audit-thermique`, `agriculture-viticulture`, `video-cinema`, `securite-surveillance`, `topographie-cartographie`, `inspection-infrastructure` (+ slugs EN correspondants)
 
 **Drones** : `dji-t100-agri`, `dji-matrice-4td`, `dji-avata-360` (FR = EN)
+
+**Dossiers** : `dette-technique-ia` (EN `technical-debt-ai`)

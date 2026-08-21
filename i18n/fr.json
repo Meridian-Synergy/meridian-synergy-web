@@ -8,6 +8,7 @@
   "nav": {
     "home": "Meridian Synergy — Accueil",
     "conseil": "Conseil & Architecture",
+    "dossiers": "Dossiers",
     "services": "Services",
     "drones": "Drones",
     "products": "Produits",
@@ -19,6 +20,42 @@
     "pricing": "Tarifs",
     "terms": "CGU",
     "termsSale": "CGV"
+  },
+  "dossiersPage": {
+    "about": {
+      "title": "À quoi sert cette section ?",
+      "body": "Ces dossiers traitent des décisions qui engagent durablement un système d'information : dette technique, obsolescence, modernisation, arbitrages d'architecture. Ils s'adressent à une direction des systèmes d'information qui doit défendre un budget, pas à une équipe qui cherche un tutoriel. Chaque dossier vise une décision précise et dit ce qu'elle coûte, ce qu'elle rapporte, et à quelle condition."
+    },
+    "method": {
+      "title": "Comment ces analyses sont-elles écrites ?",
+      "body1": "Tout chiffre cité renvoie à une source primaire que j'ai lue — un rapport, une publication de recherche, un document d'agence — jamais à une reprise de seconde main. Chaque source est listée en fin de dossier et datée, pour que vous puissiez juger de sa fraîcheur plutôt que me croire sur parole.",
+      "body2": "La deuxième règle est celle qui coûte : un chiffre que je n'ai pas pu retrouver dans sa source d'origine ne part pas en ligne, même s'il circule partout, et même s'il sert mon propos. La troisième est d'exposer les contre-preuves. Une analyse qui ne présente que ce qui l'arrange n'aide personne à décider, et sur ces sujets une décision mal informée se paie pendant des années."
+    },
+    "author": {
+      "title": "Qui écrit ces dossiers ?",
+      "body": "Denis Gosset, architecte d'entreprise et directeur de la publication de Meridian Synergy. J'interviens sur un continuum audit, architecture, direction de projet et réalisation, en transverse ou sur un domaine précis. Les arbitrages décrits ici sont ceux que je tiens sur des systèmes en production — dont Waypoint360, une plateforme SaaS que j'ai conçue, développée et que j'exploite."
+    },
+    "meta": {
+      "title": "Dossiers — dette technique et IA",
+      "description": "Analyses chiffrées et sourcées sur la dette technique, l'IA et la modernisation des systèmes d'information."
+    },
+    "hero": {
+      "badge": "Conseil & Architecture",
+      "title": "Dossiers",
+      "desc": "Des analyses de fond sur les décisions qui engagent un système d'information — chiffrées, sourcées, datées."
+    },
+    "intro": "Je publie ici les analyses dont je me sers en mission. Chaque chiffre renvoie à sa source et chaque source est datée : sur des sujets où l'approximation circule vite, c'est le minimum qu'on doive à un décideur qui engage un budget.",
+    "badge": "Dossier",
+    "byline": "Mis à jour le {date}",
+    "sources": "Sources",
+    "related": "Autres dossiers",
+    "pillarLabel": "L'offre associée",
+    "pillarDesc": "Audit, architecture, direction de projet et réalisation, sur un continuum unique.",
+    "cta": {
+      "title": "Un état des lieux de votre parc ?",
+      "desc": "L'inventaire est court, il coûte peu, et il dit où se trouve l'urgence comme où l'IA rendra immédiatement.",
+      "btn": "Me contacter"
+    }
   },
   "home": {
     "meta": {
@@ -396,6 +433,11 @@
     "updatedAt": "Dernière mise à jour : mai 2026"
   },
   "conseilPage": {
+    "dossiers": {
+      "title": "Les analyses derrière la méthode",
+      "desc": "Je publie les dossiers dont je me sers en mission : dette technique, obsolescence, modernisation. Chiffrés, sourcés, datés.",
+      "link": "Lire les dossiers"
+    },
     "meta": {
       "title": "Conseil & Architecture d'entreprise — Meridian Synergy",
       "description": "Architecture d'entreprise, direction et réalisation de projet, management de transition. Un architecte engagé du cadrage à la mise en œuvre, en transverse ou sur un domaine précis."

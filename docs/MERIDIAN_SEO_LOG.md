@@ -52,6 +52,110 @@ GSC **ne reflète pas nos déploiements en temps réel** : il montre l'**index d
 
 ## Entrées
 
+### 2026-08-21 — Ouverture du cluster « Dossiers » + pilier dette technique / IA (Lot Fondation, PR à venir)
+
+- **Statut** : **implémenté sur branche `feat/dossiers-dette-technique-ia`**, non mergé, non déployé.
+- **Périmètre livré** : nouvelle collection éditoriale `content/{fr,en}/dossiers/`, hub `/dossiers/` ↔ `/en/insights/`,
+  gabarit `pages/dossiers/[slug].vue` (schema `Article` + `citation`, bloc Sources rendu depuis le frontmatter),
+  entrée de nav sous « Conseil & Architecture », lien entrant depuis `/conseil`, registre `sitemap.urls`
+  **et** `nitro.prerender.routes`, clés i18n dans les deux locales. Premier dossier : `dette-technique-ia`
+  ↔ `technical-debt-ai`.
+
+**Étude de mots-clés — méthode et résultats (2026-08-21)**
+
+Aucun export GSC n'était disponible en local. Mesure faite via l'endpoint d'autocomplétion Google
+(`hl=fr&gl=fr`) : **152 requêtes émises, 1 171 suggestions distinctes**, puis expansion alphabétique sur les
+racines à valeur commerciale. Ce que cela mesure : **l'existence et la formulation** d'une requête. Ce que cela
+ne mesure pas : **le volume et la difficulté**.
+
+| Racine testée | Suggestions | Lecture |
+|---|---|---|
+| `dette technique ia` | 2 (`dette technique ia`, `ia et dette technique`) | demande **réelle mais mince** — cible du pilier |
+| `réduire la dette technique` | 2 | intention commerciale, faible profondeur |
+| `cartographie applicative` | 58, propres (`exemple`, `si`, `excel`, `outil`, `logiciel`) | **meilleur cluster FR identifié** — satellite prioritaire |
+| `obsolescence informatique` | 12, propres (`gestion`, `définition`, `matériel`) | satellite retenu |
+| `modernisation applicative` | 155 mais **bruit** (`application modification/rénovation`) ; expansions IT **en anglais** | slug abandonné |
+| `moderniser une application` | bruit (`transformer une appli en apk`) | slug abandonné |
+| `audit système d'information` | 43, dominées par `cours`, `mémoire`, `master`, `CNAM`, `salaire` | intention **académique** → page d'audit sortie du pari SEO |
+| `architecte d'entreprise` | `emploi`, `salaire`, `alternance`, `recrutement` | intention **candidat**, pas client |
+
+**Conséquence sur le plan initial** : deux des quatre pages prévues ont été redéfinies avant écriture — le
+satellite « moderniser une application legacy avec l'IA » est remplacé par **cartographie applicative**, et la
+page d'audit passe de cible SEO à page de conversion. Le satellite obsolescence vise `obsolescence informatique`
+et **non** `NIS2` (SERP tenue par l'ANSSI, KPMG et les cabinets d'avocats).
+
+**Pourquoi (hypothèse)** — le domaine n'a aucune autorité thématique sur les sujets DSI (138 pages, toutes
+drone). Prendre une tête de requête (`dette technique`, `NIS2`) est hors d'atteinte, et le haut du cluster
+`dette technique` est de toute façon **définitionnel** (`c'est quoi`, `définition`, `traduction`) donc sans
+valeur commerciale. Le pari est donc : longue traîne qualifiée + **cohérence de cluster** (Google évalue un
+ensemble, pas une page isolée) + **exactitude sourcée** comme différenciateur, dans une SERP factuellement
+négligée (une page bien classée y affirme que NIS2 a été transposée en droit français au S1 2025).
+
+**Rigueur des chiffres cités dans le dossier** : deux données du DBIR 2026 qui circulent largement — délai
+médian de correction passé de 32 à 43 jours, et 26 % des vulnérabilités du catalogue KEV corrigées — n'ont pu
+être vérifiées que sur des reprises secondaires, jamais dans une source primaire. **Elles ont été écartées du
+dossier.** Les chiffres retenus proviennent tous d'une source primaire lue : communiqué Verizon (31 %, première
+fois en 19 ans), PDF ANSSI `CERTFR-2026-CTI-002` extrait et cité au texte (29 %, +18 %/an, 6 200 actifs),
+McKinsey, arXiv 2501.06972, METR, DORA, MITRE ATT&CK C0062.
+
+**KPI à surveiller dans GSC**
+- *Indexation* : les 4 nouvelles URL (`/dossiers/`, `/dossiers/dette-technique-ia/` + équivalents `/en/insights/`)
+  doivent être découvertes puis indexées. Vérifier qu'elles sortent bien au sitemap après déploiement.
+- *Performance* : apparition de requêtes contenant « dette technique » dans le rapport Requêtes — **c'est le
+  signal à surveiller en premier**, aucune n'existe aujourd'hui sur ce domaine.
+- *Position* : position moyenne sur `dette technique ia` / `ia et dette technique`.
+
+**Baseline à capturer le jour du déploiement** : impressions et clics 28 j du site entier, et **liste des
+requêtes existantes** — pour pouvoir prouver que les requêtes « dette technique » sont nouvelles.
+
+**Fenêtre de verdict** : +4 sem et +8-12 sem à compter de la date de déploiement (à renseigner au merge).
+
+**Verdict** : _(à remplir)_
+
+**Conformité à `POC_PLAYBOOK/20-SEO-IA.md`** — vérifiée avant merge, quatre écarts corrigés dans la
+même PR.
+
+*Règle n°1 — HTML servi sans JavaScript.* Mesuré, pas supposé. ⚠️ **La commande `sed` de la fiche ne
+retire pas les `<script>`** (`.*?` n'est pas un quantificateur paresseux en sed, et `.` ne franchit pas
+les sauts de ligne) : le payload Nuxt inline est compté comme du texte, ce qui gonfle le résultat d'un
+facteur ~20. Remesuré en retirant réellement scripts et styles, on retrouve **exactement** le chiffre de
+la fiche sur la prod (1 368 car.), ce qui valide la méthode corrigée.
+
+| Page | Texte visible sans JS |
+|---|---|
+| `/` | 1 367 |
+| `/dossiers/` **avant** étoffement | 1 204 |
+| `/dossiers/` **après** | **2 761** |
+| `/en/insights/` | 2 629 |
+| `/dossiers/dette-technique-ia/` | **11 591** |
+| `/en/insights/technical-debt-ai/` | 10 769 |
+
+Le pilier pèse **8,5 fois la home** : c'est désormais la plus grosse surface récupérable du domaine.
+
+*Écarts corrigés* :
+1. **Titres reformulés en questions** (règle « le passage prime sur la page ») — 8 H2 par locale.
+2. **`robots.txt` nomme 10 agents IA**, recherche et entraînement distingués, aucun `Disallow: /`.
+   Rien n'était bloqué avant ; l'écart était de lisibilité d'intention, pas de blocage.
+3. **Hub étoffé** — il servait moins de texte que la home, donc n'aurait jamais été récupéré.
+4. **Gardes ajoutés** (`e2e/ai-readability.spec.ts`) : plancher de texte SSR sur les 70 URL du sitemap,
+   cliquet anti-`llms.txt`, contrôle des agents nommés. ⚠️ La fiche dit « étendre le guard vitest » :
+   **ce dépôt n'a pas de vitest**, ses gardes vivent dans `e2e/`.
+
+*Calibrage du plancher* : 600 caractères. Page réelle la plus maigre du sitemap = `/en/contact/` à
+**766** car., soit 28 % de marge. Vérifié que le garde discrimine : à 1 000 il échouerait sur 2 pages.
+Il attrape un effondrement en coquille rendue côté client, pas une variation éditoriale.
+
+*Décision de plan corrigée pour le Lot Instructions IA* : ce sera **une seule page `/ai-instructions`
+en anglais**, et non la paire FR/EN annoncée. Motif tiré de la fiche : les modèles pivotent par
+l'anglais pour récupérer, et traduire un vocabulaire technique vise un terme que le marché ne tape pas.
+Le protocole de mesure passe aussi **par moteur** (citation ≠ récupération comme source).
+
+**Suite prévue** : Lot Satellites (`cartographie-applicative`, `obsolescence-informatique`), puis Lot
+Instructions IA (page `/instructions-ia/` ↔ `/en/ai-instructions/`). Note mesurée pour ce dernier :
+`public/_robots.txt` autorise déjà tous les agents (`User-agent: * / Allow: /`, seul `/_nuxt/` exclu), donc
+aucun blocage côté crawlers IA. `llms.txt` **écarté** sur preuve : sur plus de 500 M de visites de bots IA
+suivies sur 90 jours, 408 seulement visaient ce fichier, et aucun fournisseur majeur n'a confirmé le lire.
+
 ### 2026-08-08 — Slugs EN localisés + purge des arbres de routes fantômes (v1.2.2, PR #46)
 
 - **Statut** : **déployé le 2026-08-08**, vérifié en production.
