@@ -35,7 +35,7 @@ const socialLinks: SocialLinkItem[] = [
           <NuxtLink :to="localePath('/produits')">{{ t('nav.products') }}</NuxtLink>
           <NuxtLink :to="localePath('/a-propos')">{{ t('nav.about') }}</NuxtLink>
           <NuxtLink :to="localePath('/contact')">{{ t('nav.contact') }}</NuxtLink>
-          <NuxtLink to="/audit-de-site">{{ t('footer.audit') }}</NuxtLink>
+          <NuxtLink :to="localePath('/audit-de-site')">{{ t('footer.audit') }}</NuxtLink>
           <NuxtLink :to="localePath('/mentions-legales')">{{ t('footer.legal') }}</NuxtLink>
           <!-- Machine-facing reference page. Linked so crawlers reach it: an orphan page
                is not crawled, and this one only works if it is. -->

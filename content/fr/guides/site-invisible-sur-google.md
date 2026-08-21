@@ -3,6 +3,7 @@ title: "Mon site n'apparaît pas sur Google : que faire ?"
 description: "Les causes réelles, dans l'ordre où il faut les vérifier — et le cas devenu fréquent du site invisible des IA."
 metaTitle: "Site invisible sur Google : que faire"
 kind: "guide"
+translationKey: "not-showing-on-google"
 order: 2
 publishedAt: "2026-08-21"
 updatedAt: "2026-08-21"
