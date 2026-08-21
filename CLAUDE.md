@@ -278,4 +278,4 @@ sur la racine et annoncer la **page d'accueil** en alternative : les `hreflang` 
 par clé dans chaque page. ⚠️ La page de conversion n'a **aucune attente SEO** — c'est écrit
 dans le journal ; le trafic est le travail des deux guides.
 
-**Dossiers** : `dette-technique-ia` (EN `technical-debt-ai`), `cartographie-applicative` (EN `application-mapping`), `obsolescence-informatique` (EN `it-obsolescence`)
+**Dossiers** : `dette-technique-ia` (EN `technical-debt-ai`), `cartographie-applicative` (EN `application-mapping`), `obsolescence-informatique` (EN `it-obsolescence`), `referencement-chatgpt` (EN `chatgpt-visibility`)

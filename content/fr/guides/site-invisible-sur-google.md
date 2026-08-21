@@ -103,6 +103,9 @@ seulement l'ont demandé, et aucun fournisseur majeur ne s'engage à le lire. Ce
 fonctionne est plus banal : une page normale, servie en HTML lisible sans
 JavaScript, déclarée au plan du site.
 
+Le sujet a sa propre analyse, chiffres et sources à l'appui : [référencement
+ChatGPT, ce qui marche et ce qui ne marche pas](/dossiers/referencement-chatgpt/).
+
 ## Par où commencer ?
 
 Par la vérification `site:`, qui prend trente secondes et oriente tout le reste.
