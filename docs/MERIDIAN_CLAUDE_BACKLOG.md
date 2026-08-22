@@ -25,45 +25,29 @@
 
 | # | Sujet | Prio | Effort | Bloqué par |
 |---|---|---|---|---|
-| G1 | Page `/fiche-google-entreprise/` | P1 | M | Fiche GMB en ligne et vérifiée |
+| ~~G1~~ | ~~Page fiche Google~~ — **LIVRÉE le 2026-08-22** | — | — | — |
 | T1 | Titre de marque doublé sur `/conseil` et `/services` | P2 | S | — |
 | T2 | Stubs de redirection — **services corrigés**, cas d'usage restants | ~~P2~~ **P1** | M | — |
 
 ---
 
-### G1 — Page `/fiche-google-entreprise/` · P1 · M · ⏳ **en attente de la fiche**
+### ~~G1~~ — Guide fiche d'établissement Google · **LIVRÉ le 2026-08-22**
 
-**Pourquoi.** C'est le cluster le mieux formé mesuré sur l'audience PME locale, et de loin :
-`fiche google entreprise` sort **74 suggestions** d'autocomplétion (*non visible, sans adresse,
-profil, compte*), `pourquoi mon entreprise n'apparaît pas sur google` en sort **14**, toutes
-autour de Maps et de la fiche établissement. C'est exactement la population que vise le
-diagnostic offert, et elle vit déjà sur cette surface.
+Livré en `/guides/fiche-google-entreprise/` ↔ `/en/guides/google-business-profile/`.
 
-Le sujet est par ailleurs devenu un **volet de l'audit** le 2026-08-21 (cf. `POC_PLAYBOOK/16`
-et `audits/_outils/fiche-google.py`) : la page et le volet se renforcent.
+⚠️ **Deux erreurs de cette fiche de backlog, relevées par Denis à la reprise** — à ne pas
+reproduire sur les items suivants :
 
-⏳ **Pourquoi ce n'est pas fait tout de suite.** La fiche de Meridian Synergy a été créée le
-2026-08-21 mais **sa vérification par Google peut prendre plusieurs jours**. Écrire la page de
-référence sur les fiches d'établissement sans en avoir une en ligne se vérifie en un clic, et
-détruirait la crédibilité de la page comme celle du volet d'audit qui la cite.
+1. J'avais écrit l'URL **à la racine**, `/fiche-google-entreprise/`. Faux : la page a la même
+   audience et le même rôle que les autres guides, elle appartient au conteneur `/guides/`.
+   Vérifier le conteneur avant d'écrire une URL dans un backlog.
+2. J'avais écrit « **FR seul, `en: false` comme les guides** ». Périmé le soir même : les guides
+   sont devenus bilingues sur demande de Denis, par cohérence de site. Un backlog écrit la veille
+   peut décrire un état qui n'existe plus — **relire l'état réel avant d'exécuter**, pas la fiche.
 
-**Déclencheur** : la fiche est **en ligne et vérifiée**. Pas avant.
-
-**Done.** Page FR (l'audience est locale, donc `en: false` comme les guides), ciblant
-`fiche google entreprise` et `pourquoi mon entreprise n'apparaît pas sur google`. Contenu :
-à quoi sert la fiche, pourquoi la **catégorie principale** décide de tout — le constat le plus
-rentable du volet d'audit —, zones desservies pour un établissement sans local, avis et réponses,
-et l'écart entre fiche et site. Reliée depuis `/audit-de-site/` et depuis
-`/guides/site-invisible-sur-google/`, qui aborde déjà le cas « c'est mon entreprise, pas mon
-site, qui n'apparaît pas ». Ajouter la route au `sitemap.urls` **et** au `nitro.prerender.routes`,
-et réécrire les `hreflang` par clé — sans quoi i18n annonce la page d'accueil comme alternative.
-
-**À faire en même temps** : renseigner la **catégorie principale** et les cinq secondaires
-proposées, et configurer la fiche en **établissement de service** (adresse masquée, zones
-desservies). C'est ce champ, et non le texte d'une page, qui porte Paris / Cher / Nièvre /
-Loiret / Yonne.
-
----
+Le déclencheur, lui, a bien joué son rôle : la page attendait que la fiche de Meridian soit en
+ligne, elle l'était, et elle a pu être écrite en parlant de la catégorie « Consultant informatique »
+réellement choisie.
 
 ### T1 — Titre de marque doublé sur `/conseil` et `/services` · P2 · S
 

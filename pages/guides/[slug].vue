@@ -169,6 +169,20 @@ useHead(computed(() => {
 }
 .prose :deep(li) { font-size: 1rem; line-height: 1.65; color: var(--ms-color-navy); }
 .prose :deep(strong) { font-weight: 700; color: var(--ms-color-navy); }
+.prose :deep(a) {
+  color: var(--ms-color-navy);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.prose :deep(a:hover) { color: var(--ms-color-sky); }
+.prose :deep(blockquote) {
+  margin: 1.5em 0;
+  padding: 16px 24px;
+  background: var(--ms-color-bg);
+  border-left: 4px solid var(--ms-color-gold);
+  border-radius: var(--ms-radius-md);
+}
+.prose :deep(blockquote p) { margin: 0; font-style: italic; }
 .prose :deep(code) {
   font-family: var(--ms-font-mono, monospace);
   font-size: 0.9em;

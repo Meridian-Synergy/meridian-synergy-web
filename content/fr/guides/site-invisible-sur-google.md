@@ -75,7 +75,8 @@ vous êtes absent des recherches qui comptent — une menuiserie classée « mag
 meubles » ne sort pas sur « menuisier ».
 
 C'est gratuit, c'est rapide, et pour une activité de proximité ça pèse souvent
-plus que le site lui-même.
+plus que le site lui-même. Le sujet a son propre guide : [la fiche
+d'établissement Google, mode d'emploi](/guides/fiche-google-entreprise/).
 
 ## Le cas devenu fréquent : invisible des IA
 
