@@ -77,6 +77,7 @@ const guides = computed(() => {
   return [
     { href: en ? '/en/guides/website-cost' : '/guides/combien-coute-un-site-internet', key: 'prix' },
     { href: en ? '/en/guides/site-not-showing-on-google' : '/guides/site-invisible-sur-google', key: 'visibilite' },
+    { href: en ? '/en/guides/google-business-profile' : '/guides/fiche-google-entreprise', key: 'fiche' },
     { href: en ? '/en/insights/chatgpt-visibility' : '/dossiers/referencement-chatgpt', key: 'chatgpt' },
   ]
 })

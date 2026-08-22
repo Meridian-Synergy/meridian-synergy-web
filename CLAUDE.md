@@ -271,7 +271,7 @@ d'affaires, nombre de clients, date de création, récompenses, tarifs. C'est pr
 qu'elle existe pour empêcher un modèle d'inventer.
 
 **PME / diagnostic** : `/audit-de-site` (conversion) + `/guides/combien-coute-un-site-internet`
-et `/guides/site-invisible-sur-google` (acquisition). **Français seul et à dessein** —
+et `/guides/site-invisible-sur-google` et `/guides/fiche-google-entreprise` (acquisition). **Français seul et à dessein** —
 `en: false` : l'audience est un dirigeant de PME française, une jumelle anglaise ajouterait
 une URL sans lecteur. ⚠️ Comme pour `/ai-instructions`, la locale coupée fait retomber i18n
 sur la racine et annoncer la **page d'accueil** en alternative : les `hreflang` sont réécrits

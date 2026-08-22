@@ -14,6 +14,7 @@ const PAIRS = [
   { fr: '/audit-de-site/', en: '/en/website-audit/' },
   { fr: '/guides/combien-coute-un-site-internet/', en: '/en/guides/website-cost/' },
   { fr: '/guides/site-invisible-sur-google/', en: '/en/guides/site-not-showing-on-google/' },
+  { fr: '/guides/fiche-google-entreprise/', en: '/en/guides/google-business-profile/' },
 ]
 
 const SITE = 'https://meridian-synergy.com'

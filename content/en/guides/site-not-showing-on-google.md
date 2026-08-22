@@ -72,7 +72,8 @@ searches that matter — a joinery listed as "furniture shop" does not come up f
 "joiner".
 
 It is free, it is quick, and for a local business it often weighs more than the
-site itself.
+site itself. The subject has its own guide: [the Google Business Profile,
+explained](/en/guides/google-business-profile/).
 
 ## The now common case: invisible to AI
 

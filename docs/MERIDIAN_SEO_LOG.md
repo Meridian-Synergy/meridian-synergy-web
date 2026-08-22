@@ -52,6 +52,32 @@ GSC **ne reflète pas nos déploiements en temps réel** : il montre l'**index d
 
 ## Entrées
 
+### 2026-08-22 — Guide fiche d'établissement Google (PR #61)
+
+- **Périmètre** : `/guides/fiche-google-entreprise/` ↔ `/en/guides/google-business-profile/`, FR et EN.
+- **Cible mesurée** : `fiche google entreprise` (**74 suggestions** d'autocomplétion) et
+  `pourquoi mon entreprise n'apparaît pas sur google` (14). **Le cluster le mieux formé** trouvé sur
+  l'audience PME locale de toute la campagne de mesure — à comparer aux 3 semaines non nulles sur 261
+  de `carnet de vol drone`, ou au zéro absolu des combinaisons service + lieu.
+
+**Trois rôles, distincts et à ne pas confondre dans le verdict** :
+1. *Acquisition* — la longue traîne du cluster.
+2. *Maillage* — `/guides/site-invisible-sur-google/` portait depuis la veille une section
+   « et si c'est votre entreprise, et non votre site, qui n'apparaît pas ? » qui **ne pointait nulle
+   part**. Elle a maintenant sa destination, dans les deux langues.
+3. *Conversion* — la fiche d'établissement est devenue un volet de l'audit le 2026-08-21
+   (`POC_PLAYBOOK/16`). La page explique publiquement le constat le plus rentable de ce volet — la
+   catégorie principale mal choisie — et renvoie vers `/audit-de-site/`.
+
+**Attente réaliste** : requête nationale, disputée par des agences et des éditeurs d'outils, sur un
+domaine sans autorité sur le sujet. **Pas de première place.** Longue traîne, et surtout actif de
+conversion.
+
+**Ce qui a changé depuis le parcage** : Denis a créé sa fiche. Écrire la page de référence sur les
+fiches sans en avoir une se vérifiait en un clic — c'était le blocage, il est levé.
+
+⛔ Rappel : le suivi GSC est abandonné, aucun verdict ne sera relevé pour cette entrée.
+
 ### 2026-08-21 — Quatre pages anglaises absentes du sitemap : cause trouvée par test (PR #58)
 
 - **Constat mesuré** : `/services` déclarait **7 URL FR pour 3 EN**, alors que **six** pages de
