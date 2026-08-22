@@ -5,6 +5,13 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) — versioning:
 
 ---
 
+## [1.4.0](https://github.com/Meridian-Synergy/meridian-synergy-web/compare/v1.3.0...v1.4.0) (2026-08-22)
+
+
+### Features
+
+* **guides:** add the Google Business Profile guide ([#61](https://github.com/Meridian-Synergy/meridian-synergy-web/issues/61)) ([b1bf7fe](https://github.com/Meridian-Synergy/meridian-synergy-web/commit/b1bf7fec2655652ab206b2b8839d095802672e8f))
+
 ## [1.3.0](https://github.com/Meridian-Synergy/meridian-synergy-web/compare/v1.2.2...v1.3.0) (2026-08-21)
 
 
