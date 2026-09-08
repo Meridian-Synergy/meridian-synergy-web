@@ -369,7 +369,9 @@
     },
     "relatedService": "Related service",
     "relatedDrones": "Drones used",
-    "related": { "title": "Related use cases" },
+    "related": {
+      "title": "Related use cases"
+    },
     "quoteTitle": "Interested in this use case?",
     "quoteDesc": "Contact us to discuss your project and get a tailored quote.",
     "quoteBtn": "Request a quote"
@@ -478,6 +480,9 @@
       "whatsappLabel": "WhatsApp",
       "whatsappDesc": "Send us a message, we reply quickly.",
       "whatsappBtn": "Message on WhatsApp",
+      "phoneLabel": "Phone",
+      "phoneDesc": "For a direct conversation, Monday to Friday.",
+      "phoneBtn": "Call us",
       "emailLabel": "Email",
       "emailDesc": "For detailed requests or quotes.",
       "emailBtn": "Send an email"

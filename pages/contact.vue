@@ -81,6 +81,14 @@ const socials = visibleSocialAccounts
             :cta="t('contactPage.direct.whatsappBtn')"
           />
           <MsContactChannel
+            type="phone"
+            href="tel:+33766974874"
+            :label="t('contactPage.direct.phoneLabel')"
+            value="07 66 97 48 74"
+            :desc="t('contactPage.direct.phoneDesc')"
+            :cta="t('contactPage.direct.phoneBtn')"
+          />
+          <MsContactChannel
             type="email"
             href="mailto:contact@meridian-synergy.com"
             :label="t('contactPage.direct.emailLabel')"
