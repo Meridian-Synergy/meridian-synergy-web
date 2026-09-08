@@ -286,7 +286,7 @@ const serviceKeys: Record<string, string> = {
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--ms-color-muted);
+  color: var(--ms-color-muted-strong);
   margin: 0;
 }
 .sb-item {
@@ -303,8 +303,8 @@ const serviceKeys: Record<string, string> = {
 }
 .sb-item:hover {
   background: var(--ms-color-bg);
-  color: var(--ms-color-sky);
+  color: var(--ms-color-sky-dark);
 }
-.sb-item svg { color: var(--ms-color-sky); flex-shrink: 0; }
+.sb-item svg { color: var(--ms-color-sky-dark); flex-shrink: 0; }
 
 </style>

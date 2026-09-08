@@ -185,6 +185,6 @@ const guides = computed(() => {
   border-radius: var(--ms-radius-md);
   line-height: 1.4;
 }
-.sb-item:hover { background: var(--ms-color-bg); color: var(--ms-color-sky); }
-.sb-item svg { color: var(--ms-color-sky); flex-shrink: 0; }
+.sb-item:hover { background: var(--ms-color-bg); color: var(--ms-color-sky-dark); }
+.sb-item svg { color: var(--ms-color-sky-dark); flex-shrink: 0; }
 </style>

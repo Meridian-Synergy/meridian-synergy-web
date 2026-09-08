@@ -129,7 +129,7 @@ const { data: drones } = await useAsyncData(`fleet-${locale.value}`, async () =>
   transition: transform var(--ms-transition-base), box-shadow var(--ms-transition-base);
 }
 .drone-link:hover { transform: translateY(-3px); box-shadow: var(--ms-shadow-md); }
-.drone-link:hover :deep(.ms-card) { border-color: var(--ms-color-sky); }
+.drone-link:hover :deep(.ms-card) { border-color: var(--ms-color-sky-dark); }
 
 .drone-body { display: flex; flex-direction: column; gap: 16px; }
 
@@ -162,7 +162,7 @@ const { data: drones } = await useAsyncData(`fleet-${locale.value}`, async () =>
   color: var(--ms-color-navy);
   margin: 0;
 }
-.drone-desc { font-size: 0.9375rem; color: var(--ms-color-muted); line-height: 1.65; margin: 0; }
+.drone-desc { font-size: 0.9375rem; color: var(--ms-color-muted-strong); line-height: 1.65; margin: 0; }
 
 .drone-specs {
   display: grid;
@@ -173,8 +173,8 @@ const { data: drones } = await useAsyncData(`fleet-${locale.value}`, async () =>
   margin: 0;
 }
 .spec-item { display: flex; flex-direction: column; gap: 3px; }
-.spec-item dt { font-family: var(--ms-font-condensed); font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ms-color-muted); }
+.spec-item dt { font-family: var(--ms-font-condensed); font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ms-color-muted-strong); }
 .spec-item dd { font-size: 13px; font-weight: 600; color: var(--ms-color-navy); margin: 0; }
 
-.drone-more { font-size: 13px; font-weight: 600; color: var(--ms-color-sky); }
+.drone-more { font-size: 13px; font-weight: 600; color: var(--ms-color-sky-dark); }
 </style>

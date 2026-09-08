@@ -207,7 +207,7 @@ const NuxtLink = resolveComponent('NuxtLink')
 }
 .proof-icon--sky {
   background: color-mix(in srgb, var(--ms-color-sky) 12%, transparent);
-  color: var(--ms-color-sky);
+  color: var(--ms-color-sky-dark);
 }
 .proof-icon--gold {
   background: color-mix(in srgb, var(--ms-color-gold) 12%, transparent);

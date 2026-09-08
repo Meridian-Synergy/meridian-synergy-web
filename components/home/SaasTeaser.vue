@@ -239,7 +239,7 @@ const { t } = useI18n()
 }
 .chrome-url svg {
   flex-shrink: 0;
-  color: var(--ms-color-sky);
+  color: var(--ms-color-sky-dark);
   opacity: 0.7;
 }
 
@@ -260,7 +260,7 @@ const { t } = useI18n()
   font-family: var(--ms-font-display);
   font-size: 8px;
   font-weight: 800;
-  color: var(--ms-color-sky);
+  color: var(--ms-color-sky-dark);
   letter-spacing: 0.05em;
   background: rgba(0, 170, 239, 0.12);
   border-radius: 4px;

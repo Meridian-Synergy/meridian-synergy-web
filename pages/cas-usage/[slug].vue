@@ -221,7 +221,7 @@ const serviceKeys: Record<string, string> = {
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--ms-color-muted);
+  color: var(--ms-color-muted-strong);
   background: var(--ms-color-bg);
   border: 1px solid var(--ms-color-border);
   border-radius: 4px;
@@ -304,7 +304,7 @@ const serviceKeys: Record<string, string> = {
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--ms-color-muted);
+  color: var(--ms-color-muted-strong);
   margin: 0;
 }
 .sb-item {
@@ -321,9 +321,9 @@ const serviceKeys: Record<string, string> = {
 }
 .sb-item:hover {
   background: var(--ms-color-bg);
-  color: var(--ms-color-sky);
+  color: var(--ms-color-sky-dark);
 }
-.sb-item svg { color: var(--ms-color-sky); flex-shrink: 0; }
+.sb-item svg { color: var(--ms-color-sky-dark); flex-shrink: 0; }
 
 /* ── Related use cases ── */
 .related-section {
@@ -354,7 +354,7 @@ const serviceKeys: Record<string, string> = {
   transition: transform var(--ms-transition-base), box-shadow var(--ms-transition-base);
 }
 .related-link:hover { transform: translateY(-3px); box-shadow: var(--ms-shadow-md); }
-.related-link:hover :deep(.ms-card) { border-color: var(--ms-color-sky); }
+.related-link:hover :deep(.ms-card) { border-color: var(--ms-color-sky-dark); }
 
 .related-body {
   display: flex;
@@ -372,7 +372,7 @@ const serviceKeys: Record<string, string> = {
 }
 .related-card-desc {
   font-size: 0.875rem;
-  color: var(--ms-color-muted);
+  color: var(--ms-color-muted-strong);
   line-height: 1.6;
   margin: 0;
   display: -webkit-box;
@@ -383,6 +383,6 @@ const serviceKeys: Record<string, string> = {
 .related-more {
   font-size: 13px;
   font-weight: 600;
-  color: var(--ms-color-sky);
+  color: var(--ms-color-sky-dark);
 }
 </style>

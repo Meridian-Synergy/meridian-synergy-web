@@ -93,5 +93,5 @@ const highlights = ['h1', 'h2', 'h3'] as const
   border-radius: var(--ms-radius-lg);
 }
 .highlight-title { font-family: var(--ms-font-display); font-size: 1.0625rem; font-weight: 700; color: var(--ms-color-navy); }
-.highlight-desc { font-size: 0.875rem; color: var(--ms-color-muted); line-height: 1.6; }
+.highlight-desc { font-size: 0.875rem; color: var(--ms-color-muted-strong); line-height: 1.6; }
 </style>

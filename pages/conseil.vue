@@ -162,12 +162,12 @@ const continuum = ['audit', 'archi', 'direction', 'realisation'] as const
   width: 48px; height: 48px;
   border-radius: var(--ms-radius-md);
   background: color-mix(in srgb, var(--ms-color-sky) 12%, transparent);
-  color: var(--ms-color-sky);
+  color: var(--ms-color-sky-dark);
   display: flex; align-items: center; justify-content: center;
 }
 .mode-icon svg { width: 24px; height: 24px; }
 .mode-name { font-family: var(--ms-font-display); font-size: 1.1875rem; font-weight: 700; color: var(--ms-color-navy); margin: 0; }
-.mode-text { font-size: 0.9375rem; color: var(--ms-color-muted); line-height: 1.7; margin: 0; }
+.mode-text { font-size: 0.9375rem; color: var(--ms-color-muted-strong); line-height: 1.7; margin: 0; }
 
 /* Transition */
 .transition { padding: 24px 0 64px; background: var(--ms-color-white); }
@@ -189,7 +189,7 @@ const continuum = ['audit', 'archi', 'direction', 'realisation'] as const
   margin-bottom: 12px;
 }
 .transition-title { font-family: var(--ms-font-display); font-size: 1.375rem; font-weight: 800; color: var(--ms-color-navy); margin: 0 0 12px; letter-spacing: -0.02em; }
-.transition-text { font-size: 1rem; line-height: 1.7; color: var(--ms-color-muted); margin: 0; }
+.transition-text { font-size: 1rem; line-height: 1.7; color: var(--ms-color-muted-strong); margin: 0; }
 
 /* Dossiers */
 .dossiers-link { padding: 56px 0; background: var(--ms-color-white); }
@@ -200,8 +200,8 @@ const continuum = ['audit', 'archi', 'direction', 'realisation'] as const
   background: var(--ms-color-bg);
 }
 .dossiers-title { font-family: var(--ms-font-display); font-size: 1.25rem; font-weight: 800; color: var(--ms-color-navy); margin: 0 0 10px; letter-spacing: -0.02em; }
-.dossiers-text { font-size: 0.9375rem; line-height: 1.7; color: var(--ms-color-muted); margin: 0 0 14px; }
-.dossiers-cta { font-size: 14px; font-weight: 600; color: var(--ms-color-sky); text-decoration: none; }
+.dossiers-text { font-size: 0.9375rem; line-height: 1.7; color: var(--ms-color-muted-strong); margin: 0 0 14px; }
+.dossiers-cta { font-size: 14px; font-weight: 600; color: var(--ms-color-sky-dark); text-decoration: none; }
 .dossiers-cta:hover { text-decoration: underline; }
 
 /* Continuum */
@@ -228,7 +228,7 @@ const continuum = ['audit', 'archi', 'direction', 'realisation'] as const
 }
 .continuum-content { display: flex; flex-direction: column; gap: 6px; }
 .continuum-name { font-family: var(--ms-font-display); font-size: 1.125rem; font-weight: 700; color: var(--ms-color-navy); margin: 0; }
-.continuum-text { font-size: 0.9375rem; color: var(--ms-color-muted); line-height: 1.65; margin: 0; }
+.continuum-text { font-size: 0.9375rem; color: var(--ms-color-muted-strong); line-height: 1.65; margin: 0; }
 
 /* Proof */
 .proof { padding: 64px 0; background: var(--ms-color-white); }
@@ -240,6 +240,6 @@ const continuum = ['audit', 'archi', 'direction', 'realisation'] as const
 }
 .proof-title { font-family: var(--ms-font-display); font-size: 1.5rem; font-weight: 800; color: var(--ms-color-white); margin: 0 0 16px; letter-spacing: -0.02em; }
 .proof-text { font-size: 1rem; line-height: 1.7; color: rgba(255,255,255,0.72); max-width: 620px; margin: 0 auto 20px; }
-.proof-link { font-family: var(--ms-font-body); font-size: 0.9375rem; font-weight: 600; color: var(--ms-color-sky); text-decoration: none; }
+.proof-link { font-family: var(--ms-font-body); font-size: 0.9375rem; font-weight: 600; color: var(--ms-color-sky-dark); text-decoration: none; }
 .proof-link:hover { text-decoration: underline; }
 </style>

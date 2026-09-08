@@ -174,7 +174,7 @@ useHead(computed(() => {
   text-decoration: underline;
   text-underline-offset: 2px;
 }
-.prose :deep(a:hover) { color: var(--ms-color-sky); }
+.prose :deep(a:hover) { color: var(--ms-color-sky-dark); }
 .prose :deep(blockquote) {
   margin: 1.5em 0;
   padding: 16px 24px;
@@ -200,10 +200,10 @@ useHead(computed(() => {
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--ms-color-muted);
+  color: var(--ms-color-muted-strong);
   margin: 0;
 }
-.sb-text { font-size: 0.875rem; line-height: 1.6; color: var(--ms-color-muted); margin: 0; }
+.sb-text { font-size: 0.875rem; line-height: 1.6; color: var(--ms-color-muted-strong); margin: 0; }
 .sb-item {
   display: flex;
   align-items: center;
@@ -215,6 +215,6 @@ useHead(computed(() => {
   padding: 6px 8px;
   border-radius: var(--ms-radius-md);
 }
-.sb-item:hover { background: var(--ms-color-bg); color: var(--ms-color-sky); }
-.sb-item svg { color: var(--ms-color-sky); flex-shrink: 0; }
+.sb-item:hover { background: var(--ms-color-bg); color: var(--ms-color-sky-dark); }
+.sb-item svg { color: var(--ms-color-sky-dark); flex-shrink: 0; }
 </style>

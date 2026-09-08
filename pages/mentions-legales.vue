@@ -137,7 +137,7 @@ useSeoMeta({
 
 .legal-block p {
   font-size: 0.9375rem;
-  color: var(--ms-color-muted);
+  color: var(--ms-color-muted-strong);
   line-height: 1.75;
   margin: 0 0 12px;
 }
@@ -153,7 +153,7 @@ useSeoMeta({
 }
 .legal-block li {
   font-size: 0.9375rem;
-  color: var(--ms-color-muted);
+  color: var(--ms-color-muted-strong);
   line-height: 1.6;
   padding-left: 16px;
   position: relative;
@@ -166,14 +166,14 @@ useSeoMeta({
 }
 
 .legal-block a {
-  color: var(--ms-color-sky);
+  color: var(--ms-color-sky-dark);
   text-decoration: none;
 }
 .legal-block a:hover { text-decoration: underline; }
 
 .legal-date {
   font-size: 0.8125rem;
-  color: var(--ms-color-muted);
+  color: var(--ms-color-muted-strong);
   opacity: 0.6;
   margin: 0;
 }

@@ -117,7 +117,7 @@ const items = computed(() =>
   transition: transform var(--ms-transition-base), box-shadow var(--ms-transition-base);
 }
 .card-link:hover { transform: translateY(-3px); box-shadow: var(--ms-shadow-md); }
-.card-link:hover :deep(.ms-card) { border-color: var(--ms-color-sky); }
+.card-link:hover :deep(.ms-card) { border-color: var(--ms-color-sky-dark); }
 
 .uc-body {
   display: flex;
@@ -134,7 +134,7 @@ const items = computed(() =>
 }
 .uc-desc {
   font-size: 0.9375rem;
-  color: var(--ms-color-muted);
+  color: var(--ms-color-muted-strong);
   line-height: 1.65;
   margin: 0;
 }
@@ -149,7 +149,7 @@ const items = computed(() =>
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--ms-color-muted);
+  color: var(--ms-color-muted-strong);
   background: var(--ms-color-bg);
   border: 1px solid var(--ms-color-border);
   border-radius: 4px;
@@ -158,6 +158,6 @@ const items = computed(() =>
 .uc-more {
   font-size: 13px;
   font-weight: 600;
-  color: var(--ms-color-sky);
+  color: var(--ms-color-sky-dark);
 }
 </style>
