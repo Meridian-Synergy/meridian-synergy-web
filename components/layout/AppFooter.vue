@@ -92,7 +92,11 @@ const socialLinks: SocialLinkItem[] = [
 }
 .footer-tagline {
   font-size: 13px;
-  color: rgba(255,255,255,0.45);
+  /* Pas d'opacité sur un texte : une opacité n'est pas une couleur, c'est une
+     fonction du fond, et elle se dérobe dès que le fond change. Le blanc à 45 %
+     donnait #828AA2, soit 4,00:1 sur le navy — sous le seuil AA de 4,5.
+     `--ms-color-muted` est le token prévu pour du texte sur fond sombre (4,58:1). */
+  color: var(--ms-color-muted);
   line-height: 1.55;
   max-width: 280px;
   margin-bottom: 16px;
@@ -106,7 +110,9 @@ const socialLinks: SocialLinkItem[] = [
 }
 .footer-nav a {
   font-size: 14px;
-  color: rgba(255,255,255,0.6);
+  /* Conforme avant correction (5,93:1), mais posé par une opacité : on fige la
+     valeur pour qu'elle ne dépende plus du fond. */
+  color: #A4AABB;
   text-decoration: none;
   transition: color var(--ms-transition-fast);
 }
@@ -120,6 +126,8 @@ const socialLinks: SocialLinkItem[] = [
   font-family: var(--ms-font-condensed);
   font-size: 12px;
   letter-spacing: 0.03em;
-  color: rgba(255,255,255,0.3);
+  /* Le blanc à 30 % donnait #5F6B89, soit 2,56:1 : le texte le moins lisible de
+     tout le site avant correction. */
+  color: var(--ms-color-muted);
 }
 </style>

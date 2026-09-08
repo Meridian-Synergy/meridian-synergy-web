@@ -170,7 +170,7 @@ const guides = computed(() => {
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--ms-color-muted);
+  color: var(--ms-color-muted-strong);
   margin: 0;
 }
 .sb-item {

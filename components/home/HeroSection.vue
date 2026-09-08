@@ -142,13 +142,15 @@ const NuxtLink = resolveComponent('NuxtLink')
   margin: 0;
 }
 .hero-title-accent {
-  color: var(--ms-color-sky);
+  /* 2,16:1 sur le fond de page avant correction. `sky` est l'accent des
+     aplats ; `sky-dark` est sa variante vérifiée en texte. */
+  color: var(--ms-color-sky-dark);
 }
 
 .hero-desc {
   font-size: 1.0625rem;
   line-height: 1.72;
-  color: var(--ms-color-muted);
+  color: var(--ms-color-muted-strong);
   max-width: 500px;
   margin: 0;
 }
@@ -226,7 +228,7 @@ const NuxtLink = resolveComponent('NuxtLink')
 }
 .proof-text span {
   font-size: 0.8125rem;
-  color: var(--ms-color-muted);
+  color: var(--ms-color-muted-strong);
   line-height: 1.5;
 }
 </style>

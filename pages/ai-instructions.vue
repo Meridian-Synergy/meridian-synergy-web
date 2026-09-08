@@ -32,12 +32,26 @@ useSeoMeta({
   twitterCard: 'summary_large_image',
 })
 
-// The route's locale gives the correct <html lang="en-US">. The alternates still need
-// fixing: with the French variant disabled, i18n falls back to the locale root and emits
-// an fr-FR alternate pointing at the HOME PAGE — telling Google the French version of
-// this page is the home page. The tags carry stable keys (`i18n-alt-<language>`,
-// `i18n-xd`), so they are replaced rather than fought: every alternate points here,
-// which is the honest signal for one page serving both audiences.
+// The route's locale gives the correct <html lang="en-US">. The alternates need care:
+// with the French variant disabled, i18n falls back to the locale root and emits an
+// fr-FR alternate pointing at the HOME PAGE — telling Google the French version of this
+// page is the home page. The tags carry stable keys (`i18n-alt-<language>`, `i18n-xd`),
+// so they are replaced rather than fought.
+//
+// ⚠️ Pointing the fr-FR alternate HERE was the previous fix. Better than the default
+// (which lied about the home page) but still untrue: hreflang declares a LANGUAGE, not
+// an audience, and this page serves no French. Our own audit measured all 89 sitemap
+// URLs; this was the only page whose declared hreflang did not match the target's
+// `lang`. A page that exists in one language declares that language and nothing else.
+//
+// `defineI18nRoute({ locales: ['en'] })` states that at the routing level. DROPPING the
+// fr-FR entry below was tried and MEASURED IN THE BUILT OUTPUT: the module re-emits its
+// own, pointing at the home page — worse than what it replaced. So the explicit tag
+// stays, pointing here. Removing the claim entirely needs `experimental.strictSeo`,
+// which is global and changes head handling for all 157 pages: worth doing, not worth
+// slipping into an accessibility fix.
+defineI18nRoute({ locales: ['en'] })
+
 useHead(
   {
     link: [
