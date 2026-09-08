@@ -19,9 +19,30 @@ const enGuides    = contentSlugs('./content/en/guides')
 export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
+    '@nuxt/fonts',
     '@nuxtjs/i18n',
     '@nuxtjs/seo',
   ],
+
+  // Les polices sont téléchargées au build et servies depuis notre domaine.
+  // AVANT : une feuille de style et six fichiers demandés à fonts.googleapis.com et
+  // fonts.gstatic.com AU CHARGEMENT, donc avant que le bandeau de consentement ne
+  // s'affiche (mesuré à 0,51 s). Cela transmettait l'IP du visiteur à un tiers sans
+  // son accord : 100 Ko sur les 261 Ko de la page d'accueil, et deux domaines de plus
+  // dans la chaîne. Une police n'est pas un cookie, donc le bandeau ne la couvrait pas.
+  // Cf. LG München I, 20.01.2022, 3 O 17493/20.
+  fonts: {
+    // ⚠️ Sans cette ligne, le module ne produit RIEN et les polices disparaissent :
+    // il ne traite par défaut que les variables `--font-*`, or le design system
+    // déclare ses familles dans `--ms-font-display`, `--ms-font-body`, etc.
+    // Vérifié au build : 0 fichier .woff2 et 0 @font-face générés avant correction.
+    processCSSVariables: 'ms-font',
+    families: [
+      { name: 'Barlow', provider: 'google', weights: [400, 600, 700, 800], styles: ['normal', 'italic'] },
+      { name: 'Barlow Condensed', provider: 'google', weights: [500, 600] },
+      { name: 'Space Mono', provider: 'google', weights: [400] },
+    ],
+  },
 
   site: {
     url: 'https://meridian-synergy.com',
@@ -114,12 +135,6 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
         { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
         { rel: 'manifest', href: '/site.webmanifest' },
-{ rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
-        {
-          rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=Barlow:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Space+Mono&display=swap',
-        },
       ],
     },
   },

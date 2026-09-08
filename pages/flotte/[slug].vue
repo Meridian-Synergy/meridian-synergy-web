@@ -247,7 +247,7 @@ const specItems = computed<MsSpecItem[]>(() => [
 /* ── Sidebar ── */
 .sidebar { display: flex; flex-direction: column; gap: 16px; position: sticky; top: 88px; }
 .sb-block { display: flex; flex-direction: column; gap: 10px; }
-.sb-label { font-family: var(--ms-font-condensed); font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ms-color-muted); margin: 0; }
+.sb-label { font-family: var(--ms-font-condensed); font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ms-color-muted-strong); margin: 0; }
 .sb-item { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 500; color: var(--ms-color-navy); text-decoration: none; padding: 6px 8px; border-radius: var(--ms-radius-md); transition: background-color var(--ms-transition-fast), color var(--ms-transition-fast); }
 .sb-item:hover { background: var(--ms-color-bg); color: var(--ms-color-sky); }
 .sb-item svg { color: var(--ms-color-sky); flex-shrink: 0; }

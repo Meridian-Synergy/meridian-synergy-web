@@ -36,6 +36,9 @@ importers:
         specifier: ^3.5.0
         version: 3.5.33(typescript@5.9.3)
     devDependencies:
+      '@nuxt/fonts':
+        specifier: ^0.14.0
+        version: 0.14.0(db0@0.3.4(better-sqlite3@12.9.0))(ioredis@5.10.1)(magicast@0.5.2)(vite@7.3.2(@types/node@25.8.0)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.2)(yaml@2.8.4))
       '@playwright/test':
         specifier: ^1.61.1
         version: 1.61.1

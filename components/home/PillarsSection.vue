@@ -77,7 +77,7 @@ const pillars = [
   letter-spacing: -0.03em;
   margin: 0 0 16px;
 }
-.pillars-desc { font-size: 1.0625rem; color: var(--ms-color-muted); max-width: 560px; margin: 0 auto; line-height: 1.7; }
+.pillars-desc { font-size: 1.0625rem; color: var(--ms-color-muted-strong); max-width: 560px; margin: 0 auto; line-height: 1.7; }
 
 .pillars-grid { display: grid; grid-template-columns: 1fr; gap: 20px; align-items: stretch; }
 @media (min-width: 768px) { .pillars-grid { grid-template-columns: repeat(3, 1fr); } }
@@ -90,7 +90,7 @@ const pillars = [
   transition: transform var(--ms-transition-base), box-shadow var(--ms-transition-base);
 }
 .pillar-link:hover { transform: translateY(-4px); box-shadow: var(--ms-shadow-md); }
-.pillar-link:hover :deep(.ms-card) { border-color: var(--ms-color-sky); }
+.pillar-link:hover :deep(.ms-card) { border-color: var(--ms-color-sky-dark); }
 /* Equal-height cards: card fills the grid row, footer pinned to the bottom */
 .pillar-link :deep(.ms-card) { height: 100%; display: flex; flex-direction: column; }
 .pillar-link :deep(.ms-card__body) { flex: 1 1 auto; }
@@ -106,6 +106,6 @@ const pillars = [
 }
 .pillar-icon svg { width: 26px; height: 26px; }
 .pillar-name { font-family: var(--ms-font-display); font-size: 1.25rem; font-weight: 700; color: var(--ms-color-navy); margin: 0; }
-.pillar-text { font-size: 0.9375rem; color: var(--ms-color-muted); line-height: 1.65; margin: 0; }
-.pillar-more { font-family: var(--ms-font-body); font-size: 14px; font-weight: 600; color: var(--ms-color-sky); }
+.pillar-text { font-size: 0.9375rem; color: var(--ms-color-muted-strong); line-height: 1.65; margin: 0; }
+.pillar-more { font-family: var(--ms-font-body); font-size: 14px; font-weight: 600; color: var(--ms-color-sky-dark); }
 </style>

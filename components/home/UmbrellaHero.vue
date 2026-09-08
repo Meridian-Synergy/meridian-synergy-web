@@ -68,12 +68,12 @@ const NuxtLink = resolveComponent('NuxtLink')
   color: var(--ms-color-navy);
   margin: 0;
 }
-.hero-title-accent { color: var(--ms-color-sky); }
+.hero-title-accent { color: var(--ms-color-sky-dark); }
 
 .hero-desc {
   font-size: 1.125rem;
   line-height: 1.7;
-  color: var(--ms-color-muted);
+  color: var(--ms-color-muted-strong);
   max-width: 620px;
   margin: 0;
 }

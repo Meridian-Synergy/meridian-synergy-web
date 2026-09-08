@@ -73,7 +73,9 @@ watch(bannerVisible, (val) => {
 
 .cookie-desc {
   font-size: 14px;
-  color: var(--ms-color-muted);
+  /* Ce texte est posé sur le blanc de la fenêtre, pas sur un fond sombre :
+     `muted` y donnait 2,83:1. */
+  color: var(--ms-color-muted-strong);
   line-height: 1.65;
   margin: 0;
 }
@@ -110,7 +112,9 @@ watch(bannerVisible, (val) => {
 .cookie-btn--decline:hover { border-color: var(--ms-color-navy); }
 
 .cookie-btn--accept {
-  background: var(--ms-color-sky);
+  /* Blanc sur `sky` : 2,70:1. Sur `sky-dark` : 5,17:1. Le bouton reste bleu,
+     il devient lisible. */
+  background: var(--ms-color-sky-dark);
   color: var(--ms-color-white);
 }
 
