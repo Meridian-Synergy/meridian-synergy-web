@@ -25,7 +25,7 @@ importers:
         version: 12.9.0
       meridian-synergy-ui:
         specifier: github:meridian-synergy/meridian-synergy-ui
-        version: https://codeload.github.com/meridian-synergy/meridian-synergy-ui/tar.gz/cc40c8a61f143d94615c7db688b472c494fa2ccc
+        version: https://codeload.github.com/meridian-synergy/meridian-synergy-ui/tar.gz/f0792597abfd1decef5f183c3f689c17145e705c
       nuxt:
         specifier: ^3.16.0
         version: 3.21.4(@parcel/watcher@2.5.6)(@types/node@25.8.0)(@vue/compiler-sfc@3.5.33)(better-sqlite3@12.9.0)(cac@6.7.14)(db0@0.3.4(better-sqlite3@12.9.0))(eslint@10.3.0(jiti@2.6.1))(ioredis@5.10.1)(lightningcss@1.32.0)(magicast@0.5.2)(optionator@0.9.4)(rollup-plugin-visualizer@7.0.1(rollup@4.60.3))(rollup@4.60.3)(srvx@0.11.15)(terser@5.46.2)(typescript@5.9.3)(vite@7.3.2(@types/node@25.8.0)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.2)(yaml@2.8.4))(yaml@2.8.4)
@@ -4981,8 +4981,8 @@ packages:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
     engines: {node: '>= 8'}
 
-  meridian-synergy-ui@https://codeload.github.com/meridian-synergy/meridian-synergy-ui/tar.gz/cc40c8a61f143d94615c7db688b472c494fa2ccc:
-    resolution: {tarball: https://codeload.github.com/meridian-synergy/meridian-synergy-ui/tar.gz/cc40c8a61f143d94615c7db688b472c494fa2ccc}
+  meridian-synergy-ui@https://codeload.github.com/meridian-synergy/meridian-synergy-ui/tar.gz/f0792597abfd1decef5f183c3f689c17145e705c:
+    resolution: {tarball: https://codeload.github.com/meridian-synergy/meridian-synergy-ui/tar.gz/f0792597abfd1decef5f183c3f689c17145e705c}
     version: 1.2.1
 
   micromark-core-commonmark@2.0.3:
@@ -11911,7 +11911,7 @@ snapshots:
 
   merge2@1.4.1: {}
 
-  meridian-synergy-ui@https://codeload.github.com/meridian-synergy/meridian-synergy-ui/tar.gz/cc40c8a61f143d94615c7db688b472c494fa2ccc: {}
+  meridian-synergy-ui@https://codeload.github.com/meridian-synergy/meridian-synergy-ui/tar.gz/f0792597abfd1decef5f183c3f689c17145e705c: {}
 
   micromark-core-commonmark@2.0.3:
     dependencies:
