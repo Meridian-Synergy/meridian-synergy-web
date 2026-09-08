@@ -5,6 +5,20 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) — versioning:
 
 ---
 
+## [1.4.0](https://github.com/Meridian-Synergy/meridian-synergy-web/compare/v1.3.0...v1.4.0) (2026-09-08)
+
+
+### Features
+
+* **contact:** canal telephone appelable d'un geste ([#64](https://github.com/Meridian-Synergy/meridian-synergy-web/issues/64)) ([06fc154](https://github.com/Meridian-Synergy/meridian-synergy-web/commit/06fc15457906e495309a698ac4f2d5a67f88bb8e))
+* **guides:** add the Google Business Profile guide ([#61](https://github.com/Meridian-Synergy/meridian-synergy-web/issues/61)) ([b1bf7fe](https://github.com/Meridian-Synergy/meridian-synergy-web/commit/b1bf7fec2655652ab206b2b8839d095802672e8f))
+
+
+### Bug Fixes
+
+* **a11y,privacy:** polices servies localement et contrastes conformes AA ([#63](https://github.com/Meridian-Synergy/meridian-synergy-web/issues/63)) ([d4e75f5](https://github.com/Meridian-Synergy/meridian-synergy-web/commit/d4e75f5ac8364b135f2c522064a57edd476ed7cd))
+* **a11y:** contrastes des 21 fichiers restants, sur les cinq pages mesurees ([#65](https://github.com/Meridian-Synergy/meridian-synergy-web/issues/65)) ([52baa7b](https://github.com/Meridian-Synergy/meridian-synergy-web/commit/52baa7bef426f4ad5af104f917b652c53ae83038))
+
 ## [1.3.0](https://github.com/Meridian-Synergy/meridian-synergy-web/compare/v1.2.2...v1.3.0) (2026-08-21)
 
 
