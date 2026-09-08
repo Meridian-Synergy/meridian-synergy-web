@@ -116,7 +116,7 @@ const services = [
 }
 .services-desc {
   font-size: 1.0625rem;
-  color: var(--ms-color-muted);
+  color: var(--ms-color-muted-strong);
   max-width: 540px;
   margin: 0 auto;
   line-height: 1.7;
@@ -142,7 +142,7 @@ const services = [
   transform: translateY(-3px);
   box-shadow: var(--ms-shadow-md);
 }
-.card-link:hover :deep(.ms-card) { border-color: var(--ms-color-sky); }
+.card-link:hover :deep(.ms-card) { border-color: var(--ms-color-sky-dark); }
 
 /* Card body content */
 .svc-body {
@@ -174,7 +174,7 @@ const services = [
 }
 .svc-desc {
   font-size: 0.875rem;
-  color: var(--ms-color-muted);
+  color: var(--ms-color-muted-strong);
   line-height: 1.6;
   margin: 0;
 }
@@ -183,7 +183,7 @@ const services = [
   font-family: var(--ms-font-body);
   font-size: 13px;
   font-weight: 600;
-  color: var(--ms-color-sky);
+  color: var(--ms-color-sky-dark);
   letter-spacing: 0.01em;
 }
 

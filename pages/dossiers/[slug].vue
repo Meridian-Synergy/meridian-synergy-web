@@ -281,15 +281,15 @@ const relatedDossiers = computed(() => {
 .sources-item {
   font-size: 0.875rem;
   line-height: 1.6;
-  color: var(--ms-color-muted);
+  color: var(--ms-color-muted-strong);
 }
 .sources-item a {
   color: var(--ms-color-navy);
   text-decoration: underline;
   text-underline-offset: 2px;
 }
-.sources-item a:hover { color: var(--ms-color-sky); }
-.sources-date { color: var(--ms-color-muted); }
+.sources-item a:hover { color: var(--ms-color-sky-dark); }
+.sources-date { color: var(--ms-color-muted-strong); }
 
 /* ── Sidebar ── */
 .sidebar {
@@ -306,13 +306,13 @@ const relatedDossiers = computed(() => {
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--ms-color-muted);
+  color: var(--ms-color-muted-strong);
   margin: 0;
 }
 .sb-text {
   font-size: 0.875rem;
   line-height: 1.6;
-  color: var(--ms-color-muted);
+  color: var(--ms-color-muted-strong);
   margin: 0;
 }
 .sb-item {
@@ -327,6 +327,6 @@ const relatedDossiers = computed(() => {
   border-radius: var(--ms-radius-md);
   transition: background-color var(--ms-transition-fast), color var(--ms-transition-fast);
 }
-.sb-item:hover { background: var(--ms-color-white); color: var(--ms-color-sky); }
-.sb-item svg { color: var(--ms-color-sky); flex-shrink: 0; }
+.sb-item:hover { background: var(--ms-color-white); color: var(--ms-color-sky-dark); }
+.sb-item svg { color: var(--ms-color-sky-dark); flex-shrink: 0; }
 </style>

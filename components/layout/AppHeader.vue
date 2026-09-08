@@ -288,7 +288,7 @@ watch(() => route.path, () => { isOpen.value = false; openGroup.value = null })
   white-space: nowrap;
 }
 .dropdown-link:hover { color: var(--ms-color-navy); background: var(--ms-color-bg); }
-.dropdown-link--active { color: var(--ms-color-sky); font-weight: 600; }
+.dropdown-link--active { color: var(--ms-color-sky-dark); font-weight: 600; }
 
 /* ── Actions (lang + CTA) ── */
 .actions {

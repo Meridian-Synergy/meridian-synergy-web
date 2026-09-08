@@ -105,7 +105,7 @@ const subSections = [
   letter-spacing: -0.03em;
   margin: 0 0 12px;
 }
-.subs-desc { font-size: 1.0625rem; color: var(--ms-color-muted); max-width: 540px; margin: 0 auto; line-height: 1.7; }
+.subs-desc { font-size: 1.0625rem; color: var(--ms-color-muted-strong); max-width: 540px; margin: 0 auto; line-height: 1.7; }
 
 .subs-grid {
   display: grid;
@@ -123,7 +123,7 @@ const subSections = [
   transition: transform var(--ms-transition-base), box-shadow var(--ms-transition-base);
 }
 .sub-link:hover { transform: translateY(-3px); box-shadow: var(--ms-shadow-md); }
-.sub-link:hover :deep(.ms-card) { border-color: var(--ms-color-sky); }
+.sub-link:hover :deep(.ms-card) { border-color: var(--ms-color-sky-dark); }
 /* Equal-height cards: card fills the grid row, footer pinned to the bottom */
 .sub-link :deep(.ms-card) { height: 100%; display: flex; flex-direction: column; }
 .sub-link :deep(.ms-card__body) { flex: 1 1 auto; }
@@ -138,6 +138,6 @@ const subSections = [
 }
 .sub-icon svg { width: 22px; height: 22px; }
 .sub-name { font-family: var(--ms-font-display); font-size: 1.0625rem; font-weight: 700; color: var(--ms-color-navy); margin: 0; }
-.sub-text { font-size: 0.875rem; color: var(--ms-color-muted); line-height: 1.6; margin: 0; }
-.sub-more { font-family: var(--ms-font-body); font-size: 13px; font-weight: 600; color: var(--ms-color-sky); }
+.sub-text { font-size: 0.875rem; color: var(--ms-color-muted-strong); line-height: 1.6; margin: 0; }
+.sub-more { font-family: var(--ms-font-body); font-size: 13px; font-weight: 600; color: var(--ms-color-sky-dark); }
 </style>

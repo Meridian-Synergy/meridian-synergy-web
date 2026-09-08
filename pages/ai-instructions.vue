@@ -132,7 +132,7 @@ const updatedAt = computed(() => page.value?.updatedAt ?? page.value?.publishedA
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--ms-color-muted);
+  color: var(--ms-color-muted-strong);
   margin: 0 0 24px;
 }
 
@@ -178,5 +178,5 @@ const updatedAt = computed(() => page.value?.updatedAt ?? page.value?.publishedA
   text-decoration: underline;
   text-underline-offset: 2px;
 }
-.prose :deep(a:hover) { color: var(--ms-color-sky); }
+.prose :deep(a:hover) { color: var(--ms-color-sky-dark); }
 </style>

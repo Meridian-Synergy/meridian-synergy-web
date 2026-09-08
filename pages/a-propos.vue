@@ -178,7 +178,7 @@ const contactActions = computed(() => [
 }
 .section-title.centered { text-align: center; margin-bottom: 32px; }
 
-.story-p { font-size: 0.9375rem; color: var(--ms-color-muted); line-height: 1.75; margin: 0 0 16px; }
+.story-p { font-size: 0.9375rem; color: var(--ms-color-muted-strong); line-height: 1.75; margin: 0 0 16px; }
 .story-p:last-child { margin-bottom: 0; }
 
 .story-visual { display: flex; justify-content: center; align-items: center; }
@@ -196,7 +196,7 @@ const contactActions = computed(() => [
 
 /* ── Certifications ── */
 .certs-section { padding: 64px 0; background: var(--ms-color-white); }
-.certs-intro { text-align: center; font-size: 0.9375rem; color: var(--ms-color-muted); margin: 0 auto 32px; max-width: 520px; }
+.certs-intro { text-align: center; font-size: 0.9375rem; color: var(--ms-color-muted-strong); margin: 0 auto 32px; max-width: 520px; }
 .certs-list {
   display: flex;
   flex-wrap: wrap;
@@ -206,7 +206,7 @@ const contactActions = computed(() => [
 
 /* ── Zone ── */
 .zone-section { padding: 64px 0; background: var(--ms-color-bg); }
-.zone-intro { text-align: center; font-size: 0.9375rem; color: var(--ms-color-muted); margin: 0 auto 32px; max-width: 520px; }
+.zone-intro { text-align: center; font-size: 0.9375rem; color: var(--ms-color-muted-strong); margin: 0 auto 32px; max-width: 520px; }
 .dept-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -233,11 +233,11 @@ const contactActions = computed(() => [
   transition: border-color var(--ms-transition-fast);
 }
 .dept-card.dept-home {
-  border-color: var(--ms-color-sky);
+  border-color: var(--ms-color-sky-dark);
   background: rgba(0, 170, 239, 0.04);
 }
 .dept-num { font-family: var(--ms-font-condensed); font-size: 22px; font-weight: 700; color: var(--ms-color-navy); letter-spacing: -0.02em; line-height: 1; }
-.dept-home .dept-num { color: var(--ms-color-sky); }
-.dept-name { font-size: 12px; color: var(--ms-color-muted); font-weight: 500; }
+.dept-home .dept-num { color: var(--ms-color-sky-dark); }
+.dept-name { font-size: 12px; color: var(--ms-color-muted-strong); font-weight: 500; }
 
 </style>

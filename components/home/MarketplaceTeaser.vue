@@ -163,7 +163,7 @@ const { t } = useI18n()
   font-family: var(--ms-font-display);
   font-size: 13px;
   font-weight: 800;
-  color: var(--ms-color-sky);
+  color: var(--ms-color-sky-dark);
   letter-spacing: 0.02em;
   flex-shrink: 0;
 }
@@ -192,7 +192,7 @@ const { t } = useI18n()
   align-items: center;
   gap: 4px;
   font-size: 0.75rem;
-  color: var(--ms-color-muted);
+  color: var(--ms-color-muted-strong);
 }
 
 .mp-badge-verified {
@@ -227,7 +227,7 @@ const { t } = useI18n()
 .mp-tag--more {
   background: transparent;
   border-color: transparent;
-  color: var(--ms-color-muted);
+  color: var(--ms-color-muted-strong);
 }
 
 .mp-certs {
@@ -243,7 +243,7 @@ const { t } = useI18n()
   font-family: var(--ms-font-condensed);
   font-size: 0.6875rem;
   font-weight: 600;
-  color: var(--ms-color-sky);
+  color: var(--ms-color-sky-dark);
   letter-spacing: 0.04em;
 }
 
@@ -268,7 +268,7 @@ const { t } = useI18n()
 }
 .mp-stat-label {
   font-size: 0.6875rem;
-  color: var(--ms-color-muted);
+  color: var(--ms-color-muted-strong);
 }
 
 .mp-cta-pill {
@@ -294,10 +294,10 @@ const { t } = useI18n()
   border-radius: var(--ms-radius-lg);
   padding: 10px 14px;
   font-size: 0.8125rem;
-  color: var(--ms-color-muted);
+  color: var(--ms-color-muted-strong);
   box-shadow: 0 4px 16px rgba(0,0,0,0.05);
 }
-.mp-search svg { flex-shrink: 0; color: var(--ms-color-sky); }
+.mp-search svg { flex-shrink: 0; color: var(--ms-color-sky-dark); }
 .mp-search span { flex: 1; }
 .mp-search strong { color: var(--ms-color-navy); font-weight: 600; }
 .mp-search-results {
@@ -307,7 +307,7 @@ const { t } = useI18n()
   border-radius: 999px;
   font-size: 0.6875rem;
   font-weight: 600;
-  color: var(--ms-color-sky);
+  color: var(--ms-color-sky-dark);
   white-space: nowrap;
   flex-shrink: 0;
 }
@@ -332,7 +332,7 @@ const { t } = useI18n()
 .marketplace-desc {
   font-size: 1.0625rem;
   line-height: 1.7;
-  color: var(--ms-color-muted);
+  color: var(--ms-color-muted-strong);
   max-width: 480px;
   margin: 0;
 }
