@@ -25,7 +25,7 @@ importers:
         version: 12.9.0
       meridian-synergy-ui:
         specifier: github:meridian-synergy/meridian-synergy-ui
-        version: https://codeload.github.com/meridian-synergy/meridian-synergy-ui/tar.gz/f20d3dc129a6a43f45213b61db53a044ce1a07b8
+        version: https://codeload.github.com/meridian-synergy/meridian-synergy-ui/tar.gz/cc40c8a61f143d94615c7db688b472c494fa2ccc
       nuxt:
         specifier: ^3.16.0
         version: 3.21.4(@parcel/watcher@2.5.6)(@types/node@25.8.0)(@vue/compiler-sfc@3.5.33)(better-sqlite3@12.9.0)(cac@6.7.14)(db0@0.3.4(better-sqlite3@12.9.0))(eslint@10.3.0(jiti@2.6.1))(ioredis@5.10.1)(lightningcss@1.32.0)(magicast@0.5.2)(optionator@0.9.4)(rollup-plugin-visualizer@7.0.1(rollup@4.60.3))(rollup@4.60.3)(srvx@0.11.15)(terser@5.46.2)(typescript@5.9.3)(vite@7.3.2(@types/node@25.8.0)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.2)(yaml@2.8.4))(yaml@2.8.4)
@@ -756,8 +756,8 @@ packages:
     resolution: {integrity: sha512-vqTaUEgxzm+YDSdElad6PiRoX4t8VGDjCtt05zn4nU810UIx/uNEV7/lZJ6KwFThKZOzOxzXy48da+No7HZaMw==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
 
-  '@eslint/plugin-kit@0.7.2':
-    resolution: {integrity: sha512-+CNAzxglkrpNf/kKywqQfk74QjtceuOE7Qm+AF8miRvPF/wmmK5+OJOgVh3AVTT3RP2mH3+FOaxlE5v72owk0A==}
+  '@eslint/plugin-kit@0.7.3':
+    resolution: {integrity: sha512-IkO+/KEUvwbVpiURZg+P7zF74z5Jxe0UgJxVni+RtoHQ6IZieXaO02kmadomap/q+l6bc/jdPGGqTjhuZnuz1Q==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
 
   '@fingerprintjs/botd@2.0.0':
@@ -4981,8 +4981,8 @@ packages:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
     engines: {node: '>= 8'}
 
-  meridian-synergy-ui@https://codeload.github.com/meridian-synergy/meridian-synergy-ui/tar.gz/f20d3dc129a6a43f45213b61db53a044ce1a07b8:
-    resolution: {tarball: https://codeload.github.com/meridian-synergy/meridian-synergy-ui/tar.gz/f20d3dc129a6a43f45213b61db53a044ce1a07b8}
+  meridian-synergy-ui@https://codeload.github.com/meridian-synergy/meridian-synergy-ui/tar.gz/cc40c8a61f143d94615c7db688b472c494fa2ccc:
+    resolution: {tarball: https://codeload.github.com/meridian-synergy/meridian-synergy-ui/tar.gz/cc40c8a61f143d94615c7db688b472c494fa2ccc}
     version: 1.2.1
 
   micromark-core-commonmark@2.0.3:
@@ -7428,7 +7428,7 @@ snapshots:
 
   '@eslint/object-schema@3.0.5': {}
 
-  '@eslint/plugin-kit@0.7.2':
+  '@eslint/plugin-kit@0.7.3':
     dependencies:
       '@eslint/core': 1.2.1
       levn: 0.4.1
@@ -10880,7 +10880,7 @@ snapshots:
       '@eslint/config-array': 0.23.5
       '@eslint/config-helpers': 0.5.5
       '@eslint/core': 1.2.1
-      '@eslint/plugin-kit': 0.7.2
+      '@eslint/plugin-kit': 0.7.3
       '@humanfs/node': 0.16.8
       '@humanwhocodes/module-importer': 1.0.1
       '@humanwhocodes/retry': 0.4.3
@@ -11911,7 +11911,7 @@ snapshots:
 
   merge2@1.4.1: {}
 
-  meridian-synergy-ui@https://codeload.github.com/meridian-synergy/meridian-synergy-ui/tar.gz/f20d3dc129a6a43f45213b61db53a044ce1a07b8: {}
+  meridian-synergy-ui@https://codeload.github.com/meridian-synergy/meridian-synergy-ui/tar.gz/cc40c8a61f143d94615c7db688b472c494fa2ccc: {}
 
   micromark-core-commonmark@2.0.3:
     dependencies:
